@@ -4,6 +4,7 @@ require 'fileutils'
 searchpath = "MA/"  
 ALLOY = "file:///Users/stian/Downloads/alloy-1.0.1"
 header = "MA thesis"
+layout = 3
 
 def sanitize_filename(filename)
   name = filename.strip 
@@ -67,7 +68,7 @@ Find.find(searchpath) do |path|
 
   dirs = path[searchpath.size..-1].split("/")
   next if dirs == []
-  next if File.file?(path)
+  next if File.file?(path) && layout == 3
   next if dirs[dirs.size-1] == "Images"
   cur_ind = dirs.size
   if cur_ind > indent then 
@@ -78,10 +79,17 @@ Find.find(searchpath) do |path|
   indent = cur_ind
   name = dirs[indent-1]
 
-    puts ("  " * indent) + "<li>" 
+  puts ("  " * indent) + "<li>" 
+  if layout == 3
     puts "<a href='#{path}/index.html' target='filelist'>#{name}</a>"
-    create_index(path)
-
+    create_index(path) 
+  elsif layout == 2
+    if File.file?(path)
+      puts "<a href='#{path}' target='content'>#{name}</a>"
+    else
+      puts "<a href='#'>#{name}</a>"
+    end
+  end
 
 end
 puts '</li></ul></div>
