@@ -1,9 +1,10 @@
 require 'find'
 require 'fileutils'
+require './library'
 
 searchpath = "MA/"  
-ALLOY = "file:///Users/stian/Downloads/alloy-1.0.1"
-header = "MA thesis"
+TITLE = "MA thesis"
+OUT = "/Users/stian/src/kindle/out/"
 layout = 3
 
 def sanitize_filename(filename)
@@ -25,7 +26,7 @@ end
 def create_index(path)
   path = path + "/"
   f = File.open(path + "index.html","w")
-  f << '<html><head><link rel="stylesheet" href="' + ALLOY + '/build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
+  f << '<html><head><link rel="stylesheet" href="http://alloy.liferay.com/deploy/build/aui-skin-base/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
   </head><body><div id="markupBoundingBox">
   <ul id="markupContentBox">'
   Dir.glob(path + "*").each do |node| 
@@ -43,26 +44,19 @@ def create_index(path)
   f << "</ul></div></body></html>"
 end
 
-puts '<!DOCTYPE html>
+#######################################################################
 
-<html>
-<head>
-<script src="'+ ALLOY + '/build/aui/aui.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="'+ ALLOY + '/build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
-</head>
-
-<style type="text/css" media="screen">
-
-</style>
-
-<body>
-<h1>' + header + '</h1>
-
-<div id="markupBoundingBox">
-<ul id="markupContentBox">'
 indent = 1
 
+`rm -rf #{OUT}`
+`mkdir #{OUT}`
+`cp -R #{searchpath}* #{OUT}`
+searchpath = OUT
+`cp index-#{layout}.html #{OUT}index.html`
+
+menufile = File.open(searchpath + "dirs.html", "w")
+
+menufile << header(TITLE)
 
 Find.find(searchpath) do |path|
 
@@ -72,41 +66,24 @@ Find.find(searchpath) do |path|
   next if dirs[dirs.size-1] == "Images"
   cur_ind = dirs.size
   if cur_ind > indent then 
-    puts "<ul>"
+    menufile << "<ul>"
   elsif cur_ind < indent then
-    puts "</ul></li>" * (indent - cur_ind)
+    menufile << "</ul></li>" * (indent - cur_ind)
   end
   indent = cur_ind
   name = dirs[indent-1]
 
-  puts ("  " * indent) + "<li>" 
+  menufile << ("  " * indent) + "<li>" 
   if layout == 3
-    puts "<a href='#{path}/index.html' target='filelist'>#{name}</a>"
+    menufile << "<a href='#{path}/index.html' target='filelist'>#{name}</a>"
     create_index(path) 
   elsif layout == 2
     if File.file?(path)
-      puts "<a href='#{path}' target='content'>#{name}</a>"
+      menufile << "<a href='#{path}' target='content'>#{name}</a>"
     else
-      puts "<a href='#'>#{name}</a>"
+      menufile << "<a href='#'>#{name}</a>"
     end
   end
 
 end
-puts '</li></ul></div>
-
-<script type="text/javascript" charset="utf-8">
-
-AUI().ready("aui-tree-view", function(A) {
-
-  var treeView = new A.TreeView({
-    boundingBox: "#markupBoundingBox",
-    contentBox: "#markupContentBox"
-    })
-    .render();
-
-    });
-
-    </script>
-
-    </body>
-    </html>'
+menufile << footer
