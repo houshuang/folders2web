@@ -5,7 +5,7 @@ require './library'
 searchpath = "MA/"  
 TITLE = "MA thesis"
 OUT = "/Users/stian/src/kindle/out/"
-layout = 3
+layout = 2
 
 def sanitize_filename(filename)
   name = filename.strip 
@@ -26,7 +26,7 @@ end
 def create_index(path)
   path = path + "/"
   f = File.open(path + "index.html","w")
-  f << '<html><head><link rel="stylesheet" href="http://alloy.liferay.com/deploy/build/aui-skin-base/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
+  f << '<html><head><link rel="stylesheet" href="http://reganmian.net/alloy/build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
   </head><body><div id="markupBoundingBox">
   <ul id="markupContentBox">'
   Dir.glob(path + "*").each do |node| 

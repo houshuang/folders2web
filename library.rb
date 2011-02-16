@@ -1,9 +1,10 @@
 def header(title)
   return '<html>
   <head>
-  <script src="http://alloy.liferay.com/deploy/build/aui-base/aui-base-min.js" type="text/javascript"></script>
+  
+  <script src="http://reganmian.net/alloy/build/aui/aui-min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="http://alloy.liferay.com/deploy/build/aui-skin-base/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://reganmian.net/alloy/build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
   </head>
 
   <style type="text/css" media="screen">
