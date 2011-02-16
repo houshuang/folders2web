@@ -60,7 +60,7 @@ Near the top of folders.rb are a few settings that need to be modified:
 	#######################################################################
 
 *searchpath* is the relative path to the directories to be processed, ie. where you exported the DevonThink files to. *TITLE* will
-just be displayed on the webpage, OUT is the absolute path of where you want the resulting files to be placed, and *layout* is 
+just be displayed on the webpage, *OUT* is the absolute path of where you want the resulting files to be placed, and *layout* is 
 either 2, for two-paned layout, or 3 for three-paned layout.
 
 Note that all links in the generated files are relative, which means that after generation, the entire directory (*out*  

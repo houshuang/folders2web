@@ -1,3 +1,27 @@
+def indexhtml(title,layout)
+
+  if layout == 2
+    return '  <html>
+    <title>'+ title +'</title>
+    <frameset cols="25%,75%">
+    <frame src="dirs.html" />
+    <frame src="" name="content"/>
+    </frameset>
+    </html>'
+  else
+
+    return  '<html><title>' + title + '</title>
+    <frameset cols="25%,75%">
+    <frame src="dirs.html" />
+    <frameset rows="25%,75%">
+    <frame src="" name="filelist"/>
+    <frame src="" name="content"/>
+    </frameset>
+    </frameset>
+    </html>'
+  end
+end
+
 def header(title)
   return '<html>
   <head>

@@ -4,9 +4,9 @@ require './library'
 
 #######################################################################
 searchpath = "MA/"  
-TITLE = "MA thesis"
-OUT = "/Users/stian/src/kindle/out/"
-layout = 2
+TITLE = "Raw notes from research on Top Level Courses Project"
+OUT = "/Users/stian/src/folders2web/out/"
+layout = 3
 #######################################################################
 
 def rel_path(path)
@@ -21,7 +21,7 @@ def sanitize_filename(filename)
 end
 
 def skip?(filename)
-  true if ['index.html','Images'].index(filename)
+  true if ['index.html','Images'].index(filename) || filename[0..1] == '.'
 end
 
 def clean_name(path) # takes full path, moves file, returns new rel path and display name
@@ -60,7 +60,7 @@ indent = 1
 `mkdir #{OUT}`
 `cp -R #{searchpath}* #{OUT}`
 searchpath = OUT
-`cp index-#{layout}.html #{OUT}index.html`
+File.open(OUT + "index.html", 'w') { |f| f << indexhtml(TITLE, layout) }
 
 menufile = File.open(searchpath + "dirs.html", "w")
 
