@@ -12,3 +12,4 @@ docu = dt.document.name.get[0][0..-5]
 `/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{dt.document.file.get[0].to_s}`
 File.open('/tmp/skimtmp', 'w') {|f| f << "h1. Notes\n\n" << File.read("/Volumes/Home/stian/Documents/Bibdesk/#{docu}.txt").gsub("\n","\n\n") }
 `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
+`open http://localhost/wiki/clip:#{docu}`
