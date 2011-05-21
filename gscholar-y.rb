@@ -14,6 +14,10 @@ end
 a = File.open("gscholar-tmp").readlines
 url = a[ARGV[0].to_i-1]
 
+domain = url.scan(/http:\/\/(.+?)\//)[0][0]
+
+`/usr/local/bin/growlnotify -t "Download started" -m "Downloading from #{domain}"`
+
 download(url, "/tmp/pdftmp.pdf")
 
 dt = app('BibDesk')
