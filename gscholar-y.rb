@@ -3,10 +3,23 @@ require 'pp'
 require 'appscript'
 include Appscript
 
+def download full_url, to_here
+    require 'open-uri'
+    writeOut = open(to_here, "wb")
+    writeOut.write(open(full_url).read)
+    writeOut.close
+end
+
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
+a = File.open("gscholar-tmp").readlines
+url = a[ARGV[0].to_i-1]
+
+download(url, "/tmp/pdftmp.pdf")
+
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
-f = MacTypes::FileURL.path('/Volumes/Home/stian//src/folders2web/pdftmp.pdf')
-`killall -9 qlmanage`
+
+f = MacTypes::FileURL.path('/tmp/pdftmp.pdf')
 d[0].linked_files.add(f,{:to =>d[0]})
 d[0].auto_file
+`/usr/local/bin/growlnotify -t "PDF added" -m "File added successfully to #{d.cite_key.key}"`

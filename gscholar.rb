@@ -3,18 +3,13 @@ curpath = File.dirname(File.expand_path(__FILE__)) + "/"
 require 'pp'
 require 'open-uri'
 require 'appscript'
+require 'cgi'
 include Appscript
 
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
 f = File.open(curpath + "log","a")
 
-def download full_url, to_here
-    require 'open-uri'
-    writeOut = open(to_here, "wb")
-    writeOut.write(open(full_url).read)
-    writeOut.close
-end
-
+`/usr/local/bin/growlnotify -t "Starting lookup on Google Scholar"`
 
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
@@ -24,19 +19,26 @@ f << "#{title}, #{author}\n"
 
 url = "http://scholar.google.com/scholar?&as_q=#{title}&as_sauthors=#{author}"
 page = open(url).read
-puts page
-a = page.scan(/\<p\>(.+?)\<\/a\>(.+?)a href\=\"(.+?)\"(.*)\[PDF\]/)
-pp a
-exit
-File.open("gscholar-tmp","w") do |f|
-  a.each do |item|
-    f << item[1] + "," + item[3] + "\n"
-  end
-end
-f.close
+a = page.scan(/<h3><a href=(.*?)>(.*?)<\/a>(.*?)a href="(.*?)"(.*?)\[PDF\]/)
+if a
 
-# if a 
-#   pp a
-#   download(a[0], 'pdftmp.pdf')
-#   `qlmanage -p pdftmp.pdf`
-# end
+  items = Array.new
+  a.each do |item|
+    title = CGI::unescapeHTML(item[1].gsub(/[\{|\}]/,"").gsub(/\<(\/?)b\>/,""))
+    items << {:title => title, :url => item[3]}
+  end
+
+  out = ''
+  c = 0
+  File.open("gscholar-tmp","w") do |f|
+    items.each do |item|
+      c += 1
+      out << "#{c}: #{item[:title]}\n"
+      f << item[:url] << "\n"
+    end
+  end
+  `/usr/local/bin/growlnotify -t "Possible hits" -m "#{out}"`
+
+else
+  `/usr/local/bin/growlnotify -t "No hits with PDFs"`
+end
