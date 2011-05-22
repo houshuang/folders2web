@@ -1,5 +1,12 @@
 # folders2web
 
+## Update
+This collection started out as two scripts that imported clippings from Kindle to DevonThink, and then generated a web interface for the resulting folder structure. Since then, I've been experimenting a lot with small scripts that tie together Mac apps, and help me manage my academic information workflow. I naturally began putting all of these in the same directory, since they seemed to small to get their own. I will try to document all of this on my [Hacks][100] page.
+
+[100]: http://reganmian.net/wiki/Hacks
+
+## Old README (only pertaining to Kindle and DevonThink scripts)
+
 **folders2web**  brings together two scripts that are unified more by how I use them, then by their common functionality.
 **convert.rb**  reads a My Clippings.txt file from a Kindle, and imports the clippings into a running [DevonThink][1] database
 using appscript. **folders.rb**  takes a directory structure of html files, and creates a static web interface with a two 
