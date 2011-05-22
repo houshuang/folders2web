@@ -7,7 +7,6 @@ require 'cgi'
 include Appscript
 
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
-f = File.open(curpath + "log","a")
 
 `/usr/local/bin/growlnotify -m "Starting lookup on Google Scholar"`
 
@@ -15,7 +14,6 @@ dt = app('BibDesk')
 d = dt.document.selection.get[0]
 title = d[0].title.get.gsub(" ","%20").gsub(/[\{|\}]/,'')
 author =  d[0].author.get[0].name.get.gsub(" ","%20")
-f << "#{title}, #{author}\n"
 
 url = "http://scholar.google.com/scholar?&as_q=#{title}&as_sauthors=#{author}"
 page = open(url).read
@@ -31,6 +29,7 @@ unless a == []
   out = ''
   c = 0
   File.open("gscholar-tmp","w") do |f|
+    f << "#{d.cite_key.key}\n"
     items.each do |item|
       c += 1
       out << "#{c}: #{item[:title]}\n"

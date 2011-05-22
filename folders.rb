@@ -1,10 +1,11 @@
+# encoding: UTF-8
 require 'find'
 require 'fileutils'
 require './library'
 
 #######################################################################
-searchpath = "MA/"  
-TITLE = "Raw notes from research on Top Level Courses Project"
+searchpath = "../kindle/Clippings"  
+TITLE = "Raw Kindle clippings"
 OUT = "/Users/stian/src/folders2web/out/"
 layout = 3
 #######################################################################
@@ -21,7 +22,7 @@ def sanitize_filename(filename)
 end
 
 def skip?(filename)
-  true if ['index.html','Images'].index(filename) || filename[0..1] == '.'
+  true if ['index.html','Images','.png','.jpg','.gif','dirs.html'].index(filename) || filename[0..1] == '.'
 end
 
 def clean_name(path) # takes full path, moves file, returns new rel path and display name

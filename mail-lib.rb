@@ -1,10 +1,12 @@
+# encoding: UTF-8
 require 'mail'
 require 'yaml'
 
 # helper function for emailing stuff to Kindle, etc
 def mail_file(file)
+  curpath = File.dirname(File.expand_path(__FILE__)) + "/"
   # get passwords and email
-  conf = YAML::load(File.read("config.yaml"))
+  conf = YAML::load(File.read(curpath + "config.yaml"))
 
   # we're using GMail
   options = { :address              => "smtp.gmail.com",

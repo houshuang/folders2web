@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'pp'
 require 'rubygems'
 require 'appscript'

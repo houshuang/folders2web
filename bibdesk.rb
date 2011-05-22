@@ -1,6 +1,9 @@
+# encoding: UTF-8
+curpath = File.dirname(File.expand_path(__FILE__)) + "/"
 require 'pp'
 require 'rubygems'
 require 'appscript'
+require curpath + 'wiki-lib'
 include Appscript
 
 # grabs the name of the currently open Skim file, uses skimnotes to extract notes and highlights to a text file,
@@ -11,17 +14,7 @@ dt = app('BibDesk')
 d = dt.document.selection.get[0]
 d.each do |dd|
   docu = dd.cite_key.get
-  
-  # check if main page exists, and if not, create it
-  unless File.exists?("/wiki/data/pages/ref/#{docu}.txt")
-    bibtex =dd.BibTeX_string.get.gsub(/Bdsk(.+?)$/,"")
-    bibtex =dd.BibTeX_string.get.gsub(/\Abstract(.+?)$/,"")
-    bibtex =dd.BibTeX_string.get.gsub(/\n\n/,"\n")
-    title = dd.title.get.gsub("{","").gsub("}","")
-    File.open('/tmp/bibdesktmp', 'w') {|f| f << "h1. #{title}\n\n<hidden BibTex>\n  #{bibtex}\n</hidden>\n\n{{page>notes:#{docu}}}\n\n{{page>clip:#{docu}}}"}  
-    `/wiki/bin/dwpage.php -m 'Automatically generated from Bibdesk' commit /tmp/bibdesktmp 'ref:#{docu}'`
-  end
-  
+  ensure_refpage(docu)
   # open it in the default browser
   `open http://localhost/wiki/ref:#{docu}`
 end

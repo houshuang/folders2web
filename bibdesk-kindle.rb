@@ -1,6 +1,8 @@
+# encoding: UTF-8
+curpath = File.dirname(File.expand_path(__FILE__)) + "/"
 require 'rubygems'
 require 'appscript'
-require './mail-lib'
+require curpath + 'mail-lib'
 include Appscript
 
 # grabs the name of the currently open Skim file, uses skimnotes to extract notes and highlights to a text file,

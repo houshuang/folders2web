@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def indexhtml(title,layout)
 
   if layout == 2

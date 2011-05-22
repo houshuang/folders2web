@@ -12,7 +12,8 @@ end
 
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
 a = File.open("gscholar-tmp").readlines
-url = a[ARGV[0].to_i-1]
+citekey  = a[0]
+url = a[ARGV[0].to_i]
 
 domain = url.scan(/http:\/\/(.+?)\//)[0][0]
 
@@ -21,7 +22,7 @@ domain = url.scan(/http:\/\/(.+?)\//)[0][0]
 download(url, "/tmp/pdftmp.pdf")
 
 dt = app('BibDesk')
-d = dt.document.selection.get[0]
+d = dt.search({:for=>citekey})
 
 f = MacTypes::FileURL.path('/tmp/pdftmp.pdf')
 d[0].linked_files.add(f,{:to =>d[0]})
