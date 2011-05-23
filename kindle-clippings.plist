@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd >
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>kindle-clippings</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Volumes/Home/stian/src/folders2web/kindle-mount.sh</string>
+	</array>
+	<key>StartOnMount</key>
+	<true/>
+</dict>
+</plist>
