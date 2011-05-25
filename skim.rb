@@ -48,4 +48,5 @@ File.open("/tmp/skimtmp", "w") {|f| f << out}
 `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
 
 ensure_refpage(docu)
+make_newimports_page([docu])
 `open http://localhost/wiki/ref:#{docu}`

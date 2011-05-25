@@ -29,7 +29,7 @@ unless a == []
   out = ''
   c = 0
   File.open("gscholar-tmp","w") do |f|
-    f << "#{d.cite_key.key}\n"
+    f << "#{d[0].cite_key.get}\n"
     items.each do |item|
       c += 1
       out << "#{c}: #{item[:title]}\n"

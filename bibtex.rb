@@ -10,11 +10,17 @@ b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
 b.parse_names
 
 out = "h1. Bibliography\n\n^Note name ^ Note text ^\n"
+out1 = ''
+out2 = ''
 b.each do |item|
   cit = CiteProc.process item.to_citeproc, :style => :apa
-  out << "| :ref:#{item.key} | #{cit}|\n"
+  if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
+  out1 << "| [[:ref:#{item.key}|:ref:#{item.key}]] | #{cit}|\n"
+else
+  out2 << "| :ref:#{item.key} | #{cit}|\n"
 end
-
+end
+out << out1 << out2
   File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
   `/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:bibliography'`
 

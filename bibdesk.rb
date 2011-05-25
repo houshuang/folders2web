@@ -12,12 +12,16 @@ include Appscript
 
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
+dt.document.save
+ary = Array.new
 d.each do |dd|
   docu = dd.cite_key.get
+  ary << docu unless File.exists?("/wiki/data/pages/ref/#{docu}.txt")
   ensure_refpage(docu)
   # open it in the default browser
-  `open http://localhost/wiki/ref:#{docu}`
 end
+`open http://localhost/wiki/ref:#{d[0].cite_key.get}`
+make_newimports_page(ary)
 
 #   
 #   @inproceedings{stahl2002contributions,
