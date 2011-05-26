@@ -47,9 +47,10 @@ if File.exists?("/tmp/skim-screenshots-tmp")
   a = File.readlines("/tmp/skim-screenshots-tmp")
   out << "\nh2. Images\n\n"
   c = 0
-  a.each do |f|
+  a.each do |line|
+    f,pg = line.split(",")
     `mv "#{f.strip}" "/wiki/data/media/skim/#{Citekey}#{c.to_s}.png"`
-    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n"
+    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg}|p. #{pg}]]<html><hr></html>\n\n"
     c += 1
   end
   `rm "/tmp/skim-screenshots-tmp"`
