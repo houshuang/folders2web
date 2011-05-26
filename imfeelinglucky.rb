@@ -1,5 +1,10 @@
 require 'pp'
 require 'open-uri'
+require 'yaml'
+
+curpath = File.dirname(File.expand_path(__FILE__)) + "/"
+conf = YAML::load(File.read(curpath + "config.yaml"))
+
 
 def json_parse(json)
   null=nil
@@ -17,9 +22,8 @@ else
   stext = search
   searchphrase = search
 end
-
-a = open("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&hl=en&q=#{searchphrase}").read
-
+a = open("https://www.googleapis.com/customsearch/v1?key=#{conf["googleapi"]}&q=#{searchphrase}").read
+pp a
 out = ''
 c =0 
 File.open("/tmp/imfeelinglucky-tmp",'w') do |file|

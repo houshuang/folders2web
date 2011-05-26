@@ -6,66 +6,48 @@ require 'pp'
 
 # batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
 
-b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
-b.parse_names
+def nice(name)
+  return "#{name.first} #{name.last}"
+end
+
+b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib");nil
+b.parse_names;nil
 
 out = "h1. Bibliography\n\n^Note name ^ Note text ^\n"
 out1 = ''
 out2 = ''
+authors = Hash.new
 b.each do |item|
+  item.author.each do |a|
+    authors[nice(a)] = Array.new unless authors[nice(a)]
+    authors[nice(a)] << item.key
+  end
+
   cit = CiteProc.process item.to_citeproc, :style => :apa
   if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
-  out1 << "| [[:ref:#{item.key}|:ref:#{item.key}]] | #{cit}|\n"
-else
-  out2 << "| :ref:#{item.key} | #{cit}|\n"
+    out1 << "| [[:ref:#{item.key}|:ref:#{item.key}]] | #{cit}|\n"
+  else
+    out2 << "| :ref:#{item.key} | #{cit}|\n"
+  end
 end
-end
-out << out1 << out2
+File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
+`/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:Bibliography'`
+
+authors.each do |author, pubs|
+  out = "h2. #{author}'s publications\n\n"
+  pubs.each do |i|
+    item = b[i]
+    cit = CiteProc.process item.to_citeproc, :style => :apa
+    if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
+      out1 << "| [[:ref:#{item.key}|:ref:#{item.key}]] | #{cit}|\n"
+    else
+      out2 << "| :ref:#{item.key} | #{cit}|\n"
+    end
+  end
+
+  out << out1 << out2
   File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
-  `/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:bibliography'`
-
-
-# bib = BibTeX::Bibliography.new
-# bib << BibTeX::Entry.new({
-#   :type => :book,
-#   :key => :rails,
-#   :address => 'Raleigh, North Carolina',
-#   :author => 'Ruby, Sam and Thomas, Dave, and Hansson, David Heinemeier',
-#   :booktitle => 'Agile Web Development with Rails',
-#   :edition => 'third',
-#   :keywords => 'ruby, rails',
-#   :publisher => 'The Pragmatic Bookshelf',
-#   :series => 'The Facets of Ruby',
-#   :title => 'Agile Web Development with Rails',
-#   :year => '2009'
-# })
-# book = BibTeX::Entry.new
-# book.type = :book
-# book.key = :mybook
-# bib << book
-# bib.parse_names
-# pp bib[:rails].author
-
-# examples
-# >> require 'citeproc'  # requires the citeproc-ruby gem
-# => true
-#     >> CiteProc.process b[:pickaxe].to_citeproc, :style => :apa
-#     => "Thomas, D., Fowler, C., & Hunt, A. (2009). Programming Ruby 1.9:
-#       The Pragmatic Programmer's Guide. The Facets of Ruby.
-#       Raleigh, North Carolina: The Pragmatic Bookshelf."
-#     >> CiteProc.process b[:pickaxe].to_citeproc, :style => 'chicago-author-date'
-#     => "Thomas, Dave, Chad Fowler, and Andy Hunt. 2009. Programming Ruby 1.9:
-#       The Pragmatic Programmer's Guide. The Facets of Ruby.
-#       Raleigh, North Carolina: The Pragmatic Bookshelf."
-#     >> CiteProc.process b[:pickaxe].to_citeproc, :style => :mla
-#     => "Thomas, Dave, Chad Fowler, and Andy Hunt. Programming Ruby 1.9:
-#       The Pragmatic Programmer's Guide. Raleigh, North Carolina:
-#       The Pragmatic Bookshelf, 2009."
-
-# >> BibTeX.parse(<<-END)[1].author.map(&:last)
-#    @string{ ht = "Nathaniel Hawthorne" }
-#    @book{key,
-#      author = ht # " and Melville, Herman"
-#    }
-#    END
-# => ["Hawthorne", "Melville"]
+  `/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'abib:#{author}'`
+  puts author
+  out = out1 = out2 = ''
+end
