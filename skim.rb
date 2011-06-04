@@ -57,9 +57,9 @@ if File.exists?("/tmp/skim-screenshots-tmp")
     c += 1
   end
   `rm "/tmp/skim-screenshots-tmp"`
+  File.open("/tmp/skimtmp", "w") {|f| f << out}
+  `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
 end
-File.open("/tmp/skimtmp", "w") {|f| f << out}
-`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
 
 ensure_refpage(docu)
 make_newimports_page([docu])
