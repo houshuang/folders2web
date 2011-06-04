@@ -16,6 +16,7 @@ docu = dt.document.name.get[0][0..-5]
 
 # format notes
 a = File.readlines("/Volumes/Home/stian/Documents/Bibdesk/#{docu}.txt") 
+`rm "/Volumes/Home/stian/Documents/Bibdesk/#{docu}.txt"`
 text=''
 lineno=nil
 Citekey = docu
@@ -42,10 +43,12 @@ a.each do |line|
 end
 highlight = (type == "Text Note" ? "**" : "")
 out << format(text,lineno,type)
+File.open("/tmp/skimtmp", "w") {|f| f << out}
+`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
 
 if File.exists?("/tmp/skim-screenshots-tmp")
   a = File.readlines("/tmp/skim-screenshots-tmp")
-  out << "\nh2. Images\n\n"
+  out = "h2. Images\n\n"
   c = 0
   a.each do |line|
     f,pg = line.split(",")
@@ -56,8 +59,7 @@ if File.exists?("/tmp/skim-screenshots-tmp")
   `rm "/tmp/skim-screenshots-tmp"`
 end
 File.open("/tmp/skimtmp", "w") {|f| f << out}
-
-`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
+`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
 
 ensure_refpage(docu)
 make_newimports_page([docu])

@@ -14,7 +14,8 @@ include Appscript
 
 app("BibDesk").document.save
 #a = File.open("/Volumes/Kindle/documents/My\ Clippings.txt")
-a = File.open("/Volumes/Home/stian/src/folders2web/My Clippings.txt")
+filename = ( ARGV[0] ? ARGV[0] : "/Volumes/Home/stian/src/folders2web/My Clippings.txt")
+a = File.open(filename)
 annotations = Hash.new
 
 def format(text,label, loc)
@@ -45,7 +46,6 @@ while !a.eof?   # until we've gone through the whole file, line by line
   annotations[title][:clippings] << {:text => content, :label => label, :loc => loc}
 end
 
-# now let's connect to DevonThink, and create the notes
 c = 0
 new_imports = Array.new
 annotations.each do |title, article|
