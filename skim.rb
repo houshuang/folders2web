@@ -1,14 +1,15 @@
 # encoding: UTF-8
 curpath = File.dirname(File.expand_path(__FILE__)) + "/"
+require curpath + 'wiki-lib'
 require 'pp'
 require 'rubygems'
 require 'appscript'
-require curpath + 'wiki-lib'
 include Appscript
 
 # grabs the name of the currently open Skim file, uses skimnotes to extract notes and highlights to a text file,
 # and inserts this as a page, using the filename as a page name, in DokuWiki. intended to be turned into a service.
 
+app('BibDesk').document.save
 dt = app('Skim')
 dt.save(dt.document)
 docu = dt.document.name.get[0][0..-5]
@@ -61,6 +62,9 @@ if File.exists?("/tmp/skim-screenshots-tmp")
   `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
 end
 
+app("BibDesk").document.search({:for =>docu})[0].fields["Read"].value.set("1")
 ensure_refpage(docu)
-make_newimports_page([docu])
+dt.save(dt.document)
+
+#make_newimports_page([docu])
 `open http://localhost/wiki/ref:#{docu}`

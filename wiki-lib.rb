@@ -16,13 +16,11 @@ end
 # ensure that main refpage exists for a given citekey, taking info from BibDesk (needs to be running,
 # maybe replace with taking info from Bibtex file eventually)
 def ensure_refpage(citekey)
-  unless false#File.exists?("/wiki/data/pages/ref/#{citekey}.txt")
+  unless File.exists?("/wiki/data/pages/ref/#{citekey}.txt")
 
     b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
     b.parse_names
     item = b[citekey.to_sym]
-    p item
-    p citekey
     citation = CiteProc.process(item.to_citeproc, :style => :apa)
     citation = "^ Citation | " + citation + " ^ <html><a href=\"javascript:var MyFrame='<frameset cols=\\'*,*\\'><frame src=\\'/wiki/notes:#{citekey}?do=edit&vecdo=print\\'><frame src=\\'/wiki/clip:#{citekey}?vecdo=print\\'></frameset>';with(document) {    write(MyFrame);};return false;\">Sidewiki</a></html>^\n^[[bibdesk://#{citekey}|BibDesk]] | ::: ^  [[skimx://#{citekey}|PDF]] ^ "
 
@@ -42,6 +40,5 @@ def make_newimports_page(ary)
     out << "| [[:ref:#{item.key}]] | #{cit}|\n"
   end
 
-  File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
-  `/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:recent_imports'`
+  File.open('/wiki/data/pages/ref/recent_imports.txt', 'w') {|f| f << out}  
 end

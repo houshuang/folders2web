@@ -8,11 +8,11 @@ include Appscript
 
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
 
+curfile =  Dir["/Volumes/Home/stian/Downloads/*.pdf"].select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop 
+
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
-out = ''
-d.each do |dd|
-  docu = dd.cite_key.get
-  out << "[[:ref:#{docu}|#{docu}]] "
-end
-`echo "#{out}" | pbcopy`
+f = MacTypes::FileURL.path(curfile)
+d[0].linked_files.add(f,{:to =>d[0]})
+d[0].auto_file
+`/usr/local/bin/growlnotify -t "PDF added" -m "File added successfully to #{d[0].cite_key.get}"`

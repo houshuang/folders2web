@@ -6,7 +6,8 @@ require 'pp'
 require 'appscript'
 include Appscript
 
-app('BibDesk').document.save
+dt = app('BibDesk')
+dt.document.save
 # batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
 
 def nice(name)
@@ -16,11 +17,12 @@ end
 b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
 b.parse_names
 
-out = "h1. Bibliography\n\n^Note name ^ Note text ^\n"
+out = "h1. Bibliography\n\n<html><table>"
 out1 = ''
 out2 = ''
 authors = Hash.new
 b.each do |item|
+
   item.author.each do |a|
     authors[nice(a)] = Array.new unless authors[nice(a)]
     authors[nice(a)] << item.key
@@ -28,12 +30,21 @@ b.each do |item|
 
   cit = CiteProc.process item.to_citeproc, :style => :apa
   if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
-    out1 << "| [[:ref:#{item.key}|:ref:#{item.key}]] | #{cit}|\n"
+    out1 << "<tr><td><a href = '/wiki/ref:#{item.key}'>#{item.key}</a></td><td>#{cit}</td></tr>\n"
   else
-    out2 << "| :ref:#{item.key} | #{cit}|\n"
+    out2 << "<tr><td>#{item.key}</td><td>#{cit}</td></tr>\n"
   end
+  
+  # mark as read if notes exist
+  # if File.exists?("/wiki/data/pages/clip/#{item.key}.txt") || File.exists?("/wiki/data/pages/kindle/#{item.key}.txt")
+  #   dt.document.search({:for =>item.key.to_s})[0].fields["Read"].value.set("1")
+  # end
+
 end
-out << out1 << out2
+
+dt.document.save
+
+out << out1 << out2 << "</table></html>"
 File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
 `/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:Bibliography'`
 

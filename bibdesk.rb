@@ -21,7 +21,7 @@ d.each do |dd|
   # open it in the default browser
 end
 `open http://localhost/wiki/ref:#{d[0].cite_key.get}`
-make_newimports_page(ary)
+#make_newimports_page(ary)
 
 #   
 #   @inproceedings{stahl2002contributions,
