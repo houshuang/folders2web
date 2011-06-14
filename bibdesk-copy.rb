@@ -13,6 +13,7 @@ d = dt.document.selection.get[0]
 out = ''
 d.each do |dd|
   docu = dd.cite_key.get
-  out << "[[:ref:#{docu}|#{docu}]] "
+  docu.strip!
+  out << "[[:ref:#{docu}]] "
 end
 `echo "#{out}" | pbcopy`
