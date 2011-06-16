@@ -10,7 +10,7 @@ else
   page = 1
 end
 
-File.open("log","a"){|f|f << "#{pdf} -- #{page}\n"}
+File.append("log", "#{pdf} -- #{page}\n")
 fname = "/Volumes/Home/stian/Documents/Bibdesk/#{pdf}.pdf"
 if File.exists?(fname)
   dt = app('Skim')
@@ -18,6 +18,5 @@ if File.exists?(fname)
   dd.go({:to => dd.pages.get[page-1]})
   dt.activate
 else
-  `/usr/local/bin/growlnotify -t "File not found" -m "Cannot find PDF #{fname}"`
+  growl("File not found", "Cannot find PDF #{fname}")
 end
-#dd = dt.open("/Volumes/Home/stian/Documents/Bibdesk/scardamalia2003knowledge.pdf")

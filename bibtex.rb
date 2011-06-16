@@ -1,14 +1,19 @@
 # encoding: UTF-8
-require 'rubygems'
+
+# batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
+
 require 'bibtex'
 require 'citeproc'
-require 'pp'
+require 'find'
 require 'appscript'
 include Appscript
 
 dt = app('BibDesk')
 dt.document.save
-# batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
+
+def sort_pubs(pubs)
+  return pubs.sort {|x,y| x.to_s.scan(/[0-9]+/)[0].to_i <=> y.to_s.scan(/[0-9]+/)[0].to_i}
+end
 
 def nice(name)
   return "#{name.first} #{name.last}".gsub(/[\{\}]/,"")
@@ -27,15 +32,24 @@ out = "h1. Bibliography\n\n<html><table>"
 out1 = ''
 out2 = ''
 authors = Hash.new
-
 json = Hash.new
+keywords = Hash.new
+
 b.each do |item|
-#  puts item.key
   ax = []
-  item.author.each do |a|
-    authors[nice(a)] = Array.new unless authors[nice(a)]
-    ax << a.last.gsub(/[\{\}]/,"")
-    authors[nice(a)] << item.key
+  if item.respond_to? :author
+    item.author.each do |a|
+      authors[nice(a)] = Array.new unless authors[nice(a)]
+      ax << a.last.gsub(/[\{\}]/,"")
+      authors[nice(a)] << item.key
+    end
+  end
+  if item.respond_to? :keywords
+    item.keywords.split(";").each do |a|
+      a.strip!
+      keywords[a] = Array.new unless keywords[a]
+      keywords[a] << item.key
+    end    
   end
   cit = CiteProc.process item.to_citeproc, :style => :apa
   year = (defined? item.year) ? item.year.to_s : "n.d."
@@ -62,16 +76,21 @@ dt.document.save
 File.open("/wiki/lib/plugins/test/json.tmp","w"){|f| f << JSON.fast_generate(json)}
 
 out << out1 << out2 << "</table></html>"
-File.open('/tmp/bibtextmp', 'w') {|f| f << out}  
-`/wiki/bin/dwpage.php -m 'Automatically generated from BibTeX file' commit /tmp/bibtextmp 'ref:Bibliography'`
+File.open('/wiki/data/pages/bib/bibliography.txt', 'w') {|f| f << out}  
 
-out = out1 = out2 =''
+###############################################
+# generate individual files for each author
+
 
 authorlisted = Array.new
-authors.each do |author, pubs|
-  next if pubs.size < 2
+authors.each do |axx, pubs|
+  out ='' 
+  out1 = ''
+  out2 =''
+  author = axx.strip
+  next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase)
   out = "h2. #{author}'s publications\n\n"
-  pubs.each do |i|
+  sort_pubs(pubs).each do |i|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
@@ -86,12 +105,60 @@ authors.each do |author, pubs|
   authorlisted << [authorname,author,pubs.size]
   File.open("/wiki/data/pages/abib/#{authorname}.txt", 'w') {|f| f << out}  
   puts author
-  out = out1 = out2 = ''
 end
 
 File.open("/wiki/data/pages/abib/start.txt","w") do |f|
   f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications.\n\n"
-  authorlisted.each do |ax|
+  authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
     f << "  * [[#{ax[0]}|#{ax[1]}]] (#{ax[2]})\n"
   end
 end
+
+###############################################
+# generate individual files for each keyword
+
+
+keywordslisted = Array.new
+keywords.each do |keyword, pubs|
+  out ='' 
+  out1 = ''
+  out2 =''
+  out = "h2. Publications with keyword \"#{keyword}\"\n\n"
+  sort_pubs(pubs).each do |i|
+    item = b[i]
+    cit = CiteProc.process item.to_citeproc, :style => :apa
+    if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
+      out1 << "| [[..:ref:#{item.key}]] | #{cit}|\n"
+    else
+      out2 << "| #{item.key} | #{cit}|\n"
+    end
+  end
+
+  out << out1 << out2
+  kwname = keyword.gsub(/[\,\.\/ ]/,"_").downcase
+  keywordslisted << [kwname,keyword,pubs.size]
+  File.open("/wiki/data/pages/kbib/#{kwname}.txt", 'w') {|f| f << out}  
+  puts kwname
+end
+
+File.open("/wiki/data/pages/kbib/start.txt","w") do |f|
+  f << "h1. List of publication keywords\n\n"
+  keywordslisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
+    f << "  * [[#{ax[0]}|#{ax[1]}]] (#{ax[2]})\n"
+  end
+end
+
+###############################################
+# generate file with imported citations missing key ideas
+
+pages = Array.new
+out = "h1.Needs key ideas\n\nList of publications with clippings, which do not have key ideas.\n\n"
+
+Find.find("/wiki/data/pages/ref") do |path|
+  next unless File.file?(path)
+  fn = File.basename(path)
+  if (File.exists?("/wiki/data/pages/kindle/#{fn}") || File.exists?("/wiki/data/pages/clip/#{fn}")) && !File.exists?("/wiki/data/pages/notes/#{fn}")
+    out << "  * [@#{fn[0..-5]}]\n"
+  end
+end
+File.open("/wiki/data/pages/bib/needs_key_ideas.txt","w") {|f| f << out}

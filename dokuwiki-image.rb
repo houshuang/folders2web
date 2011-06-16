@@ -1,7 +1,9 @@
 # encoding: UTF-8
+$:.push(File.dirname($0))
 require 'pp'
 require 'appscript'
 include Appscript
+require 'utility-functions'
 
 dt = app('Google Chrome')
 cururl = dt.windows[1].get.tabs[dt.windows[1].get.active_tab_index.get].get.URL.get
@@ -9,14 +11,14 @@ wiki = cururl[22..-1]
 w,dummy = wiki.split("?")
 wikipage = w.gsub(":","_").gsub("%3A","_").gsub("%20","_").downcase
 c = 1
-curfile =  Dir["/Volumes/Home/stian/Desktop/Screen shot*"].select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop 
+curfile =  File.last_added("/Volumes/Home/stian/Desktop/Screen shot*")
 
 if curfile == nil
-  `/usr/local/bin/growlnotify -m "No screenshots available"`
+  growl("No screenshots available")
   exit
 end
 
-existingfile =  Dir["/wiki/data/media/pages/#{wikipage}#*.png"].select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop 
+existingfile =  File.last_added("/wiki/data/media/pages/#{wikipage}#*.png")
 if existingfile
   c = existingfile.scan(/\#(.)\.png/)[0][0].to_i 
   c += 1

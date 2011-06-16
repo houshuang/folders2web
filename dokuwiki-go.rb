@@ -3,6 +3,7 @@
 # Add a text field 
 $:.push(File.dirname($0))
 require 'find'
+require 'utility-functions'
 require 'Pashua'
 include Pashua
 

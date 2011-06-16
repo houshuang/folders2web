@@ -40,5 +40,5 @@ def make_newimports_page(ary)
     out << "| [[:ref:#{item.key}]] | #{cit}|\n"
   end
 
-  File.open('/wiki/data/pages/ref/recent_imports.txt', 'w') {|f| f << out}  
+  File.open('/wiki/data/pages/bib/recent_imports.txt', 'w') {|f| f << out}  
 end

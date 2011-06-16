@@ -3,6 +3,7 @@
 # with some changes by Carsten Bluem.
 
 require 'tempfile'
+require 'iconv'
 
 module Pashua
 
@@ -14,6 +15,8 @@ module Pashua
     tmp.puts script
     tmp.close
     IO.popen("'" + pbin + "' " + encoding + tmp.path).each do |s|
+#      ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
+#      s2 = ic.iconv(s + ' ')[0..-2]
       key, val = s.chomp.split('=', 2)
       res[key] = val
     end
