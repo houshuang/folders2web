@@ -1,14 +1,13 @@
 # encoding: UTF-8
-curpath = File.dirname(File.expand_path(__FILE__)) + "/"
-require 'pp'
 require 'open-uri'
-require 'appscript'
 require 'cgi'
+require 'appscript'
 include Appscript
 
-# grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference
+# looks up currently selected bibdesk publication on google scholar and presents a menu to choose from
+# idea: rewrite using pashua
 
-`/usr/local/bin/growlnotify -m "Starting lookup on Google Scholar"`
+growl("Starting lookup on Google Scholar")
 
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
@@ -28,16 +27,15 @@ unless a == []
 
   out = ''
   c = 0
-  File.open("gscholar-tmp","w") do |f|
-    f << "#{d[0].cite_key.get}\n"
-    items.each do |item|
-      c += 1
-      out << "#{c}: #{item[:title]}\n"
-      f << item[:url] << "\n"
-    end
+  f = "#{d[0].cite_key.get}\n"
+  items.each do |item|
+    c += 1
+    out << "#{c}: #{item[:title]}\n"
+    f << item[:url] << "\n"
   end
-  `/usr/local/bin/growlnotify -t "Possible hits" -m "#{out}"`
+  File.write("/tmp/gscholar-tmp",out)
+  growl("Possible hits","#{out}")
 
 else
-  `/usr/local/bin/growlnotify -m "No hits with PDFs"`
+  growl("No hits with PDFs")
 end

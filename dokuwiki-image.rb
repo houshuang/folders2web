@@ -1,9 +1,10 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
-require 'pp'
 require 'appscript'
 include Appscript
 require 'utility-functions'
+
+# Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted
 
 dt = app('Google Chrome')
 cururl = dt.windows[1].get.tabs[dt.windows[1].get.active_tab_index.get].get.URL.get
@@ -24,7 +25,7 @@ if existingfile
   c += 1
 end
 
-`mv "#{curfile.strip}" "/wiki/data/media/pages/#{wikipage}#{c.to_s}.png"`
-`touch "/wiki/data/media/pages/#{wikipage}#{c.to_s}.png"`
+`mv "#{curfile.strip}" "#{Wikipages_path}/#{wikipage}#{c.to_s}.png"`
+`touch "#{Wikipages_path}/#{wikipage}#{c.to_s}.png"`
 
 puts "{{pages:#{wikipage}#{c.to_s}.png}}"

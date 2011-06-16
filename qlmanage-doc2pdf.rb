@@ -17,7 +17,7 @@ def do_pdf(path)
     `wkhtmltopdf /tmp/qlmanage-doc2pdf-tmp.html "#{arg}.pdf"`
     app('Finder').reveal( MacTypes::FileURL.path(arg + ".pdf"))
   else
-    `/usr/local/bin/growlnotify -t "Not able to convert to PDF" -m "Preview could not convert #{file}"`
+    growl("Not able to convert to PDF", "Preview could not convert #{file}")
   end
 end
 
@@ -25,5 +25,5 @@ app('Finder').selection.get.each do |item|
   url =CGI::unescape(item.URL.get)
   do_pdf(url[16..-1])
 end
-`/usr/local/bin/growlnotify -m "Conversion complete"`
+growl("Conversion complete")
 

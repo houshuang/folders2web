@@ -53,13 +53,13 @@ end
 
 
 def pbpaste
-  IO.popen("pbcopy","w+") {|pipe| pipe << text}
+  IO.popen('pbpaste', 'r+').read
 end
 
 
 # runs pagename through php file from DokuWiki to generate a clean version
 def clean_pagename(pname)
-  return Wikipages_path + IO.popen("php #{Script_path}/clean_id.php '#{pname}'", 'r+').read + ".txt"
+  return IO.popen("php #{Script_path}/clean_id.php '#{pname}'", 'r+').read.strip
 end
 
 
@@ -86,14 +86,19 @@ def wikipage_selector(title)
     idx = fname.index(":")
     config << "cb.option = #{fname}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
   end
-  
-  return pashua_run config
+  pagetmp = pashua_run config
+
+  pagetmp['cancel'] == 1 ? nil : pagetmp['cb']
 end
 
 
 # capitalize the first letter of each word
 def capitalize_word(text)
-  text.split(/ /).each{|word| word.capitalize!}.join(" ")
+  out = Array.new
+  text.split(":").each do |t| 
+    out << t.split(/ /).each {|word| word.capitalize!}.join(" ") 
+  end
+  out.join(":")
 end
 
 
