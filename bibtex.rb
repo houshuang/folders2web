@@ -90,7 +90,7 @@ authors.each do |author, pubs|
 end
 
 File.open("/wiki/data/pages/abib/start.txt","w") do |f|
-  f << "h1.\n\nList of publications by author. Only includes authors with three or more publications.\n\n"
+  f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications.\n\n"
   authorlisted.each do |ax|
     f << "  * [[#{ax[0]}|#{ax[1]}]] (#{ax[2]})\n"
   end

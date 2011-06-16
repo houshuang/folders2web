@@ -13,16 +13,27 @@ function filter_bibtex($text) {
 	$pattern = '/\\[\\@(.*)\\]/sU';
 	preg_match_all($pattern, $text, $hits);
 	if($hits[0][0]) {   // only load bibtex file if there are some citations
-		$json =file_get_contents(dirname ( __FILE__ )."/json.tmp");
+		$json =file_get_contents("/home/houshuan/public_html/wiki/lib/plugins/test/json.tmp");
 		$t = json_decode($json,true);
 
 		foreach($hits[1] as $hit) {
 			$entry = $t[$hit];
-			$text = str_replace('[@' . $hit . ']',"<span class='tooltip_winlike'><a href='/wiki/ref:" . $hit . "'>".$entry[0].", ".$entry[1] . "</a><span class=\"tip\">".$entry[2]."</span></span>",$text);
+			if($entry[1] == ""){
+				$text = str_replace('[@' . $hit . ']',"<a href=http://wiki/ref:".$hit.">".$hit."</a>",$text);
+			} else {     
+				$text = str_replace('[@' . $hit . ']',"<span class='tooltip_winlike'><a href='/wiki/ref:" . $hit . "'>".$entry[0].", ".$entry[1]."</u></a><span class=\"tip\">".$entry[2]."</span></span></span>",$text);
+				}      
+
+
 		}
+		return $text;
 	}
-	return $text;
 }
 
+    function add_my_stylesheet() {
+		wp_enqueue_style( 'sbibtex', WP_PLUGIN_URL .'/sbibtex/sbibtex.css');
+	}
 add_filter ( 'the_content', 'filter_bibtex');
+add_action('wp_print_styles', 'add_my_stylesheet');
+
 ?>

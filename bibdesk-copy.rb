@@ -14,6 +14,6 @@ out = ''
 d.each do |dd|
   docu = dd.cite_key.get
   docu.strip!
-  out << "[[:ref:#{docu}]] "
+  out << "[@#{docu}] "
 end
-`echo "#{out}" | pbcopy`
+IO.popen("pbcopy","w+") {|pipe| pipe << out.strip}
