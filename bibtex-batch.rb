@@ -35,7 +35,7 @@ end
 b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
 b.parse_names
 
-out = "h1. Bibliography\n\n<html><table>"
+out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.<html><table>"
 out1 = ''
 out2 = ''
 authors = Hash.new
@@ -95,7 +95,7 @@ authors.each do |axx, pubs|
   out1 = ''
   out2 =''
   author = axx.strip
-  next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase)
+  next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase || author[1] == '.')
   out = "h2. #{author}'s publications\n\n"
   sort_pubs(pubs).each do |i|
     item = b[i]
@@ -108,16 +108,20 @@ authors.each do |axx, pubs|
   end
 
   out << out1 << out2
-  authorname = author.gsub(" ","_").downcase
+  authorname = clean_pagename(author)
   authorlisted << [authorname,author,pubs.size]
   File.open("/wiki/data/pages/abib/#{authorname}.txt", 'w') {|f| f << out}  
   puts author
 end
 
 File.open("/wiki/data/pages/abib/start.txt","w") do |f|
-  f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications.\n\n"
+  f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications, with full names.\n\n"
   authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
-    f << "  * [[#{ax[0]}|#{ax[1]}]] (#{ax[2]})\n"
+    apage = ''
+    if File.exists?("#{Wikipages_path}/a/#{ax[0]}.txt")
+      apage = "[[:a:#{ax[0]}|author page]]"
+    end
+    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
   end
 end
 

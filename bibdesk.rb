@@ -8,7 +8,6 @@ include Appscript
 
 dt = app('BibDesk')
 d = dt.document.selection.get[0]
-dt.document.save
 ary = Array.new
 d.each do |dd|
   docu = dd.cite_key.get

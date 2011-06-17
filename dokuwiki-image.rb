@@ -19,13 +19,13 @@ if curfile == nil
   exit
 end
 
-existingfile =  File.last_added("/wiki/data/media/pages/#{wikipage}#*.png")
+existingfile =  File.last_added("#{Wikipages_path}/#{wikipage}#*.png")
 if existingfile
   c = existingfile.scan(/\#(.)\.png/)[0][0].to_i 
   c += 1
 end
 
-`mv "#{curfile.strip}" "#{Wikipages_path}/#{wikipage}#{c.to_s}.png"`
-`touch "#{Wikipages_path}/#{wikipage}#{c.to_s}.png"`
+`mv "#{curfile.strip}" "#{Wikimedia_path}/#{wikipage}#{c.to_s}.png"`
+`touch "#{Wikimedia_path}/#{wikipage}#{c.to_s}.png"`
 
 puts "{{pages:#{wikipage}#{c.to_s}.png}}"

@@ -4,6 +4,7 @@
 Growl_path = "/usr/local/bin/growlnotify"
 Wiki_path = "/wiki"
 Wikipages_path = "/wiki/data/pages"
+Wikimedia_path = "/wiki/data/media/pages"
 Home_path = "/Volumes/Home/stian"
 Script_path = "#{Home_path}/src/folders2web"
 PDF_path = "#{Home_path}/Documents/Bibdesk"
@@ -59,7 +60,18 @@ end
 
 # runs pagename through php file from DokuWiki to generate a clean version
 def clean_pagename(pname)
-  return IO.popen("php #{Script_path}/clean_id.php '#{pname}'", 'r+').read.strip
+  # only send the ones that need it to the external php script
+  if pname.downcase =~ /[^0-9a-zA-Z ]/
+    # make sure we can manually close the process, otherwise we run out of processes
+    ret = ''
+    IO.popen("php #{Script_path}/clean_id.php '#{pname}'", 'r+') do |iop|
+      iop.close_write
+      ret = iop.read
+    end
+    return ret.strip
+  else
+    return pname.gsub(" ", "_").downcase
+  end
 end
 
 
@@ -70,6 +82,7 @@ def wikipage_selector(title)
   include Pashua
   
   config = "
+  *.title = researchr
   cb.type = combobox 
   cb.label = #{title}
   cb.default = start 

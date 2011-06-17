@@ -4,6 +4,7 @@
 $:.push(File.dirname($0))
 require 'Pashua'
 include Pashua
+require 'utility-functions'
 
 config = <<EOS
 *.title = Add a new author page
