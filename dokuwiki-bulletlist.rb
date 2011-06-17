@@ -12,6 +12,8 @@ a = b.gsub(/^[\t]*\*/,"")
 # determine whether to split on newline, space or comma
 if a.scan("\n").size > 1
   splt = "\n"
+elsif a.scan(";").size > 1
+  splt = ";"
 elsif a.scan(",").size < 1
   splt = " "
 else

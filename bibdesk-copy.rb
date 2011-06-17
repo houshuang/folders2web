@@ -3,6 +3,7 @@
 $:.push(File.dirname($0))
 require 'appscript'
 require 'wiki-lib'
+require 'utility-functions'
 include Appscript
 
 # grabs the name of the currently open BibDesk file, and puts on clipboard formatted as a DokuWiki reference

@@ -6,4 +6,4 @@ require 'utility-functions'
 
 pagetmp = wikipage_selector("Jump to which page?")
 exit unless pagetmp
-`open http://localhost/wiki/#{pagetmp}`
+`open "http://localhost/wiki/#{pagetmp}"`

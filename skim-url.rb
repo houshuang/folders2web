@@ -1,5 +1,7 @@
+$:.push(File.dirname($0))
 require 'appscript'
 include Appscript
+require 'utility-functions'
 
 arg = ARGV[0][8..-1]
 if arg.index("%23")
@@ -9,12 +11,10 @@ else
   pdf = arg
   page = 1
 end
-
-File.append("log", "#{pdf} -- #{page}\n")
-fname = "/Volumes/Home/stian/Documents/Bibdesk/#{pdf}.pdf"
+fname = "#{PDF_path}/#{pdf}.pdf"
 if File.exists?(fname)
   dt = app('Skim')
-  dd = dt.open("/Volumes/Home/stian/Documents/Bibdesk/#{pdf}.pdf")
+  dd = dt.open(fname)
   dd.go({:to => dd.pages.get[page-1]})
   dt.activate
 else

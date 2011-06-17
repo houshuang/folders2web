@@ -1,15 +1,22 @@
 # encoding: UTF-8
-
-# batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
-
 require 'bibtex'
 require 'citeproc'
+$:.push(File.dirname($0))
 require 'find'
+require 'utility-functions'
 require 'appscript'
 include Appscript
 
+# batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
+
 dt = app('BibDesk')
 dt.document.save
+
+def pdfpath(citekey)
+  if File.exists?("#{PDF_path}/#{citekey.to_s}.pdf")
+    return "[[skimx://#{citekey}|PDF]]"
+  end
+end
 
 def sort_pubs(pubs)
   return pubs.sort {|x,y| x.to_s.scan(/[0-9]+/)[0].to_i <=> y.to_s.scan(/[0-9]+/)[0].to_i}
@@ -94,9 +101,9 @@ authors.each do |axx, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[..:ref:#{item.key}]] | #{cit}|\n"
+      out1 << "| [[..:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
     else
-      out2 << "| #{item.key} | #{cit}|\n"
+      out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
     end
   end
 
@@ -117,7 +124,6 @@ end
 ###############################################
 # generate individual files for each keyword
 
-
 keywordslisted = Array.new
 keywords.each do |keyword, pubs|
   out ='' 
@@ -128,9 +134,9 @@ keywords.each do |keyword, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[..:ref:#{item.key}]] | #{cit}|\n"
+      out1 << "| [[..:ref:#{item.key}]] | #{cit}| #{pdfpath(item.key)} |\n"
     else
-      out2 << "| #{item.key} | #{cit}|\n"
+      out2 << "| #{item.key} | #{cit} | #{pdfpath(item.key)}|\n"
     end
   end
 
