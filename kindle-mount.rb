@@ -49,9 +49,10 @@ end
 c = 0
 new_imports = Array.new
 annotations.each do |title, article|
-  next unless title =~ /\[(.+?)\] \((.+?)\)$/
+  next unless title =~ /\[\@?(.+?)\] \((.+?)\)$/
   citekey = $1
   puts $1
+  app("BibDesk").document.search({:for =>citekey})[0].fields["Read"].value.set("1")
   #next if File.exists?("/wiki/data/pages/kindle/#{citekey}.txt")
   new_imports << citekey
   c += 1
