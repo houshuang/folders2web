@@ -1,12 +1,9 @@
 #!/usr/bin/ruby
 # encoding: UTF-8
 
-#File.open("/Volumes/Home/stian/src/folders2web/kindle","a"){|f| f<<Time.now.to_s << File.exists?("/Volumes/Kindle").to_s <<"\n"}
-# encoding: UTF-8
-require 'pp'
+$:.push(File.dirname($0))
 require 'rubygems'
-curpath = File.dirname(File.expand_path(__FILE__)) + "/"
-require curpath + 'wiki-lib'
+require 'wiki-lib'
 require 'appscript'
 include Appscript
 

@@ -3,14 +3,17 @@ $:.push(File.dirname($0))
 require 'appscript'
 include Appscript
 require 'utility-functions'
+require 'pp'
 
 # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
 
-pagetmp = wikipage_selector("Which wikipage do you want to add text to?")
-
+pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
+xb.type = checkbox
+xb.label = only insert link to this page
+xb.tooltip = Otherwise, it will take the currently selected text and insert")
 exit if pagetmp["cancel"] == 1
+onlylink = true if pagetmp['xb'] == "1"
 pagename = pagetmp['cb'].strip
-
 pagepath = Wikipages_path + "/" + clean_pagename(pagename) + ".txt"
 pagepath.gsub!(":","/")
 
@@ -25,20 +28,25 @@ elsif cururl.index("localhost/wiki")
   curpage = "[[#{capitalize_word(curpage.gsub("_", " "))}]]"
 else
   title = dt.windows[1].get.tabs[dt.windows[1].get.active_tab_index.get].get.title.get
-  curpage ="[[#{cururl}|#{title[0..50]}]]"
+  curpage ="[[#{cururl}|#{title}]]"
 end
 
-insert = utf8safe(pbpaste)
+insert = (onlylink ? "  *" : utf8safe(pbpaste) )
 
 if File.exists?(pagepath)
-  f = File.read(pagepath) + "\n\n<html><hr></html>\n\n"
+  f = File.read(pagepath) 
   growltext = "Selected text added to #{pagename}"
+  if f.index("id=clippings")
+    hr = "\n"
+  else
+    hr = "\n\n<html><hr id=clippings></html>\n\n"
+  end
 else
   f = "h1. "+ capitalize_word(pagename) + "\n\n"
+  hr = ""
   growltext = "Selected text added to newly created #{pagename}"
 end
-
-filetext = f + insert.gsub("\n","\n\n").gsub("\n\n\n","\n\n") + " " + curpage
+filetext = f + hr + insert.gsub("\n","\n\n").gsub("\n\n\n","\n\n") + " " + curpage
 
 dwpage(pagename, filetext)
 growl("Text added", growltext)

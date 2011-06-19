@@ -1,8 +1,10 @@
 # encoding: UTF-8
+$:.push(File.dirname($0))
 require 'open-uri'
 require 'cgi'
 require 'appscript'
 include Appscript
+require 'utility-functions'
 
 # looks up currently selected bibdesk publication on google scholar and presents a menu to choose from
 # idea: rewrite using pashua
@@ -33,7 +35,7 @@ unless a == []
     out << "#{c}: #{item[:title]}\n"
     f << item[:url] << "\n"
   end
-  File.write("/tmp/gscholar-tmp",out)
+  File.write("/tmp/gscholar-tmp",f)
   growl("Possible hits","#{out}")
 
 else

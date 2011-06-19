@@ -1,7 +1,6 @@
 # encoding: UTF-8
-curpath = File.dirname(File.expand_path(__FILE__)) + "/"
-require curpath + 'wiki-lib'
-require 'pp'
+$:.push(File.dirname($0))
+require 'wiki-lib'
 require 'rubygems'
 require 'appscript'
 include Appscript

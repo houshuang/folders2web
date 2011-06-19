@@ -1,7 +1,7 @@
 # encoding: UTF-8
+$:.push(File.dirname($0))
 require 'bibtex'
 require 'citeproc'
-$:.push(File.dirname($0))
 require 'find'
 require 'utility-functions'
 require 'appscript'
@@ -20,16 +20,6 @@ end
 
 def sort_pubs(pubs)
   return pubs.sort {|x,y| x.to_s.scan(/[0-9]+/)[0].to_i <=> y.to_s.scan(/[0-9]+/)[0].to_i}
-end
-
-def nice(name)
-  return "#{name.first} #{name.last}".gsub(/[\{\}]/,"")
-end
-
-def namify(names)
-  return names[0] if names.size == 1
-  return names[0] + " et al." if names.size > 3
-  names[0..-2].join(", ") + " & " + names[-1].to_s
 end
 
 b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")

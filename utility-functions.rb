@@ -76,7 +76,7 @@ end
 
 
 # show GUI selector listing all wiki pages, and letting user choose one, or manually enter a new one
-def wikipage_selector(title)
+def wikipage_selector(title, retfull = false, additional_code = "")
   require 'find'
   require 'pashua'
   include Pashua
@@ -90,7 +90,7 @@ def wikipage_selector(title)
   cb.tooltip = Choose from the list or enter another name
   db.type = cancelbutton
   db.label = Cancel
-  db.tooltip = Closes this window without taking action"
+  db.tooltip = Closes this window without taking action" + "\n" + additional_code
 
   # insert list of all wiki pages from filesystem into Pashua config
   Find.find(Wikipages_path) do |path|
@@ -101,7 +101,7 @@ def wikipage_selector(title)
   end
   pagetmp = pashua_run config
 
-  pagetmp['cancel'] == 1 ? nil : pagetmp['cb']
+  pagetmp['cancel'] == 1 ? nil : (retfull ? pagetmp : pagetmp['cb'] )
 end
 
 
@@ -131,9 +131,22 @@ def utf8safe(text)
   ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
   return ic.iconv(text + ' ')[0..-2]
 end
-  
+
+# wrapper around DokuWiki dwpage tool, inserts page into dokuwiki  
 def dwpage(page, text, msg = "Automatically added text")
   tmp = Time.now.to_i.to_s
   File.write("/tmp/researcher-#{tmp}.tmp", text)
   `/wiki/bin/dwpage.php -m '#{msg}' commit "/tmp/researcher-#{tmp}.tmp" '#{page}'`
+end
+
+# properly format full name, extracted from bibtex
+def nice_name(name)
+  return "#{name.first} #{name.last}".gsub(/[\{\}]/,"")
+end
+
+# properly format list of names for citation
+def namify(names)
+  return names[0] if names.size == 1
+  return names[0] + " et al." if names.size > 3
+  names[0..-2].join(", ") + " & " + names[-1].to_s
 end
