@@ -97,7 +97,7 @@ b.each do |item|
   # end
 
 end
-out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\nStatistics: Totally **#{counter[:hasref] + counter[:noref]}** publications. **#{counter[:hasref]}** publications have their own wikipages, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, **#{counter[:images]}** with images (imported from Skim) **(I)** and **#{counter[:images]}** with notes (key ideas) **(N)**.<html><table>"
+out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\nStatistics: Totally **#{counter[:hasref] + counter[:noref]}** publications, and **#{counter[:hasref]}** publications have their own wikipages. Of these, **#{counter[:images]}** with notes (key ideas) **(N)**, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, and **#{counter[:images]}** with images (imported from Skim) **(I)** and.<html><table>"
 
 dt.document.save
 
@@ -105,7 +105,7 @@ File.open("/wiki/lib/plugins/test/json.tmp","w"){|f| f << JSON.fast_generate(jso
 
 out << out1 << out2 << out3 << out4 << "</table></html>"
 File.open('/wiki/data/pages/bib/bibliography.txt', 'w') {|f| f << out}  
-exit
+
 ###############################################
 # generate individual files for each author
 
