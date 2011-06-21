@@ -53,7 +53,7 @@ if File.exists?("/tmp/skim-screenshots-tmp")
   a.each do |line|
     f,pg = line.split(",")
     `mv "#{f.strip}" "/wiki/data/media/skim/#{Citekey}#{c.to_s}.png"`
-    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg}|p. #{pg}]]<html><hr></html>\n\n"
+    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg}|p. #{pg}]]\n----\n\n"
     c += 1
   end
   `rm "/tmp/skim-screenshots-tmp"`

@@ -39,7 +39,7 @@ if File.exists?(pagepath)
   if f.index("id=clippings")
     hr = "\n"
   else
-    hr = "\n\n<html><hr id=clippings></html>\n\n"
+    hr = "\n\n----\n\n"
   end
 else
   f = "h1. "+ capitalize_word(pagename) + "\n\n"

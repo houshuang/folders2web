@@ -19,9 +19,9 @@ if curfile == nil
   exit
 end
 
-existingfile =  File.last_added("#{Wikimedia_path}/#{wikipage}#*.png")
+existingfile =  File.last_added("#{Wikimedia_path}/#{wikipage}*.png")
 if existingfile
-  c = existingfile.scan(/\#(.)\.png/)[0][0].to_i 
+  c = existingfile.scan(/(.)\.png/)[0][0].to_i 
   c += 1
 end
 

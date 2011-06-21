@@ -25,20 +25,28 @@ end
 b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
 b.parse_names
 
-out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.<html><table>"
 out1 = ''
 out2 = ''
+out3 = ''
+out4 = ''
 authors = Hash.new
 json = Hash.new
 keywords = Hash.new
+
+counter = Hash.new
+counter[:hasref] = 0
+counter[:noref] = 0
+counter[:notes] = 0
+counter[:clippings] = 0
+counter[:images] = 0
 
 b.each do |item|
   ax = []
   if item.respond_to? :author
     item.author.each do |a|
-      authors[nice(a)] = Array.new unless authors[nice(a)]
+      authors[nice_name(a)] = Array.new unless authors[nice_name(a)]
       ax << a.last.gsub(/[\{\}]/,"")
-      authors[nice(a)] << item.key
+      authors[nice_name(a)] << item.key
     end
   end
   if item.respond_to? :keywords
@@ -54,11 +62,33 @@ b.each do |item|
     year = $1
   end
   json[item.key.to_s] = [namify(ax), year, cit]
-
+  hasfiles = Array.new
+  hasfiles[4]=""
   if File.exists?("/wiki/data/pages/ref/#{item.key}.txt")
-    out1 << "<tr><td><a href = '/wiki/ref:#{item.key}'>#{item.key}</a></td><td>#{cit}</td></tr>\n"
+    counter[:hasref] += 1
+    if File.exists?("/wiki/data/pages/clip/#{item.key}.txt") || File.exists?("/wiki/data/pages/kindle/#{item.key}.txt")
+      counter[:clippings] += 1
+      hasfiles[1] = "C"
+    end
+    if File.exists?("/wiki/data/pages/skimg/#{item.key}.txt") 
+      counter[:images] += 1
+      hasfiles[2] = "I"
+    end
+    if File.exists?("/wiki/data/pages/notes/#{item.key}.txt")
+      counter[:notes] += 1 
+      hasfiles[0] = "N"
+      out1 << "<tr><td><a href = '/wiki/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+    elsif hasfiles[1] == "C"
+      out2 << "<tr><td><a href = '/wiki/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+    else
+      out3 << "<tr><td><a href = '/wiki/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+
+      
+    end
+    
   else
-    out2 << "<tr><td>#{item.key}</td><td>#{cit}</td></tr>\n"
+    counter[:noref] += 1
+    out4 << "<tr><td>#{item.key}</td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
   end
   
   # mark as read if notes exist
@@ -67,14 +97,15 @@ b.each do |item|
   # end
 
 end
+out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\nStatistics: Totally **#{counter[:hasref] + counter[:noref]}** publications. **#{counter[:hasref]}** publications have their own wikipages, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, **#{counter[:images]}** with images (imported from Skim) **(I)** and **#{counter[:images]}** with notes (key ideas) **(N)**.<html><table>"
 
 dt.document.save
 
 File.open("/wiki/lib/plugins/test/json.tmp","w"){|f| f << JSON.fast_generate(json)}
 
-out << out1 << out2 << "</table></html>"
+out << out1 << out2 << out3 << out4 << "</table></html>"
 File.open('/wiki/data/pages/bib/bibliography.txt', 'w') {|f| f << out}  
-
+exit
 ###############################################
 # generate individual files for each author
 
