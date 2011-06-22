@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf /wiki/data/cache/*
 rsync --exclude .htaccess --delete -avzPe ssh /Library/WebServer/Documents/wiki houshuan@reganmian.net:~/public_html
 ssh houshuan@reganmian.net 'chmod -R 755 ~/public_html/wiki/*; chmod 755 ~/public_html/wiki;touch ~/public_html/wiki/conf/dokuwiki.php'
 gunzip /wiki/sitemap.xml.gz
