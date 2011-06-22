@@ -142,7 +142,7 @@ File.open("/wiki/data/pages/abib/start.txt","w") do |f|
     if File.exists?("#{Wikipages_path}/a/#{ax[0]}.txt")
       apage = "[[:a:#{ax[0]}|author page]]"
     end
-    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage}&nbsp; |#{ax[2]}|\n"
+    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
   end
 end
 

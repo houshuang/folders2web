@@ -21,11 +21,18 @@ end
 
 existingfile =  File.last_added("#{Wikimedia_path}/#{wikipage}*.png")
 if existingfile
-  c = existingfile.scan(/(.)\.png/)[0][0].to_i 
+  c = existingfile.scan(/(..)\.png/)[0][0].to_i 
   c += 1
 end
 
-`mv "#{curfile.strip}" "#{Wikimedia_path}/#{wikipage}#{c.to_s}.png"`
-`touch "#{Wikimedia_path}/#{wikipage}#{c.to_s}.png"`
+pagenum = c.to_s
+pagenum = "0" + pagenum if pagenum.size == 1
+newfilename = "#{Wikimedia_path}/#{wikipage}#{pagenum}.png"
+if File.exists?(newfilename)
+  growl("Error!", "File already exists, aborting!")
+  exit
+end
+`mv "#{curfile.strip}" "#{newfilename}"`
+`touch "#{newfilename}"`
 
-puts "{{pages:#{wikipage}#{c.to_s}.png}}"
+puts "{{pages:#{wikipage}#{pagenum}.png}}"

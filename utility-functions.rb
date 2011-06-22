@@ -150,3 +150,8 @@ def namify(names)
   return names[0] + " et al." if names.size > 3
   names[0..-2].join(", ") + " & " + names[-1].to_s
 end
+
+# entire bibliography pre-parsed read in from json
+def json_bib()
+  return JSON.parse("/wiki/lib/plugins/test/json.tmp")
+end

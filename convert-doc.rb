@@ -1,33 +1,10 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
 require 'pp'
-require 'bibtex'
-require 'citeproc'
 require 'utility-functions'
 
 # processes a text file and converts all citations, and generates a bibliography - inspired by pandoc
-
-def get_citation(citekey)
-  item = B[citekey.to_sym]
-  cit = CiteProc.process item.to_citeproc, :style => :apa
-  year = (defined? item.year) ? item.year.to_s : "n.d."
-  if year == "n.d." and cit.match(/\((....)\)/) 
-    year = $1
-  end
-  ax = []
-  if item.respond_to? :author
-    item.author.each do |a|
-      ax << a.last.gsub(/[\{\}]/,"")
-    end
-  end
   
-  names = namify(ax)
-  return [cit, names, year]
-end
-  
-B = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
-B.parse_names
-
 doc = "<html><head></head><style>
 <!--
  /* Font Definitions */
@@ -64,6 +41,7 @@ div.WordSection1
 </style>
 <body>\n" +  File.read(ARGV[0])
 
+bib = json_bib
 citations = Hash.new
 doc.scan( /\@([a-zA-Z]+[0-9]+[a-zA-Z]+)/).each do |hit|
   hit = hit[0]
