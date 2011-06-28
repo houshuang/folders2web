@@ -90,7 +90,7 @@ def wikipage_selector(title, retfull = false, additional_code = "")
   cb.tooltip = Choose from the list or enter another name
   db.type = cancelbutton
   db.label = Cancel
-  db.tooltip = Closes this window without taking action" + "\n" + additional_code
+  db.tooltip = Closes this window without taking action" + "\n" + additional_code + "\n"
 
   # insert list of all wiki pages from filesystem into Pashua config
   Find.find(Wikipages_path) do |path|
