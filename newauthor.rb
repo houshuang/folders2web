@@ -20,6 +20,7 @@ puts pagetmp
 exit if pagetmp["cancel"] == 1
 page = pagetmp["cb"]
 pname = "/wiki/data/pages/a/#{clean_pagename(page)}.txt"
-File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n\n{{page>abib:#{page}}}"}
+File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]
+\n{{page>abib:#{page}}}"}
 `chmod a+rw "#{pname}"`
 `open "http://localhost/wiki/a:#{page}?do=edit"`

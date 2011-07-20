@@ -12,7 +12,7 @@ wiki = cururl[22..-1]
 w,dummy = wiki.split("?")
 wikipage = w.gsub(":","_").gsub("%3A","_").gsub("%20","_").downcase
 c = 1
-curfile =  File.last_added("#{Home_path}/Desktop/Screen shot*")
+curfile =  File.last_added("#{Home_path}/Desktop/Screen Shot*")
 
 if curfile == nil
   growl("No screenshots available")

@@ -2,7 +2,6 @@
 $:.push(File.dirname($0))
 require 'rubygems'
 require 'appscript'
-require 'wiki-lib'
 require 'utility-functions'
 include Appscript
 

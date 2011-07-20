@@ -14,6 +14,8 @@ if a.scan("\n").size > 1
   splt = "\n"
 elsif a.scan(";").size > 1
   splt = ";"
+elsif a.scan(".").size > 2
+  splt = "."
 elsif a.scan(",").size < 1
   splt = " "
 else
@@ -23,8 +25,8 @@ end
 splits = a.split(splt)
 
 # deal with situation where the last two items are delimited with "and"
-if splits.last.index("and") 
-  x,y = splits.last.split("and")
+if splits.last.index(" and ") 
+  x,y = splits.last.split(" and ")
   splits.pop
   splits << x
   splits << y
