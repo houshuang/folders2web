@@ -153,5 +153,22 @@ end
 
 # entire bibliography pre-parsed read in from json
 def json_bib()
-  return JSON.parse("/wiki/lib/plugins/test/json.tmp")
+  require 'json'
+  return JSON.parse(File.read("/wiki/lib/plugins/test/json.tmp"))
+end
+
+# given a start of a filename, and an end, looks if there are already any files existing with the filename (pre)01(post)
+# increments number with one and returns. used to generate filenames like picture01.png picture02.png etc
+def filename_in_series(pre,post)
+  existingfile =  File.last_added("#{pre}*#{post}")
+  if existingfile
+    c = existingfile.scan(/(..)#{post}/)[0][0].to_i 
+    c += 1
+  else
+    c = 1
+  end
+
+  pagenum = c.to_s
+  pagenum = "0" + pagenum if pagenum.size == 1
+  return "#{pre}#{pagenum}#{post}"
 end

@@ -3,6 +3,7 @@
 $:.push(File.dirname($0))
 require 'rubygems'
 require 'mail-lib'
+require 'utility-functions'
 require 'appscript'
 include Appscript
 

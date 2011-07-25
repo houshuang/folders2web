@@ -11,7 +11,6 @@ cururl = dt.windows[1].get.tabs[dt.windows[1].get.active_tab_index.get].get.URL.
 wiki = cururl[22..-1]
 w,dummy = wiki.split("?")
 wikipage = w.gsub(":","_").gsub("%3A","_").gsub("%20","_").downcase
-c = 1
 curfile =  File.last_added("#{Home_path}/Desktop/Screen Shot*")
 
 if curfile == nil
@@ -19,15 +18,7 @@ if curfile == nil
   exit
 end
 
-existingfile =  File.last_added("#{Wikimedia_path}/#{wikipage}*.png")
-if existingfile
-  c = existingfile.scan(/(..)\.png/)[0][0].to_i 
-  c += 1
-end
-
-pagenum = c.to_s
-pagenum = "0" + pagenum if pagenum.size == 1
-newfilename = "#{Wikimedia_path}/#{wikipage}#{pagenum}.png"
+newfilename = filename_in_series("#{Wikimedia_path}/#{wikipage}",".png")
 if File.exists?(newfilename)
   growl("Error!", "File already exists, aborting!")
   exit
