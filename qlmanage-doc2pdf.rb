@@ -23,8 +23,8 @@ def do_pdf(path)
 end
 
 growl("Starting conversion")
-app('Finder').selection.get.each do |item|
-  url = app('Finder').selection.get(:result_type=>:alias)[0].path # http://stackoverflow.com/questions/6976898
+app('Finder').selection.get(:result_type=>:alias).each do |item|
+  url = item.path # http://stackoverflow.com/questions/6976898
   do_pdf(url)
 end
 growl("Conversion complete")
