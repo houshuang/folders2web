@@ -18,7 +18,7 @@ if curfile == nil
   exit
 end
 
-newfilename = filename_in_series("#{Wikimedia_path}/#{wikipage}",".png")
+newfilename, pagenum = filename_in_series("#{Wikimedia_path}/#{wikipage}",".png")
 if File.exists?(newfilename)
   growl("Error!", "File already exists, aborting!")
   exit

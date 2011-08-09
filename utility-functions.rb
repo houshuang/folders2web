@@ -170,5 +170,5 @@ def filename_in_series(pre,post)
 
   pagenum = c.to_s
   pagenum = "0" + pagenum if pagenum.size == 1
-  return "#{pre}#{pagenum}#{post}"
+  return "#{pre}#{pagenum}#{post}", pagenum
 end

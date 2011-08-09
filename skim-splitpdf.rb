@@ -21,6 +21,8 @@ config = "
 fb.type = textfield
 fb.default = 1
 fb.label = Starting on page #{page}, how many pages to extract?\n
+xb.type = checkbox
+xb.label = last page number, instead of number of pages
 db.type = cancelbutton
 db.label = Cancel
 db.tooltip = Closes this window without taking action\n"
@@ -29,7 +31,12 @@ pagetmp = pashua_run config
 exit if pagetmp['cancel'] == 1 
 
 startpage = page.to_i
-endpage = pagetmp['fb'].to_i + startpage - 1
+tmppage = pagetmp['fb'].to_i
+if pagetmp['xb'] == "1"
+  endpage = tmppage
+else
+  endpage = pagetmp['fb'].to_i + startpage - 1
+end
 
 outfile = "#{Downloads_path}/#{dname[0..-5]}-split.pdf"
 

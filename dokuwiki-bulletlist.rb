@@ -34,7 +34,7 @@ end
 
 out = ''
 splits.each do |item|
-  i = item.gsub(", and","").gsub(/[\.\*]/,"").gsub(/^ *and /,"").gsub(/\.$/,"").strip
+  i = item.gsub(", and","").gsub(/[\.\*]/,"").gsub(/^ *and /,"").gsub(/\.$/,"").gsub("•","").strip
   out << "  * #{i}\n" if i.size > 0
 end
 
