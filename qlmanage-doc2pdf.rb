@@ -1,6 +1,7 @@
 # encoding: UTF-8
 # this script takes a doc file as input (or anything, really), and generates a PDF, using qlmanage and wkhtmltopdf
-
+$:.push(File.dirname($0))
+require 'utility-functions'
 require 'appscript'
 include Appscript
 require 'cgi'
@@ -21,9 +22,9 @@ def do_pdf(path)
   end
 end
 
+growl("Starting conversion")
 app('Finder').selection.get.each do |item|
-  url =CGI::unescape(item.URL.get)
-  do_pdf(url[16..-1])
+  url = app('Finder').selection.get(:result_type=>:alias)[0].path # http://stackoverflow.com/questions/6976898
+  do_pdf(url)
 end
 growl("Conversion complete")
-
