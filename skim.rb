@@ -10,16 +10,23 @@ include Appscript
 def process(type, text, page)
    if type == "Underline"
     if @out[-1].index(text.strip)
-      @out << @out.pop.gsub(text.strip,"::#{text.strip}::")
+      @out << @out.pop.gsub(text.strip,"::::#{text.strip}::::")
     else
-      type = "Text Note"
+      type = "Underline-standalone"
     end
   end
   return type == "Underline" ? "" : format(type, text, page) 
 end
 
 def format(type, text, page)
-  highlight = (type == "Text Note" ? "::" : "")
+  highlight = case type
+    when "Text Note"
+      "::"
+    when "Underline-standalone"
+      ":::"
+    else
+      ""
+  end
   return "#{highlight}#{text.strip}#{highlight} [[skimx://#{Citekey}##{page}|p. #{page}]]\n\n"
 end
 
