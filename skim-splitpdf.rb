@@ -40,5 +40,6 @@ end
 
 outfile = "#{Downloads_path}/#{dname[0..-5]}-split.pdf"
 
-`pdfmanipulate split "#{docu}" #{startpage}-#{endpage} -o #{outfile}`
+`pdfmanipulate split "#{docu}" #{startpage}-#{endpage} -o "#{outfile}"`
+puts "pdfmanipulate split \"#{docu}\" #{startpage}-#{endpage} -o \"#{outfile}\""
 growl("File extracted and put in Downloads directory")

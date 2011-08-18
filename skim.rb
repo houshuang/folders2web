@@ -15,8 +15,8 @@ docu = dt.document.name.get[0][0..-5]
 `/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{dt.document.file.get[0].to_s}`
 
 # format notes
-a = File.readlines("/Volumes/Home/stian/Documents/Bibdesk/#{docu}.txt") 
-`rm "/Volumes/Home/stian/Documents/Bibdesk/#{docu}.txt"`
+a = File.readlines("#{PDF_path}/#{docu}.txt") 
+`rm "#{PDF_path}/#{docu}.txt"`
 text=''
 lineno=nil
 Citekey = docu
@@ -53,7 +53,7 @@ if File.exists?("/tmp/skim-screenshots-tmp")
   a.each do |line|
     f,pg = line.split(",")
     `mv "#{f.strip}" "/wiki/data/media/skim/#{Citekey}#{c.to_s}.png"`
-    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg}|p. #{pg}]]\n----\n\n"
+    out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg.strip}|p. #{pg.strip}]]\n----\n\n"
     c += 1
   end
   `rm "/tmp/skim-screenshots-tmp"`
