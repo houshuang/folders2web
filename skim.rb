@@ -15,7 +15,7 @@ def process(type, text, page)
       type = "Underline-standalone"
     end
   end
-  return type == "Underline" ? "" : format(type, text, page) 
+  return type == "Underline" ? nil : format(type, text, page) 
 end
 
 def format(type, text, page)
@@ -51,7 +51,8 @@ text=''
 a.each do |line|
   if line =~ /^\* (Highlight|Text Note|Underline), page (.+?)$/
     if page != nil  # ie. don't execute the first time, only when there is a previous annotation in the system
-      @out << process(type, text, page)
+      p = process(type, text, page)
+      @out << p if p
     end
     page = $2.to_i
     type = $1
