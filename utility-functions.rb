@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # utility functions for researchr
 
 # constants
@@ -154,7 +155,7 @@ end
 # entire bibliography pre-parsed read in from json
 def json_bib()
   require 'json'
-  return JSON.parse(File.read("/wiki/lib/plugins/test/json.tmp"))
+  return JSON.parse(File.read("/wiki/lib/plugins/dokuresearchr/json.tmp"))
 end
 
 # given a start of a filename, and an end, looks if there are already any files existing with the filename (pre)01(post)
