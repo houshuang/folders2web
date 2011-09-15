@@ -13,7 +13,7 @@ function filter_bibtex($text) {
 	$pattern = '/\\[\\@(.*)\\]/sU';
 	preg_match_all($pattern, $text, $hits);
 	if($hits[0][0]) {   // only load bibtex file if there are some citations
-		$json =file_get_contents("/home/houshuan/public_html/wiki/lib/plugins/test/json.tmp");
+		$json =file_get_contents("/home/houshuan/public_html/wiki/lib/plugins/dokuresearchr/json.tmp");
 		$t = json_decode($json,true);
 
 		foreach($hits[1] as $hit) {

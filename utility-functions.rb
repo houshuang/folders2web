@@ -4,13 +4,14 @@
 # constants
 Growl_path = "/usr/local/bin/growlnotify"
 Wiki_path = "/wiki"
-Wikipages_path = "/wiki/data/pages"
-Wikimedia_path = "/wiki/data/media/pages"
+Wikipages_path = "#{Wiki_path}/data/pages"
+Wikimedia_path = "#{Wiki_path}/data/media/pages"
 Home_path = "/Volumes/Home/stian"
 Script_path = "#{Home_path}/src/folders2web"
 PDF_path = "#{Home_path}/Documents/Bibdesk"
 Bibliography = "#{Home_path}/Dropbox/Archive/Bibliography.bib"
 Downloads_path = "#{Home_path}/Downloads"
+JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"
 
 
 # shows notification on screen. one or two arguments, if one, just shows a message, if two, the first is the title
@@ -155,7 +156,7 @@ end
 # entire bibliography pre-parsed read in from json
 def json_bib()
   require 'json'
-  return JSON.parse(File.read("/wiki/lib/plugins/dokuresearchr/json.tmp"))
+  return JSON.parse(File.read(JSON_path))
 end
 
 # given a start of a filename, and an end, looks if there are already any files existing with the filename (pre)01(post)
