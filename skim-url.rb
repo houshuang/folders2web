@@ -1,7 +1,7 @@
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'appscript'
 include Appscript
-require 'utility-functions'
 
 arg = ARGV[0][8..-1]
 if arg.index("%23")

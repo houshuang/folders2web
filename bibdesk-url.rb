@@ -1,8 +1,8 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'appscript'
 include Appscript
-require 'utility-functions'
 arg = ARGV[0][10..-1]
 
 # opens a given reference as passed by bibdesk:// URL in BibDesk

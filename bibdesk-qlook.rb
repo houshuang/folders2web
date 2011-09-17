@@ -1,6 +1,6 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
-require 'pp'
+require 'utility-functions'
 require 'appscript'
 include Appscript
 

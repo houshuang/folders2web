@@ -1,8 +1,7 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
-require 'rubygems'
-require 'appscript'
 require 'utility-functions'
+require 'appscript'
 include Appscript
 
 # attaches the last added PDF in the download directory to the currently selected Bibdesk reference

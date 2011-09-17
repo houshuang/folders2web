@@ -2,9 +2,9 @@
 
 # Add a text field 
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'Pashua'
 include Pashua
-require 'utility-functions'
 
 config = <<EOS
 *.title = Add a new author page

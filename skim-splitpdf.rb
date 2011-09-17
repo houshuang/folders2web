@@ -1,7 +1,7 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
-require 'appscript'
 require 'utility-functions'
+require 'appscript'
 include Appscript
 require 'pashua'
 include Pashua

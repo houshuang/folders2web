@@ -1,3 +1,4 @@
+require 'utility-functions'
 require 'appscript'
 include Appscript
 

@@ -1,9 +1,8 @@
 # encoding: UTF-8
 
 $:.push(File.dirname($0))
-require 'rubygems'
-require 'mail-lib'
 require 'utility-functions'
+require 'mail-lib'
 require 'appscript'
 include Appscript
 

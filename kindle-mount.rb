@@ -2,7 +2,7 @@
 # encoding: UTF-8
 
 $:.push(File.dirname($0))
-require 'rubygems'
+require 'utility-functions'
 require 'wiki-lib'
 require 'appscript'
 include Appscript

@@ -1,8 +1,8 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'appscript'
 include Appscript
-require 'utility-functions'
 
 # Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted 
 

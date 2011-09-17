@@ -1,8 +1,8 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'appscript'
 include Appscript
-require 'utility-functions'
 
 # works with gscholar.rb - takes the number chosen as argument, downloads the file, and autolinks it to the publication
 

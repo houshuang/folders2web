@@ -1,10 +1,10 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'open-uri'
 require 'cgi'
 require 'appscript'
 include Appscript
-require 'utility-functions'
 
 # looks up currently selected bibdesk publication on google scholar and presents a menu to choose from
 # idea: rewrite using pashua

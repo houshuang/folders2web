@@ -1,9 +1,9 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'bibtex'
 require 'citeproc'
 require 'find'
-require 'utility-functions'
 require 'appscript'
 include Appscript
 

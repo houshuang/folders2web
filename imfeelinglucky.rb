@@ -1,4 +1,3 @@
-require 'pp'
 require 'open-uri'
 require 'yaml'
 
