@@ -77,7 +77,8 @@ def wikipage_selector(title, retfull = false, additional_code = "")
   
   config = "
   *.title = researchr
-  cb.type = combobox 
+  cb.type = combobox
+  cb.completion = 2  
   cb.label = #{title}
   cb.default = start 
   cb.width = 220 
@@ -91,7 +92,7 @@ def wikipage_selector(title, retfull = false, additional_code = "")
     next unless File.file?(path)
     fname = path[17..-5].gsub("/",":").gsub("_", " ")
     idx = fname.index(":")
-    config << "cb.option = #{fname}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
+    config << "cb.option = #{capitalize_word(fname)}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
   end
   pagetmp = pashua_run config
 
