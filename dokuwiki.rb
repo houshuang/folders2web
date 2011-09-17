@@ -98,6 +98,7 @@ def bulletlist
   puts out
 end
 
+# Present a wiki page selector and open the page selected
 def go
   require 'pashua'
   pagetmp = wikipage_selector("Jump to which page?")
