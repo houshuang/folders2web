@@ -9,6 +9,7 @@ require 'appscript'
 #### keyboard commands ####
  
 # properly formats an author list for BibDesk with " and " as separator
+# launched by ctrl+alt+cmd+P
 def authorlist
   a = pbpaste.strip
   a.force_encoding("ISO-8859-1")
@@ -25,6 +26,7 @@ def authorlist
 end
 
 # put on the clipboard a properly formatted list of references to the currently selected publications
+# launched by ctrl+alt+cmd+C
 def copy
   out = ''
 
@@ -39,6 +41,7 @@ def copy
 end
 
 # attaches the last added PDF in the download directory to the currently selected Bibdesk reference
+# launched by ctrl+alt+cmd+L
 def linkfile
   curfile =  File.last_added("#{Downloads_path}/*.pdf")
 
@@ -50,6 +53,7 @@ def linkfile
 end
 
 # uses quicklook to preview the PDF of the currently selected publication
+# launched by cmd+space
 def qlook
   file =  Selection[0].linked_files.get[0].to_s
   if File.exists?(file)
@@ -60,6 +64,7 @@ def qlook
 end
 
 # opens a given reference as passed by bibdesk:// URL in BibDesk
+# launched by bibdesk:// url in Chrome (bibdesk.app must be registered first)
 def url(argv)
   arg = argv[10..-1]
   find = BibDesk.search({:for => arg})
@@ -71,6 +76,8 @@ def url(argv)
   end
 end
 
+# makes sure that all selected citations have corresponding wiki pages, and opens the first selected citation in Chrome
+# launched by ctrl+alt+cmd+E
 def open
   require 'wiki-lib'
   ary = Array.new
