@@ -61,7 +61,7 @@ end
 
 # opens a given reference as passed by bibdesk:// URL in BibDesk
 def url(argv)
-  arg = argv[0][10..-1]
+  arg = argv[10..-1]
   find = BibDesk.search({:for => arg})
   unless find == []
     find[0].show
