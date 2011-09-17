@@ -1,5 +1,6 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
+require 'utility-functions'
 require 'wiki-lib'
 require 'appscript'
 include Appscript
@@ -27,26 +28,29 @@ def format(type, text, page)
     else
       ""
   end
-  return "#{highlight}#{text.strip}#{highlight} [[skimx://#{Citekey}##{page}|p. #{page}]]\n\n"
+  text.strip!
+  if text.scan(/[•]/).size > 1
+    text.gsub!(/[•]/, "\n  * ")
+  end
+    
+  return "#{highlight}#{text}#{highlight} [[skimx://#{Citekey}##{page}|p. #{page}]]\n\n"
 end
 
 app('BibDesk').document.save
 dt = app('Skim')
 dt.save(dt.document)
 docu = dt.document.name.get[0][0..-5]
-`/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{dt.document.file.get[0].to_s}`
-
-# format notes
-a = File.readlines("#{PDF_path}/#{docu}.txt") 
-`rm "#{PDF_path}/#{docu}.txt"`
 Citekey = docu
+filename = dt.document.file.get[0].to_s
+`/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{filename}`
+a = File.readlines("#{PDF_path}/#{docu}.txt") 
 
 page = nil
 @out = Array.new
-@out << "h2. Highlights\n\n"
 
 type = ''
 text=''
+alltext = ''
 
 a.each do |line|
   if line =~ /^\* (Highlight|Text Note|Underline), page (.+?)$/
@@ -59,12 +63,22 @@ a.each do |line|
     text = ''
   else
     text << line  # just add the text 
+    alltext << line
   end
 end
 
-@out << process(type, text, page)  # pick up the last annotation
+# calculate percentage of notes
+File.write("/tmp/skimnote-tmp", alltext)
+ntlines = `wc "/tmp/skimnote-tmp"`.split(" ")[1].to_f
+`rm "/tmp/skimnote-tmp"`
+`/usr/local/bin/pdftotext "#{filename}"`
+ftlines = `wc "#{PDF_path}/#{docu}.txt"`.split(" ")[1].to_f
+`rm "#{PDF_path}/#{docu}.txt"`
+percentage = ntlines/ftlines*100
 
-File.open("/tmp/skimtmp", "w") {|f| f << @out.join('')}
+@out << process(type, text, page)  # pick up the last annotation
+outfinal = "h2. Highlights (#{percentage.to_i}%)\n\n" + @out.join('')
+File.write("/tmp/skimtmp", outfinal)
 `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
 
 if File.exists?("/tmp/skim-screenshots-tmp")
