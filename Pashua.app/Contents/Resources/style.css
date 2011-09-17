@@ -1,0 +1,95 @@
+/*  $Id: style.css 8 2011-03-22 17:55:24Z cb $ */
+
+* {
+	color: #000;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+a {
+	text-decoration: none;
+	border-width: 1px;
+	border-style: none none solid none;
+	border-color: #BFBEBE;
+}
+
+a:hover {
+	border-style: none none solid none;
+	border-color: #7E7D7D;
+}
+
+body {
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 0.8em 0;
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	margin: 1.75em 0 0.25em 0;
+	font-size: 14px;
+	color: #414040;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+h2, h3 {
+	font-weight: normal;
+	letter-spacing: 1px;		
+}
+
+h3 {
+	font-size: 12px;
+	margin: 4px 0 2px 0;
+}
+
+div.version, div.version ul {
+	margin-left: 16px;
+}
+
+ul {
+	margin: 0 0 8px 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	padding: 0 48px 0 16px;
+	margin: 0 0 3px 0;
+	background-image:url(li.gif);
+	background-repeat: no-repeat;
+	background-position: 0 5px;
+}
+
+pre, code {
+	font-family: Monaco, Courier;
+	color: #414040;
+	font-size: 11px;
+}
+
+#canvas {
+	max-width: 650px;
+	padding: 0 8em 0 0;
+	margin: 12px auto 24px auto;
+}
+
+#head {
+	height: 34px;
+	background-image:url(bar.gif);
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
+	margin-bottom: 38px;
+}
+
+#head a {
+	border-style: none;
+}
