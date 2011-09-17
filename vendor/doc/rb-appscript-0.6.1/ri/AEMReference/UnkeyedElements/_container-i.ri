@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"_container:EFI"-AEMReference::UnkeyedElements#_container;FI"R;F:protectedo:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"ZA partial elements reference, containing element code but no keyform/keydata. A shim.;TI"UUser is never exposed to this class directly. See comments in AllElements class.;T:
+@file0FI"lib/_aem/aemreference.rb;T

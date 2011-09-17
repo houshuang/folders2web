@@ -1,5 +1,8 @@
 # encoding: UTF-8
 # utility functions for researchr
+Dir.glob(File.join(File.dirname($0), "vendor", "gems", "*", "lib")).each do |lib|
+  $LOAD_PATH.unshift(File.expand_path(lib))
+end
 
 # constants
 Growl_path = "/usr/local/bin/growlnotify"

@@ -1,0 +1,4 @@
+{:ancestors{I"LaTeX::Decode::Accents:EF[I"Decoder;FI"LaTeX::Decode::Decoder;F[I"Object;FI"Object;F[I"BasicObject;FI"LaTeX::Decode::Diacritics;F[I"LaTeX::Decode::Decoder;FI"LaTeX::Decode::Punctuation;F[@I"LaTeX::Decode::Symbols;F[@:attributes{I"LaTeX::Decode::Decoder;F[I"attr_reader map;FI"attr_reader patterns;F:class_methods{I"LaTeX::Decode::Decoder;F[I"decode;FI"decode!;FI"inherited;FI"map;FI"patterns;FI"subclasses;FI"
+LaTeX;F[I"decode;FI"to_unicode;F:encodingIu:Encoding
+UTF-8;F:instance_methods{I"Object;F[I"ruby_18;FI"ruby_19;FI"LaTeX::Decode::Base;F[I"normalize;FI"strip_braces;F:modules[I"
+LaTeX;FI"LaTeX::Decode;FI"LaTeX::Decode::Accents;FI"LaTeX::Decode::Base;F@I"LaTeX::Decode::Diacritics;FI"LaTeX::Decode::Punctuation;FI"LaTeX::Decode::Symbols;F@

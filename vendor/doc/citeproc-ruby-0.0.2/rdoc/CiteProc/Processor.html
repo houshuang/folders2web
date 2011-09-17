@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CiteProc::Processor</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/citeproc/processor_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/citeproc/processor.rb">lib/citeproc/processor.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-cite">::cite</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-process">::process</a></li>
+          
+          <li><a href="#method-i-abbreviate">#abbreviate</a></li>
+          
+          <li><a href="#method-i-abbreviations">#abbreviations</a></li>
+          
+          <li><a href="#method-i-abbreviations-3D">#abbreviations=</a></li>
+          
+          <li><a href="#method-i-add_abbreviations">#add_abbreviations</a></li>
+          
+          <li><a href="#method-i-bibliography">#bibliography</a></li>
+          
+          <li><a href="#method-i-cite">#cite</a></li>
+          
+          <li><a href="#method-i-format">#format</a></li>
+          
+          <li><a href="#method-i-format-3D">#format=</a></li>
+          
+          <li><a href="#method-i-import">#import</a></li>
+          
+          <li><a href="#method-i-items">#items</a></li>
+          
+          <li><a href="#method-i-locale">#locale</a></li>
+          
+          <li><a href="#method-i-locale-3D">#locale=</a></li>
+          
+          <li><a href="#method-i-make_bibliography">#make_bibliography</a></li>
+          
+          <li><a href="#method-i-nocite">#nocite</a></li>
+          
+          <li><a href="#method-i-style-3D">#style=</a></li>
+          
+          <li><a href="#method-i-transfrom">#transfrom</a></li>
+          
+          <li><a href="#method-i-update_items">#update_items</a></li>
+          
+          <li><a href="#method-i-update_uncited_items">#update_uncited_items</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CSL.html">CSL</a></li>
+        
+          <li><a href="../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../Support.html">Support</a></li>
+        
+          <li><a href="../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CiteProc::Processor</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="formatter-attribute-method" class="method-detail">
+          <a name="formatter"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">formatter</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="style-attribute-method" class="method-detail">
+          <a name="style"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">style</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="cite-method" class="method-detail ">
+          <a name="method-c-cite"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cite</span><span
+              class="method-args">(items, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="cite-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cite</span>(<span class="ruby-identifier">items</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">process</span>(<span class="ruby-identifier">items</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'citation'</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cite-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cite-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@formatter</span> = <span class="ruby-constant">Formatter</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-c-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(items, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">items</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">return</span> <span class="ruby-string">''</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">items</span>.<span class="ruby-identifier">empty?</span>
+  
+  <span class="ruby-identifier">processor</span> = <span class="ruby-constant">Processor</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">style</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:style</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">CSL</span>.<span class="ruby-identifier">default_style</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">locale</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:locale</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">CSL</span>.<span class="ruby-identifier">default_locale</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">format</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:format</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:default</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">import</span>(<span class="ruby-identifier">items</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:mode</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/cit(e|ation)/</span>)
+    <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">cite</span>(<span class="ruby-value">:all</span>).<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:last</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">bibliography</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">join</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="abbreviate-method" class="method-detail ">
+          <a name="method-i-abbreviate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">abbreviate</span><span
+              class="method-args">(category, name, list='default')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="abbreviate-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abbreviate</span>(<span class="ruby-identifier">category</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">list</span>=<span class="ruby-string">'default'</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">abbreviations</span>[<span class="ruby-identifier">list</span>][<span class="ruby-identifier">category</span>][<span class="ruby-identifier">name</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- abbreviate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- abbreviate-method -->
+
+      
+        <div id="abbreviations-method" class="method-detail ">
+          <a name="method-i-abbreviations"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">abbreviations</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns the abbreviations, a self-recording hash.</p>
+            
+
+            
+            <div class="method-source-code" id="abbreviations-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abbreviations</span>
+  <span class="ruby-ivar">@abbreviations</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">new_abbreviations</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- abbreviations-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Processor.html#method-i-transfrom">transfrom</a>
+          </div>
+          
+
+          
+        </div><!-- abbreviations-method -->
+
+      
+        <div id="abbreviations-3D-method" class="method-detail ">
+          <a name="method-i-abbreviations-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">abbreviations=</span><span
+              class="method-args">(abbreviations)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="abbreviations-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abbreviations=</span>(<span class="ruby-identifier">abbreviations</span>)
+  <span class="ruby-ivar">@abbreviations</span> = <span class="ruby-identifier">new_abbreviations</span>
+  <span class="ruby-identifier">add_abbreviations</span>(<span class="ruby-identifier">abbreviations</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- abbreviations-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- abbreviations-3D-method -->
+
+      
+        <div id="add_abbreviations-method" class="method-detail ">
+          <a name="method-i-add_abbreviations"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_abbreviations</span><span
+              class="method-args">(abbreviations)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="add_abbreviations-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_abbreviations</span>(<span class="ruby-identifier">abbreviations</span>)
+  <span class="ruby-identifier">abbreviations</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">list</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">abbreviations</span>[<span class="ruby-identifier">list</span>].<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">category</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">abbreviations</span>[<span class="ruby-identifier">list</span>][<span class="ruby-identifier">category</span>].<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">long</span>, <span class="ruby-identifier">short</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">abbreviations</span>[<span class="ruby-identifier">list</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">new_self_recording_hash</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">abbreviations</span>[<span class="ruby-identifier">list</span>][<span class="ruby-identifier">category</span>][<span class="ruby-identifier">long</span>] = <span class="ruby-identifier">short</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_abbreviations-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_abbreviations-method -->
+
+      
+        <div id="bibliography-method" class="method-detail ">
+          <a name="method-i-bibliography"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">bibliography</span><span
+              class="method-args">(selector = :all)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="bibliography-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bibliography</span>(<span class="ruby-identifier">selector</span> = <span class="ruby-value">:all</span>)
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">items</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">select</span>(&amp;<span class="ruby-constant">Selector</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">selector</span>)).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> { <span class="ruby-string">'id'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">id</span> } }
+  <span class="ruby-identifier">data</span> = <span class="ruby-constant">CitationData</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">data</span>).<span class="ruby-identifier">populate!</span>(<span class="ruby-identifier">items</span>)
+  
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">style</span>.<span class="ruby-identifier">bibliography</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-keyword">self</span>)
+  <span class="ruby-constant">Bibliography</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">data</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- bibliography-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Processor.html#method-i-make_bibliography">make_bibliography</a>
+          </div>
+          
+
+          
+        </div><!-- bibliography-method -->
+
+      
+        <div id="cite-method" class="method-detail ">
+          <a name="method-i-cite"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cite</span><span
+              class="method-args">(data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param data Symbol :all / or id of item @param data String  id of item
+@param data Array list of ids or citation data @param data Hash citation
+data or citation items</p>
+
+<p>@returns a list of lists; [[1, ‘Doe, 2000, p. 1’], …]</p>
+            
+
+            
+            <div class="method-source-code" id="cite-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cite</span>(<span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">extract_citation_data</span>(<span class="ruby-identifier">data</span>)
+
+  <span class="ruby-identifier">data</span>.<span class="ruby-identifier">populate!</span>(<span class="ruby-identifier">items</span>)
+  <span class="ruby-identifier">citation</span> = <span class="ruby-identifier">style</span>.<span class="ruby-identifier">citation</span>.<span class="ruby-identifier">render</span>(<span class="ruby-identifier">data</span>, <span class="ruby-keyword">self</span>)
+  
+  [[<span class="ruby-identifier">register</span>(<span class="ruby-identifier">citation</span>), <span class="ruby-identifier">citation</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cite-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Processor.html#method-i-update_items">update_items</a>
+          </div>
+          
+
+          
+        </div><!-- cite-method -->
+
+      
+        <div id="format-method" class="method-detail ">
+          <a name="method-i-format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="format-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format</span>(*<span class="ruby-identifier">args</span>); <span class="ruby-ivar">@formatter</span>.<span class="ruby-identifier">format</span>(*<span class="ruby-identifier">args</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format-method -->
+
+      
+        <div id="format-3D-method" class="method-detail ">
+          <a name="method-i-format-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format=</span><span
+              class="method-args">(format)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="format-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format=</span>(<span class="ruby-identifier">format</span>); <span class="ruby-ivar">@formatter</span>.<span class="ruby-identifier">format</span> = <span class="ruby-identifier">format</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- format-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format-3D-method -->
+
+      
+        <div id="import-method" class="method-detail ">
+          <a name="method-i-import"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">import</span><span
+              class="method-args">(items)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="import-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">import</span>(<span class="ruby-identifier">items</span>)
+  <span class="ruby-comment"># TODO assign default ids if no id</span>
+  <span class="ruby-identifier">items</span> = <span class="ruby-identifier">to_a</span>(<span class="ruby-identifier">items</span>)
+  <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">item</span> = <span class="ruby-constant">Item</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">item</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">items</span>[<span class="ruby-identifier">item</span>[<span class="ruby-string">'id'</span>].<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">item</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- import-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- import-method -->
+
+      
+        <div id="items-method" class="method-detail ">
+          <a name="method-i-items"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">items</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="items-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">items</span>
+  <span class="ruby-ivar">@items</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- items-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- items-method -->
+
+      
+        <div id="locale-method" class="method-detail ">
+          <a name="method-i-locale"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locale</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="locale-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locale</span>
+  <span class="ruby-ivar">@locale</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">CSL</span>.<span class="ruby-identifier">default_locale</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locale-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locale-method -->
+
+      
+        <div id="locale-3D-method" class="method-detail ">
+          <a name="method-i-locale-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locale=</span><span
+              class="method-args">(locale)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="locale-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locale=</span>(<span class="ruby-identifier">locale</span>)
+  <span class="ruby-ivar">@locale</span> = <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">CSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Locale</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">locale</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Locale</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">locale</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locale-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locale-3D-method -->
+
+      
+        <div id="make_bibliography-method" class="method-detail method-alias">
+          <a name="method-i-make_bibliography"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_bibliography</span><span
+              class="method-args">(selector = :all)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Processor.html#method-i-bibliography">bibliography</a>
+          </div>
+          
+        </div><!-- make_bibliography-method -->
+
+      
+        <div id="nocite-method" class="method-detail ">
+          <a name="method-i-nocite"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nocite</span><span
+              class="method-args">(ids, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="nocite-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nocite</span>(<span class="ruby-identifier">ids</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-ivar">@bibliography</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">to_a</span>(<span class="ruby-identifier">ids</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">items</span>[<span class="ruby-identifier">id</span>] }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nocite-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Processor.html#method-i-update_uncited_items">update_uncited_items</a>
+          </div>
+          
+
+          
+        </div><!-- nocite-method -->
+
+      
+        <div id="style-3D-method" class="method-detail ">
+          <a name="method-i-style-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">style=</span><span
+              class="method-args">(resource)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="style-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/processor.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">style=</span>(<span class="ruby-identifier">resource</span>)
+  <span class="ruby-ivar">@style</span> = <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">CSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Style</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">resource</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Style</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">resource</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- style-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- style-3D-method -->
+
+      
+        <div id="transfrom-method" class="method-detail method-alias">
+          <a name="method-i-transfrom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">transfrom</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Processor.html#method-i-abbreviations">abbreviations</a>
+          </div>
+          
+        </div><!-- transfrom-method -->
+
+      
+        <div id="update_items-method" class="method-detail method-alias">
+          <a name="method-i-update_items"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_items</span><span
+              class="method-args">(data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Processor.html#method-i-cite">cite</a>
+          </div>
+          
+        </div><!-- update_items-method -->
+
+      
+        <div id="update_uncited_items-method" class="method-detail method-alias">
+          <a name="method-i-update_uncited_items"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_uncited_items</span><span
+              class="method-args">(ids, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Processor.html#method-i-nocite">nocite</a>
+          </div>
+          
+        </div><!-- update_uncited_items-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

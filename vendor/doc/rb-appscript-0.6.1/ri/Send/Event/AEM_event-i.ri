@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"AEM_event:EFI"Send::Event#AEM_event;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"rClients don't instantiate this class directly; instead, new instances are returned by AEM::Application#event.;T:
+@file0FI"lib/_aem/send.rb;T

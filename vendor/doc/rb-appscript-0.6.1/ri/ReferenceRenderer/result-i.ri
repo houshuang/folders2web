@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"result:EFI"ReferenceRenderer#result;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"YGenerates string representations of appscript references from aem object specifiers.;T:
+@file0FI"(lib/_appscript/referencerenderer.rb;T

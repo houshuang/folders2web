@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"doc:EFI"Nokogiri::XML::Builder#doc;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",The current Document object being built;T:
+@file0FI" lib/nokogiri/xml/builder.rb;T

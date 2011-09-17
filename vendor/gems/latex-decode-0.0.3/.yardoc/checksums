@@ -1,0 +1,15 @@
+test.rb 826ff109924c0f7db9548e2e171af635aacb849c
+ustring.c 81f34fadc3950ed6f665ede78cfcf99e895e88ec
+wstring.c 54305657e42cac22d7a045a6914580363e73ddc7
+unicode.c 23c653cb3fce0d26c91c275cea721c83d565ebe2
+extconf.rb 80a8226910f9af63f216a22d8116cc108c80c890
+tools/normtest.rb 98f64a61f6aff21845b47d42b4ffd92fba84923e
+tools/mkunidata.rb 87b5cc1ad4f23b291cf92c1a065e813aa2a5cd2a
+lib/latex/decode.rb 7431c2b850b9a8ad2d3df2f0aeba8939bf7fc6b1
+lib/latex/decode/base.rb dfadcf326ff66bae1b6b72a5f57b92660a65de3f
+lib/latex/decode/version.rb 565f566b2859e2db7fc411d1782fd1be5dd7dcb1
+lib/latex/decode/symbols.rb 16e2b94c24cf533c80691ea2571cf5c16a3f97bd
+lib/latex/decode/accents.rb ce2ba996fb8bb1631e2813e005e63bfe47ccdb8e
+lib/latex/decode/diacritics.rb 628be34e75c4cb735da1bcf11633a2ebaf7728e3
+lib/latex/decode/punctuation.rb 8070e7a93530c3e3892a34cee22aefe573e7c9ac
+lib/latex/decode/compatibility.rb 8767b03f049ce91087aa827bb45916f2dbf8ebc1

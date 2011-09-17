@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"AS_aem_reference:EFI"*Appscript::Reference#AS_aem_reference;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"dusers may occasionally require access to the following for creating workarounds to problem apps;TI"enote: calling #AS_app_data on a newly created application object will return an AppData instance;TI"Zthat is not yet fully initialised, so remember to call its #connect method before use;T:
+@file0FI"lib/appscript.rb;T

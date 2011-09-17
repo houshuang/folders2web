@@ -1,0 +1,26 @@
+Fri, 16 Sep 2011 23:35:53 -0400
+lib/citeproc/bibliography.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/data.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/date.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/formatter.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/item.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/name.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/processor.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/selector.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/variable.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc/version.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/citeproc.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/locale.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/node.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/nodes.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/renderer.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/sort.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/style.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/csl/term.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/extensions/core.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/plugins/filters/bibtex.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/plugins/formats/default.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/plugins/formats/html.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/support/attributes.rb	Fri, 16 Sep 2011 23:35:39 -0400
+lib/support/tree.rb	Fri, 16 Sep 2011 23:35:39 -0400
+README.md	Fri, 16 Sep 2011 23:35:39 -0400

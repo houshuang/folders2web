@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: INSTALL.txt [unicode_utils-1.0.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./INSTALL_txt.html">INSTALL.txt</a></li>
+        
+          <li class="file"><a href="./README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./UnicodeUtils.html">UnicodeUtils</a></li>
+        
+          <li><a href="./UnicodeUtils.html">UnicodeUtils</a></li>
+        
+          <li><a href="./UnicodeUtils/Codepoint.html">UnicodeUtils::Codepoint</a></li>
+        
+          <li><a href="./UnicodeUtils/Impl.html">UnicodeUtils::Impl</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./UnicodeUtils.html">Object::U</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<h2>Installing <a href="UnicodeUtils.html">UnicodeUtils</a></h2>
+
+<p>The easiest way to install <a href="UnicodeUtils.html">UnicodeUtils</a> is
+with RubyGems:</p>
+
+<pre>$ gem install unicode_utils</pre>
+
+<h3>Manual installation</h3>
+
+<p>Two kinds of files must be installed:</p>
+<ol><li>
+<p>The library code. All files under <tt>lib/</tt> and
+<tt>lib/unicode_utils/</tt> with suffix <tt>.rb</tt>. The whole tree under
+<tt>lib/</tt> must be on the load path.</p>
+</li><li>
+<p>The compiled Unicode data files under <tt>cdata/</tt>. <a
+href="UnicodeUtils.html">UnicodeUtils</a> loads them from the
+<tt>UnicodeUtils::CDATA_DIR</tt> directory, which is defined in
+<tt>read_cdata.rb</tt>.</p>
+</li></ol>
+
+<p>The best strategy is to copy the library files to Ruby’s
+<tt>sitelibdir</tt>. You can get that by running:</p>
+
+<pre>$ ruby -r rbconfig -e &quot;puts Config::CONFIG['sitelibdir']&quot;</pre>
+
+<p>Then copy all files under <tt>cdata/</tt> to
+<tt>&lt;sitelibdir&gt;/unicode_utils</tt>. And last but not least, change
+the definition of <tt>CDATA_DIR</tt> in
+<tt>&lt;sitelibdir&gt;/unicode_utils/read_cdata.rb</tt> to
+<tt>File.absolute_path(File.dirname(__FILE__))</tt>.</p>
+
+<p>In fact, <a href="UnicodeUtils.html">UnicodeUtils</a> comes with an
+install.rb script that does all that:</p>
+
+<pre>$ ruby install.rb install</pre>
+
+<p>or:</p>
+
+<pre>$ ruby install.rb install /some/other/dir</pre>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Term</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/csl/term_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/term.rb">lib/csl/term.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-build">::build</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-empty-3F">#empty?</a></li>
+          
+          <li><a href="#method-i-has_gender-3F">#has_gender?</a></li>
+          
+          <li><a href="#method-i-parse-21">#parse!</a></li>
+          
+          <li><a href="#method-i-pluralize">#pluralize</a></li>
+          
+          <li><a href="#method-i-singularize">#singularize</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Support/Attributes.html">Support::Attributes</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CSL.html">CSL</a></li>
+        
+          <li><a href="../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../Support.html">Support</a></li>
+        
+          <li><a href="../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Term</h1>
+
+    <div id="description" class="description">
+      
+<h2><a href="Term.html">Term</a></h2>
+
+<p>Terms are localized strings. For example, if a style specifies that the
+term “and” should be used, the string that appears in the style output
+depends on the locale: “and” for English, “und” for German. Terms are
+defined using cs:term elements, child elements of cs:terms, itself a child
+element of cs:locale. Terms are identified by the value of the name
+attribute of cs:term. Two types of terms exist: simple terms, where the
+content of the cs:term is the localized string, and compound terms, where
+cs:term includes the two child elements cs:single and cs:multiple, which
+respectively contain the singular and plural variant of the term (e.g.
+“page” and “pages”). Some terms are defined for multiple forms. In these
+cases, multiple cs:term element share the same value of name, but differ in
+the value of the optional form attribute. The different forms are:</p>
+<ul><li>
+<p>"long" - the default, e.g. "editor" and "editors" for the term "editor"</p>
+</li><li>
+<p>"short" - e.g. "ed" and "eds" for the term "editor"</p>
+</li><li>
+<p>"verb" - e.g. "edited by" for the term "editor"</p>
+</li><li>
+<p>"verb-short" - e.g. "ed" for the term "editor"</p>
+</li><li>
+<p>“symbol” - e.g. “§” for the term “section”</p>
+</li></ul>
+
+<p>The plural attribute can be set to choose either the singular (value
+“false”, the default) or plural variant (value “true”) of a term. In
+addition, the form attribute can be set to select the desired term form
+(“long” [default], “short”, “verb”, “verb-short” or “symbol”). If for a
+given term the desired form does not exist, another form may be used:
+“verb-short” reverts to “verb”, “symbol” reverts to “short”, and “verb” and
+“short” both revert to “long”.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="build-method" class="method-detail ">
+          <a name="method-c-build"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">build</span><span
+              class="method-args">(doc=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a hash containing all the terms in the given document</p>
+            
+
+            
+            <div class="method-source-code" id="build-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">build</span>(<span class="ruby-identifier">doc</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">terms</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>,<span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-constant">Term</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">k</span>) }
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">'terms term'</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span> <span class="ruby-identifier">terms</span>[<span class="ruby-identifier">term</span>[<span class="ruby-string">'name'</span>]].<span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">term</span>) } <span class="ruby-keyword">unless</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">terms</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- build-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- build-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(argument=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">argument</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">argument</span>)
+  
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+    <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">argument</span>)
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^&lt;term/</span>)
+    <span class="ruby-identifier">parse!</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">argument</span>).<span class="ruby-identifier">root</span>)
+  
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-identifier">attributes</span>[<span class="ruby-string">'name'</span>] = <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">to_s</span>
+  
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;failed to create new Term from #{ argument.inspect }&quot;</span>
+    
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="empty-3F-method" class="method-detail ">
+          <a name="method-i-empty-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">empty?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="empty-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">long</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">short</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">verb</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">verb_short</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- empty-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- empty-3F-method -->
+
+      
+        <div id="has_gender-3F-method" class="method-detail ">
+          <a name="method-i-has_gender-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_gender?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="has_gender-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_gender?</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">gender</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- has_gender-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- has_gender-3F-method -->
+
+      
+        <div id="parse-21-method" class="method-detail ">
+          <a name="method-i-parse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse!</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;failed to parse node; expected &lt;term&gt;, was: #{ node.inspect }&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'term'</span>
+  
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">'name'</span>] = <span class="ruby-identifier">node</span>[<span class="ruby-string">'name'</span>]
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">'gender'</span>] = <span class="ruby-identifier">node</span>[<span class="ruby-string">'gender'</span>]
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">node</span>[<span class="ruby-string">'form'</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">node</span>[<span class="ruby-string">'gender-form'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">'long'</span>] = <span class="ruby-constant">Hash</span>[<span class="ruby-node">%{ singular plural }</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:content</span>))]
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse-21-method -->
+
+      
+        <div id="pluralize-method" class="method-detail ">
+          <a name="method-i-pluralize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pluralize</span><span
+              class="method-args">(options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pluralize-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pluralize</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">options</span>[<span class="ruby-string">'plural'</span>] = <span class="ruby-string">'true'</span>
+  <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pluralize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pluralize-method -->
+
+      
+        <div id="singularize-method" class="method-detail ">
+          <a name="method-i-singularize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">singularize</span><span
+              class="method-args">(options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="singularize-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">singularize</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">options</span>[<span class="ruby-string">'plural'</span>] = <span class="ruby-string">'false'</span>
+  <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">options</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- singularize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- singularize-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">(options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/term.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">plural</span> = [<span class="ruby-string">''</span>, <span class="ruby-string">'false'</span>, <span class="ruby-string">'1'</span>, <span class="ruby-string">'never'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">options</span>[<span class="ruby-string">'plural'</span>].<span class="ruby-identifier">to_s</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">term</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'verb-short'</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">verb_short</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">verb</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'symbol'</span>     <span class="ruby-keyword">then</span> <span class="ruby-identifier">symbol</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">short</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'verb'</span>       <span class="ruby-keyword">then</span> <span class="ruby-identifier">verb</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'short'</span>      <span class="ruby-keyword">then</span> <span class="ruby-identifier">short</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>]] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">options</span>[<span class="ruby-string">'gender-form'</span>]] <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">masculine</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">feminine</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">neutral</span>
+  <span class="ruby-keyword">end</span> <span class="ruby-operator">||</span> {}
+  
+  <span class="ruby-identifier">plural</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">term</span>[<span class="ruby-string">'plural'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">term</span>[<span class="ruby-string">'plural'</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">term</span>[<span class="ruby-string">'singular'</span>].<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;failed to convert Term to String: #{ e.message }&quot;</span>
+  <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

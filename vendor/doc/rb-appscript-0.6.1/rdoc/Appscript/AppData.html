@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Appscript::AppData</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/appscript_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/appscript.rb">lib/appscript.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Codecs.html">AEM::Codecs</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-_display_help">#_display_help</a></li>
+          
+          <li><a href="#method-i-_init_help_agent">#_init_help_agent</a></li>
+          
+          <li><a href="#method-i-connect">#connect</a></li>
+          
+          <li><a href="#method-i-dont_cache_unpacked_specifiers">#dont_cache_unpacked_specifiers</a></li>
+          
+          <li><a href="#method-i-help">#help</a></li>
+          
+          <li><a href="#method-i-pack">#pack</a></li>
+          
+          <li><a href="#method-i-pack_hash">#pack_hash</a></li>
+          
+          <li><a href="#method-i-reference_by_code">#reference_by_code</a></li>
+          
+          <li><a href="#method-i-reference_by_name">#reference_by_name</a></li>
+          
+          <li><a href="#method-i-target">#target</a></li>
+          
+          <li><a href="#method-i-type_by_code">#type_by_code</a></li>
+          
+          <li><a href="#method-i-type_by_name">#type_by_name</a></li>
+          
+          <li><a href="#method-i-unpack_aerecord">#unpack_aerecord</a></li>
+          
+          <li><a href="#method-i-unpack_contains_comp_descriptor">#unpack_contains_comp_descriptor</a></li>
+          
+          <li><a href="#method-i-unpack_enumerated">#unpack_enumerated</a></li>
+          
+          <li><a href="#method-i-unpack_insertion_loc">#unpack_insertion_loc</a></li>
+          
+          <li><a href="#method-i-unpack_object_specifier">#unpack_object_specifier</a></li>
+          
+          <li><a href="#method-i-unpack_property">#unpack_property</a></li>
+          
+          <li><a href="#method-i-unpack_type">#unpack_type</a></li>
+          
+          <li><a href="#method-i-unpack_unknown">#unpack_unknown</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../AEMReference.html">AEMReference</a></li>
+        
+          <li><a href="../AEMReference/AND.html">AEMReference::AND</a></li>
+        
+          <li><a href="../AEMReference/AllElements.html">AEMReference::AllElements</a></li>
+        
+          <li><a href="../AEMReference/ApplicationRoot.html">AEMReference::ApplicationRoot</a></li>
+        
+          <li><a href="../AEMReference/BeginsWith.html">AEMReference::BeginsWith</a></li>
+        
+          <li><a href="../AEMReference/CollectComparable.html">AEMReference::CollectComparable</a></li>
+        
+          <li><a href="../AEMReference/ComparisonTest.html">AEMReference::ComparisonTest</a></li>
+        
+          <li><a href="../AEMReference/Contains.html">AEMReference::Contains</a></li>
+        
+          <li><a href="../AEMReference/CurrentContainer.html">AEMReference::CurrentContainer</a></li>
+        
+          <li><a href="../AEMReference/CustomRoot.html">AEMReference::CustomRoot</a></li>
+        
+          <li><a href="../AEMReference/DeferredSpecifier.html">AEMReference::DeferredSpecifier</a></li>
+        
+          <li><a href="../AEMReference/ElementByID.html">AEMReference::ElementByID</a></li>
+        
+          <li><a href="../AEMReference/ElementByIndex.html">AEMReference::ElementByIndex</a></li>
+        
+          <li><a href="../AEMReference/ElementByName.html">AEMReference::ElementByName</a></li>
+        
+          <li><a href="../AEMReference/ElementByOrdinal.html">AEMReference::ElementByOrdinal</a></li>
+        
+          <li><a href="../AEMReference/ElementByRelativePosition.html">AEMReference::ElementByRelativePosition</a></li>
+        
+          <li><a href="../AEMReference/ElementsByFilter.html">AEMReference::ElementsByFilter</a></li>
+        
+          <li><a href="../AEMReference/ElementsByRange.html">AEMReference::ElementsByRange</a></li>
+        
+          <li><a href="../AEMReference/EndsWith.html">AEMReference::EndsWith</a></li>
+        
+          <li><a href="../AEMReference/Equals.html">AEMReference::Equals</a></li>
+        
+          <li><a href="../AEMReference/GreaterOrEquals.html">AEMReference::GreaterOrEquals</a></li>
+        
+          <li><a href="../AEMReference/GreaterThan.html">AEMReference::GreaterThan</a></li>
+        
+          <li><a href="../AEMReference/InsertionSpecifier.html">AEMReference::InsertionSpecifier</a></li>
+        
+          <li><a href="../AEMReference/IsIn.html">AEMReference::IsIn</a></li>
+        
+          <li><a href="../AEMReference/LessOrEquals.html">AEMReference::LessOrEquals</a></li>
+        
+          <li><a href="../AEMReference/LessThan.html">AEMReference::LessThan</a></li>
+        
+          <li><a href="../AEMReference/LogicalTest.html">AEMReference::LogicalTest</a></li>
+        
+          <li><a href="../AEMReference/MultipleElements.html">AEMReference::MultipleElements</a></li>
+        
+          <li><a href="../AEMReference/NOT.html">AEMReference::NOT</a></li>
+        
+          <li><a href="../AEMReference/NotEquals.html">AEMReference::NotEquals</a></li>
+        
+          <li><a href="../AEMReference/OR.html">AEMReference::OR</a></li>
+        
+          <li><a href="../AEMReference/ObjectBeingExamined.html">AEMReference::ObjectBeingExamined</a></li>
+        
+          <li><a href="../AEMReference/PositionSpecifier.html">AEMReference::PositionSpecifier</a></li>
+        
+          <li><a href="../AEMReference/Property.html">AEMReference::Property</a></li>
+        
+          <li><a href="../AEMReference/Query.html">AEMReference::Query</a></li>
+        
+          <li><a href="../AEMReference/ReferenceRoot.html">AEMReference::ReferenceRoot</a></li>
+        
+          <li><a href="../AEMReference/SingleElement.html">AEMReference::SingleElement</a></li>
+        
+          <li><a href="../AEMReference/Specifier.html">AEMReference::Specifier</a></li>
+        
+          <li><a href="../AEMReference/Test.html">AEMReference::Test</a></li>
+        
+          <li><a href="../AEMReference/UnkeyedElements.html">AEMReference::UnkeyedElements</a></li>
+        
+          <li><a href="../AEMReference/UserProperty.html">AEMReference::UserProperty</a></li>
+        
+          <li><a href="../Appscript.html">Appscript</a></li>
+        
+          <li><a href="../Appscript/AppData.html">Appscript::AppData</a></li>
+        
+          <li><a href="../Appscript/AppDataAccessors.html">Appscript::AppDataAccessors</a></li>
+        
+          <li><a href="../Appscript/Application.html">Appscript::Application</a></li>
+        
+          <li><a href="../FindApp/ApplicationNotFoundError.html">Appscript::ApplicationNotFoundError</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">Appscript::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../Appscript/CommandError.html">Appscript::CommandError</a></li>
+        
+          <li><a href="../Appscript/GenericApplication.html">Appscript::GenericApplication</a></li>
+        
+          <li><a href="../Appscript/GenericReference.html">Appscript::GenericReference</a></li>
+        
+          <li><a href="../Appscript/Reference.html">Appscript::Reference</a></li>
+        
+          <li><a href="../AEM.html">AEM</a></li>
+        
+          <li><a href="../TypeWrappers/AEEnum.html">AEM::AEEnum</a></li>
+        
+          <li><a href="../TypeWrappers/AEKey.html">AEM::AEKey</a></li>
+        
+          <li><a href="../TypeWrappers/AEProp.html">AEM::AEProp</a></li>
+        
+          <li><a href="../TypeWrappers/AEType.html">AEM::AEType</a></li>
+        
+          <li><a href="../TypeWrappers/AETypeBase.html">AEM::AETypeBase</a></li>
+        
+          <li><a href="../AEM/Application.html">AEM::Application</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">AEM::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../Codecs.html">AEM::Codecs</a></li>
+        
+          <li><a href="../MacTypes.html">MacTypes</a></li>
+        
+          <li><a href="../MacTypes/Alias.html">MacTypes::Alias</a></li>
+        
+          <li><a href="../MacTypes/FileBase.html">MacTypes::FileBase</a></li>
+        
+          <li><a href="../MacTypes/FileNotFoundError.html">MacTypes::FileNotFoundError</a></li>
+        
+          <li><a href="../MacTypes/FileURL.html">MacTypes::FileURL</a></li>
+        
+          <li><a href="../MacTypes/Units.html">MacTypes::Units</a></li>
+        
+          <li><a href="../TypeWrappers.html">TypeWrappers</a></li>
+        
+          <li><a href="../TypeWrappers/AEEnum.html">TypeWrappers::AEEnum</a></li>
+        
+          <li><a href="../TypeWrappers/AEKey.html">TypeWrappers::AEKey</a></li>
+        
+          <li><a href="../TypeWrappers/AEProp.html">TypeWrappers::AEProp</a></li>
+        
+          <li><a href="../TypeWrappers/AEType.html">TypeWrappers::AEType</a></li>
+        
+          <li><a href="../TypeWrappers/AETypeBase.html">TypeWrappers::AETypeBase</a></li>
+        
+          <li><a href="../OSAX.html">OSAX</a></li>
+        
+          <li><a href="../OSAX/OSAXData.html">OSAX::OSAXData</a></li>
+        
+          <li><a href="../OSAX/ScriptingAddition.html">OSAX::ScriptingAddition</a></li>
+        
+          <li><a href="../OSAX/SdefParser.html">OSAX::SdefParser</a></li>
+        
+          <li><a href="../AEMEncodingSupport.html">AEMEncodingSupport</a></li>
+        
+          <li><a href="../AEMEncodingSupport/DisableStringEncodings.html">AEMEncodingSupport::DisableStringEncodings</a></li>
+        
+          <li><a href="../AEMEncodingSupport/EnableStringEncodings.html">AEMEncodingSupport::EnableStringEncodings</a></li>
+        
+          <li><a href="../Send.html">Send</a></li>
+        
+          <li><a href="../Send/Event.html">Send::Event</a></li>
+        
+          <li><a href="../Send/EventError.html">Send::EventError</a></li>
+        
+          <li><a href="../TerminologyParser.html">TerminologyParser</a></li>
+        
+          <li><a href="../TerminologyParser/BigEndianParser.html">TerminologyParser::BigEndianParser</a></li>
+        
+          <li><a href="../TerminologyParser/LittleEndianParser.html">TerminologyParser::LittleEndianParser</a></li>
+        
+          <li><a href="../Connect.html">Connect</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">Connect::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../FindApp.html">FindApp</a></li>
+        
+          <li><a href="../FindApp/ApplicationNotFoundError.html">FindApp::ApplicationNotFoundError</a></li>
+        
+          <li><a href="../AS_SafeObject.html">AS_SafeObject</a></li>
+        
+          <li><a href="../BigEndianConverters.html">BigEndianConverters</a></li>
+        
+          <li><a href="../BigEndianPackers.html">BigEndianPackers</a></li>
+        
+          <li><a href="../Codecs.html">Codecs</a></li>
+        
+          <li><a href="../DefaultTerminology.html">DefaultTerminology</a></li>
+        
+          <li><a href="../DisableObjectSpecifierCaching.html">DisableObjectSpecifierCaching</a></li>
+        
+          <li><a href="../KAE.html">KAE</a></li>
+        
+          <li><a href="../Module.html">Module</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../ReferenceRenderer.html">ReferenceRenderer</a></li>
+        
+          <li><a href="../SmallEndianConverters.html">SmallEndianConverters</a></li>
+        
+          <li><a href="../SmallEndianPackers.html">SmallEndianPackers</a></li>
+        
+          <li><a href="../Terminology.html">Terminology</a></li>
+        
+          <li><a href="../UnitTypeCodecs.html">UnitTypeCodecs</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Appscript::AppData</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ASDictionaryBundleID">ASDictionaryBundleID</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="ClassType">ClassType</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Constructors">Constructors</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="constructor-attribute-method" class="method-detail">
+          <a name="constructor"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">constructor</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="identifier-attribute-method" class="method-detail">
+          <a name="identifier"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">identifier</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="reference_codecs-attribute-method" class="method-detail">
+          <a name="reference_codecs"></a>
+          
+          <a name="reference_codecs="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">reference_codecs</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(aem_application_class, constructor, identifier, terms)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">aem_application_class</span>, <span class="ruby-identifier">constructor</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">terms</span>)
+        <span class="ruby-keyword">super</span>()
+        <span class="ruby-ivar">@_aem_application_class</span> = <span class="ruby-identifier">aem_application_class</span> <span class="ruby-comment"># AEM::Application class or subclass to use when constructing target</span>
+        <span class="ruby-ivar">@_terms</span> = <span class="ruby-identifier">terms</span> <span class="ruby-comment"># user-supplied terminology tables/true/false</span>
+        <span class="ruby-ivar">@constructor</span> = <span class="ruby-identifier">constructor</span> <span class="ruby-comment"># name of AEM::Application constructor to use/:by_aem_app</span>
+        <span class="ruby-ivar">@identifier</span> = <span class="ruby-identifier">identifier</span> <span class="ruby-comment"># argument for AEM::Application constructor</span>
+        <span class="ruby-ivar">@reference_codecs</span> = <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment"># low-level Codecs object used to unpack references; used by AppData#unpack_object_specifier, AppData#unpack_insertion_loc. Note: this is a bit kludgy, and it's be better to use AppData for all unpacking, but it should be 'good enough' in practice.</span>
+        <span class="ruby-ivar">@_help_agent</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="_display_help-method" class="method-detail ">
+          <a name="method-i-_display_help"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_display_help</span><span
+              class="method-args">(flags, ref)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="_display_help-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_display_help</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-identifier">ref</span>)
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-ivar">@_help_agent</span>.<span class="ruby-identifier">event</span>(<span class="ruby-string">'AppSHelp'</span>, {
+                                <span class="ruby-string">'Cons'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Constructors</span>[<span class="ruby-ivar">@constructor</span>],
+                                <span class="ruby-string">'Iden'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@identifier</span>,
+                                <span class="ruby-string">'Styl'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'rb-appscript'</span>,
+                                <span class="ruby-string">'Flag'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">flags</span>,
+                                <span class="ruby-string">'aRef'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">ref</span>),
+                        }).<span class="ruby-identifier">send</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">EventError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _display_help-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _display_help-method -->
+
+      
+        <div id="_init_help_agent-method" class="method-detail ">
+          <a name="method-i-_init_help_agent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_init_help_agent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="_init_help_agent-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_init_help_agent</span>
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-identifier">apppath</span> = <span class="ruby-constant">FindApp</span>.<span class="ruby-identifier">by_id</span>(<span class="ruby-constant">ASDictionaryBundleID</span>)
+                <span class="ruby-identifier">asdictionary_is_running</span> = <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Application</span>.<span class="ruby-identifier">process_exists_for_path?</span>(<span class="ruby-identifier">apppath</span>)
+                <span class="ruby-ivar">@_help_agent</span> = <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Application</span>.<span class="ruby-identifier">by_path</span>(<span class="ruby-identifier">apppath</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">asdictionary_is_running</span> <span class="ruby-comment"># hide ASDictionary after launching it</span>
+                        <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Application</span>.<span class="ruby-identifier">by_path</span>(<span class="ruby-constant">FindApp</span>.<span class="ruby-identifier">by_id</span>(<span class="ruby-string">'com.apple.systemevents'</span>)).<span class="ruby-identifier">event</span>(<span class="ruby-string">'coresetd'</span>, {
+                                        <span class="ruby-string">'----'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">AEM</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">elements</span>(<span class="ruby-string">'prcs'</span>).<span class="ruby-identifier">by_name</span>(<span class="ruby-string">'ASDictionary'</span>).<span class="ruby-identifier">property</span>(<span class="ruby-string">'pvis'</span>), 
+                                        <span class="ruby-string">'data'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>}).<span class="ruby-identifier">send</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">FindApp</span><span class="ruby-operator">::</span><span class="ruby-constant">ApplicationNotFoundError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;No help available: ASDictionary application not found (#{e}).&quot;</span>)
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">CantLaunchApplicationError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;No help available: can't launch ASDictionary application (#{e}).&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _init_help_agent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _init_help_agent-method -->
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-i-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span> <span class="ruby-comment"># initialize AEM::Application instance and terminology tables the first time they are needed</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-ivar">@constructor</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-value">:by_aem_app</span>
+                        <span class="ruby-ivar">@target</span> = <span class="ruby-ivar">@identifier</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-value">:current</span>
+                        <span class="ruby-ivar">@target</span> = <span class="ruby-ivar">@_aem_application_class</span>.<span class="ruby-identifier">current</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-ivar">@target</span> = <span class="ruby-ivar">@_aem_application_class</span>.<span class="ruby-identifier">send</span>(<span class="ruby-ivar">@constructor</span>, <span class="ruby-ivar">@identifier</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-ivar">@_terms</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-keyword">true</span> <span class="ruby-comment"># obtain terminology from application</span>
+                        <span class="ruby-ivar">@type_by_code</span>, <span class="ruby-ivar">@type_by_name</span>, <span class="ruby-ivar">@reference_by_code</span>, <span class="ruby-ivar">@reference_by_name</span> = <span class="ruby-constant">Terminology</span>.<span class="ruby-identifier">tables_for_app</span>(<span class="ruby-ivar">@target</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-keyword">false</span> <span class="ruby-comment"># use built-in terminology only (e.g. use this when running AppleScript applets)</span>
+                        <span class="ruby-ivar">@type_by_code</span>, <span class="ruby-ivar">@type_by_name</span>, <span class="ruby-ivar">@reference_by_code</span>, <span class="ruby-ivar">@reference_by_name</span> = <span class="ruby-constant">Terminology</span>.<span class="ruby-identifier">default_tables</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># [developer-only] make Application#methods return names of built-in methods only (needed to generate reservedkeywords.rb file)</span>
+                        <span class="ruby-ivar">@type_by_code</span>, <span class="ruby-ivar">@type_by_name</span>, <span class="ruby-ivar">@reference_by_code</span>, <span class="ruby-ivar">@reference_by_name</span> = {}, {}, {}, {}
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span> <span class="ruby-comment"># ready-to-use terminology tables</span>
+                        <span class="ruby-ivar">@type_by_code</span>, <span class="ruby-ivar">@type_by_name</span>, <span class="ruby-ivar">@reference_by_code</span>, <span class="ruby-ivar">@reference_by_name</span> = <span class="ruby-ivar">@_terms</span>
+        <span class="ruby-keyword">else</span> <span class="ruby-comment"># @_terms is [assumed to be] a module containing dumped terminology, so use that</span>
+                <span class="ruby-ivar">@type_by_code</span>, <span class="ruby-ivar">@type_by_name</span>, <span class="ruby-ivar">@reference_by_code</span>, <span class="ruby-ivar">@reference_by_name</span> = <span class="ruby-constant">Terminology</span>.<span class="ruby-identifier">tables_for_module</span>(<span class="ruby-ivar">@_terms</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">extend</span>(<span class="ruby-constant">AppDataAccessors</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="dont_cache_unpacked_specifiers-method" class="method-detail ">
+          <a name="method-i-dont_cache_unpacked_specifiers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dont_cache_unpacked_specifiers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dont_cache_unpacked_specifiers-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dont_cache_unpacked_specifiers</span>
+        <span class="ruby-ivar">@reference_codecs</span>.<span class="ruby-identifier">dont_cache_unpacked_specifiers</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dont_cache_unpacked_specifiers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dont_cache_unpacked_specifiers-method -->
+
+      
+        <div id="help-method" class="method-detail ">
+          <a name="method-i-help"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">help</span><span
+              class="method-args">(flags, ref)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="help-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">help</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-identifier">ref</span>)
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@_help_agent</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">_init_help_agent</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">e</span> = <span class="ruby-identifier">_display_help</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-identifier">ref</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">and</span> [<span class="ruby-value">-600</span>, <span class="ruby-value">-609</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">number</span>) <span class="ruby-comment"># not running</span>
+                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">_init_help_agent</span>
+                        <span class="ruby-identifier">e</span> = <span class="ruby-identifier">_display_help</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-identifier">ref</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;No help available: ASDictionary raised an error: #{e}.&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+                <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;No help available: unknown error: #{err}&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- help-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- help-method -->
+
+      
+        <div id="pack-method" class="method-detail ">
+          <a name="method-i-pack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack</span><span
+              class="method-args">(data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">data</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">GenericReference</span>)
+                <span class="ruby-identifier">data</span> = <span class="ruby-identifier">data</span>.<span class="ruby-constant">AS_resolve</span>(<span class="ruby-keyword">self</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Reference</span>)
+                <span class="ruby-identifier">data</span> = <span class="ruby-identifier">data</span>.<span class="ruby-constant">AS_aem_reference</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+                <span class="ruby-identifier">data</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type_by_name</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">data</span>) { <span class="ruby-identifier">raise</span> <span class="ruby-constant">IndexError</span>, <span class="ruby-node">&quot;Unknown Keyword: #{data.inspect}&quot;</span> }
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span>(<span class="ruby-identifier">data</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack-method -->
+
+      
+        <div id="pack_hash-method" class="method-detail ">
+          <a name="method-i-pack_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_hash</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_hash</span>(<span class="ruby-identifier">val</span>)
+        <span class="ruby-identifier">record</span> = <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new_list</span>(<span class="ruby-keyword">true</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:class_</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-constant">ClassType</span>)
+                <span class="ruby-comment"># if hash contains a 'class' property containing a class name, coerce the AEDesc to that class</span>
+                <span class="ruby-identifier">new_val</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">val</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_val</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:class_</span>)
+                        <span class="ruby-identifier">val2</span> = <span class="ruby-identifier">new_val</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:class_</span>)
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">val2</span> = <span class="ruby-identifier">new_val</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">ClassType</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">val2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-comment"># get the corresponding AEType (assuming there is one)</span>
+                        <span class="ruby-identifier">val2</span> = <span class="ruby-ivar">@type_by_name</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">val2</span>, <span class="ruby-identifier">val2</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">val2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span>) <span class="ruby-comment"># coerce the record to the desired type</span>
+                        <span class="ruby-identifier">record</span> = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">val2</span>.<span class="ruby-identifier">code</span>)
+                        <span class="ruby-identifier">val</span> = <span class="ruby-identifier">new_val</span>
+                <span class="ruby-keyword">end</span> <span class="ruby-comment"># else value wasn't a class name, so it'll be packed as a normal record property instead</span>
+        <span class="ruby-keyword">end</span>  
+        <span class="ruby-identifier">usrf</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> <span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+                        <span class="ruby-identifier">key_type</span> = <span class="ruby-ivar">@type_by_name</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">key</span>) { <span class="ruby-identifier">raise</span> <span class="ruby-constant">IndexError</span>, <span class="ruby-node">&quot;Unknown keyword: #{key.inspect}&quot;</span> }
+                        <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-identifier">key_type</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">AETypeBase</span>)
+                        <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">usrf</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+                                <span class="ruby-identifier">usrf</span> = <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new_list</span>(<span class="ruby-keyword">false</span>)
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">usrf</span>.<span class="ruby-identifier">put_item</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">key</span>))
+                        <span class="ruby-identifier">usrf</span>.<span class="ruby-identifier">put_item</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">usrf</span>
+                <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyASUserRecordFields</span>, <span class="ruby-identifier">usrf</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">record</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_hash-method -->
+
+      
+        <div id="reference_by_code-method" class="method-detail ">
+          <a name="method-i-reference_by_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reference_by_code</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reference_by_code-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reference_by_code</span>
+        <span class="ruby-identifier">connect</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reference_by_code</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reference_by_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reference_by_code-method -->
+
+      
+        <div id="reference_by_name-method" class="method-detail ">
+          <a name="method-i-reference_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reference_by_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="reference_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reference_by_name</span>
+        <span class="ruby-identifier">connect</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reference_by_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reference_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reference_by_name-method -->
+
+      
+        <div id="target-method" class="method-detail ">
+          <a name="method-i-target"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">target</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="target-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">target</span>
+        <span class="ruby-identifier">connect</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@target</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- target-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- target-method -->
+
+      
+        <div id="type_by_code-method" class="method-detail ">
+          <a name="method-i-type_by_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">type_by_code</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="type_by_code-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">type_by_code</span>
+        <span class="ruby-identifier">connect</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@type_by_code</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- type_by_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- type_by_code-method -->
+
+      
+        <div id="type_by_name-method" class="method-detail ">
+          <a name="method-i-type_by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">type_by_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="type_by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">type_by_name</span>
+        <span class="ruby-identifier">connect</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@type_by_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- type_by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- type_by_name-method -->
+
+      
+        <div id="unpack_aerecord-method" class="method-detail ">
+          <a name="method-i-unpack_aerecord"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_aerecord</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_aerecord-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_aerecord</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">dct</span> = {}
+        <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">length</span>().<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_item</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyASUserRecordFields</span>
+                        <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">unpack_aelist</span>(<span class="ruby-identifier">value</span>)
+                        (<span class="ruby-identifier">lst</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">dct</span>[<span class="ruby-identifier">lst</span>[<span class="ruby-identifier">j</span> * <span class="ruby-value">2</span>]] = <span class="ruby-identifier">lst</span>[<span class="ruby-identifier">j</span> * <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">dct</span>[<span class="ruby-ivar">@type_by_code</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">key</span>) { <span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>) }] = <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">value</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">dct</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_aerecord-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_aerecord-method -->
+
+      
+        <div id="unpack_contains_comp_descriptor-method" class="method-detail ">
+          <a name="method-i-unpack_contains_comp_descriptor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_contains_comp_descriptor</span><span
+              class="method-args">(op1, op2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_contains_comp_descriptor-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 264</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_contains_comp_descriptor</span>(<span class="ruby-identifier">op1</span>, <span class="ruby-identifier">op2</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">op1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Appscript</span><span class="ruby-operator">::</span><span class="ruby-constant">Reference</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">op1</span>.<span class="ruby-constant">AS_aem_reference</span>.<span class="ruby-constant">AEM_root</span> <span class="ruby-operator">==</span> <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">Its</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">op1</span>.<span class="ruby-identifier">contains</span>(<span class="ruby-identifier">op2</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_contains_comp_descriptor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_contains_comp_descriptor-method -->
+
+      
+        <div id="unpack_enumerated-method" class="method-detail ">
+          <a name="method-i-unpack_enumerated"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_enumerated</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_enumerated-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_enumerated</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">aem_value</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@type_by_code</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">aem_value</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">aem_value</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_enumerated-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_enumerated-method -->
+
+      
+        <div id="unpack_insertion_loc-method" class="method-detail ">
+          <a name="method-i-unpack_insertion_loc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_insertion_loc</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_insertion_loc-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_insertion_loc</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Reference</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-ivar">@reference_codecs</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_insertion_loc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_insertion_loc-method -->
+
+      
+        <div id="unpack_object_specifier-method" class="method-detail ">
+          <a name="method-i-unpack_object_specifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_object_specifier</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_object_specifier-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Reference</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-ivar">@reference_codecs</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_object_specifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_object_specifier-method -->
+
+      
+        <div id="unpack_property-method" class="method-detail ">
+          <a name="method-i-unpack_property"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_property</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_property-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_property</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">aem_value</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@type_by_code</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">aem_value</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">aem_value</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_property-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_property-method -->
+
+      
+        <div id="unpack_type-method" class="method-detail ">
+          <a name="method-i-unpack_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_type</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_type-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_type</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">aem_value</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@type_by_code</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">aem_value</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">aem_value</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_type-method -->
+
+      
+        <div id="unpack_unknown-method" class="method-detail ">
+          <a name="method-i-unpack_unknown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_unknown</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_unknown-source">
+<pre>
+<span class="ruby-comment"># File lib/appscript.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_unknown</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">type</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeApplicationBundleID</span>
+                        <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">by_id</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeApplicationURL</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'file'</span> <span class="ruby-comment"># workaround for converting AEAddressDescs containing file:// URLs to application paths, since AEAddressDescs containing file URLs don't seem to work correctly</span>
+                                <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>(<span class="ruby-constant">MacTypes</span><span class="ruby-operator">::</span><span class="ruby-constant">FileURL</span>.<span class="ruby-identifier">url</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>).<span class="ruby-identifier">path</span>)
+                        <span class="ruby-keyword">else</span> <span class="ruby-comment"># presumably contains an eppc:// URL</span>
+                                <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">by_url</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>)
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeApplSignature</span>
+                        <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">by_creator</span>(<span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>))
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeKernelProcessID</span>
+                        <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">by_pid</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>)[<span class="ruby-value">0</span>])
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeMachPort</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeProcessSerialNumber</span>
+                        <span class="ruby-constant">Appscript</span>.<span class="ruby-identifier">app</span>.<span class="ruby-identifier">by_aem_app</span>(<span class="ruby-constant">AEM</span><span class="ruby-operator">::</span><span class="ruby-constant">Application</span>.<span class="ruby-identifier">by_desc</span>(<span class="ruby-identifier">desc</span>))
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">super</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_unknown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_unknown-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

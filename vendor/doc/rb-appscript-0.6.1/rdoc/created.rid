@@ -1,0 +1,18 @@
+Fri, 16 Sep 2011 23:36:47 -0400
+lib/_aem/aemreference.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/codecs.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/connect.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/encodingsupport.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/findapp.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/mactypes.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/send.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_aem/typewrappers.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_appscript/defaultterminology.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_appscript/referencerenderer.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_appscript/reservedkeywords.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_appscript/safeobject.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/_appscript/terminology.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/aem.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/appscript.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/kae.rb	Fri, 16 Sep 2011 23:36:39 -0400
+lib/osax.rb	Fri, 16 Sep 2011 23:36:39 -0400

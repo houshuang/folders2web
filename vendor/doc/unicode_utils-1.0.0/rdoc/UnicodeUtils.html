@@ -1,0 +1,1702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: UnicodeUtils</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/unicode_utils/canonical_decomposition_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/canonical_decomposition.rb">lib/unicode_utils/canonical_decomposition.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/canonical_equivalents_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/canonical_equivalents_q.rb">lib/unicode_utils/canonical_equivalents_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/case_ignorable_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/case_ignorable_char_q.rb">lib/unicode_utils/case_ignorable_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/cased_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/cased_char_q.rb">lib/unicode_utils/cased_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/casefold_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/casefold.rb">lib/unicode_utils/casefold.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/char_name_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/char_name.rb">lib/unicode_utils/char_name.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/codepoint_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/codepoint.rb">lib/unicode_utils/codepoint.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/combining_class_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/combining_class.rb">lib/unicode_utils/combining_class.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/compatibility_decomposition_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/compatibility_decomposition.rb">lib/unicode_utils/compatibility_decomposition.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/conditional_casing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/conditional_casing.rb">lib/unicode_utils/conditional_casing.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/downcase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/downcase.rb">lib/unicode_utils/downcase.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/each_grapheme_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/each_grapheme.rb">lib/unicode_utils/each_grapheme.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/each_word_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/each_word.rb">lib/unicode_utils/each_word.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/grep_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/grep.rb">lib/unicode_utils/grep.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/hangul_syllable_decomposition_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/hangul_syllable_decomposition.rb">lib/unicode_utils/hangul_syllable_decomposition.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/jamo_short_name_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/jamo_short_name.rb">lib/unicode_utils/jamo_short_name.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/lowercase_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/lowercase_char_q.rb">lib/unicode_utils/lowercase_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/nfc_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/nfc.rb">lib/unicode_utils/nfc.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/nfd_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/nfd.rb">lib/unicode_utils/nfd.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/nfkc_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/nfkc.rb">lib/unicode_utils/nfkc.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/nfkd_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/nfkd.rb">lib/unicode_utils/nfkd.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/read_cdata_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/read_cdata.rb">lib/unicode_utils/read_cdata.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/simple_casefold_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/simple_casefold.rb">lib/unicode_utils/simple_casefold.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/simple_downcase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/simple_downcase.rb">lib/unicode_utils/simple_downcase.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/simple_upcase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/simple_upcase.rb">lib/unicode_utils/simple_upcase.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/soft_dotted_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/soft_dotted_char_q.rb">lib/unicode_utils/soft_dotted_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/titlecase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/titlecase.rb">lib/unicode_utils/titlecase.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/titlecase_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/titlecase_char_q.rb">lib/unicode_utils/titlecase_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/upcase_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/upcase.rb">lib/unicode_utils/upcase.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/uppercase_char_q_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/uppercase_char_q.rb">lib/unicode_utils/uppercase_char_q.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils/version.rb">lib/unicode_utils/version.rb</a></li>
+          
+            <li><a href="./lib/unicode_utils_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicode_utils.rb">lib/unicode_utils.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="UnicodeUtils/Impl.html">UnicodeUtils::Impl</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="UnicodeUtils/Codepoint.html">UnicodeUtils::Codepoint</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-canonical_decomposition">::canonical_decomposition</a></li>
+          
+          <li><a href="#method-c-canonical_equivalents-3F">::canonical_equivalents?</a></li>
+          
+          <li><a href="#method-c-case_ignorable_char-3F">::case_ignorable_char?</a></li>
+          
+          <li><a href="#method-c-cased_char-3F">::cased_char?</a></li>
+          
+          <li><a href="#method-c-casefold">::casefold</a></li>
+          
+          <li><a href="#method-c-char_name">::char_name</a></li>
+          
+          <li><a href="#method-c-combining_class">::combining_class</a></li>
+          
+          <li><a href="#method-c-compatibility_decomposition">::compatibility_decomposition</a></li>
+          
+          <li><a href="#method-c-downcase">::downcase</a></li>
+          
+          <li><a href="#method-c-each_grapheme">::each_grapheme</a></li>
+          
+          <li><a href="#method-c-each_word">::each_word</a></li>
+          
+          <li><a href="#method-c-grep">::grep</a></li>
+          
+          <li><a href="#method-c-hangul_syllable_decomposition">::hangul_syllable_decomposition</a></li>
+          
+          <li><a href="#method-c-jamo_short_name">::jamo_short_name</a></li>
+          
+          <li><a href="#method-c-lowercase_char-3F">::lowercase_char?</a></li>
+          
+          <li><a href="#method-c-nfc">::nfc</a></li>
+          
+          <li><a href="#method-c-nfd">::nfd</a></li>
+          
+          <li><a href="#method-c-nfkc">::nfkc</a></li>
+          
+          <li><a href="#method-c-nfkd">::nfkd</a></li>
+          
+          <li><a href="#method-c-simple_casefold">::simple_casefold</a></li>
+          
+          <li><a href="#method-c-simple_downcase">::simple_downcase</a></li>
+          
+          <li><a href="#method-c-simple_upcase">::simple_upcase</a></li>
+          
+          <li><a href="#method-c-soft_dotted_char-3F">::soft_dotted_char?</a></li>
+          
+          <li><a href="#method-c-titlecase">::titlecase</a></li>
+          
+          <li><a href="#method-c-titlecase_char-3F">::titlecase_char?</a></li>
+          
+          <li><a href="#method-c-upcase">::upcase</a></li>
+          
+          <li><a href="#method-c-uppercase_char-3F">::uppercase_char?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./INSTALL_txt.html">INSTALL.txt</a></li>
+        
+          <li class="file"><a href="./README_txt.html">README.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./UnicodeUtils.html">UnicodeUtils</a></li>
+        
+          <li><a href="./UnicodeUtils.html">UnicodeUtils</a></li>
+        
+          <li><a href="./UnicodeUtils/Codepoint.html">UnicodeUtils::Codepoint</a></li>
+        
+          <li><a href="./UnicodeUtils/Impl.html">UnicodeUtils::Impl</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./UnicodeUtils.html">Object::U</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">UnicodeUtils</h1>
+
+    <div id="description" class="description">
+      
+<p>This version of <a href="UnicodeUtils.html">UnicodeUtils</a> implements
+algorithms as defined by version 5.1.0 of the Unicode standard. Each public
+method is declared as a <tt>module_function</tt> of the <a
+href="UnicodeUtils.html">UnicodeUtils</a> module and defined in a separate
+file under the <tt>unicode_utils</tt> directory.</p>
+
+<p>As a convenience, the toplevel <tt>unicode_utils</tt> file loads all
+methods (needs lots of memory!). Also as a convenience for irb usage, the
+file <tt>unicode_utils/u</tt> assigns the <a
+href="UnicodeUtils.html">UnicodeUtils</a> module to the toplevel <a
+href="UnicodeUtils.html">U</a> constant and loads all methods:</p>
+
+<pre>$ irb -r unicode_utils/u
+irb(main):001:0&gt; U.grep /angstrom/
+=&gt; [#&lt;U+212B &quot;Å&quot; ANGSTROM SIGN utf8:e2,84,ab&gt;]</pre>
+
+<p>If a method takes a character as argument (usually named <tt>char</tt>),
+that argument can be an integer or a string (in which case the first
+codepoint counts) or any other object that responds to <tt>ord</tt> by
+returning an integer.</p>
+
+<p>All methods are non-destructive, string return values are in the same
+encoding as strings passed as arguments, which must be in one of the
+Unicode encodings.</p>
+
+<p>Highlevel methods are:</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-upcase">UnicodeUtils.upcase</a></p></td>
+<td>
+<p>full conversion to uppercase</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-downcase">UnicodeUtils.downcase</a></p></td>
+<td>
+<p>full conversion to lowercase</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-titlecase">UnicodeUtils.titlecase</a></p></td>
+<td>
+<p>full conversion to titlecase</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-casefold">UnicodeUtils.casefold</a></p></td>
+<td>
+<p>case folding (case insensitive string comparison)</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-nfd">UnicodeUtils.nfd</a></p></td>
+<td>
+<p>Normalization Form D</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-nfc">UnicodeUtils.nfc</a></p></td>
+<td>
+<p>Normalization Form C</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-nfkd">UnicodeUtils.nfkd</a></p></td>
+<td>
+<p>Normalization Form KD</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-nfkc">UnicodeUtils.nfkc</a></p></td>
+<td>
+<p>Normalization Form KC</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-each_grapheme">UnicodeUtils.each_grapheme</a></p></td>
+<td>
+<p>grapheme boundaries</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-each_word">UnicodeUtils.each_word</a></p></td>
+<td>
+<p>word boundaries</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-char_name">UnicodeUtils.char_name</a></p></td>
+<td>
+<p>character names</p>
+</td></tr><tr><td class="rdoc-term"><p><a href="UnicodeUtils.html#method-c-grep">UnicodeUtils.grep</a></p></td>
+<td>
+<p>find codepoints by character name</p>
+</td></tr></table>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="CDATA_DIR">CDATA_DIR</a></dt>
+          
+          <dd class="description"><p>Absolute path to the directory from which <a
+href="UnicodeUtils.html">UnicodeUtils</a> loads its compiled Unicode data
+files at runtime.</p></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"><p>Corresponds to the unicode_utils gem version.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="canonical_decomposition-method" class="method-detail ">
+          <a name="method-c-canonical_decomposition"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">canonical_decomposition</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the canonical decomposition of the given string, also called
+Normalization Form D or short NFD.</p>
+
+<p>The Unicode standard has multiple representations for some characters. One
+representation as a single codepoint and other representation(s) as a
+combination of multiple codepoints. This function “decomposes” these
+characters in <tt>str</tt> into the latter representation.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/canonical_decomposition&quot;
+# LATIN SMALL LETTER A WITH ACUTE =&gt; LATIN SMALL LETTER A, COMBINING ACUTE ACCENT
+UnicodeUtils.canonical_decomposition(&quot;\u{E1}&quot;) =&gt; &quot;\u{61}\u{301}&quot;</pre>
+
+<p>See also: <a href="UnicodeUtils.html#method-c-nfd">UnicodeUtils.nfd</a></p>
+            
+
+            
+            <div class="method-source-code" id="canonical_decomposition-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/canonical_decomposition.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">canonical_decomposition</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cp</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0xAC00</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0xD7A3</span> <span class="ruby-comment"># hangul syllable</span>
+      <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">append_hangul_syllable_decomposition</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">cp</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">mapping</span> = <span class="ruby-constant">CANONICAL_DECOMPOSITION_MAP</span>[<span class="ruby-identifier">cp</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">mapping</span>
+        <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">append_recursive_canonical_decomposition_mapping</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">mapping</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cp</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">put_into_canonical_order</span>(<span class="ruby-identifier">res</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- canonical_decomposition-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- canonical_decomposition-method -->
+
+      
+        <div id="canonical_equivalents-3F-method" class="method-detail ">
+          <a name="method-c-canonical_equivalents-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">canonical_equivalents?</span><span
+              class="method-args">(a, b)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The strings <tt>a</tt> and <tt>b</tt> are canonical equivalents if their
+canonical decompositions are equal.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/canonical_equivalents_q&quot;
+UnicodeUtils.canonical_equivalents?(&quot;Äste&quot;, &quot;A\u{308}ste&quot;) =&gt; true
+UnicodeUtils.canonical_equivalents?(&quot;Äste&quot;, &quot;Aste&quot;) =&gt; false</pre>
+            
+
+            
+            <div class="method-source-code" id="canonical_equivalents-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/canonical_equivalents_q.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">canonical_equivalents?</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
+  <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">canonical_decomposition</span>(<span class="ruby-identifier">a</span>) <span class="ruby-operator">==</span>
+    <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">canonical_decomposition</span>(<span class="ruby-identifier">b</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- canonical_equivalents-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- canonical_equivalents-3F-method -->
+
+      
+        <div id="case_ignorable_char-3F-method" class="method-detail ">
+          <a name="method-c-case_ignorable_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">case_ignorable_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if the given character is case-ignorable as defined by Unicode
+5.0, section 3.13.</p>
+            
+
+            
+            <div class="method-source-code" id="case_ignorable_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/case_ignorable_char_q.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">case_ignorable_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">CASE_IGNORABLE_SET</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- case_ignorable_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- case_ignorable_char-3F-method -->
+
+      
+        <div id="cased_char-3F-method" class="method-detail ">
+          <a name="method-c-cased_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cased_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>A cased char is a character that has the Unicode property Lowercase or
+Uppercase or the general category Titlecase_Letter.</p>
+
+<p>See also: lowercase_char?, uppercase_char?, titlecase_char?</p>
+            
+
+            
+            <div class="method-source-code" id="cased_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/cased_char_q.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cased_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-identifier">lowercase_char?</span>(<span class="ruby-identifier">char</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">uppercase_char?</span>(<span class="ruby-identifier">char</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">titlecase_char?</span>(<span class="ruby-identifier">char</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cased_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cased_char-3F-method -->
+
+      
+        <div id="casefold-method" class="method-detail ">
+          <a name="method-c-casefold"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">casefold</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform full case folding. The returned string may be longer than
+<tt>str</tt>. The purpose of case folding is case insensitive string
+comparison.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/casefold&quot;
+UnicodeUtils.casefold(&quot;Ümit&quot;) == UnicodeUtils.casefold(&quot;ümit&quot;) =&gt; true
+UnicodeUtils.casefold(&quot;WEISS&quot;) == UnicodeUtils.casefold(&quot;weiß&quot;) =&gt; true</pre>
+            
+
+            
+            <div class="method-source-code" id="casefold-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/casefold.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">casefold</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">mapping</span> = <span class="ruby-constant">CASEFOLD_C_MAP</span>[<span class="ruby-identifier">cp</span>]
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mapping</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">mapping</span> = <span class="ruby-constant">CASEFOLD_F_MAP</span>[<span class="ruby-identifier">cp</span>]
+        <span class="ruby-identifier">mapping</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cp</span>
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- casefold-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- casefold-method -->
+
+      
+        <div id="char_name-method" class="method-detail ">
+          <a name="method-c-char_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">char_name</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the normative Unicode name of the given character.</p>
+
+<p>Private Use codepoints have no name, this function returns nil for such
+codepoints.</p>
+
+<p>All control characters have the special name “&lt;control&gt;”. All other
+characters have a unique name.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/char_name&quot;
+UnicodeUtils.char_name &quot;ᾀ&quot; =&gt; &quot;GREEK SMALL LETTER ALPHA WITH PSILI AND YPOGEGRAMMENI&quot;
+UnicodeUtils.char_name &quot;\t&quot; =&gt; &quot;&lt;control&gt;&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="char_name-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/char_name.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">char_name</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">char</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>)
+    <span class="ruby-identifier">cp</span> = <span class="ruby-identifier">char</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cp</span> = <span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-identifier">char</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">NAME_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">cp</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">0x3400</span><span class="ruby-operator">..</span><span class="ruby-value">0x4DB5</span>, <span class="ruby-value">0x4E00</span><span class="ruby-operator">..</span><span class="ruby-value">0x9FC3</span>, <span class="ruby-value">0x20000</span><span class="ruby-operator">..</span><span class="ruby-value">0x2A6D6</span>
+      <span class="ruby-node">&quot;CJK UNIFIED IDEOGRAPH-#{sprintf('%04X', cp)}&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">0xAC00</span><span class="ruby-operator">..</span><span class="ruby-value">0xD7A3</span>
+      <span class="ruby-identifier">str</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">cp</span>.<span class="ruby-identifier">chr</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>)
+      <span class="ruby-string">&quot;HANGUL SYLLABLE &quot;</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">hangul_syllable_decomposition</span>(<span class="ruby-identifier">str</span>).<span class="ruby-identifier">each_char</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">jamo_short_name</span>(<span class="ruby-identifier">c</span>) <span class="ruby-operator">||</span> <span class="ruby-string">''</span>)
+        }
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- char_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- char_name-method -->
+
+      
+        <div id="combining_class-method" class="method-detail ">
+          <a name="method-c-combining_class"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">combining_class</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the combining class of the given character as an integer in the range
+0..255.</p>
+            
+
+            
+            <div class="method-source-code" id="combining_class-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/combining_class.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">combining_class</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">COMBINING_CLASS_MAP</span>[<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- combining_class-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- combining_class-method -->
+
+      
+        <div id="compatibility_decomposition-method" class="method-detail ">
+          <a name="method-c-compatibility_decomposition"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">compatibility_decomposition</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the compatibility decomposition of the given string, also called
+Normalization Form KD or short NFKD.</p>
+
+<p>Compatibility decomposition decomposes more codepoints than canonical
+decomposition and contrary to Normalization Form D and C, this
+normalization can alter how a string is displayed.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/compatibility_decomposition&quot;
+# LATIN SMALL LIGATURE FI =&gt; LATIN SMALL LETTER F, LATIN SMALL LETTER I
+UnicodeUtils.compatibility_decomposition(&quot;ﬁ&quot;) =&gt; &quot;fi&quot;</pre>
+
+<p>See also: <a href="UnicodeUtils.html#method-c-nfkd">UnicodeUtils.nfkd</a></p>
+            
+
+            
+            <div class="method-source-code" id="compatibility_decomposition-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/compatibility_decomposition.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">compatibility_decomposition</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cp</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0xAC00</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0xD7A3</span> <span class="ruby-comment"># hangul syllable</span>
+      <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">append_hangul_syllable_decomposition</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">cp</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">append_recursive_compatibility_decomposition_mapping</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">cp</span>)
+    <span class="ruby-keyword">end</span>
+  }
+  <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">put_into_canonical_order</span>(<span class="ruby-identifier">res</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- compatibility_decomposition-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- compatibility_decomposition-method -->
+
+      
+        <div id="downcase-method" class="method-detail ">
+          <a name="method-c-downcase"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">downcase</span><span
+              class="method-args">(str, language_id = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform a full case-conversion of <tt>str</tt> to lowercase according to
+the Unicode standard.</p>
+
+<p>Some conversion rules are language dependent, these are in effect when a
+non-nil <tt>language_id</tt> is given. If non-nil, the <tt>language_id</tt>
+must be a two letter language code as defined in BCP 47 (<a
+href="http://tools.ietf.org/rfc/bcp/bcp47.txt">tools.ietf.org/rfc/bcp/bcp47.txt</a>)
+as a symbol. If a language doesn’t have a two letter code, the three letter
+code is to be used. If locale independent behaviour is required,
+<tt>nil</tt> should be passed explicitely, because a later version of <a
+href="UnicodeUtils.html">UnicodeUtils</a> may default to something else.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/downcase&quot;
+UnicodeUtils.downcase(&quot;ᾈ&quot;) =&gt; &quot;ᾀ&quot;
+UnicodeUtils.downcase(&quot;aBI\u{307}&quot;, :tr) =&gt; &quot;abi&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="downcase-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/downcase.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">downcase</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">language_id</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Impl</span><span class="ruby-operator">::</span><span class="ruby-constant">LANGS_WITH_RULES</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">language_id</span>)
+      <span class="ruby-comment"># ensure O(1) lookup by index</span>
+      <span class="ruby-identifier">str</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_32LE</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">pos</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">special_mapping</span> =
+        <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">conditional_downcase_mapping</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">language_id</span>) <span class="ruby-operator">||</span>
+        <span class="ruby-constant">SPECIAL_DOWNCASE_MAP</span>[<span class="ruby-identifier">cp</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">special_mapping</span>
+        <span class="ruby-identifier">special_mapping</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_DOWNCASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">pos</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- downcase-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- downcase-method -->
+
+      
+        <div id="each_grapheme-method" class="method-detail ">
+          <a name="method-c-each_grapheme"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each_grapheme</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Iterate over the grapheme clusters that make up <tt>str</tt>. A grapheme
+cluster is a user perceived character (the basic unit of a writing system
+for a language) and consists of one or more codepoints.</p>
+
+<p>This method uses the default Unicode algorithm for extended grapheme
+clusters.</p>
+
+<p>Returns an enumerator if no block is given.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/each_grapheme&quot;
+UnicodeUtils.each_grapheme(&quot;a\r\nb&quot;) { |g| p g }</pre>
+
+<p>prints:</p>
+
+<pre>&quot;a&quot;
+&quot;\r\n&quot;
+&quot;b&quot;</pre>
+
+<p>and</p>
+
+<pre>UnicodeUtils.each_grapheme(&quot;a\r\nb&quot;).count =&gt; 3</pre>
+            
+
+            
+            <div class="method-source-code" id="each_grapheme-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/each_grapheme.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each_grapheme</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span>(<span class="ruby-identifier">__method__</span>, <span class="ruby-identifier">str</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">c0</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">c0_prop</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">grapheme</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">gbreak</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">c_prop</span> = <span class="ruby-constant">GRAPHEME_CLUSTER_BREAK_MAP</span>[<span class="ruby-identifier">c</span>]
+    
+    <span class="ruby-comment">### rules ###</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x1</span>
+      <span class="ruby-comment"># don't break CR LF</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x2</span>
+      <span class="ruby-comment"># break after controls</span>
+      <span class="ruby-identifier">gbreak</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x2</span>
+      <span class="ruby-comment"># break before controls</span>
+      <span class="ruby-identifier">gbreak</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x6</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x6</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x7</span> <span class="ruby-operator">||</span>
+                             <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x9</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xA</span>)
+      <span class="ruby-comment"># don't break hangul syllable</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x9</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x7</span>) <span class="ruby-operator">&amp;&amp;</span>
+          (<span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x7</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x8</span>)
+      <span class="ruby-comment"># don't break hangul syllable</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0xA</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x8</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x8</span>
+      <span class="ruby-comment"># don't break hangul syllable</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x3</span>
+      <span class="ruby-comment"># don't break before extending characters</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x5</span>
+      <span class="ruby-comment"># don't break before SpacingMarks</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">c0_prop</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x4</span>
+      <span class="ruby-comment"># don't break after Prepend characters</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># break everywhere</span>
+      <span class="ruby-identifier">gbreak</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment">#############</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">gbreak</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">grapheme</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">grapheme</span>
+      <span class="ruby-identifier">grapheme</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">grapheme</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>
+    <span class="ruby-identifier">c0</span> = <span class="ruby-identifier">c</span>
+    <span class="ruby-identifier">c0_prop</span> = <span class="ruby-identifier">c_prop</span>
+  }
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">grapheme</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">grapheme</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each_grapheme-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each_grapheme-method -->
+
+      
+        <div id="each_word-method" class="method-detail ">
+          <a name="method-c-each_word"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each_word</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Split <tt>str</tt> along word boundaries according to Unicode’s Default
+Word Boundary Specification, calling the given block with each word.
+Returns <tt>str</tt>, or an enumerator if no block is given.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/each_word&quot;
+UnicodeUtils.each_word(&quot;Hello, world!&quot;).to_a =&gt; [&quot;Hello&quot;, &quot;,&quot;, &quot; &quot;, &quot;world&quot;, &quot;!&quot;]</pre>
+            
+
+            
+            <div class="method-source-code" id="each_word-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/each_word.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each_word</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span>(<span class="ruby-identifier">__method__</span>, <span class="ruby-identifier">str</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-identifier">cs</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-constant">WORD_BREAK_MAP</span>[<span class="ruby-identifier">c</span>] }
+  <span class="ruby-identifier">cs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># for negative indices</span>
+  <span class="ruby-identifier">word</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">word</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">word_break?</span>(<span class="ruby-identifier">cs</span>, <span class="ruby-identifier">i</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">word</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">word</span>
+      <span class="ruby-identifier">word</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  }
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">word</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each_word-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each_word-method -->
+
+      
+        <div id="grep-method" class="method-detail ">
+          <a name="method-c-grep"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">grep</span><span
+              class="method-args">(regexp)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get an array of all <a href="UnicodeUtils/Codepoint.html">Codepoint</a>
+instances in Codepoint::RANGE whose name matches regexp. Matching is case
+insensitive.</p>
+
+<pre>require &quot;unicode_utils/grep&quot;
+UnicodeUtils.grep(/angstrom/) =&gt; [#&lt;U+212B &quot;Å&quot; ANGSTROM SIGN utf8:e2,84,ab&gt;]</pre>
+            
+
+            
+            <div class="method-source-code" id="grep-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/grep.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">grep</span>(<span class="ruby-identifier">regexp</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">regexp</span>.<span class="ruby-identifier">casefold?</span>
+    <span class="ruby-identifier">regexp</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">regexp</span>.<span class="ruby-identifier">source</span>, <span class="ruby-constant">Regexp</span><span class="ruby-operator">::</span><span class="ruby-constant">IGNORECASE</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Codepoint</span><span class="ruby-operator">::</span><span class="ruby-constant">RANGE</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">regexp</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">char_name</span>(<span class="ruby-identifier">cp</span>)
+  }.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span> <span class="ruby-constant">Codepoint</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cp</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- grep-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- grep-method -->
+
+      
+        <div id="hangul_syllable_decomposition-method" class="method-detail ">
+          <a name="method-c-hangul_syllable_decomposition"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hangul_syllable_decomposition</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Derives the canonical decomposition of the given Hangul syllable.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/hangul_syllable_decomposition&quot;
+UnicodeUtils.hangul_syllable_decomposition(&quot;\u{d4db}&quot;) =&gt; &quot;\u{1111}\u{1171}\u{11b6}&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="hangul_syllable_decomposition-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/hangul_syllable_decomposition.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hangul_syllable_decomposition</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">append_hangul_syllable_decomposition</span>(<span class="ruby-identifier">str</span> , <span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hangul_syllable_decomposition-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hangul_syllable_decomposition-method -->
+
+      
+        <div id="jamo_short_name-method" class="method-detail ">
+          <a name="method-c-jamo_short_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">jamo_short_name</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The Jamo Short Name property of the given character (defaults to nil).</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/jamo_short_name&quot;
+UnicodeUtils.jamo_short_name(&quot;\u{1101}&quot;) =&gt; &quot;GG&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="jamo_short_name-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/jamo_short_name.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jamo_short_name</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">JAMO_SHORT_NAME_MAP</span>[<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- jamo_short_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- jamo_short_name-method -->
+
+      
+        <div id="lowercase_char-3F-method" class="method-detail ">
+          <a name="method-c-lowercase_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lowercase_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the given character has the Unicode property Lowercase.</p>
+            
+
+            
+            <div class="method-source-code" id="lowercase_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/lowercase_char_q.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lowercase_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">PROP_LOWERCASE_SET</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lowercase_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lowercase_char-3F-method -->
+
+      
+        <div id="nfc-method" class="method-detail ">
+          <a name="method-c-nfc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nfc</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get <tt>str</tt> in Normalization Form C.</p>
+
+<p>The Unicode standard has multiple representations for some characters. One
+representation as a single codepoint and other representation(s) as a
+combination of multiple codepoints. This function “composes” these
+characters into the former representation.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/nfc&quot;
+UnicodeUtils.nfc(&quot;La\u{308}mpchen&quot;) =&gt; &quot;Lämpchen&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="nfc-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/nfc.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nfc</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">str</span> = <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">canonical_decomposition</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">composition</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nfc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nfc-method -->
+
+      
+        <div id="nfd-method" class="method-detail ">
+          <a name="method-c-nfd"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nfd</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get <tt>str</tt> in Normalization Form D.</p>
+
+<p>Alias for <a
+href="UnicodeUtils.html#method-c-canonical_decomposition">UnicodeUtils.canonical_decomposition</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="nfd-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/nfd.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nfd</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">canonical_decomposition</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nfd-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nfd-method -->
+
+      
+        <div id="nfkc-method" class="method-detail ">
+          <a name="method-c-nfkc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nfkc</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get <tt>str</tt> in Normalization Form KC.</p>
+
+<p>Normalization Form KC is compatibiliy decomposition (NFKD) followed by
+composition. Like NFKD, this normalization can alter how a string is
+displayed.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/nfkc&quot;
+# LATIN SMALL LIGATURE FI =&gt; LATIN SMALL LETTER F, LATIN SMALL LETTER I
+UnicodeUtils.nfkc(&quot;ﬁ&quot;) =&gt; &quot;fi&quot;</pre>
+
+<p>See also: <a
+href="UnicodeUtils.html#method-c-compatibility_decomposition">UnicodeUtils.compatibility_decomposition</a></p>
+            
+
+            
+            <div class="method-source-code" id="nfkc-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/nfkc.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nfkc</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">str</span> = <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">compatibility_decomposition</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">composition</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nfkc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nfkc-method -->
+
+      
+        <div id="nfkd-method" class="method-detail ">
+          <a name="method-c-nfkd"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nfkd</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get <tt>str</tt> in Normalization Form KD.</p>
+
+<p>Alias for <a
+href="UnicodeUtils.html#method-c-compatibility_decomposition">UnicodeUtils.compatibility_decomposition</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="nfkd-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/nfkd.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nfkd</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">UnicodeUtils</span>.<span class="ruby-identifier">compatibility_decomposition</span>(<span class="ruby-identifier">str</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nfkd-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nfkd-method -->
+
+      
+        <div id="simple_casefold-method" class="method-detail ">
+          <a name="method-c-simple_casefold"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">simple_casefold</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform simple case folding. Contrary to full case folding, this uses only
+one to one mappings, so that the length of the returned string is equal to
+the length of <tt>str</tt>.</p>
+
+<p>The purpose of case folding is case insensitive string comparison.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/simple_casefold&quot;
+UnicodeUtils.simple_casefold(&quot;Ümit&quot;) == UnicodeUtils.simple_casefold(&quot;ümit&quot;) =&gt; true
+UnicodeUtils.simple_casefold(&quot;WEISS&quot;) == UnicodeUtils.simple_casefold(&quot;weiß&quot;) =&gt; false</pre>
+
+<p>See also: <a
+href="UnicodeUtils.html#method-c-casefold">UnicodeUtils.casefold</a></p>
+            
+
+            
+            <div class="method-source-code" id="simple_casefold-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/simple_casefold.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">simple_casefold</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">CASEFOLD_C_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">CASEFOLD_S_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- simple_casefold-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- simple_casefold-method -->
+
+      
+        <div id="simple_downcase-method" class="method-detail ">
+          <a name="method-c-simple_downcase"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">simple_downcase</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Map each codepoint in <tt>str</tt> that has a single codepoint
+lowercase-mapping to that lowercase mapping. The returned string has the
+same length as the original string.</p>
+
+<p>This function is locale independent.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/simple_downcase&quot;
+UnicodeUtils.simple_downcase(&quot;ÜMIT: 123&quot;) =&gt; &quot;ümit: 123&quot;
+UnicodeUtils.simple_downcase(&quot;STRASSE&quot;) =&gt; &quot;strasse&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="simple_downcase-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/simple_downcase.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">simple_downcase</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_DOWNCASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- simple_downcase-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- simple_downcase-method -->
+
+      
+        <div id="simple_upcase-method" class="method-detail ">
+          <a name="method-c-simple_upcase"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">simple_upcase</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Map each codepoint in <tt>str</tt> that has a single codepoint
+uppercase-mapping to that uppercase mapping. The returned string has the
+same length as the original string.</p>
+
+<p>This function is locale independent.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/simple_upcase&quot;
+UnicodeUtils.simple_upcase(&quot;ümit: 123&quot;) =&gt; &quot;ÜMIT: 123&quot;
+UnicodeUtils.simple_upcase(&quot;weiß&quot;) =&gt; &quot;WEIß&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="simple_upcase-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/simple_upcase.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">simple_upcase</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_UPCASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- simple_upcase-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- simple_upcase-method -->
+
+      
+        <div id="soft_dotted_char-3F-method" class="method-detail ">
+          <a name="method-c-soft_dotted_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">soft_dotted_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns true if the given character has the Unicode property Soft_Dotted.</p>
+            
+
+            
+            <div class="method-source-code" id="soft_dotted_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/soft_dotted_char_q.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">soft_dotted_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">SOFT_DOTTED_SET</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- soft_dotted_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- soft_dotted_char-3F-method -->
+
+      
+        <div id="titlecase-method" class="method-detail ">
+          <a name="method-c-titlecase"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">titlecase</span><span
+              class="method-args">(str, language_id = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Convert the first cased character after each word boundary to titlecase and
+all other cased characters to lowercase. For many, but not all characters,
+the titlecase mapping is the same as the uppercase mapping.</p>
+
+<p>Some conversion rules are language dependent, these are in effect when a
+non-nil <tt>language_id</tt> is given. If non-nil, the <tt>language_id</tt>
+must be a two letter language code as defined in BCP 47 (<a
+href="http://tools.ietf.org/rfc/bcp/bcp47.txt">tools.ietf.org/rfc/bcp/bcp47.txt</a>)
+as a symbol. If a language doesn’t have a two letter code, the three letter
+code is to be used. If locale independent behaviour is required,
+<tt>nil</tt> should be passed explicitely, because a later version of <a
+href="UnicodeUtils.html">UnicodeUtils</a> may default to something else.</p>
+
+<p>Example:</p>
+
+<pre>require &quot;unicode_utils/titlecase&quot;
+UnicodeUtils.titlecase(&quot;hello, world!&quot;) =&gt; &quot;Hello, World!&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="titlecase-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/titlecase.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">titlecase</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">language_id</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># ensure O(1) lookup by index</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_32LE</span>)
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">each_word</span>(<span class="ruby-identifier">str</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">word</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">cased_char_found</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">word</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">cased</span> = <span class="ruby-identifier">cased_char?</span>(<span class="ruby-identifier">cp</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">cased_char_found</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cased</span>
+          <span class="ruby-identifier">cased_char_found</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-identifier">special_mapping</span> =
+            <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">conditional_titlecase_mapping</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">language_id</span>) <span class="ruby-operator">||</span>
+            <span class="ruby-constant">SPECIAL_TITLECASE_MAP</span>[<span class="ruby-identifier">cp</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">special_mapping</span>
+            <span class="ruby-identifier">special_mapping</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span> }
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_TITLECASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">cased</span>
+          <span class="ruby-identifier">special_mapping</span> =
+            <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">conditional_downcase_mapping</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">language_id</span>) <span class="ruby-operator">||</span>
+            <span class="ruby-constant">SPECIAL_DOWNCASE_MAP</span>[<span class="ruby-identifier">cp</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">special_mapping</span>
+            <span class="ruby-identifier">special_mapping</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span> }
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_DOWNCASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cp</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      }
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- titlecase-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- titlecase-method -->
+
+      
+        <div id="titlecase_char-3F-method" class="method-detail ">
+          <a name="method-c-titlecase_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">titlecase_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the given character has the General_Category Titlecase_Letter (Lt).</p>
+            
+
+            
+            <div class="method-source-code" id="titlecase_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/titlecase_char_q.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">titlecase_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">TITLECASE_LETTER_SET</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- titlecase_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- titlecase_char-3F-method -->
+
+      
+        <div id="upcase-method" class="method-detail ">
+          <a name="method-c-upcase"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">upcase</span><span
+              class="method-args">(str, language_id = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform a full case-conversion of <tt>str</tt> to uppercase according to
+the Unicode standard.</p>
+
+<p>Some conversion rules are language dependent, these are in effect when a
+non-nil <tt>language_id</tt> is given. If non-nil, the <tt>language_id</tt>
+must be a two letter language code as defined in BCP 47 (<a
+href="http://tools.ietf.org/rfc/bcp/bcp47.txt">tools.ietf.org/rfc/bcp/bcp47.txt</a>)
+as a symbol. If a language doesn’t have a two letter code, the three letter
+code is to be used. If locale independent behaviour is required,
+<tt>nil</tt> should be passed explicitely, because a later version of <a
+href="UnicodeUtils.html">UnicodeUtils</a> may default to something else.</p>
+
+<p>Examples:</p>
+
+<pre>require &quot;unicode_utils/upcase&quot;
+UnicodeUtils.upcase(&quot;weiß&quot;) =&gt; &quot;WEISS&quot;
+UnicodeUtils.upcase(&quot;i&quot;, :en) =&gt; &quot;I&quot;
+UnicodeUtils.upcase(&quot;i&quot;, :tr) =&gt; &quot;İ&quot;</pre>
+            
+
+            
+            <div class="method-source-code" id="upcase-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/upcase.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">upcase</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">language_id</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">tap</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">res</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Impl</span><span class="ruby-operator">::</span><span class="ruby-constant">LANGS_WITH_RULES</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">language_id</span>)
+      <span class="ruby-comment"># ensure O(1) lookup by index</span>
+      <span class="ruby-identifier">str</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_32LE</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">pos</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">each_codepoint</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">special_mapping</span> =
+        <span class="ruby-constant">Impl</span>.<span class="ruby-identifier">conditional_upcase_mapping</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">str</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">language_id</span>) <span class="ruby-operator">||</span>
+        <span class="ruby-constant">SPECIAL_UPCASE_MAP</span>[<span class="ruby-identifier">cp</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">special_mapping</span>
+        <span class="ruby-identifier">special_mapping</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-constant">SIMPLE_UPCASE_MAP</span>[<span class="ruby-identifier">cp</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">cp</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">pos</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- upcase-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- upcase-method -->
+
+      
+        <div id="uppercase_char-3F-method" class="method-detail ">
+          <a name="method-c-uppercase_char-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">uppercase_char?</span><span
+              class="method-args">(char)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>True if the given character has the Unicode property Uppercase.</p>
+            
+
+            
+            <div class="method-source-code" id="uppercase_char-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/unicode_utils/uppercase_char_q.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uppercase_char?</span>(<span class="ruby-identifier">char</span>)
+  <span class="ruby-constant">PROP_UPPERCASE_SET</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">char</span>.<span class="ruby-identifier">ord</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- uppercase_char-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- uppercase_char-3F-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

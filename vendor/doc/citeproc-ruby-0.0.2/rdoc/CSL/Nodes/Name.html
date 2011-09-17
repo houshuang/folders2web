@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Nodes::Name</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Node.html">CSL::Nodes::Node</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-ampersand">#ampersand</a></li>
+          
+          <li><a href="#method-i-inherit_attributes">#inherit_attributes</a></li>
+          
+          <li><a href="#method-i-parts">#parts</a></li>
+          
+          <li><a href="#method-i-process_names">#process_names</a></li>
+          
+          <li><a href="#method-i-set_defaults">#set_defaults</a></li>
+          
+          <li><a href="#method-i-truncate">#truncate</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Nodes::Name</h1>
+
+    <div id="description" class="description">
+      
+<p>The cs:name element is a required child element of cs:names, and describes
+both how individual names are formatted, and how names within a name
+variable are separated from each other. The attributes that may be used on
+cs:name are:</p>
+
+<p>‘and’ This attribute specifies the delimiter between the second to last and
+the last name of the names in a name variable. The value of the attribute
+may be either “text”, which selects the “and” term, or “symbol”, which
+selects the ampersand (&amp;).</p>
+
+<p>‘delimiter’   Specifies the text string to separate names of a name
+variable. The default value is “, ” (“J. Doe, S. Smith”).</p>
+
+<p>‘delimiter-precedes-last’ Determines in which cases the delimiter used to
+delimit names is also used to separate the second to last and the last name
+in name lists. The possible values are:</p>
+
+<pre>&quot;contextual&quot; (default): the delimiter is only included for name lists with three or more names
+    2 names: &quot;J. Doe and T. Williams,&quot;
+    3 names: &quot;J. Doe, S. Smith, and T. Williams&quot;
+&quot;always&quot;: the delimiter is always included
+    2 names: &quot;J. Doe, and T. Williams&quot;
+    3 names: &quot;J. Doe, S. Smith, and T. Williams&quot;
+&quot;never&quot;: the delimiter is never included
+    2 names: &quot;J. Doe and T. Williams,&quot;
+    3 names: &quot;J. Doe, S. Smith and T. Williams&quot;</pre>
+
+<p>‘et-al-min / et-al-use-first’   Together, these attributes control et-al
+abbreviation. When the number of names in a name variable matches or
+exceeds the number set on et-al-min, the rendered name list is truncated at
+the number of names set on et-al-use-first. If truncation occurs, the
+“et-al” term is appended to the names rendered (see also Et-al). With a
+single name (et-al-use-first=“1”), the “et-al” term is preceded by a space
+(e.g. “Doe et al.”). With multiple names, the “et-al” term is preceded by
+the name delimiter (e.g. “Doe, Smith, et al.”).</p>
+
+<p>‘et-al-subsequent-min / et-al-subsequent-use-first’   The (optional)
+et-al-min and et-al-use-first attributes take effect for all cites and
+bibliographic entries. With the et-al-subsequent-min and
+et-al-subsequent-use-first attributes divergent et-al abbreviation rules
+can be specified for subsequent cites (cites referencing earlier cited
+items).</p>
+
+<p>The remaining attributes, discussed below, only affect personal names.
+Personal names require a “family” name-part, and may also contain “given”,
+“suffix”, “non-dropping-particle” and “dropping-particle” name-parts. The
+roles of these name-parts, which are delimited by single spaces in rendered
+names, are:</p>
+<ul><li>
+<p>"family": the surname minus any particles and suffixes</p>
+</li><li>
+<p>"given": the given names, which may be either full ("John Edward") or
+initialized ("J. E.")</p>
+</li><li>
+<p>"suffix": name suffix, e.g. "Jr." in "John Smith Jr." and "III" in "Bill
+Gates III"</p>
+</li><li>
+<p>"non-dropping-particle": name particles that are not dropped when only the
+last name is shown ("de" in the Dutch surname "de Koning") but which may be
+treated as a separate object from the family name (e.g. for sorting)</p>
+</li><li>
+<p>"dropping-particle": name particles that are dropped when only the surname
+is shown ("van" in "Ludwig van Beethoven", which becomes "Beethoven")</p>
+</li></ul>
+
+<p>‘form’   Specifies whether all the name-parts of personal names should be
+displayed (value “long”), or only the family name and the
+non-dropping-particle (value “short”). A third value, “count”, returns the
+total number of names that would be otherwise displayed by the use of the
+cs:names element (taking into account the effects of et-al abbreviation and
+editor/translator collapsing), and may be used for advanced sorting.</p>
+
+<p>‘initialize-with’   If this attribute is set, given names are converted to
+initials. The attribute value specifies the suffix that is included after
+each initial (“.” results in “J.J. Doe”). Note that the global
+initialize-with-hyphen option controls how compound given names (e.g.
+“Jean-Luc”) are hyphenated when initialized (see Hyphenation of Initialized
+<a href="Names.html">Names</a>).</p>
+
+<p>‘name-as-sort-order’ Specifies that names should be displayed with the
+given name following the family name (e.g. “John Doe” becomes “Doe, John”).
+The attribute may have one of the two values:</p>
+
+<p>"first": name-as-sort-order applies to the first name in each name variable
+"all": name-as-sort-order applies to all names</p>
+
+<p>Note that the sort order of names may differ from the display order for
+names containing particles and suffixes (see Name-part order). Also, this
+attribute only affects names written in the latin or Cyrillic alphabet. <a
+href="Names.html">Names</a> written in other alphabets (e.g. Asian scripts)
+are always shown with the family name preceding the given name.</p>
+
+<p>‘sort-separator’   Sets the delimiter for name-parts that have switched
+positions as a result of name-as-sort-order. The default value is “, ”
+(“Doe, John”). As is the case for name-as-sort-order, this attribute only
+affects names written in the latin or Cyrillic alphabet.</p>
+
+<p>The cs:name element may also carry any of the attributes for affixes and
+formatting.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="parts-method" class="method-detail ">
+          <a name="method-i-parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parts-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 790</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parts</span>
+  <span class="ruby-ivar">@parts</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/(non-)?dropping-particle/</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">h</span>[<span class="ruby-string">'family'</span>] <span class="ruby-operator">:</span> {} }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parts-method -->
+
+      
+        <div id="process_names-method" class="method-detail ">
+          <a name="method-i-process_names"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_names</span><span
+              class="method-args">(role, names, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process_names-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 794</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_names</span>(<span class="ruby-identifier">role</span>, <span class="ruby-identifier">names</span>, <span class="ruby-identifier">processor</span>)
+
+  <span class="ruby-comment"># set display options</span>
+  <span class="ruby-identifier">names</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">merge_options</span>(<span class="ruby-identifier">attributes</span>) }
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">options</span>[<span class="ruby-string">'name-as-sort-order'</span>] = <span class="ruby-string">'true'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">name_as_sort_order</span> <span class="ruby-operator">==</span> <span class="ruby-string">'first'</span>
+
+  <span class="ruby-comment"># name-part formatting</span>
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">name</span>.<span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">display_order</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">format</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">token</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">'-'</span>, <span class="ruby-string">'_'</span>)), <span class="ruby-identifier">parts</span>[<span class="ruby-identifier">token</span>])
+    <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">delimiter</span>))
+  <span class="ruby-keyword">end</span>        
+
+  <span class="ruby-comment"># join names</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">names</span> = [<span class="ruby-identifier">names</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-identifier">delimiter</span>), <span class="ruby-identifier">names</span>.<span class="ruby-identifier">last</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">ampersand</span>(<span class="ruby-identifier">processor</span>))
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span> <span class="ruby-value">:error</span>, <span class="ruby-node">&quot;failed to process names #{ names.inspect }&quot;</span>, <span class="ruby-identifier">e</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_names-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_names-method -->
+
+      
+        <div id="truncate-method" class="method-detail ">
+          <a name="method-i-truncate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">truncate</span><span
+              class="method-args">(names)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="truncate-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 819</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">truncate</span>(<span class="ruby-identifier">names</span>)
+  <span class="ruby-comment"># TODO subsequent</span>
+  <span class="ruby-identifier">et_al_min?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">et_al_min</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">names</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">et_al_use_first</span>.<span class="ruby-identifier">to_i</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">names</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- truncate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- truncate-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="ampersand-method" class="method-detail ">
+          <a name="method-i-ampersand"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ampersand</span><span
+              class="method-args">(processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns the delimiter to be used between the penultimate and last name in
+the list.</p>
+            
+
+            
+            <div class="method-source-code" id="ampersand-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 836</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ampersand</span>(<span class="ruby-identifier">processor</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">and?</span>
+    <span class="ruby-identifier">ampersand</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">and</span> <span class="ruby-operator">==</span> <span class="ruby-string">'symbol'</span> <span class="ruby-operator">?</span> <span class="ruby-string">'&amp;'</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">localized_terms</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">and</span> <span class="ruby-operator">==</span> <span class="ruby-string">'text'</span> <span class="ruby-operator">?</span> <span class="ruby-string">'and'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">and</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">attributes</span>)
+    <span class="ruby-identifier">delimiter_precedes_last?</span> <span class="ruby-operator">?</span> [<span class="ruby-identifier">delimiter</span>, <span class="ruby-identifier">ampersand</span>, <span class="ruby-string">' '</span>].<span class="ruby-identifier">join</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">ampersand</span>.<span class="ruby-identifier">center</span>(<span class="ruby-identifier">ampersand</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">delimiter</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ampersand-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ampersand-method -->
+
+      
+        <div id="inherit_attributes-method" class="method-detail ">
+          <a name="method-i-inherit_attributes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inherit_attributes</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="inherit_attributes-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 845</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inherit_attributes</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">inherit_attributes_from</span>(<span class="ruby-identifier">node</span>, [<span class="ruby-string">'citation'</span>, <span class="ruby-string">'bibliography'</span>, <span class="ruby-string">'style'</span>], <span class="ruby-constant">Nodes</span>.<span class="ruby-identifier">inheritable_name_attributes</span>)
+  <span class="ruby-identifier">inherit_attributes_from</span>(<span class="ruby-identifier">node</span>, [<span class="ruby-string">'citation'</span>, <span class="ruby-string">'bibliography'</span>, <span class="ruby-string">'style'</span>], [<span class="ruby-string">'et-al-use-first'</span>, <span class="ruby-string">'delimiter-precedes-et-al'</span>])
+  <span class="ruby-identifier">inherit_attributes_from</span>(<span class="ruby-identifier">node</span>, [<span class="ruby-string">'citation'</span>, <span class="ruby-string">'bibliography'</span>, <span class="ruby-string">'style'</span>], [<span class="ruby-string">'form'</span>, <span class="ruby-string">'delimiter'</span>], <span class="ruby-string">'name-'</span>)
+  <span class="ruby-identifier">inherit_attributes_from</span>(<span class="ruby-identifier">node</span>, [<span class="ruby-string">'style'</span>], [<span class="ruby-string">'demote-non-dropping-particle'</span>, <span class="ruby-string">'initialize-with-hyphen'</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inherit_attributes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inherit_attributes-method -->
+
+      
+        <div id="set_defaults-method" class="method-detail ">
+          <a name="method-i-set_defaults"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_defaults</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set_defaults-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 826</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_defaults</span>
+  <span class="ruby-identifier">attributes</span>[<span class="ruby-string">'delimiter'</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">', '</span>
+  <span class="ruby-identifier">attributes</span>[<span class="ruby-string">'delimiter-precedes-last'</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">'false'</span>
+  <span class="ruby-identifier">attributes</span>[<span class="ruby-string">'et-al-use-first'</span>]  <span class="ruby-operator">||=</span> <span class="ruby-string">'1'</span>
+  
+  <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span> <span class="ruby-identifier">parts</span>[<span class="ruby-identifier">child</span>[<span class="ruby-string">'name'</span>]] = <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span> }        
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_defaults-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_defaults-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

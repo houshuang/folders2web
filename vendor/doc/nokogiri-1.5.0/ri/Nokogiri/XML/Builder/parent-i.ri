@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"parent:EFI""Nokogiri::XML::Builder#parent;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"/The parent of the current node being built;T:
+@file0FI" lib/nokogiri/xml/builder.rb;T

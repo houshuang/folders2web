@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>citeproc-ruby-0.0.2 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>citeproc-ruby-0.0.2 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'citeproc-ruby-0.0.2 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="CSL.html">CSL</a></li>
+    
+    <li class="class"><a href="CSL/Bibliography.html">CSL::Bibliography</a></li>
+    
+    <li class="class"><a href="CSL/Citation.html">CSL::Citation</a></li>
+    
+    <li class="class"><a href="CSL/Key.html">CSL::Key</a></li>
+    
+    <li class="class"><a href="CSL/Locale.html">CSL::Locale</a></li>
+    
+    <li class="class"><a href="CSL/Node.html">CSL::Node</a></li>
+    
+    <li class="class"><a href="CSL/Nodes.html">CSL::Nodes</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+    
+    <li class="class"><a href="CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+    
+    <li class="class"><a href="CSL/Renderer.html">CSL::Renderer</a></li>
+    
+    <li class="class"><a href="CSL/Sort.html">CSL::Sort</a></li>
+    
+    <li class="class"><a href="CSL/Style.html">CSL::Style</a></li>
+    
+    <li class="class"><a href="CSL/Term.html">CSL::Term</a></li>
+    
+    <li class="module"><a href="CiteProc.html">CiteProc</a></li>
+    
+    <li class="class"><a href="CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+    
+    <li class="class"><a href="CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+    
+    <li class="class"><a href="CiteProc/Date.html">CiteProc::Date</a></li>
+    
+    <li class="module"><a href="CiteProc/Format.html">CiteProc::Format</a></li>
+    
+    <li class="class"><a href="CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+    
+    <li class="class"><a href="CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+    
+    <li class="class"><a href="CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+    
+    <li class="class"><a href="CiteProc/Item.html">CiteProc::Item</a></li>
+    
+    <li class="class"><a href="CiteProc/Name.html">CiteProc::Name</a></li>
+    
+    <li class="class"><a href="CiteProc/Processor.html">CiteProc::Processor</a></li>
+    
+    <li class="class"><a href="CiteProc/Selector.html">CiteProc::Selector</a></li>
+    
+    <li class="class"><a href="CiteProc/Variable.html">CiteProc::Variable</a></li>
+    
+    <li class="module"><a href="Support.html">Support</a></li>
+    
+    <li class="module"><a href="Support/Attributes.html">Support::Attributes</a></li>
+    
+    <li class="module"><a href="Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+    
+    <li class="module"><a href="Support/Tree.html">Support::Tree</a></li>
+    
+    <li class="module"><a href="Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+    
+    <li class="module"><a href="Extensions.html">Extensions</a></li>
+    
+    <li class="module"><a href="Extensions/Core.html">Extensions::Core</a></li>
+    
+    <li class="module"><a href="Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+    
+    <li class="class"><a href="Fixnum.html">Fixnum</a></li>
+    
+    <li class="module"><a href="Kernel.html">Kernel</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="CSL.html#method-c-Node">::Node &mdash; CSL</a></li>
+    
+      <li><a href="CSL/Term.html#method-c-build">::build &mdash; CSL::Term</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-c-cite">::cite &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Format.html#method-c-default">::default &mdash; CiteProc::Format</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-c-fields">::fields &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-c-filter">::filter &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-c-filter">::filter &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-c-filter">::filter &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-c-format_on">::format_on &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="Support/Tree.html#method-c-included">::included &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Attributes.html#method-c-included">::included &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc.html#method-c-log">::log &mdash; CiteProc</a></li>
+    
+      <li><a href="CSL/Locale.html#method-c-match_language">::match_language &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Locale.html#method-c-match_region">::match_region &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-c-new">::new &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-c-new">::new &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-c-new">::new &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-c-new">::new &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CSL/Term.html#method-c-new">::new &mdash; CSL::Term</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-c-new">::new &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CSL/Style.html#method-c-new">::new &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-c-new">::new &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CSL/Locale.html#method-c-new">::new &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Citation.html#method-c-new">::new &mdash; CSL::Citation</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-c-new">::new &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-c-new">::new &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-c-new">::new &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Node.html#method-c-new">::new &mdash; CSL::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-c-new">::new &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-c-parse">::parse &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CSL/Nodes.html#method-c-parse">::parse &mdash; CSL::Nodes</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-c-parse">::parse &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CSL/Node.html#method-c-parse">::parse &mdash; CSL::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-c-process">::process &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Locale.html#method-c-sort">::sort &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-3C-3D-3E">#<=> &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-3C-3D-3E">#<=> &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-3C-3D-3E">#<=> &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-i-3C-3D-3E">#<=> &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-3C-3D-3E">#<=> &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-5B-5D">#[] &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-5B-5D">#[] &mdash; CSL::Style</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-5B-5D">#[] &mdash; CSL::Locale</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-5B-5D">#[] &mdash; Support::Attributes</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-5B-5D-3D">#[]= &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-abbreviate">#abbreviate &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-abbreviations">#abbreviations &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-abbreviations-3D">#abbreviations= &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-access">#access &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-ad-3F">#ad? &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-add_abbreviations">#add_abbreviations &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-add_child">#add_child &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-add_children">#add_children &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-ampersand">#ampersand &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-ancestors">#ancestors &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-ancestors-21">#ancestors! &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Sort.html#method-i-apply">#apply &mdash; CSL::Sort</a></li>
+    
+      <li><a href="CiteProc/Formatter.html#method-i-apply">#apply &mdash; CiteProc::Formatter</a></li>
+    
+      <li><a href="CSL/Key.html#method-i-ascending-3F">#ascending? &mdash; CSL::Key</a></li>
+    
+      <li><a href="Support/Tree/ClassMethods.html#method-i-attr_children">#attr_children &mdash; Support::Tree::ClassMethods</a></li>
+    
+      <li><a href="Support/Attributes/ClassMethods.html#method-i-attr_fields">#attr_fields &mdash; Support::Attributes::ClassMethods</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-attributes">#attributes &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-bc-3F">#bc? &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-bibliography">#bibliography &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-byzantine-3F">#byzantine? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-children">#children &mdash; Support::Tree</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-i-citation_items">#citation_items &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-cite">#cite &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-collect_formatting_attributes">#collect_formatting_attributes &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CSL/Nodes/Names.html#method-i-collect_names">#collect_names &mdash; CSL::Nodes::Names</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-comma">#comma &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-comma_suffix">#comma_suffix &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-conditions">#conditions &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-content_tag">#content_tag &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CSL/Key.html#method-i-convert">#convert &mdash; CSL::Key</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-copy">#copy &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="Support/Attributes/ClassMethods.html#method-i-create">#create &mdash; Support::Attributes::ClassMethods</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-data">#data &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-date">#date &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-date_parts">#date_parts &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Nodes/Date.html#method-i-date_parts">#date_parts &mdash; CSL::Nodes::Date</a></li>
+    
+      <li><a href="CiteProc.html#method-i-default_format">#default_format &mdash; CiteProc</a></li>
+    
+      <li><a href="CSL.html#method-i-default_locale">#default_locale &mdash; CSL</a></li>
+    
+      <li><a href="CSL.html#method-i-default_style">#default_style &mdash; CSL</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-defaults">#defaults &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-defaults">#defaults &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-delimiter">#delimiter &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-depth">#depth &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-descendants">#descendants &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-descendants-21">#descendants! &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Key.html#method-i-descending-3F">#descending? &mdash; CSL::Key</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-display">#display &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-display">#display &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-display_order">#display_order &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-display_parts">#display_parts &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-each">#each &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-empty-3F">#empty? &mdash; CSL::Term</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-errors">#errors &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CSL/Nodes/ConditionalBlock.html#method-i-evaluate">#evaluate &mdash; CSL::Nodes::ConditionalBlock</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-finalize">#finalize &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-finalize">#finalize &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-find_children_by_name">#find_children_by_name &mdash; Support::Tree</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-format">#format &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Formatter.html#method-i-format">#format &mdash; CiteProc::Formatter</a></li>
+    
+      <li><a href="CiteProc/Formatter.html#method-i-format-3D">#format= &mdash; CiteProc::Formatter</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-format-3D">#format= &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Nodes/Text.html#method-i-format_page_range">#format_page_range &mdash; CSL::Nodes::Text</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-from">#from &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-gender">#gender &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-given">#given &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-handle_processing_error">#handle_processing_error &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-has_children-3F">#has_children? &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-has_gender-3F">#has_gender? &mdash; CSL::Term</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-has_term-3F">#has_term? &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-import">#import &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-individual_tags">#individual_tags &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-info">#info &mdash; CSL::Style</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-inherit_attributes">#inherit_attributes &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-inherit_attributes">#inherit_attributes &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Names.html#method-i-inherit_attributes">#inherit_attributes &mdash; CSL::Nodes::Names</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-inherit_attributes_from">#inherit_attributes_from &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-initialize-3F">#initialize? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-input-3D">#input= &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-input-3D">#input= &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-items">#items &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-key_filter">#key_filter &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-language-3D">#language= &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-link">#link &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-literal_as_sort_order">#literal_as_sort_order &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-locale">#locale &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-locale">#locale &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-locale-3D">#locale= &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-locales">#locales &mdash; CSL::Style</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-locales">#locales &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-localize">#localize &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-localized_date_parts">#localized_date_parts &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-localized_options">#localized_options &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-localized_terms">#localized_terms &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-make_bibliography">#make_bibliography &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-match">#match &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-matcher">#matcher &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-matches-3F">#matches? &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CSL/Nodes/ConditionalBlock.html#method-i-matches-3F">#matches? &mdash; CSL::Nodes::ConditionalBlock</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-merge">#merge &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-merge">#merge &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-merge-21">#merge! &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-merge-21">#merge! &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-merge-21">#merge! &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-i-merge-21">#merge! &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-merge-21">#merge! &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-merge_options">#merge_options &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Date.html#method-i-merge_parts">#merge_parts &mdash; CSL::Nodes::Date</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-name">#name &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-name">#name &mdash; CSL::Node</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-name">#name &mdash; Support::Tree</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-name">#name &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-nocite">#nocite &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-normalize">#normalize &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-normalize">#normalize &mdash; CSL::Node</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-normalize">#normalize &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-numeric-3F">#numeric? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-i-numeric-3F">#numeric? &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-numeric-3F">#numeric? &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-open">#open &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-open_range-3F">#open_range? &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-options">#options &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-options">#options &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-options">#options &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-options">#options &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-ordinalize">#ordinalize &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-parse">#parse &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-parse">#parse &mdash; CSL::Node</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-i-parse">#parse &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-parse-21">#parse! &mdash; CSL::Term</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-parse-21">#parse! &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-parse-21">#parse! &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-parse-21">#parse! &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-i-parse-21">#parse! &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-parse_argument">#parse_argument &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-parse_attributes">#parse_attributes &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-parse_date-21">#parse_date! &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-parse_family-21">#parse_family! &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-parse_given-21">#parse_given! &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-parse_name-21">#parse_name! &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Date.html#method-i-parts">#parts &mdash; CSL::Nodes::Date</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-parts">#parts &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-parts">#parts &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-personal-3F">#personal? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Label.html#method-i-plural-3F">#plural? &mdash; CSL::Nodes::Label</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-pluralize">#pluralize &mdash; CSL::Term</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-i-populate-21">#populate! &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-prefix">#prefix &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CSL/Nodes/Names.html#method-i-prefix_label-3F">#prefix_label? &mdash; CSL::Nodes::Names</a></li>
+    
+      <li><a href="CSL/Nodes/Choose.html#method-i-process">#process &mdash; CSL::Nodes::Choose</a></li>
+    
+      <li><a href="CSL/Nodes/Text.html#method-i-process">#process &mdash; CSL::Nodes::Text</a></li>
+    
+      <li><a href="CSL/Nodes/Label.html#method-i-process">#process &mdash; CSL::Nodes::Label</a></li>
+    
+      <li><a href="CSL/Nodes/Layout.html#method-i-process">#process &mdash; CSL::Nodes::Layout</a></li>
+    
+      <li><a href="CSL.html#method-i-process">#process &mdash; CSL</a></li>
+    
+      <li><a href="CSL/Nodes/ConditionalBlock.html#method-i-process">#process &mdash; CSL::Nodes::ConditionalBlock</a></li>
+    
+      <li><a href="CSL/Nodes/EtAl.html#method-i-process">#process &mdash; CSL::Nodes::EtAl</a></li>
+    
+      <li><a href="CSL/Nodes/Date.html#method-i-process">#process &mdash; CSL::Nodes::Date</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-process">#process &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-process">#process &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CSL/Nodes/Substitute.html#method-i-process">#process &mdash; CSL::Nodes::Substitute</a></li>
+    
+      <li><a href="CSL/Nodes/Names.html#method-i-process">#process &mdash; CSL::Nodes::Names</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-i-process">#process &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-process">#process &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Nodes/Number.html#method-i-process">#process &mdash; CSL::Nodes::Number</a></li>
+    
+      <li><a href="CiteProc.html#method-i-process">#process &mdash; CiteProc</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-process_day">#process_day &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-process_month">#process_month &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-process_names">#process_names &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Label.html#method-i-process_names">#process_names &mdash; CSL::Nodes::Label</a></li>
+    
+      <li><a href="CSL/Nodes/Date.html#method-i-process_range">#process_range &mdash; CSL::Nodes::Date</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-process_season">#process_season &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-process_year">#process_year &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CiteProc/CitationData.html#method-i-properties">#properties &mdash; CiteProc::CitationData</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-range-3F">#range? &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-range_match">#range_match &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-region-3D">#region= &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-reload-21">#reload! &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-i-render">#render &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-reset">#reset &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-reverse_merge">#reverse_merge &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-reverse_merge">#reverse_merge &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-reverse_merge-21">#reverse_merge! &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-reverse_merge-21">#reverse_merge! &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-romanesque-3F">#romanesque? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="Extensions/Core/Numbers.html#method-i-romanize">#romanize &mdash; Extensions::Core::Numbers</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-root">#root &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-root-21">#root! &mdash; Support::Tree</a></li>
+    
+      <li><a href="Support/Tree.html#method-i-root-3F">#root? &mdash; Support::Tree</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-schema">#schema &mdash; CSL::Style</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-set">#set &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-set_defaults">#set_defaults &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-set_defaults">#set_defaults &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-i-set_defaults">#set_defaults &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-set_defaults">#set_defaults &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="CSL/Nodes/DatePart.html#method-i-set_defaults">#set_defaults &mdash; CSL::Nodes::DatePart</a></li>
+    
+      <li><a href="CiteProc/Format/Html.html#method-i-set_display">#set_display &mdash; CiteProc::Format::Html</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_display">#set_display &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_font_style">#set_font_style &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_font_variant">#set_font_variant &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_font_weight">#set_font_weight &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_prefix">#set_prefix &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_strip_periods">#set_strip_periods &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_suffix">#set_suffix &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_text_case">#set_text_case &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_text_decoration">#set_text_decoration &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-set_vertical_align">#set_vertical_align &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-singularize">#singularize &mdash; CSL::Term</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-skip-3F">#skip? &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-skip-3F">#skip? &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CSL/Sort.html#method-i-sort">#sort &mdash; CSL::Sort</a></li>
+    
+      <li><a href="CSL/Renderer.html#method-i-sort">#sort &mdash; CSL::Renderer</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-sort_order">#sort_order &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-sort_order">#sort_order &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-sort_order-3F">#sort_order? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-start_observing">#start_observing &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-static_order-3F">#static_order? &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-stop_observing">#stop_observing &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-i-strip_markup">#strip_markup &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-style">#style &mdash; CSL::Node</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-style-21">#style! &mdash; CSL::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-style-3D">#style= &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-style_options">#style_options &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Format/Default.html#method-i-suffix">#suffix &mdash; CiteProc::Format::Default</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-tag">#tag &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-term">#term &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CSL/Locale.html#method-i-terms">#terms &mdash; CSL::Locale</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-to">#to &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-to_hash">#to_hash &mdash; Support::Attributes</a></li>
+    
+      <li><a href="CiteProc/Variable.html#method-i-to_i">#to_i &mdash; CiteProc::Variable</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-to_initials">#to_initials &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-to_json">#to_json &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-to_proc">#to_proc &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CiteProc/Item.html#method-i-to_s">#to_s &mdash; CiteProc::Item</a></li>
+    
+      <li><a href="CSL/Term.html#method-i-to_s">#to_s &mdash; CSL::Term</a></li>
+    
+      <li><a href="CSL/Nodes/Node.html#method-i-to_s">#to_s &mdash; CSL::Nodes::Node</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-to_s">#to_s &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-to_s">#to_s &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="CiteProc/Bibliography.html#method-i-to_s">#to_s &mdash; CiteProc::Bibliography</a></li>
+    
+      <li><a href="CSL/Node.html#method-i-to_xml">#to_xml &mdash; CSL::Node</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-transfrom">#transfrom &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Nodes/Name.html#method-i-truncate">#truncate &mdash; CSL::Nodes::Name</a></li>
+    
+      <li><a href="CiteProc/Selector.html#method-i-type">#type &mdash; CiteProc::Selector</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-uncertain-21">#uncertain! &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CSL/Nodes/Group.html#method-i-update">#update &mdash; CSL::Nodes::Group</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-update-21">#update! &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-update_items">#update_items &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CiteProc/Processor.html#method-i-update_uncited_items">#update_uncited_items &mdash; CiteProc::Processor</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-valid-3F">#valid? &mdash; CSL::Style</a></li>
+    
+      <li><a href="CSL/Style.html#method-i-validate">#validate &mdash; CSL::Style</a></li>
+    
+      <li><a href="CiteProc/Date.html#method-i-value">#value &mdash; CiteProc::Date</a></li>
+    
+      <li><a href="CiteProc/Name.html#method-i-value">#value &mdash; CiteProc::Name</a></li>
+    
+      <li><a href="Support/Attributes.html#method-i-value_filter">#value_filter &mdash; Support::Attributes</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

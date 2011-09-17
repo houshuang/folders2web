@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"document:EFI",Nokogiri::XML::SAX::PushParser#document;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"EThe Nokogiri::XML::SAX::Document on which the PushParser will be;TI"operating;T:
+@file0FI"(lib/nokogiri/xml/sax/push_parser.rb;T

@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Codecs</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/_aem/codecs_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/_aem/codecs.rb">lib/_aem/codecs.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add_unit_types">#add_unit_types</a></li>
+          
+          <li><a href="#method-i-dont_cache_unpacked_specifiers">#dont_cache_unpacked_specifiers</a></li>
+          
+          <li><a href="#method-i-fully_unpack_object_specifier">#fully_unpack_object_specifier</a></li>
+          
+          <li><a href="#method-i-pack">#pack</a></li>
+          
+          <li><a href="#method-i-pack_array">#pack_array</a></li>
+          
+          <li><a href="#method-i-pack_hash">#pack_hash</a></li>
+          
+          <li><a href="#method-i-pack_strings_as_type">#pack_strings_as_type</a></li>
+          
+          <li><a href="#method-i-pack_uint64">#pack_uint64</a></li>
+          
+          <li><a href="#method-i-pack_unknown">#pack_unknown</a></li>
+          
+          <li><a href="#method-i-unpack">#unpack</a></li>
+          
+          <li><a href="#method-i-unpack_aelist">#unpack_aelist</a></li>
+          
+          <li><a href="#method-i-unpack_aerecord">#unpack_aerecord</a></li>
+          
+          <li><a href="#method-i-unpack_comp_descriptor">#unpack_comp_descriptor</a></li>
+          
+          <li><a href="#method-i-unpack_contains_comp_descriptor">#unpack_contains_comp_descriptor</a></li>
+          
+          <li><a href="#method-i-unpack_current_container">#unpack_current_container</a></li>
+          
+          <li><a href="#method-i-unpack_enumerated">#unpack_enumerated</a></li>
+          
+          <li><a href="#method-i-unpack_insertion_loc">#unpack_insertion_loc</a></li>
+          
+          <li><a href="#method-i-unpack_keyword">#unpack_keyword</a></li>
+          
+          <li><a href="#method-i-unpack_logical_descriptor">#unpack_logical_descriptor</a></li>
+          
+          <li><a href="#method-i-unpack_object_being_examined">#unpack_object_being_examined</a></li>
+          
+          <li><a href="#method-i-unpack_object_specifier">#unpack_object_specifier</a></li>
+          
+          <li><a href="#method-i-unpack_property">#unpack_property</a></li>
+          
+          <li><a href="#method-i-unpack_type">#unpack_type</a></li>
+          
+          <li><a href="#method-i-unpack_unknown">#unpack_unknown</a></li>
+          
+          <li><a href="#method-i-use_ascii_8bit">#use_ascii_8bit</a></li>
+          
+          <li><a href="#method-i-use_datetime">#use_datetime</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./AEMReference.html">AEMReference</a></li>
+        
+          <li><a href="./AEMReference/AND.html">AEMReference::AND</a></li>
+        
+          <li><a href="./AEMReference/AllElements.html">AEMReference::AllElements</a></li>
+        
+          <li><a href="./AEMReference/ApplicationRoot.html">AEMReference::ApplicationRoot</a></li>
+        
+          <li><a href="./AEMReference/BeginsWith.html">AEMReference::BeginsWith</a></li>
+        
+          <li><a href="./AEMReference/CollectComparable.html">AEMReference::CollectComparable</a></li>
+        
+          <li><a href="./AEMReference/ComparisonTest.html">AEMReference::ComparisonTest</a></li>
+        
+          <li><a href="./AEMReference/Contains.html">AEMReference::Contains</a></li>
+        
+          <li><a href="./AEMReference/CurrentContainer.html">AEMReference::CurrentContainer</a></li>
+        
+          <li><a href="./AEMReference/CustomRoot.html">AEMReference::CustomRoot</a></li>
+        
+          <li><a href="./AEMReference/DeferredSpecifier.html">AEMReference::DeferredSpecifier</a></li>
+        
+          <li><a href="./AEMReference/ElementByID.html">AEMReference::ElementByID</a></li>
+        
+          <li><a href="./AEMReference/ElementByIndex.html">AEMReference::ElementByIndex</a></li>
+        
+          <li><a href="./AEMReference/ElementByName.html">AEMReference::ElementByName</a></li>
+        
+          <li><a href="./AEMReference/ElementByOrdinal.html">AEMReference::ElementByOrdinal</a></li>
+        
+          <li><a href="./AEMReference/ElementByRelativePosition.html">AEMReference::ElementByRelativePosition</a></li>
+        
+          <li><a href="./AEMReference/ElementsByFilter.html">AEMReference::ElementsByFilter</a></li>
+        
+          <li><a href="./AEMReference/ElementsByRange.html">AEMReference::ElementsByRange</a></li>
+        
+          <li><a href="./AEMReference/EndsWith.html">AEMReference::EndsWith</a></li>
+        
+          <li><a href="./AEMReference/Equals.html">AEMReference::Equals</a></li>
+        
+          <li><a href="./AEMReference/GreaterOrEquals.html">AEMReference::GreaterOrEquals</a></li>
+        
+          <li><a href="./AEMReference/GreaterThan.html">AEMReference::GreaterThan</a></li>
+        
+          <li><a href="./AEMReference/InsertionSpecifier.html">AEMReference::InsertionSpecifier</a></li>
+        
+          <li><a href="./AEMReference/IsIn.html">AEMReference::IsIn</a></li>
+        
+          <li><a href="./AEMReference/LessOrEquals.html">AEMReference::LessOrEquals</a></li>
+        
+          <li><a href="./AEMReference/LessThan.html">AEMReference::LessThan</a></li>
+        
+          <li><a href="./AEMReference/LogicalTest.html">AEMReference::LogicalTest</a></li>
+        
+          <li><a href="./AEMReference/MultipleElements.html">AEMReference::MultipleElements</a></li>
+        
+          <li><a href="./AEMReference/NOT.html">AEMReference::NOT</a></li>
+        
+          <li><a href="./AEMReference/NotEquals.html">AEMReference::NotEquals</a></li>
+        
+          <li><a href="./AEMReference/OR.html">AEMReference::OR</a></li>
+        
+          <li><a href="./AEMReference/ObjectBeingExamined.html">AEMReference::ObjectBeingExamined</a></li>
+        
+          <li><a href="./AEMReference/PositionSpecifier.html">AEMReference::PositionSpecifier</a></li>
+        
+          <li><a href="./AEMReference/Property.html">AEMReference::Property</a></li>
+        
+          <li><a href="./AEMReference/Query.html">AEMReference::Query</a></li>
+        
+          <li><a href="./AEMReference/ReferenceRoot.html">AEMReference::ReferenceRoot</a></li>
+        
+          <li><a href="./AEMReference/SingleElement.html">AEMReference::SingleElement</a></li>
+        
+          <li><a href="./AEMReference/Specifier.html">AEMReference::Specifier</a></li>
+        
+          <li><a href="./AEMReference/Test.html">AEMReference::Test</a></li>
+        
+          <li><a href="./AEMReference/UnkeyedElements.html">AEMReference::UnkeyedElements</a></li>
+        
+          <li><a href="./AEMReference/UserProperty.html">AEMReference::UserProperty</a></li>
+        
+          <li><a href="./Appscript.html">Appscript</a></li>
+        
+          <li><a href="./Appscript/AppData.html">Appscript::AppData</a></li>
+        
+          <li><a href="./Appscript/AppDataAccessors.html">Appscript::AppDataAccessors</a></li>
+        
+          <li><a href="./Appscript/Application.html">Appscript::Application</a></li>
+        
+          <li><a href="./FindApp/ApplicationNotFoundError.html">Appscript::ApplicationNotFoundError</a></li>
+        
+          <li><a href="./Connect/CantLaunchApplicationError.html">Appscript::CantLaunchApplicationError</a></li>
+        
+          <li><a href="./Appscript/CommandError.html">Appscript::CommandError</a></li>
+        
+          <li><a href="./Appscript/GenericApplication.html">Appscript::GenericApplication</a></li>
+        
+          <li><a href="./Appscript/GenericReference.html">Appscript::GenericReference</a></li>
+        
+          <li><a href="./Appscript/Reference.html">Appscript::Reference</a></li>
+        
+          <li><a href="./AEM.html">AEM</a></li>
+        
+          <li><a href="./TypeWrappers/AEEnum.html">AEM::AEEnum</a></li>
+        
+          <li><a href="./TypeWrappers/AEKey.html">AEM::AEKey</a></li>
+        
+          <li><a href="./TypeWrappers/AEProp.html">AEM::AEProp</a></li>
+        
+          <li><a href="./TypeWrappers/AEType.html">AEM::AEType</a></li>
+        
+          <li><a href="./TypeWrappers/AETypeBase.html">AEM::AETypeBase</a></li>
+        
+          <li><a href="./AEM/Application.html">AEM::Application</a></li>
+        
+          <li><a href="./Connect/CantLaunchApplicationError.html">AEM::CantLaunchApplicationError</a></li>
+        
+          <li><a href="./Codecs.html">AEM::Codecs</a></li>
+        
+          <li><a href="./MacTypes.html">MacTypes</a></li>
+        
+          <li><a href="./MacTypes/Alias.html">MacTypes::Alias</a></li>
+        
+          <li><a href="./MacTypes/FileBase.html">MacTypes::FileBase</a></li>
+        
+          <li><a href="./MacTypes/FileNotFoundError.html">MacTypes::FileNotFoundError</a></li>
+        
+          <li><a href="./MacTypes/FileURL.html">MacTypes::FileURL</a></li>
+        
+          <li><a href="./MacTypes/Units.html">MacTypes::Units</a></li>
+        
+          <li><a href="./TypeWrappers.html">TypeWrappers</a></li>
+        
+          <li><a href="./TypeWrappers/AEEnum.html">TypeWrappers::AEEnum</a></li>
+        
+          <li><a href="./TypeWrappers/AEKey.html">TypeWrappers::AEKey</a></li>
+        
+          <li><a href="./TypeWrappers/AEProp.html">TypeWrappers::AEProp</a></li>
+        
+          <li><a href="./TypeWrappers/AEType.html">TypeWrappers::AEType</a></li>
+        
+          <li><a href="./TypeWrappers/AETypeBase.html">TypeWrappers::AETypeBase</a></li>
+        
+          <li><a href="./OSAX.html">OSAX</a></li>
+        
+          <li><a href="./OSAX/OSAXData.html">OSAX::OSAXData</a></li>
+        
+          <li><a href="./OSAX/ScriptingAddition.html">OSAX::ScriptingAddition</a></li>
+        
+          <li><a href="./OSAX/SdefParser.html">OSAX::SdefParser</a></li>
+        
+          <li><a href="./AEMEncodingSupport.html">AEMEncodingSupport</a></li>
+        
+          <li><a href="./AEMEncodingSupport/DisableStringEncodings.html">AEMEncodingSupport::DisableStringEncodings</a></li>
+        
+          <li><a href="./AEMEncodingSupport/EnableStringEncodings.html">AEMEncodingSupport::EnableStringEncodings</a></li>
+        
+          <li><a href="./Send.html">Send</a></li>
+        
+          <li><a href="./Send/Event.html">Send::Event</a></li>
+        
+          <li><a href="./Send/EventError.html">Send::EventError</a></li>
+        
+          <li><a href="./TerminologyParser.html">TerminologyParser</a></li>
+        
+          <li><a href="./TerminologyParser/BigEndianParser.html">TerminologyParser::BigEndianParser</a></li>
+        
+          <li><a href="./TerminologyParser/LittleEndianParser.html">TerminologyParser::LittleEndianParser</a></li>
+        
+          <li><a href="./Connect.html">Connect</a></li>
+        
+          <li><a href="./Connect/CantLaunchApplicationError.html">Connect::CantLaunchApplicationError</a></li>
+        
+          <li><a href="./FindApp.html">FindApp</a></li>
+        
+          <li><a href="./FindApp/ApplicationNotFoundError.html">FindApp::ApplicationNotFoundError</a></li>
+        
+          <li><a href="./AS_SafeObject.html">AS_SafeObject</a></li>
+        
+          <li><a href="./BigEndianConverters.html">BigEndianConverters</a></li>
+        
+          <li><a href="./BigEndianPackers.html">BigEndianPackers</a></li>
+        
+          <li><a href="./Codecs.html">Codecs</a></li>
+        
+          <li><a href="./DefaultTerminology.html">DefaultTerminology</a></li>
+        
+          <li><a href="./DisableObjectSpecifierCaching.html">DisableObjectSpecifierCaching</a></li>
+        
+          <li><a href="./KAE.html">KAE</a></li>
+        
+          <li><a href="./Module.html">Module</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./ReferenceRenderer.html">ReferenceRenderer</a></li>
+        
+          <li><a href="./SmallEndianConverters.html">SmallEndianConverters</a></li>
+        
+          <li><a href="./SmallEndianPackers.html">SmallEndianPackers</a></li>
+        
+          <li><a href="./Terminology.html">Terminology</a></li>
+        
+          <li><a href="./UnitTypeCodecs.html">UnitTypeCodecs</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Codecs</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="AbsoluteOrdinals">AbsoluteOrdinals</a></dt>
+          
+          <dd class="description"><p>Lookup tables for converting enumerator, ordinal codes to aem reference
+method names. Used by <a
+href="Codecs.html#method-i-unpack_object_specifier">unpack_object_specifier</a>,
+<a
+href="Codecs.html#method-i-fully_unpack_object_specifier">fully_unpack_object_specifier</a>
+to construct aem references.</p></dd>
+          
+        
+          <dt><a name="AllAbsoluteOrdinal">AllAbsoluteOrdinal</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="App">App</a></dt>
+          
+          <dd class="description"><p>Subclasses could override these to provide their own reference roots if
+needed</p></dd>
+          
+        
+          <dt><a name="ComparisonEnums">ComparisonEnums</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Con">Con</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="FalseDesc">FalseDesc</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="InsertionLocEnums">InsertionLocEnums</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Its">Its</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="LogicalEnums">LogicalEnums</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NullDesc">NullDesc</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RelativePositionEnums">RelativePositionEnums</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SInt32Bounds">SInt32Bounds</a></dt>
+          
+          <dd class="description"><p>Pack</p></dd>
+          
+        
+          <dt><a name="SInt64Bounds">SInt64Bounds</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TrueDesc">TrueDesc</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="UInt64Bounds">UInt64Bounds</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@unit_type_codecs</span> = <span class="ruby-constant">UnitTypeCodecs</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-comment"># Note: while typeUnicodeText is deprecated (see AEDataModel.h), it's still the</span>
+        <span class="ruby-comment"># most commonly used Unicode type so is used here for compatibility's sake.</span>
+        <span class="ruby-comment"># typeUTF8Text was initially tried, but existing applications had problems with it; i.e.</span>
+        <span class="ruby-comment"># some apps make unsafe assumptions on what to expect based on AS's behaviour.</span>
+        <span class="ruby-comment"># Once AppleScript is using typeUTF8Text/typeUTF16ExternalRepresentation</span>
+        <span class="ruby-comment"># and existing applications don't choke, this code can be similarly upgraded.</span>
+        <span class="ruby-ivar">@pack_text_as_type</span> = <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUnicodeText</span>
+        <span class="ruby-comment"># on Ruby 1.9+, set String encoding to UTF-8</span>
+        <span class="ruby-ivar">@encoding_support</span> = <span class="ruby-constant">AEMEncodingSupport</span>.<span class="ruby-identifier">encoding_support</span>
+        <span class="ruby-ivar">@unpack_dates_as_datetime</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add_unit_types-method" class="method-detail ">
+          <a name="method-i-add_unit_types"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_unit_types</span><span
+              class="method-args">(type_defs)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Compatibility options</p>
+            
+
+            
+            <div class="method-source-code" id="add_unit_types-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_unit_types</span>(<span class="ruby-identifier">type_defs</span>)
+        <span class="ruby-comment"># register custom unit type definitions with this Codecs instance</span>
+        <span class="ruby-comment"># e.g. Adobe apps define additional unit types (ciceros, pixels, etc.)</span>
+        <span class="ruby-ivar">@unit_type_codecs</span>.<span class="ruby-identifier">add_types</span>(<span class="ruby-identifier">type_defs</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_unit_types-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_unit_types-method -->
+
+      
+        <div id="dont_cache_unpacked_specifiers-method" class="method-detail ">
+          <a name="method-i-dont_cache_unpacked_specifiers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dont_cache_unpacked_specifiers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dont_cache_unpacked_specifiers-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dont_cache_unpacked_specifiers</span>
+        <span class="ruby-comment"># When unpacking object specifiers, unlike AppleScript, appscript caches</span>
+        <span class="ruby-comment"># the original AEDesc for efficiency, allowing the resulting reference to</span>
+        <span class="ruby-comment"># be re-packed much more quickly. Occasionally this causes compatibility</span>
+        <span class="ruby-comment"># problems with applications that returned subtly malformed specifiers.</span>
+        <span class="ruby-comment"># To force a Codecs object to fully unpack and repack object specifiers,</span>
+        <span class="ruby-comment"># call its dont_cache_unpacked_specifiers method.</span>
+        <span class="ruby-identifier">extend</span>(<span class="ruby-constant">DisableObjectSpecifierCaching</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dont_cache_unpacked_specifiers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dont_cache_unpacked_specifiers-method -->
+
+      
+        <div id="fully_unpack_object_specifier-method" class="method-detail ">
+          <a name="method-i-fully_unpack_object_specifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fully_unpack_object_specifier</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="fully_unpack_object_specifier-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 528</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fully_unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-comment"># Recursively unpack an object specifier and all of its container descs.</span>
+        <span class="ruby-comment"># (Note: Codecs#unpack_object_specifier and AEMReference::DeferredSpecifier#_real_ref will call this when needed.)</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">type</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeObjectSpecifier</span>
+                        <span class="ruby-identifier">want</span> = <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEDesiredClass</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeType</span>).<span class="ruby-identifier">data</span>)
+                        <span class="ruby-identifier">key_form</span> = <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEKeyForm</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumeration</span>).<span class="ruby-identifier">data</span>)
+                        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEKeyData</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)
+                        <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">fully_unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEContainer</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>))
+                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">key_form</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormPropertyID</span>
+                                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">property</span>(<span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span>))
+                                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormUserPropertyID</span>
+                                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">userproperty</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormRelativePosition</span>
+                                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">send</span>(<span class="ruby-constant">RelativePositionEnums</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span>], <span class="ruby-identifier">want</span>)
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">elements</span>(<span class="ruby-identifier">want</span>)
+                                <span class="ruby-keyword">case</span> <span class="ruby-identifier">key_form</span>
+                                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormAbsolutePosition</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAbsoluteOrdinal</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span> <span class="ruby-operator">==</span> <span class="ruby-constant">AllAbsoluteOrdinal</span>
+                                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>
+                                                        <span class="ruby-keyword">else</span>
+                                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">send</span>(<span class="ruby-constant">AbsoluteOrdinals</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span>])
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">else</span>
+                                                        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">by_index</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormName</span>
+                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">by_name</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormUniqueID</span>
+                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">by_id</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormRange</span>
+                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">by_range</span>(
+                                                                <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAERangeStart</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)),
+                                                                <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAERangeStop</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)))
+                                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormTest</span>
+                                                <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">by_filter</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeNull</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">App</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeCurrentContainer</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">Con</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeObjectBeingExamined</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">Its</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fully_unpack_object_specifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fully_unpack_object_specifier-method -->
+
+      
+        <div id="pack-method" class="method-detail ">
+          <a name="method-i-pack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 232</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">val</span>) <span class="ruby-comment"># clients may override this to replace existing packers</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">Query</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">val</span>.<span class="ruby-constant">AEM_pack_self</span>(<span class="ruby-keyword">self</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Fixnum</span>, <span class="ruby-constant">Bignum</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-constant">SInt32Bounds</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">val</span>
+                                <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeSInt32</span>, [<span class="ruby-identifier">val</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'l'</span>)) 
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">SInt64Bounds</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">val</span>
+                                <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeSInt64</span>, [<span class="ruby-identifier">val</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'q'</span>))
+                        <span class="ruby-keyword">elsif</span> <span class="ruby-constant">UInt64Bounds</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">val</span>
+                                <span class="ruby-identifier">pack_uint64</span>(<span class="ruby-identifier">val</span>)
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFloat</span>, [<span class="ruby-identifier">val</span>.<span class="ruby-identifier">to_f</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'d'</span>))
+                        <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span> <span class="ruby-keyword">then</span> 
+                        <span class="ruby-ivar">@encoding_support</span>.<span class="ruby-identifier">pack_string</span>(<span class="ruby-identifier">val</span>, <span class="ruby-ivar">@pack_text_as_type</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">TrueClass</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">TrueDesc</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">FalseClass</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">FalseDesc</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Float</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFloat</span>, [<span class="ruby-identifier">val</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'d'</span>))
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Time</span>
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeLongDateTime</span>,
+                                [<span class="ruby-constant">AE</span>.<span class="ruby-identifier">convert_unix_seconds_to_long_date_time</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">to_i</span>)].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'q'</span>))
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">DateTime</span>, <span class="ruby-constant">Date</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeLongDateTime</span>,
+                                [<span class="ruby-constant">AE</span>.<span class="ruby-identifier">convert_string_to_long_date_time</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%F %T'</span>))].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'q'</span>))
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">pack_array</span>(<span class="ruby-identifier">val</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">pack_hash</span>(<span class="ruby-identifier">val</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">MacTypes</span><span class="ruby-operator">::</span><span class="ruby-constant">FileBase</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">desc</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeType</span>, <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">code</span>))
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEEnum</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumerated</span>, <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">code</span>))
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEProp</span> <span class="ruby-keyword">then</span> 
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeProperty</span>, <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">code</span>))
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEKey</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeKeyword</span>, <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">val</span>.<span class="ruby-identifier">code</span>))
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">val</span>
+                        
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">NilClass</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">NullDesc</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">did_pack</span>, <span class="ruby-identifier">desc</span> = <span class="ruby-ivar">@unit_type_codecs</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-identifier">val</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">did_pack</span>
+                        <span class="ruby-identifier">desc</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">pack_unknown</span>(<span class="ruby-identifier">val</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack-method -->
+
+      
+        <div id="pack_array-method" class="method-detail ">
+          <a name="method-i-pack_array"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_array</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_array-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_array</span>(<span class="ruby-identifier">val</span>)
+        <span class="ruby-identifier">lst</span> = <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new_list</span>(<span class="ruby-keyword">false</span>)
+        <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">put_item</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">item</span>))
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">lst</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_array-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_array-method -->
+
+      
+        <div id="pack_hash-method" class="method-detail ">
+          <a name="method-i-pack_hash"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_hash</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_hash-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_hash</span>(<span class="ruby-identifier">val</span>)
+        <span class="ruby-identifier">record</span> = <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new_list</span>(<span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">usrf</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">val</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> <span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AETypeBase</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">PClass</span> <span class="ruby-comment"># AS packs records that contain a 'class' property by coercing the packed record to that type at the end</span>
+                                <span class="ruby-keyword">begin</span>
+                                        <span class="ruby-identifier">record</span> = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">code</span>)
+                                <span class="ruby-keyword">rescue</span>
+                                        <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">code</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">usrf</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+                                <span class="ruby-identifier">usrf</span> = <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new_list</span>(<span class="ruby-keyword">false</span>)
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">usrf</span>.<span class="ruby-identifier">put_item</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">key</span>))
+                        <span class="ruby-identifier">usrf</span>.<span class="ruby-identifier">put_item</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-identifier">value</span>))
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">usrf</span>
+                <span class="ruby-identifier">record</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyASUserRecordFields</span>, <span class="ruby-identifier">usrf</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">record</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_hash-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_hash-method -->
+
+      
+        <div id="pack_strings_as_type-method" class="method-detail ">
+          <a name="method-i-pack_strings_as_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_strings_as_type</span><span
+              class="method-args">(code)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_strings_as_type-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_strings_as_type</span>(<span class="ruby-identifier">code</span>)
+        <span class="ruby-comment"># Some older (pre-OS X) applications may require text to be passed as </span>
+        <span class="ruby-comment"># typeChar or typeIntlText rather than the usual typeUnicodeText. To force</span>
+        <span class="ruby-comment"># an AEM::Codecs object to pack strings as one of these older types, call </span>
+        <span class="ruby-comment"># its pack_strings_as_type method, specifying the type you want used instead.</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span>(<span class="ruby-identifier">code</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">code</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Code must be a four-character string: #{code.inspect}&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@pack_text_as_type</span> = <span class="ruby-identifier">code</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_strings_as_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_strings_as_type-method -->
+
+      
+        <div id="pack_uint64-method" class="method-detail ">
+          <a name="method-i-pack_uint64"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_uint64</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_uint64-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_uint64</span>(<span class="ruby-identifier">val</span>) 
+        <span class="ruby-comment"># On 10.5+, clients could override this method to do a non-lossy conversion,</span>
+        <span class="ruby-comment"># (assuming target app knows how to handle new UInt64 type):</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># def pack_uint64(val)</span>
+        <span class="ruby-comment">#     AE::AEDesc.new(KAE::TypeUInt64, [val.to_f].pack('Q'))</span>
+        <span class="ruby-comment"># end</span>
+        <span class="ruby-constant">AE</span><span class="ruby-operator">::</span><span class="ruby-constant">AEDesc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFloat</span>, [<span class="ruby-identifier">val</span>.<span class="ruby-identifier">to_f</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">'d'</span>)) <span class="ruby-comment"># pack as 64-bit float for compatibility (lossy conversion)</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_uint64-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_uint64-method -->
+
+      
+        <div id="pack_unknown-method" class="method-detail ">
+          <a name="method-i-pack_unknown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pack_unknown</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pack_unknown-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pack_unknown</span>(<span class="ruby-identifier">val</span>) <span class="ruby-comment"># clients may override this to provide additional packers</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Can't pack data into an AEDesc (unsupported type): #{val.inspect}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pack_unknown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pack_unknown-method -->
+
+      
+        <div id="unpack-method" class="method-detail ">
+          <a name="method-i-unpack"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 352</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>) <span class="ruby-comment"># clients may override this to replace existing unpackers</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">type</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeObjectSpecifier</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeSInt32</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'l'</span>)[<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeIEEE64BitFloatingPoint</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'d'</span>)[<span class="ruby-value">0</span>]
+                
+                <span class="ruby-keyword">when</span> 
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUnicodeText</span>,
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeChar</span>, 
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeIntlText</span>, 
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUTF16ExternalRepresentation</span>,
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeStyledText</span>
+                        <span class="ruby-ivar">@encoding_support</span>.<span class="ruby-identifier">unpack_string</span>(<span class="ruby-identifier">desc</span>)
+                        
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFalse</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">false</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeTrue</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">true</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeLongDateTime</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-identifier">t</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'q'</span>)[<span class="ruby-value">0</span>]
+                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@unpack_dates_as_datetime</span>
+                                <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">strptime</span>(<span class="ruby-constant">AE</span>.<span class="ruby-identifier">convert_long_date_time_to_string</span>(<span class="ruby-identifier">t</span>), <span class="ruby-string">'%F %T'</span>)
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-constant">AE</span>.<span class="ruby-identifier">convert_long_date_time_to_unix_seconds</span>(<span class="ruby-identifier">t</span>))
+                        <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAEList</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_aelist</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAERecord</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_aerecord</span>(<span class="ruby-identifier">desc</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAlias</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">MacTypes</span><span class="ruby-operator">::</span><span class="ruby-constant">Alias</span>.<span class="ruby-identifier">desc</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> 
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFileURL</span>,
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFSRef</span>,
+                                <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeFSS</span>
+                        <span class="ruby-constant">MacTypes</span><span class="ruby-operator">::</span><span class="ruby-constant">FileURL</span>.<span class="ruby-identifier">desc</span>(<span class="ruby-identifier">desc</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeType</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_type</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumerated</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_enumerated</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeProperty</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_property</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeKeyword</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_keyword</span>(<span class="ruby-identifier">desc</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeSInt16</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'s'</span>)[<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUInt32</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'L'</span>)[<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeSInt64</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'q'</span>)[<span class="ruby-value">0</span>]
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeNull</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">nil</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUTF8Text</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeInsertionLoc</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_insertion_loc</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeCurrentContainer</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_current_container</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeObjectBeingExamined</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_object_being_examined</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeCompDescriptor</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_comp_descriptor</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeLogicalDescriptor</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">unpack_logical_descriptor</span>(<span class="ruby-identifier">desc</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeIEEE32BitFloatingPoint</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'f'</span>)[<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">Type128BitFloatingPoint</span> <span class="ruby-keyword">then</span> 
+                        <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeIEEE64BitFloatingPoint</span>).<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'d'</span>)[<span class="ruby-value">0</span>]
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeQDPoint</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'ss'</span>).<span class="ruby-identifier">reverse</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeQDRectangle</span> <span class="ruby-keyword">then</span>
+                        <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'ssss'</span>)
+                        [<span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">x2</span>]
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeRGBColor</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'SSS'</span>)
+                        
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeVersion</span>
+                        <span class="ruby-keyword">begin</span>
+                                <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUnicodeText</span>)) <span class="ruby-comment"># supported in 10.4+</span>
+                        <span class="ruby-keyword">rescue</span>
+                                <span class="ruby-identifier">vers</span>, <span class="ruby-identifier">lo</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'CC'</span>)
+                                <span class="ruby-identifier">subvers</span>, <span class="ruby-identifier">patch</span> = <span class="ruby-identifier">lo</span>.<span class="ruby-identifier">divmod</span>(<span class="ruby-value">16</span>)
+                                <span class="ruby-node">&quot;#{vers}.#{subvers}.#{patch}&quot;</span>
+                        <span class="ruby-keyword">end</span> 
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeBoolean</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;\0000&quot;</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUInt16</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'S'</span>)[<span class="ruby-value">0</span>] <span class="ruby-comment"># 10.5+</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeUInt64</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">'Q'</span>)[<span class="ruby-value">0</span>] <span class="ruby-comment"># 10.5+</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">did_unpack</span>, <span class="ruby-identifier">val</span> = <span class="ruby-ivar">@unit_type_codecs</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">did_unpack</span>
+                        <span class="ruby-identifier">val</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">unpack_unknown</span>(<span class="ruby-identifier">desc</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack-method -->
+
+      
+        <div id="unpack_aelist-method" class="method-detail ">
+          <a name="method-i-unpack_aelist"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_aelist</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_aelist-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_aelist</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">lst</span> = []
+        <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">length</span>().<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">lst</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_item</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)[<span class="ruby-value">1</span>]))
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">lst</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_aelist-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_aelist-method -->
+
+      
+        <div id="unpack_aerecord-method" class="method-detail ">
+          <a name="method-i-unpack_aerecord"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_aerecord</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_aerecord-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_aerecord</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">dct</span> = {}
+        <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">length</span>().<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_item</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyASUserRecordFields</span>
+                        <span class="ruby-identifier">lst</span> = <span class="ruby-identifier">unpack_aelist</span>(<span class="ruby-identifier">value</span>)
+                        (<span class="ruby-identifier">lst</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">dct</span>[<span class="ruby-identifier">lst</span>[<span class="ruby-identifier">j</span> * <span class="ruby-value">2</span>]] = <span class="ruby-identifier">lst</span>[<span class="ruby-identifier">j</span> * <span class="ruby-value">2</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">dct</span>[<span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>)] = <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">value</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">dct</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_aerecord-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_aerecord-method -->
+
+      
+        <div id="unpack_comp_descriptor-method" class="method-detail ">
+          <a name="method-i-unpack_comp_descriptor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_comp_descriptor</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_comp_descriptor-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 642</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_comp_descriptor</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">operator</span> = <span class="ruby-constant">ComparisonEnums</span>[<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAECompOperator</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumeration</span>).<span class="ruby-identifier">data</span>]
+        <span class="ruby-identifier">op1</span> = <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEObject1</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>))
+        <span class="ruby-identifier">op2</span> = <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEObject2</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>))
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">'contains'</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">unpack_contains_comp_descriptor</span>(<span class="ruby-identifier">op1</span>, <span class="ruby-identifier">op2</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">op1</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operator</span>, <span class="ruby-identifier">op2</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_comp_descriptor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_comp_descriptor-method -->
+
+      
+        <div id="unpack_contains_comp_descriptor-method" class="method-detail ">
+          <a name="method-i-unpack_contains_comp_descriptor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_contains_comp_descriptor</span><span
+              class="method-args">(op1, op2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_contains_comp_descriptor-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 630</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_contains_comp_descriptor</span>(<span class="ruby-identifier">op1</span>, <span class="ruby-identifier">op2</span>)
+        <span class="ruby-comment"># KAEContains is also used to construct 'is_in' tests, where test value is first operand and</span>
+        <span class="ruby-comment"># reference being tested is second operand, so need to make sure first operand is an its-based ref;</span>
+        <span class="ruby-comment"># if not, rearrange accordingly.</span>
+        <span class="ruby-comment"># Since type-checking is involved, this extra hook is provided so that appscript's AppData subclass can override this method to add its own type checking</span>
+        <span class="ruby-keyword">if</span>  <span class="ruby-identifier">op1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">Query</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">op1</span>.<span class="ruby-constant">AEM_root</span> <span class="ruby-operator">==</span> <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">Its</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">op1</span>.<span class="ruby-identifier">contains</span>(<span class="ruby-identifier">op2</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">op2</span>.<span class="ruby-identifier">is_in</span>(<span class="ruby-identifier">op1</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_contains_comp_descriptor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_contains_comp_descriptor-method -->
+
+      
+        <div id="unpack_current_container-method" class="method-detail ">
+          <a name="method-i-unpack_current_container"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_current_container</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_current_container-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 620</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_current_container</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Con</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_current_container-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_current_container-method -->
+
+      
+        <div id="unpack_enumerated-method" class="method-detail ">
+          <a name="method-i-unpack_enumerated"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_enumerated</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_enumerated-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_enumerated</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEEnum</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_enumerated-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_enumerated-method -->
+
+      
+        <div id="unpack_insertion_loc-method" class="method-detail ">
+          <a name="method-i-unpack_insertion_loc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_insertion_loc</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_insertion_loc-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 614</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_insertion_loc</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEObject</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)).<span class="ruby-identifier">send</span>(<span class="ruby-constant">InsertionLocEnums</span>[<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEPosition</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumeration</span>).<span class="ruby-identifier">data</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_insertion_loc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_insertion_loc-method -->
+
+      
+        <div id="unpack_keyword-method" class="method-detail ">
+          <a name="method-i-unpack_keyword"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_keyword</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_keyword-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 480</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_keyword</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEKey</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_keyword-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_keyword-method -->
+
+      
+        <div id="unpack_logical_descriptor-method" class="method-detail ">
+          <a name="method-i-unpack_logical_descriptor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_logical_descriptor</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_logical_descriptor-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 653</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_logical_descriptor</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-identifier">operator</span> = <span class="ruby-constant">LogicalEnums</span>[<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAELogicalOperator</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumeration</span>).<span class="ruby-identifier">data</span>]
+        <span class="ruby-identifier">operands</span> = <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAELogicalTerms</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAEList</span>))
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operator</span>, *<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>, <span class="ruby-identifier">operands</span>.<span class="ruby-identifier">length</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_logical_descriptor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_logical_descriptor-method -->
+
+      
+        <div id="unpack_object_being_examined-method" class="method-detail ">
+          <a name="method-i-unpack_object_being_examined"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_object_being_examined</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_object_being_examined-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 624</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_object_being_examined</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Its</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_object_being_examined-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_object_being_examined-method -->
+
+      
+        <div id="unpack_object_specifier-method" class="method-detail ">
+          <a name="method-i-unpack_object_specifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_object_specifier</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_object_specifier-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 580</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-comment"># Shallow-unpack an object specifier, retaining the container AEDesc as-is.</span>
+        <span class="ruby-comment"># (i.e. Defers full unpacking of [most] object specifiers for efficiency.)</span>
+        <span class="ruby-identifier">key_form</span> = <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEKeyForm</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeEnumeration</span>).<span class="ruby-identifier">data</span>)
+        <span class="ruby-keyword">if</span> [<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormPropertyID</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormAbsolutePosition</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormName</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormUniqueID</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key_form</span>)
+                <span class="ruby-identifier">want</span> = <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEDesiredClass</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeType</span>).<span class="ruby-identifier">data</span>)
+                <span class="ruby-identifier">key</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEKeyData</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>)
+                <span class="ruby-identifier">container</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">DeferredSpecifier</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">get_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">KeyAEContainer</span>, <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeWildCard</span>), <span class="ruby-keyword">self</span>)
+                <span class="ruby-keyword">case</span> <span class="ruby-identifier">key_form</span>
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormPropertyID</span>
+                                <span class="ruby-identifier">ref</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">Property</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-identifier">container</span>, <span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span>))
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormAbsolutePosition</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAbsoluteOrdinal</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">data</span> <span class="ruby-operator">==</span> <span class="ruby-constant">AllAbsoluteOrdinal</span>
+                                                <span class="ruby-identifier">ref</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">AllElements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-identifier">container</span>)
+                                        <span class="ruby-keyword">else</span>
+                                                <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">fully_unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>) <span class="ruby-comment"># do a full unpack of rarely returned reference forms</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">ref</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">ElementByIndex</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">UnkeyedElements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-identifier">container</span>), <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormName</span>
+                                <span class="ruby-identifier">ref</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">ElementByName</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">UnkeyedElements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-identifier">container</span>), <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                        <span class="ruby-keyword">when</span> <span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">FormUniqueID</span>
+                                <span class="ruby-identifier">ref</span> = <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">ElementByID</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-constant">AEMReference</span><span class="ruby-operator">::</span><span class="ruby-constant">UnkeyedElements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">want</span>, <span class="ruby-identifier">container</span>), <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">key</span>))
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">fully_unpack_object_specifier</span>(<span class="ruby-identifier">desc</span>) <span class="ruby-comment"># do a full unpack of more complex, rarely returned reference forms</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">ref</span>.<span class="ruby-constant">AEM_set_desc</span>(<span class="ruby-identifier">desc</span>) <span class="ruby-comment"># retain existing AEDesc for efficiency</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">ref</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_object_specifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_object_specifier-method -->
+
+      
+        <div id="unpack_property-method" class="method-detail ">
+          <a name="method-i-unpack_property"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_property</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_property-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 476</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_property</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEProp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_property-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_property-method -->
+
+      
+        <div id="unpack_type-method" class="method-detail ">
+          <a name="method-i-unpack_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_type</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpack_type-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 468</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_type</span>(<span class="ruby-identifier">desc</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Codecs</span>.<span class="ruby-identifier">four_char_code</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">data</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_type-method -->
+
+      
+        <div id="unpack_unknown-method" class="method-detail ">
+          <a name="method-i-unpack_unknown"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpack_unknown</span><span
+              class="method-args">(desc)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Unpack</p>
+            
+
+            
+            <div class="method-source-code" id="unpack_unknown-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpack_unknown</span>(<span class="ruby-identifier">desc</span>) <span class="ruby-comment"># clients may override this to provide additional unpackers</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">is_record?</span> <span class="ruby-comment"># if it's a record-like structure with an unknown/unsupported type then unpack it as a hash, including the original type info as a 'class' property</span>
+                <span class="ruby-identifier">rec</span> = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">coerce</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">TypeAERecord</span>)
+                <span class="ruby-identifier">rec</span>.<span class="ruby-identifier">put_param</span>(<span class="ruby-constant">KAE</span><span class="ruby-operator">::</span><span class="ruby-constant">PClass</span>, <span class="ruby-identifier">pack</span>(<span class="ruby-constant">TypeWrappers</span><span class="ruby-operator">::</span><span class="ruby-constant">AEType</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">desc</span>.<span class="ruby-identifier">type</span>)))
+                <span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">rec</span>)
+        <span class="ruby-keyword">else</span> <span class="ruby-comment"># else return unchanged</span>
+                <span class="ruby-identifier">desc</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpack_unknown-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpack_unknown-method -->
+
+      
+        <div id="use_ascii_8bit-method" class="method-detail ">
+          <a name="method-i-use_ascii_8bit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_ascii_8bit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="use_ascii_8bit-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">use_ascii_8bit</span>
+        <span class="ruby-comment"># By default on Ruby 1.9+, Codecs#pack creates String instances with UTF-8 </span>
+        <span class="ruby-comment"># encoding and #unpack ensures all strings are UTF-8 encoded before packing </span>
+        <span class="ruby-comment"># them into AEDescs of typeUTF8Text. To force the old-style behaviour where</span>
+        <span class="ruby-comment"># strings are treated as byte strings containing UTF-8 data, call:</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment">#     some_application.AS_app_data.use_ascii_8bit_strings</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-comment"># This will cause Strings to use the binary ASCII-8BIT encoding; as in Ruby 1.8, </span>
+        <span class="ruby-comment"># the user is responsible for ensuring that strings contain UTF-8 data.</span>
+        <span class="ruby-ivar">@encoding_support</span> = <span class="ruby-constant">AEMEncodingSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">DisableStringEncodings</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_ascii_8bit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_ascii_8bit-method -->
+
+      
+        <div id="use_datetime-method" class="method-detail ">
+          <a name="method-i-use_datetime"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">use_datetime</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="use_datetime-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/codecs.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">use_datetime</span>
+        <span class="ruby-comment"># By default dates are unpacked as Time instances, which have limited range.</span>
+        <span class="ruby-comment"># Call this method to unpack dates as DateTime instances instead.</span>
+        <span class="ruby-ivar">@unpack_dates_as_datetime</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- use_datetime-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- use_datetime-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

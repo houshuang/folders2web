@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: AEMReference::MultipleElements</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/_aem/aemreference_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/_aem/aemreference.rb">lib/_aem/aemreference.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="PositionSpecifier.html">AEMReference::PositionSpecifier</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-any">#any</a></li>
+          
+          <li><a href="#method-i-by_filter">#by_filter</a></li>
+          
+          <li><a href="#method-i-by_id">#by_id</a></li>
+          
+          <li><a href="#method-i-by_index">#by_index</a></li>
+          
+          <li><a href="#method-i-by_name">#by_name</a></li>
+          
+          <li><a href="#method-i-by_range">#by_range</a></li>
+          
+          <li><a href="#method-i-first">#first</a></li>
+          
+          <li><a href="#method-i-last">#last</a></li>
+          
+          <li><a href="#method-i-middle">#middle</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../AEMReference.html">AEMReference</a></li>
+        
+          <li><a href="../AEMReference/AND.html">AEMReference::AND</a></li>
+        
+          <li><a href="../AEMReference/AllElements.html">AEMReference::AllElements</a></li>
+        
+          <li><a href="../AEMReference/ApplicationRoot.html">AEMReference::ApplicationRoot</a></li>
+        
+          <li><a href="../AEMReference/BeginsWith.html">AEMReference::BeginsWith</a></li>
+        
+          <li><a href="../AEMReference/CollectComparable.html">AEMReference::CollectComparable</a></li>
+        
+          <li><a href="../AEMReference/ComparisonTest.html">AEMReference::ComparisonTest</a></li>
+        
+          <li><a href="../AEMReference/Contains.html">AEMReference::Contains</a></li>
+        
+          <li><a href="../AEMReference/CurrentContainer.html">AEMReference::CurrentContainer</a></li>
+        
+          <li><a href="../AEMReference/CustomRoot.html">AEMReference::CustomRoot</a></li>
+        
+          <li><a href="../AEMReference/DeferredSpecifier.html">AEMReference::DeferredSpecifier</a></li>
+        
+          <li><a href="../AEMReference/ElementByID.html">AEMReference::ElementByID</a></li>
+        
+          <li><a href="../AEMReference/ElementByIndex.html">AEMReference::ElementByIndex</a></li>
+        
+          <li><a href="../AEMReference/ElementByName.html">AEMReference::ElementByName</a></li>
+        
+          <li><a href="../AEMReference/ElementByOrdinal.html">AEMReference::ElementByOrdinal</a></li>
+        
+          <li><a href="../AEMReference/ElementByRelativePosition.html">AEMReference::ElementByRelativePosition</a></li>
+        
+          <li><a href="../AEMReference/ElementsByFilter.html">AEMReference::ElementsByFilter</a></li>
+        
+          <li><a href="../AEMReference/ElementsByRange.html">AEMReference::ElementsByRange</a></li>
+        
+          <li><a href="../AEMReference/EndsWith.html">AEMReference::EndsWith</a></li>
+        
+          <li><a href="../AEMReference/Equals.html">AEMReference::Equals</a></li>
+        
+          <li><a href="../AEMReference/GreaterOrEquals.html">AEMReference::GreaterOrEquals</a></li>
+        
+          <li><a href="../AEMReference/GreaterThan.html">AEMReference::GreaterThan</a></li>
+        
+          <li><a href="../AEMReference/InsertionSpecifier.html">AEMReference::InsertionSpecifier</a></li>
+        
+          <li><a href="../AEMReference/IsIn.html">AEMReference::IsIn</a></li>
+        
+          <li><a href="../AEMReference/LessOrEquals.html">AEMReference::LessOrEquals</a></li>
+        
+          <li><a href="../AEMReference/LessThan.html">AEMReference::LessThan</a></li>
+        
+          <li><a href="../AEMReference/LogicalTest.html">AEMReference::LogicalTest</a></li>
+        
+          <li><a href="../AEMReference/MultipleElements.html">AEMReference::MultipleElements</a></li>
+        
+          <li><a href="../AEMReference/NOT.html">AEMReference::NOT</a></li>
+        
+          <li><a href="../AEMReference/NotEquals.html">AEMReference::NotEquals</a></li>
+        
+          <li><a href="../AEMReference/OR.html">AEMReference::OR</a></li>
+        
+          <li><a href="../AEMReference/ObjectBeingExamined.html">AEMReference::ObjectBeingExamined</a></li>
+        
+          <li><a href="../AEMReference/PositionSpecifier.html">AEMReference::PositionSpecifier</a></li>
+        
+          <li><a href="../AEMReference/Property.html">AEMReference::Property</a></li>
+        
+          <li><a href="../AEMReference/Query.html">AEMReference::Query</a></li>
+        
+          <li><a href="../AEMReference/ReferenceRoot.html">AEMReference::ReferenceRoot</a></li>
+        
+          <li><a href="../AEMReference/SingleElement.html">AEMReference::SingleElement</a></li>
+        
+          <li><a href="../AEMReference/Specifier.html">AEMReference::Specifier</a></li>
+        
+          <li><a href="../AEMReference/Test.html">AEMReference::Test</a></li>
+        
+          <li><a href="../AEMReference/UnkeyedElements.html">AEMReference::UnkeyedElements</a></li>
+        
+          <li><a href="../AEMReference/UserProperty.html">AEMReference::UserProperty</a></li>
+        
+          <li><a href="../Appscript.html">Appscript</a></li>
+        
+          <li><a href="../Appscript/AppData.html">Appscript::AppData</a></li>
+        
+          <li><a href="../Appscript/AppDataAccessors.html">Appscript::AppDataAccessors</a></li>
+        
+          <li><a href="../Appscript/Application.html">Appscript::Application</a></li>
+        
+          <li><a href="../FindApp/ApplicationNotFoundError.html">Appscript::ApplicationNotFoundError</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">Appscript::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../Appscript/CommandError.html">Appscript::CommandError</a></li>
+        
+          <li><a href="../Appscript/GenericApplication.html">Appscript::GenericApplication</a></li>
+        
+          <li><a href="../Appscript/GenericReference.html">Appscript::GenericReference</a></li>
+        
+          <li><a href="../Appscript/Reference.html">Appscript::Reference</a></li>
+        
+          <li><a href="../AEM.html">AEM</a></li>
+        
+          <li><a href="../TypeWrappers/AEEnum.html">AEM::AEEnum</a></li>
+        
+          <li><a href="../TypeWrappers/AEKey.html">AEM::AEKey</a></li>
+        
+          <li><a href="../TypeWrappers/AEProp.html">AEM::AEProp</a></li>
+        
+          <li><a href="../TypeWrappers/AEType.html">AEM::AEType</a></li>
+        
+          <li><a href="../TypeWrappers/AETypeBase.html">AEM::AETypeBase</a></li>
+        
+          <li><a href="../AEM/Application.html">AEM::Application</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">AEM::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../Codecs.html">AEM::Codecs</a></li>
+        
+          <li><a href="../MacTypes.html">MacTypes</a></li>
+        
+          <li><a href="../MacTypes/Alias.html">MacTypes::Alias</a></li>
+        
+          <li><a href="../MacTypes/FileBase.html">MacTypes::FileBase</a></li>
+        
+          <li><a href="../MacTypes/FileNotFoundError.html">MacTypes::FileNotFoundError</a></li>
+        
+          <li><a href="../MacTypes/FileURL.html">MacTypes::FileURL</a></li>
+        
+          <li><a href="../MacTypes/Units.html">MacTypes::Units</a></li>
+        
+          <li><a href="../TypeWrappers.html">TypeWrappers</a></li>
+        
+          <li><a href="../TypeWrappers/AEEnum.html">TypeWrappers::AEEnum</a></li>
+        
+          <li><a href="../TypeWrappers/AEKey.html">TypeWrappers::AEKey</a></li>
+        
+          <li><a href="../TypeWrappers/AEProp.html">TypeWrappers::AEProp</a></li>
+        
+          <li><a href="../TypeWrappers/AEType.html">TypeWrappers::AEType</a></li>
+        
+          <li><a href="../TypeWrappers/AETypeBase.html">TypeWrappers::AETypeBase</a></li>
+        
+          <li><a href="../OSAX.html">OSAX</a></li>
+        
+          <li><a href="../OSAX/OSAXData.html">OSAX::OSAXData</a></li>
+        
+          <li><a href="../OSAX/ScriptingAddition.html">OSAX::ScriptingAddition</a></li>
+        
+          <li><a href="../OSAX/SdefParser.html">OSAX::SdefParser</a></li>
+        
+          <li><a href="../AEMEncodingSupport.html">AEMEncodingSupport</a></li>
+        
+          <li><a href="../AEMEncodingSupport/DisableStringEncodings.html">AEMEncodingSupport::DisableStringEncodings</a></li>
+        
+          <li><a href="../AEMEncodingSupport/EnableStringEncodings.html">AEMEncodingSupport::EnableStringEncodings</a></li>
+        
+          <li><a href="../Send.html">Send</a></li>
+        
+          <li><a href="../Send/Event.html">Send::Event</a></li>
+        
+          <li><a href="../Send/EventError.html">Send::EventError</a></li>
+        
+          <li><a href="../TerminologyParser.html">TerminologyParser</a></li>
+        
+          <li><a href="../TerminologyParser/BigEndianParser.html">TerminologyParser::BigEndianParser</a></li>
+        
+          <li><a href="../TerminologyParser/LittleEndianParser.html">TerminologyParser::LittleEndianParser</a></li>
+        
+          <li><a href="../Connect.html">Connect</a></li>
+        
+          <li><a href="../Connect/CantLaunchApplicationError.html">Connect::CantLaunchApplicationError</a></li>
+        
+          <li><a href="../FindApp.html">FindApp</a></li>
+        
+          <li><a href="../FindApp/ApplicationNotFoundError.html">FindApp::ApplicationNotFoundError</a></li>
+        
+          <li><a href="../AS_SafeObject.html">AS_SafeObject</a></li>
+        
+          <li><a href="../BigEndianConverters.html">BigEndianConverters</a></li>
+        
+          <li><a href="../BigEndianPackers.html">BigEndianPackers</a></li>
+        
+          <li><a href="../Codecs.html">Codecs</a></li>
+        
+          <li><a href="../DefaultTerminology.html">DefaultTerminology</a></li>
+        
+          <li><a href="../DisableObjectSpecifierCaching.html">DisableObjectSpecifierCaching</a></li>
+        
+          <li><a href="../KAE.html">KAE</a></li>
+        
+          <li><a href="../Module.html">Module</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../ReferenceRenderer.html">ReferenceRenderer</a></li>
+        
+          <li><a href="../SmallEndianConverters.html">SmallEndianConverters</a></li>
+        
+          <li><a href="../SmallEndianPackers.html">SmallEndianPackers</a></li>
+        
+          <li><a href="../Terminology.html">Terminology</a></li>
+        
+          <li><a href="../UnitTypeCodecs.html">UnitTypeCodecs</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">AEMReference::MultipleElements</h1>
+
+    <div id="description" class="description">
+      
+<p>Multiple elements</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="Any">Any</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="First">First</a></dt>
+          
+          <dd class="description"><p>Base class for all multiple element specifiers.</p></dd>
+          
+        
+          <dt><a name="Last">Last</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Middle">Middle</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="any-method" class="method-detail ">
+          <a name="method-i-any"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">any</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="any-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 513</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">any</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByOrdinal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-constant">Any</span>, <span class="ruby-value">:any</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- any-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- any-method -->
+
+      
+        <div id="by_filter-method" class="method-detail ">
+          <a name="method-i-by_filter"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">by_filter</span><span
+              class="method-args">(test)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="by_filter-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">by_filter</span>(<span class="ruby-identifier">test</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementsByFilter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">test</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- by_filter-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- by_filter-method -->
+
+      
+        <div id="by_id-method" class="method-detail ">
+          <a name="method-i-by_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">by_id</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="by_id-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">by_id</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByID</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- by_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- by_id-method -->
+
+      
+        <div id="by_index-method" class="method-detail ">
+          <a name="method-i-by_index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">by_index</span><span
+              class="method-args">(index)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="by_index-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">by_index</span>(<span class="ruby-identifier">index</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByIndex</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">index</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- by_index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- by_index-method -->
+
+      
+        <div id="by_name-method" class="method-detail ">
+          <a name="method-i-by_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">by_name</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="by_name-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 517</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">by_name</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByName</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- by_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- by_name-method -->
+
+      
+        <div id="by_range-method" class="method-detail ">
+          <a name="method-i-by_range"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">by_range</span><span
+              class="method-args">(start, stop)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="by_range-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 529</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">by_range</span>(<span class="ruby-identifier">start</span>, <span class="ruby-identifier">stop</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementsByRange</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, [<span class="ruby-identifier">start</span>, <span class="ruby-identifier">stop</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- by_range-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- by_range-method -->
+
+      
+        <div id="first-method" class="method-detail ">
+          <a name="method-i-first"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">first</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="first-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 501</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">first</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByOrdinal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-constant">First</span>, <span class="ruby-value">:first</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- first-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- first-method -->
+
+      
+        <div id="last-method" class="method-detail ">
+          <a name="method-i-last"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">last</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="last-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 509</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">last</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByOrdinal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-constant">Last</span>, <span class="ruby-value">:last</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- last-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- last-method -->
+
+      
+        <div id="middle-method" class="method-detail ">
+          <a name="method-i-middle"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">middle</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="middle-source">
+<pre>
+<span class="ruby-comment"># File lib/_aem/aemreference.rb, line 505</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">middle</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">ElementByOrdinal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@AEM_want</span>, <span class="ruby-keyword">self</span>, <span class="ruby-constant">Middle</span>, <span class="ruby-value">:middle</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- middle-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- middle-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

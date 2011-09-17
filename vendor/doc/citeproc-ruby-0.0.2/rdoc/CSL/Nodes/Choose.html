@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Nodes::Choose</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Node.html">CSL::Nodes::Node</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Nodes::Choose</h1>
+
+    <div id="description" class="description">
+      
+<p>Similarly to the conditional statements encountered in programming
+languages, the cs:choose element allows for the conditional rendering of
+rendering elements. An example is shown below:</p>
+
+<pre>&lt;choose&gt;
+  &lt;if type=&quot;book thesis&quot; match=&quot;any&quot;&gt;
+    &lt;text variable=&quot;title&quot; font-style=&quot;italic&quot;&gt;
+  &lt;/if&gt;
+  &lt;else-if type=&quot;chapter&quot;&gt;
+    &lt;text variable=&quot;title&quot; quotes=&quot;true&quot;&gt;
+  &lt;/else-if&gt;
+  &lt;else&gt;
+    &lt;text variable=&quot;title&quot;&gt;
+  &lt;/else&gt;
+&lt;/choose&gt;</pre>
+
+<p>cs:choose requires a cs:if child element, which may be followed by one or
+more cs:else-if child elements, and an optional closing cs:else child
+element. The cs:if and cs:else-if elements may contain any number of
+rendering elements (except for cs:layout). As an empty cs:else element
+would be superfluous, cs:else must contain at least one rendering element.
+cs:if and cs:else-if elements must each hold at least one condition, which
+are expressed as attributes. The different types of conditions available
+are:</p>
+
+<p>disambiguate   The contents of an &lt;if disambiguate=“true”&gt; block is
+only rendered if it disambiguates two otherwise identical citations. This
+attempt at disambiguation will only be made when all other disambiguation
+methods have failed to uniquely identify the target source.</p>
+
+<p>is-numeric Tests whether the given variables (Appendix I - Variables)
+contain numeric data.</p>
+
+<p>is-uncertain-date   Tests whether the given date variables contain
+uncertain dates.</p>
+
+<p>locator   Tests whether the locator matches the given locator variable
+subtype (see Locators).</p>
+
+<p>position Tests whether the position of the item cite matches the given
+positions (when called within cs:bibliography, this condition will always
+test “false”). The different positions are (note on terminology: a citation
+refers to a citation group, which contains one or more cites to individual
+items):</p>
+<ul><li>
+<p>"first": the position of a cite that is the first to reference an item</p>
+</li><li>
+<p>"ibid"/"ibid-with-locator"/"subsequent": a cite that references an earlier
+cited item always has the "subsequent" position. In special cases cites may
+have the "ibid" or "ibid-with-locator" position. These positions are only
+assigned when:</p>
+<ol><li>
+<p>the current cite immediately follows on another cite, within the same
+citation, that references the same item</p>
+
+<p>or</p>
+</li><li>
+<p>the current cite is the first cite in the citation, and the previous
+citation includes a single cite that references the same item</p>
+</li></ol>
+
+<p>If either requirement is met, the presence of locators determines which
+position is assigned:</p>
+<ol><li>
+<p>Preceding cite does not have a locator: if the current cite has a locator,
+the position of the current cite is “ibid-with-locator”. Otherwise the
+position is “ibid”.</p>
+</li><li>
+<p>Preceding cite does have a locator: if the current cite has the same
+locator, the position of the current cite is “ibid”. If the locator differs
+the position is “ibid-with-locator”. If the current cite lacks a locator
+the position is “subsequent”.</p>
+</li></ol>
+</li><li>
+<p>"near-note": the position of a cite following another cite that references
+the same item. Both cites have to be located in foot or endnotes, and the
+distance between both cites may not exceed the maximum distance (measured
+in number of foot or endnotes) set with the near-note-distance option (see
+Note Distance).</p>
+</li></ul>
+
+<p>Note that each cite can have multiple position values. Whenever
+position=“ibid-with-locator” is true, position=“ibid” is also true. And
+whenever position=“ibid” or position=“near-note” is true,
+position=“subsequent” is also true.</p>
+
+<p>type Tests whether the item matches the given types (Appendix II - Types).</p>
+
+<p>variable Tests whether the given variables (Appendix I - Variables) contain
+non-empty values.</p>
+
+<p>With the exception of disambiguate, all conditions allow for multiple test
+values (separated with spaces, e.g. “book thesis”).</p>
+
+<p>The cs:if and cs:else-if elements may include the match attribute to
+control the testing logic, with possible values:</p>
+<ul><li>
+<p>"all" (default): the element only tests "true" when all conditions test
+"true" for all given test values</p>
+</li><li>
+<p>"any": the element tests "true" when any condition tests "true" for any
+given test value</p>
+</li><li>
+<p>"none": the element only tests "true" when none of the conditions test
+"true" for any given test value</p>
+</li></ul>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(data, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 1299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">evaluate</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-string">''</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">handle_processing_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)        
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

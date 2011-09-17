@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Nokogiri::XML::Builder</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/nokogiri/xml/builder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/nokogiri/xml/builder.rb">lib/nokogiri/xml/builder.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-with">::with</a></li>
+          
+          <li><a href="#method-i-3C-3C">#<<</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-cdata">#cdata</a></li>
+          
+          <li><a href="#method-i-text">#text</a></li>
+          
+          <li><a href="#method-i-to_xml">#to_xml</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../CHANGELOG_ja_rdoc.html">CHANGELOG.ja.rdoc</a></li>
+        
+          <li class="file"><a href="../../CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../../README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          <li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Nokogiri.html">Nokogiri</a></li>
+        
+          <li><a href="../../Nokogiri/CSS.html">Nokogiri::CSS</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Node.html">Nokogiri::CSS::Node</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Parser.html">Nokogiri::CSS::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/SyntaxError.html">Nokogiri::CSS::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Tokenizer.html">Nokogiri::CSS::Tokenizer</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Tokenizer/ScanError.html">Nokogiri::CSS::Tokenizer::ScanError</a></li>
+        
+          <li><a href="../../Nokogiri/Decorators.html">Nokogiri::Decorators</a></li>
+        
+          <li><a href="../../Nokogiri/Decorators/Slop.html">Nokogiri::Decorators::Slop</a></li>
+        
+          <li><a href="../../Nokogiri/EncodingHandler.html">Nokogiri::EncodingHandler</a></li>
+        
+          <li><a href="../../Nokogiri/HTML.html">Nokogiri::HTML</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/Builder.html">Nokogiri::HTML::Builder</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/Document.html">Nokogiri::HTML::Document</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/DocumentFragment.html">Nokogiri::HTML::DocumentFragment</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/ElementDescription.html">Nokogiri::HTML::ElementDescription</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/EntityDescription.html">Nokogiri::HTML::EntityDescription</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/EntityLookup.html">Nokogiri::HTML::EntityLookup</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX.html">Nokogiri::HTML::SAX</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX/Parser.html">Nokogiri::HTML::SAX::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX/ParserContext.html">Nokogiri::HTML::SAX::ParserContext</a></li>
+        
+          <li><a href="../../Nokogiri/SyntaxError.html">Nokogiri::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML.html">Nokogiri::XML</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Attr.html">Nokogiri::XML::Attr</a></li>
+        
+          <li><a href="../../Nokogiri/XML/AttributeDecl.html">Nokogiri::XML::AttributeDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Builder.html">Nokogiri::XML::Builder</a></li>
+        
+          <li><a href="../../Nokogiri/XML/CDATA.html">Nokogiri::XML::CDATA</a></li>
+        
+          <li><a href="../../Nokogiri/XML/CharacterData.html">Nokogiri::XML::CharacterData</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Comment.html">Nokogiri::XML::Comment</a></li>
+        
+          <li><a href="../../Nokogiri/XML/DTD.html">Nokogiri::XML::DTD</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Document.html">Nokogiri::XML::Document</a></li>
+        
+          <li><a href="../../Nokogiri/XML/DocumentFragment.html">Nokogiri::XML::DocumentFragment</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Element.html">Nokogiri::XML::Element</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ElementContent.html">Nokogiri::XML::ElementContent</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ElementDecl.html">Nokogiri::XML::ElementDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/EntityDecl.html">Nokogiri::XML::EntityDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/EntityReference.html">Nokogiri::XML::EntityReference</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Namespace.html">Nokogiri::XML::Namespace</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Node.html">Nokogiri::XML::Node</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Node/SaveOptions.html">Nokogiri::XML::Node::SaveOptions</a></li>
+        
+          <li><a href="../../Nokogiri/XML/NodeSet.html">Nokogiri::XML::NodeSet</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Notation.html">Nokogiri::XML::Notation</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP.html">Nokogiri::XML::PP</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP/CharacterData.html">Nokogiri::XML::PP::CharacterData</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP/Node.html">Nokogiri::XML::PP::Node</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ParseOptions.html">Nokogiri::XML::ParseOptions</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ProcessingInstruction.html">Nokogiri::XML::ProcessingInstruction</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Reader.html">Nokogiri::XML::Reader</a></li>
+        
+          <li><a href="../../Nokogiri/XML/RelaxNG.html">Nokogiri::XML::RelaxNG</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX.html">Nokogiri::XML::SAX</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Document.html">Nokogiri::XML::SAX::Document</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Parser.html">Nokogiri::XML::SAX::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Parser/Attribute.html">Nokogiri::XML::SAX::Parser::Attribute</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/ParserContext.html">Nokogiri::XML::SAX::ParserContext</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/PushParser.html">Nokogiri::XML::SAX::PushParser</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Schema.html">Nokogiri::XML::Schema</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SyntaxError.html">Nokogiri::XML::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Text.html">Nokogiri::XML::Text</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPath.html">Nokogiri::XML::XPath</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPath/SyntaxError.html">Nokogiri::XML::XPath::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPathContext.html">Nokogiri::XML::XPathContext</a></li>
+        
+          <li><a href="../../Nokogiri/XSLT.html">Nokogiri::XSLT</a></li>
+        
+          <li><a href="../../Nokogiri/XSLT/Stylesheet.html">Nokogiri::XSLT::Stylesheet</a></li>
+        
+          <li><a href="../../XSD.html">XSD</a></li>
+        
+          <li><a href="../../XSD/XMLParser.html">XSD::XMLParser</a></li>
+        
+          <li><a href="../../XSD/XMLParser/Nokogiri.html">XSD::XMLParser::Nokogiri</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Nokogiri::XML::Builder</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="../../Nokogiri.html">Nokogiri</a> builder can be used for building
+<a href="../XML.html">XML</a> and <a href="../HTML.html">HTML</a>
+documents.</p>
+
+<h2>Synopsis:</h2>
+
+<pre>builder = Nokogiri::XML::Builder.new do |xml|
+  xml.root {
+    xml.products {
+      xml.widget {
+        xml.id_ &quot;10&quot;
+        xml.name &quot;Awesome widget&quot;
+      }
+    }
+  }
+end
+puts builder.to_xml</pre>
+
+<p>Will output:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root&gt;
+  &lt;products&gt;
+    &lt;widget&gt;
+      &lt;id&gt;10&lt;/id&gt;
+      &lt;name&gt;Awesome widget&lt;/name&gt;
+    &lt;/widget&gt;
+  &lt;/products&gt;
+&lt;/root&gt;</pre>
+
+<h3><a href="Builder.html">Builder</a> scope</h3>
+
+<p>The builder allows two forms.  When the builder is supplied with a block
+that has a parameter, the outside scope is maintained.  This means you can
+access variables that are outside your builder.  If you don’t need outside
+scope, you can use the builder without the “xml” prefix like this:</p>
+
+<pre>builder = Nokogiri::XML::Builder.new do
+  root {
+    products {
+      widget {
+        id_ &quot;10&quot;
+        name &quot;Awesome widget&quot;
+      }
+    }
+  }
+end</pre>
+
+<h2>Special Tags</h2>
+
+<p>The builder works by taking advantage of method_missing.  Unfortunately
+some methods are defined in ruby that are difficult or dangerous to remove.
+You may want to create tags with the name “type”, “class”, and “id” for
+example.  In that case, you can use an underscore to disambiguate your tag
+name from the method call.</p>
+
+<p>Here is an example of using the underscore to disambiguate tag names from
+ruby methods:</p>
+
+<pre>@objects = [Object.new, Object.new, Object.new]
+
+builder = Nokogiri::XML::Builder.new do |xml|
+  xml.root {
+    xml.objects {
+      @objects.each do |o|
+        xml.object {
+          xml.type_   o.type
+          xml.class_  o.class.name
+          xml.id_     o.id
+        }
+      end
+    }
+  }
+end
+puts builder.to_xml</pre>
+
+<p>The underscore may be used with any tag name, and the last underscore will
+just be removed.  This code will output the following XML:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root&gt;
+  &lt;objects&gt;
+    &lt;object&gt;
+      &lt;type&gt;Object&lt;/type&gt;
+      &lt;class&gt;Object&lt;/class&gt;
+      &lt;id&gt;48390&lt;/id&gt;
+    &lt;/object&gt;
+    &lt;object&gt;
+      &lt;type&gt;Object&lt;/type&gt;
+      &lt;class&gt;Object&lt;/class&gt;
+      &lt;id&gt;48380&lt;/id&gt;
+    &lt;/object&gt;
+    &lt;object&gt;
+      &lt;type&gt;Object&lt;/type&gt;
+      &lt;class&gt;Object&lt;/class&gt;
+      &lt;id&gt;48370&lt;/id&gt;
+    &lt;/object&gt;
+  &lt;/objects&gt;
+&lt;/root&gt;</pre>
+
+<h2>Tag Attributes</h2>
+
+<p>Tag attributes may be supplied as method arguments.  Here is our previous
+example, but using attributes rather than tags:</p>
+
+<pre>@objects = [Object.new, Object.new, Object.new]
+
+builder = Nokogiri::XML::Builder.new do |xml|
+  xml.root {
+    xml.objects {
+      @objects.each do |o|
+        xml.object(:type =&gt; o.type, :class =&gt; o.class, :id =&gt; o.id)
+      end
+    }
+  }
+end
+puts builder.to_xml</pre>
+
+<h3>Tag Attribute Short Cuts</h3>
+
+<p>A couple attribute short cuts are available when building tags.  The short
+cuts are available by special method calls when building a tag.</p>
+
+<p>This example builds an “object” tag with the class attribute “classy” and
+the id of “thing”:</p>
+
+<pre>builder = Nokogiri::XML::Builder.new do |xml|
+  xml.root {
+    xml.objects {
+      xml.object.classy.thing!
+    }
+  }
+end
+puts builder.to_xml</pre>
+
+<p>Which will output:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root&gt;
+  &lt;objects&gt;
+    &lt;object class=&quot;classy&quot; id=&quot;thing&quot;/&gt;
+  &lt;/objects&gt;
+&lt;/root&gt;</pre>
+
+<p>All other options are still supported with this syntax, including blocks
+and extra tag attributes.</p>
+
+<h2>Namespaces</h2>
+
+<p>Namespaces are added similarly to attributes.  <a
+href="Builder.html">Nokogiri::XML::Builder</a> assumes that when an
+attribute starts with “xmlns”, it is meant to be a namespace:</p>
+
+<pre>builder = Nokogiri::XML::Builder.new { |xml|
+  xml.root('xmlns' =&gt; 'default', 'xmlns:foo' =&gt; 'bar') do
+    xml.tenderlove
+  end
+}
+puts builder.to_xml</pre>
+
+<p>Will output <a href="../XML.html">XML</a> like this:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root xmlns:foo=&quot;bar&quot; xmlns=&quot;default&quot;&gt;
+  &lt;tenderlove/&gt;
+&lt;/root&gt;</pre>
+
+<h3>Referencing declared namespaces</h3>
+
+<p>Tags that reference non-default namespaces (i.e. a tag “foo:bar”) can be
+built by using the Nokogiri::XML::Builder#[] method.</p>
+
+<p>For example:</p>
+
+<pre>builder = Nokogiri::XML::Builder.new do |xml|
+  xml.root('xmlns:foo' =&gt; 'bar') {
+    xml.objects {
+      xml['foo'].object.classy.thing!
+    }
+  }
+end
+puts builder.to_xml</pre>
+
+<p>Will output this XML:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root xmlns:foo=&quot;bar&quot;&gt;
+  &lt;objects&gt;
+    &lt;foo:object class=&quot;classy&quot; id=&quot;thing&quot;/&gt;
+  &lt;/objects&gt;
+&lt;/root&gt;</pre>
+
+<p>Note the “foo:object” tag.</p>
+
+<h2><a href="Document.html">Document</a> Types</h2>
+
+<p>To create a document type (<a href="DTD.html">DTD</a>), access use the <a
+href="Builder.html#attribute-i-doc">Builder#doc</a> method to get the
+current context document.  Then call <a
+href="Node.html#method-i-create_internal_subset">Node#create_internal_subset</a>
+to create the <a href="DTD.html">DTD</a> node.</p>
+
+<p>For example, this Ruby:</p>
+
+<pre>builder = Nokogiri::XML::Builder.new do |xml|
+  xml.doc.create_internal_subset(
+    'html',
+    &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;,
+    &quot;http://www.w3.org/TR/html4/loose.dtd&quot;
+  )
+  xml.root do
+    xml.foo
+  end
+end
+
+puts builder.to_xml</pre>
+
+<p>Will output this xml:</p>
+
+<pre>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;root&gt;
+  &lt;foo/&gt;
+&lt;/root&gt;</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="context-attribute-method" class="method-detail">
+          <a name="context"></a>
+          
+          <a name="context="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">context</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>A context object for use when the block has no arguments</p>
+          
+          </div>
+        </div>
+        
+        <div id="doc-attribute-method" class="method-detail">
+          <a name="doc"></a>
+          
+          <a name="doc="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">doc</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The current <a href="Document.html">Document</a> object being built</p>
+          
+          </div>
+        </div>
+        
+        <div id="parent-attribute-method" class="method-detail">
+          <a name="parent"></a>
+          
+          <a name="parent="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">parent</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>The parent of the current node being built</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="Builder.html">Builder</a> object.  <tt>options</tt>
+are sent to the top level <a href="Document.html">Document</a> that is
+being built.</p>
+
+<p>Building a document with a particular encoding for example:</p>
+
+<pre>Nokogiri::XML::Builder.new(:encoding =&gt; 'UTF-8') do |xml|
+  ...
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 266</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">root</span> = <span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">root</span>
+    <span class="ruby-ivar">@doc</span>    = <span class="ruby-identifier">root</span>.<span class="ruby-identifier">document</span>
+    <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">root</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">namespace</span>     = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'::'</span>)
+    <span class="ruby-identifier">namespace</span>[<span class="ruby-value">-1</span>] = <span class="ruby-string">'Document'</span>
+    <span class="ruby-ivar">@doc</span>          = <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">namespace</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'::'</span>)).<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@parent</span>       = <span class="ruby-ivar">@doc</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@context</span>  = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@arity</span>    = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@ns</span>       = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:&quot;#{k}=&quot;</span>, <span class="ruby-identifier">v</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+
+  <span class="ruby-ivar">@arity</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">arity</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@arity</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@context</span> = <span class="ruby-identifier">eval</span>(<span class="ruby-string">'self'</span>, <span class="ruby-identifier">block</span>.<span class="ruby-identifier">binding</span>)
+    <span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-ivar">@doc</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="with-method" class="method-detail ">
+          <a name="method-c-with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">with</span><span
+              class="method-args">(root, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a builder with an existing root object.  This is for use when you
+have an existing document that you would like to augment with builder
+methods.  The builder context created will start with the given
+<tt>root</tt> node.</p>
+
+<p>For example:</p>
+
+<pre>doc = Nokogiri::XML(open('somedoc.xml'))
+Nokogiri::XML::Builder.with(doc.at('some_tag')) do |xml|
+  # ... Use normal builder methods here ...
+  xml.awesome # add the &quot;awesome&quot; tag below &quot;some_tag&quot;
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="with-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">with</span> <span class="ruby-identifier">root</span>, &amp;<span class="ruby-identifier">block</span>
+  <span class="ruby-identifier">new</span>({}, <span class="ruby-identifier">root</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- with-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3C-method" class="method-detail ">
+          <a name="method-i-3C-3C"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;&lt;</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Append the given raw <a href="../XML.html">XML</a> <tt>string</tt> to the
+document</p>
+            
+
+            
+            <div class="method-source-code" id="3C-3C-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">string</span>
+  <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">fragment</span>(<span class="ruby-identifier">string</span>).<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">x</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3C-3C-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3C-3C-method -->
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(ns)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Build a tag that is associated with namespace <tt>ns</tt>.  Raises an
+ArgumentError if <tt>ns</tt> has not been defined higher in the tree.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span> <span class="ruby-identifier">ns</span>
+  <span class="ruby-ivar">@ns</span> = <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">namespace_definitions</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">prefix</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ns</span>.<span class="ruby-identifier">to_s</span> }
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ns</span>
+
+  <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">doc</span>
+    <span class="ruby-ivar">@ns</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">namespace_definitions</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">prefix</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ns</span>.<span class="ruby-identifier">to_s</span> }
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ns</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Namespace #{ns} has not been defined&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="cdata-method" class="method-detail ">
+          <a name="method-i-cdata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">cdata</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a <a href="CDATA.html">CDATA</a> <a href="Node.html">Node</a> with
+content of <tt>string</tt></p>
+            
+
+            
+            <div class="method-source-code" id="cdata-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cdata</span> <span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">create_cdata</span>(<span class="ruby-identifier">string</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- cdata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- cdata-method -->
+
+      
+        <div id="text-method" class="method-detail ">
+          <a name="method-i-text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">text</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a <a href="Text.html">Text</a> <a href="Node.html">Node</a> with
+content of <tt>string</tt></p>
+            
+
+            
+            <div class="method-source-code" id="text-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 301</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text</span> <span class="ruby-identifier">string</span>
+  <span class="ruby-identifier">insert</span> <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">create_text_node</span>(<span class="ruby-identifier">string</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- text-method -->
+
+      
+        <div id="to_xml-method" class="method-detail ">
+          <a name="method-i-to_xml"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_xml</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Convert this <a href="Builder.html">Builder</a> object to <a
+href="../XML.html">XML</a></p>
+            
+
+            
+            <div class="method-source-code" id="to_xml-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/xml/builder.rb, line 329</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_xml</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Nokogiri</span>.<span class="ruby-identifier">jruby?</span>
+    <span class="ruby-identifier">options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span> <span class="ruby-operator">:</span> {}
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:save_with</span>]
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:save_with</span>] = <span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">SaveOptions</span><span class="ruby-operator">::</span><span class="ruby-constant">AS_BUILDER</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">to_xml</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_xml-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_xml-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

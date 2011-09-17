@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CiteProc::Format::Html</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/plugins/formats/html_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/plugins/formats/html.rb">lib/plugins/formats/html.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Default.html">CiteProc::Format::Default</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-filter">::filter</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-content_tag">#content_tag</a></li>
+          
+          <li><a href="#method-i-finalize">#finalize</a></li>
+          
+          <li><a href="#method-i-individual_tags">#individual_tags</a></li>
+          
+          <li><a href="#method-i-input-3D">#input=</a></li>
+          
+          <li><a href="#method-i-name">#name</a></li>
+          
+          <li><a href="#method-i-set_display">#set_display</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CiteProc::Format::Html</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="filter-method" class="method-detail ">
+          <a name="method-c-filter"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">filter</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="filter-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filter</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-node">/&amp;([^#])/</span>, <span class="ruby-string">'&amp;#38;\1'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- filter-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- filter-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@container</span> = <span class="ruby-value">:span</span>
+  <span class="ruby-ivar">@mode</span> = <span class="ruby-value">:individual</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="finalize-method" class="method-detail ">
+          <a name="method-i-finalize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">finalize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="finalize-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">finalize</span>
+  <span class="ruby-identifier">content</span> = <span class="ruby-ivar">@tokens</span>.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:content</span>).<span class="ruby-identifier">join</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@styles</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">content</span> = <span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-value">:combined</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-ivar">@container</span>, <span class="ruby-identifier">content</span>, <span class="ruby-ivar">@styles</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">individual_tags</span>(<span class="ruby-identifier">content</span>)
+  <span class="ruby-keyword">end</span>
+
+  [<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">suffix</span>].<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>).<span class="ruby-identifier">join</span>      
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- finalize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- finalize-method -->
+
+      
+        <div id="input-3D-method" class="method-detail ">
+          <a name="method-i-input-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">input=</span><span
+              class="method-args">(input)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="input-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">input=</span>(<span class="ruby-identifier">input</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@tokens</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span> <span class="ruby-identifier">token</span>.<span class="ruby-identifier">content</span> = <span class="ruby-constant">Html</span>.<span class="ruby-identifier">filter</span>(<span class="ruby-identifier">token</span>.<span class="ruby-identifier">content</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- input-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- input-3D-method -->
+
+      
+        <div id="name-method" class="method-detail ">
+          <a name="method-i-name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="name-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name</span>; <span class="ruby-string">&quot;CiteProc HTML style&quot;</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name-method -->
+
+      
+        <div id="set_display-method" class="method-detail ">
+          <a name="method-i-set_display"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_display</span><span
+              class="method-args">(display)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param display ‘block’, ‘left-margin’, ‘right-inline’, ‘inline’</p>
+            
+
+            
+            <div class="method-source-code" id="set_display-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_display</span>(<span class="ruby-identifier">display</span>)
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-ivar">@container</span> = <span class="ruby-value">:div</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">display</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">display</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'inline'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_display-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_display-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="content_tag-method" class="method-detail ">
+          <a name="method-i-content_tag"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">content_tag</span><span
+              class="method-args">(name, content, styles=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="content_tag-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">styles</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">styles</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-node">%{&lt;#{name}&gt;#{content}&lt;/#{name}&gt;}</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">%{&lt;#{name} style=&quot;#{ styles.map { |k,v| [k,v].join(': ') }.join('; ') }&quot;&gt;#{content}&lt;/#{name}&gt;}</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- content_tag-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- content_tag-method -->
+
+      
+        <div id="individual_tags-method" class="method-detail ">
+          <a name="method-i-individual_tags"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">individual_tags</span><span
+              class="method-args">(content)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="individual_tags-source">
+<pre>
+<span class="ruby-comment"># File lib/plugins/formats/html.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">individual_tags</span>(<span class="ruby-identifier">content</span>)
+  <span class="ruby-ivar">@styles</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">style</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">style</span> <span class="ruby-operator">==</span> <span class="ruby-string">'font-weight'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-string">'bold'</span>
+      <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:b</span>, <span class="ruby-identifier">content</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">style</span> <span class="ruby-operator">==</span> <span class="ruby-string">'font-style'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-string">'italic'</span>
+      <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:i</span>, <span class="ruby-identifier">content</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content_tag</span>(<span class="ruby-value">:span</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">style</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">value</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- individual_tags-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- individual_tags-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

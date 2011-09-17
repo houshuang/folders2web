@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"result:EFI"+AEMReference::CollectComparable#result;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Dobtains the data needed to perform equality tests on references;TI"fuses AEM_resolve to walk a reference, building up a list of method call names and their arguments;T:
+@file0FI"lib/_aem/aemreference.rb;T

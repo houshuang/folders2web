@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CiteProc::Name</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/citeproc/name_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/citeproc/name.rb">lib/citeproc/name.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Variable</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-3C-3D-3E">#<=></a></li>
+          
+          <li><a href="#method-i-byzantine-3F">#byzantine?</a></li>
+          
+          <li><a href="#method-i-comma">#comma</a></li>
+          
+          <li><a href="#method-i-comma_suffix">#comma_suffix</a></li>
+          
+          <li><a href="#method-i-defaults">#defaults</a></li>
+          
+          <li><a href="#method-i-delimiter">#delimiter</a></li>
+          
+          <li><a href="#method-i-display">#display</a></li>
+          
+          <li><a href="#method-i-display_order">#display_order</a></li>
+          
+          <li><a href="#method-i-given">#given</a></li>
+          
+          <li><a href="#method-i-initialize-3F">#initialize?</a></li>
+          
+          <li><a href="#method-i-literal_as_sort_order">#literal_as_sort_order</a></li>
+          
+          <li><a href="#method-i-merge-21">#merge!</a></li>
+          
+          <li><a href="#method-i-merge_options">#merge_options</a></li>
+          
+          <li><a href="#method-i-normalize">#normalize</a></li>
+          
+          <li><a href="#method-i-numeric-3F">#numeric?</a></li>
+          
+          <li><a href="#method-i-options">#options</a></li>
+          
+          <li><a href="#method-i-parse-21">#parse!</a></li>
+          
+          <li><a href="#method-i-parse_family-21">#parse_family!</a></li>
+          
+          <li><a href="#method-i-parse_given-21">#parse_given!</a></li>
+          
+          <li><a href="#method-i-parse_name-21">#parse_name!</a></li>
+          
+          <li><a href="#method-i-personal-3F">#personal?</a></li>
+          
+          <li><a href="#method-i-romanesque-3F">#romanesque?</a></li>
+          
+          <li><a href="#method-i-sort_order">#sort_order</a></li>
+          
+          <li><a href="#method-i-sort_order-3F">#sort_order?</a></li>
+          
+          <li><a href="#method-i-static_order-3F">#static_order?</a></li>
+          
+          <li><a href="#method-i-to_initials">#to_initials</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-value">#value</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CSL.html">CSL</a></li>
+        
+          <li><a href="../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../Support.html">Support</a></li>
+        
+          <li><a href="../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CiteProc::Name</h1>
+
+    <div id="description" class="description">
+      
+<h2><a href="Name.html">Name</a> Variables</h2>
+
+<p>When present in the item data, <a href="../CSL.html">CSL</a> name variables
+must be delivered as a list of JavaScript arrays, with one array for each
+name represented by the variable. Simple personal names are composed of
+family and given elements, containing respectively the family and given
+name of the individual.</p>
+
+<p>{ “author” : [</p>
+
+<pre>  { &quot;family&quot; : &quot;Doe&quot;, &quot;given&quot; : &quot;Jonathan&quot; },
+  { &quot;family&quot; : &quot;Roe&quot;, &quot;given&quot; : &quot;Jane&quot; }
+],
+&quot;editor&quot; : [
+  { &quot;family&quot; : &quot;Saunders&quot;,
+    &quot;given&quot; : &quot;John Bertrand de Cusance Morant&quot; }
+]</pre>
+
+<p>}</p>
+
+<p>Institutional and other names that should always be presented literally
+(such as “The Artist Formerly Known as Prince”, “Banksy”, or “Ramses IV”)
+should be delivered as a single literal element in the name array:</p>
+
+<p>{ “author” : [</p>
+
+<pre>  { &quot;literal&quot; : &quot;Society for Putting Things on Top of Other Things&quot; }
+]</pre>
+
+<p>}</p>
+
+<p>If the name is spelled using a ‘byzantine’ alphabet (i.e., latin or
+cyrillic) its sort and display order is computed according to the given
+arguments.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ROMANESQUE">ROMANESQUE</a></dt>
+          
+          <dd class="description"><p>Based on the regular expression in citeproc-js</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3D-3E-method" class="method-detail ">
+          <a name="method-i-3C-3D-3E"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;=&gt;</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="3C-3D-3E-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+
+  <span class="ruby-identifier">tests</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sort_order</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">sort_order</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pair</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">this</span>, <span class="ruby-identifier">that</span> = <span class="ruby-identifier">pair</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span> <span class="ruby-identifier">token</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[\s-]+/</span>,<span class="ruby-string">'_'</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/literal/</span>, <span class="ruby-string">'literal_sort_order'</span>) }          
+
+    <span class="ruby-identifier">this</span> = <span class="ruby-identifier">this</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\+/</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">token</span>) }.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">downcase</span>
+    <span class="ruby-identifier">that</span> = <span class="ruby-identifier">that</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\+/</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">token</span>) }.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">downcase</span>
+
+    <span class="ruby-comment"># TODO should we ignore '' here?</span>
+    <span class="ruby-identifier">this</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">that</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">tests</span> = <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>)
+  <span class="ruby-identifier">zeroes</span> = <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">take_while</span>(&amp;<span class="ruby-value">:zero?</span>)
+
+  <span class="ruby-identifier">zeroes</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">tests</span>[<span class="ruby-identifier">zeroes</span>.<span class="ruby-identifier">length</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">zeroes</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3C-3D-3E-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3C-3D-3E-method -->
+
+      
+        <div id="byzantine-3F-method" class="method-detail method-alias">
+          <a name="method-i-byzantine-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">byzantine?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Name.html#method-i-romanesque-3F">romanesque?</a>
+          </div>
+          
+        </div><!-- byzantine-3F-method -->
+
+      
+        <div id="comma-method" class="method-detail ">
+          <a name="method-i-comma"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">comma</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="comma-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comma</span>
+  <span class="ruby-identifier">options</span>[<span class="ruby-string">'sort-separator'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">', '</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- comma-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- comma-method -->
+
+      
+        <div id="comma_suffix-method" class="method-detail ">
+          <a name="method-i-comma_suffix"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">comma_suffix</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="comma_suffix-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">comma_suffix</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">comma_suffix?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">suffix?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">comma</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- comma_suffix-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- comma_suffix-method -->
+
+      
+        <div id="defaults-method" class="method-detail ">
+          <a name="method-i-defaults"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">defaults</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="defaults-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">defaults</span>
+  <span class="ruby-constant">Hash</span>[<span class="ruby-string">'form'</span>, <span class="ruby-string">'long'</span>, <span class="ruby-string">'name-as-sort-order'</span>, <span class="ruby-string">'false'</span>, <span class="ruby-string">'demote-non-dropping-particle'</span>, <span class="ruby-string">'display-and-sort'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- defaults-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- defaults-method -->
+
+      
+        <div id="delimiter-method" class="method-detail ">
+          <a name="method-i-delimiter"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delimiter</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="delimiter-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delimiter</span>
+  <span class="ruby-identifier">romanesque?</span> <span class="ruby-operator">?</span> <span class="ruby-string">' '</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delimiter-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delimiter-method -->
+
+      
+        <div id="display-method" class="method-detail ">
+          <a name="method-i-display"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">display</span><span
+              class="method-args">(options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a string representing the name according to the given set of
+display order options.</p>
+            
+
+            
+            <div class="method-source-code" id="display-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display</span>(<span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">normalize</span>((<span class="ruby-identifier">display_order</span>(<span class="ruby-identifier">options</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">token</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">'-'</span>, <span class="ruby-string">'_'</span>)) }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">delimiter</span>)))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- display-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- display-method -->
+
+      
+        <div id="display_order-method" class="method-detail ">
+          <a name="method-i-display_order"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">display_order</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a list of strings, representing a given order of the individual
+tokens when displaying the name.</p>
+            
+
+            
+            <div class="method-source-code" id="display_order-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">display_order</span>(<span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">merge_options</span>(<span class="ruby-identifier">opts</span>)
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">literal?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ literal }</span>
+  
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">static_order?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ family given }</span>
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">'short'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sort_order?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ given dropping-particle non-dropping-particle family comma-suffix suffix }</span>
+
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">'short'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sort_order?</span> <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-string">'never'</span>, <span class="ruby-string">'sort-only'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">options</span>[<span class="ruby-string">'demote-non-dropping-particle'</span>])
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ non-dropping-particle family comma given dropping-particle comma suffix }</span>
+
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">'short'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sort_order?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'demote-non-dropping-particle'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'display-and-sort'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ family comma given dropping-particle non-dropping-particle comma suffix }</span>
+
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># options['form'] == 'short'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ non-dropping-particle family}</span>
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- display_order-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- display_order-method -->
+
+      
+        <div id="given-method" class="method-detail ">
+          <a name="method-i-given"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">given</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="given-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">given</span>
+  <span class="ruby-identifier">initialize?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">to_initials</span>(<span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>]) <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- given-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- given-method -->
+
+      
+        <div id="initialize-3F-method" class="method-detail ">
+          <a name="method-i-initialize-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">initialize?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>CSL1.0 Warning</p>
+
+<p>@returns true if, using the current options, the name’s given name is to be
+displayed using initials. Takes into account whether or not the family name
+is set (if not, given name should not be turned to initials, this is
+<b>not</b> sepcified in <a href="../CSL.html">CSL</a> 1.0).</p>
+            
+
+            
+            <div class="method-source-code" id="initialize-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize?</span>
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'initialize-with'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">family?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">romanesque?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- initialize-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initialize-3F-method -->
+
+      
+        <div id="literal_as_sort_order-method" class="method-detail ">
+          <a name="method-i-literal_as_sort_order"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">literal_as_sort_order</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="literal_as_sort_order-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">literal_as_sort_order</span>
+  <span class="ruby-identifier">literal</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^(the|an?|der|die|das|eine?|l[ae])\s+/</span>, <span class="ruby-string">''</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- literal_as_sort_order-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- literal_as_sort_order-method -->
+
+      
+        <div id="merge-21-method" class="method-detail ">
+          <a name="method-i-merge-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge!</span><span
+              class="method-args">(argument)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="merge-21-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">argument</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">argument</span>[<span class="ruby-string">'parse-names'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'parse-names'</span>) <span class="ruby-operator">!=</span> <span class="ruby-string">'false'</span>
+    <span class="ruby-identifier">parse_family!</span>(<span class="ruby-identifier">argument</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'family'</span>))
+    <span class="ruby-identifier">parse_given!</span>(<span class="ruby-identifier">argument</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'given'</span>))
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge-21-method -->
+
+      
+        <div id="merge_options-method" class="method-detail ">
+          <a name="method-i-merge_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge_options</span><span
+              class="method-args">(options)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="merge_options-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge_options</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">options</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge_options-method -->
+
+      
+        <div id="normalize-method" class="method-detail ">
+          <a name="method-i-normalize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normalize</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="normalize-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">string</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-string">' '</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^[\s,]+|[\s,]+$|\s(,)/</span>, <span class="ruby-string">'\1'</span>).<span class="ruby-identifier">squeeze</span>(<span class="ruby-string">','</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- normalize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- normalize-method -->
+
+      
+        <div id="numeric-3F-method" class="method-detail ">
+          <a name="method-i-numeric-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">numeric?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="numeric-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">numeric?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- numeric-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- numeric-3F-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-i-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">defaults</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="parse-21-method" class="method-detail ">
+          <a name="method-i-parse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse!</span><span
+              class="method-args">(argument)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">argument</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">parse_name!</span>(<span class="ruby-identifier">argument</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse-21-method -->
+
+      
+        <div id="parse_family-21-method" class="method-detail ">
+          <a name="method-i-parse_family-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_family!</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@see parse</p>
+            
+
+            
+            <div class="method-source-code" id="parse_family-21-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_family!</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span>
+  
+  <span class="ruby-identifier">tokens</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/^['&quot;](.+)['&quot;]$|^([[:lower:]\s]+)?([[:upper:]][[:alpha:]\s]*)$/</span>).<span class="ruby-identifier">first</span>
+        
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'family'</span>] = <span class="ruby-identifier">string</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'family'</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">string</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'non-dropping-particle'</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^\s+|\s+$/</span>, <span class="ruby-string">''</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_family-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_family-21-method -->
+
+      
+        <div id="parse_given-21-method" class="method-detail ">
+          <a name="method-i-parse_given-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_given!</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@see parse</p>
+            
+
+            
+            <div class="method-source-code" id="parse_given-21-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_given!</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">tokens</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/^((?:[[:upper:]][[:alpha:]\.]*\s*)+)([[:lower:]\s]+)?(?:,!?\s([[:alpha:]\.\s]+))?$/</span>).<span class="ruby-identifier">first</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>] = <span class="ruby-identifier">string</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>] = (<span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">string</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^\s+|\s+$/</span>, <span class="ruby-string">''</span>)
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'dropping-particle'</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'suffix'</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">2</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'comma-suffix'</span>] = <span class="ruby-string">'true'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/,!/</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_given-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_given-21-method -->
+
+      
+        <div id="parse_name-21-method" class="method-detail ">
+          <a name="method-i-parse_name-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_name!</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parses a string and sets :family, :given, :suffix, and :particles
+correspondingly.</p>
+<ul><li>
+<p>non-dropping-particle: A string at the beginning of the family field
+consisting of spaces and lowercase roman or Cyrillic characters will be
+treated as a non-dropping-particle. The particles preceding some names
+should be treated as part of the last name, depending on the cultural
+heritage and personal preferences of the individual. To suppress parsing
+and treat such particles as part of the family name field, enclose the
+family name field content in double-quotes</p>
+</li><li>
+<p>dropping-particle: A string at the end of the given name field consisting
+of spaces and lowercase roman or Cyrillic characters will be treated as a
+dropping-particle.</p>
+</li><li>
+<p>suffix: Content following a comma in the given name field will be parse out
+as a name suffix. Modern typographical convention does not place a comma
+between suffixes such as “Jr.” and the last name, when rendering the name
+in normal order: “John Doe Jr.” If an individual prefers that the
+traditional comma be used in rendering their name, the comma can be force
+by placing a exclamation mark after the comma.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="parse_name-21-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_name!</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">tokens</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/,\s+/</span>)
+
+  <span class="ruby-identifier">parse_family!</span>(<span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>])
+  <span class="ruby-identifier">parse_given!</span>(<span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>])
+  
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_name-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_name-21-method -->
+
+      
+        <div id="personal-3F-method" class="method-detail ">
+          <a name="method-i-personal-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">personal?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="personal-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">personal?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">family?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- personal-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- personal-3F-method -->
+
+      
+        <div id="romanesque-3F-method" class="method-detail ">
+          <a name="method-i-romanesque-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">romanesque?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="romanesque-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">romanesque?</span>
+  (<span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>[<span class="ruby-string">'given'</span>].<span class="ruby-identifier">match</span>(<span class="ruby-constant">ROMANESQUE</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword">self</span>[<span class="ruby-string">'family'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>[<span class="ruby-string">'family'</span>].<span class="ruby-identifier">match</span>(<span class="ruby-constant">ROMANESQUE</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- romanesque-3F-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Name.html#method-i-byzantine-3F">byzantine?</a>
+          </div>
+          
+
+          
+        </div><!-- romanesque-3F-method -->
+
+      
+        <div id="sort_order-method" class="method-detail ">
+          <a name="method-i-sort_order"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sort_order</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a list of strings, representing the order of precedence of the
+individual tokens when sorting the name.</p>
+            
+
+            
+            <div class="method-source-code" id="sort_order-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sort_order</span>(<span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">merge_options</span>(<span class="ruby-identifier">opts</span>)
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">literal?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ literal }</span>
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'demote-non-dropping-particle'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'never'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ non-dropping-particle+family dropping-particle given suffix }</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-node">%{ family non-dropping-particle+dropping-particle given suffix }</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sort_order-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sort_order-method -->
+
+      
+        <div id="sort_order-3F-method" class="method-detail ">
+          <a name="method-i-sort_order-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sort_order?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="sort_order-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sort_order?</span>
+  [<span class="ruby-string">'all'</span>, <span class="ruby-string">'true'</span>, <span class="ruby-string">'yes'</span>, <span class="ruby-string">'always'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">options</span>[<span class="ruby-string">'name-as-sort-order'</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sort_order-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sort_order-3F-method -->
+
+      
+        <div id="static_order-3F-method" class="method-detail ">
+          <a name="method-i-static_order-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">static_order?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="static_order-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">static_order?</span>
+  <span class="ruby-identifier">static_ordering?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">romanesque?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- static_order-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- static_order-3F-method -->
+
+      
+        <div id="to_initials-method" class="method-detail ">
+          <a name="method-i-to_initials"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_initials</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_initials-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_initials</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">name</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+  
+  <span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s+|\.\s*/</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">token</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">token</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/-/</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># Keep all-lowercase names; otherwise keep only upper case letters</span>
+      <span class="ruby-identifier">part</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^[[:lower:]]+$/</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">part</span>.<span class="ruby-identifier">center</span>(<span class="ruby-identifier">part</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">part</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[[:upper:]]/</span>).<span class="ruby-identifier">join</span>.<span class="ruby-identifier">capitalize</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">'initialize-with'</span>]
+    <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">options</span>[<span class="ruby-string">'initialize-with-hyphen'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'false'</span> <span class="ruby-operator">?</span> <span class="ruby-string">''</span> <span class="ruby-operator">:</span> <span class="ruby-string">'-'</span> ).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s+-/</span>, <span class="ruby-string">'-'</span>)
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_initials-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_initials-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">display</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="value-method" class="method-detail ">
+          <a name="method-i-value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">value</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="value-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc/name.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- value-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

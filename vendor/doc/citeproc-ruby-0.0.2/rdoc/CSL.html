@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: CSL</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/citeproc_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/citeproc.rb">lib/citeproc.rb</a></li>
+          
+            <li><a href="./lib/csl/locale_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/locale.rb">lib/csl/locale.rb</a></li>
+          
+            <li><a href="./lib/csl/node_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/node.rb">lib/csl/node.rb</a></li>
+          
+            <li><a href="./lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+            <li><a href="./lib/csl/renderer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/renderer.rb">lib/csl/renderer.rb</a></li>
+          
+            <li><a href="./lib/csl/sort_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/sort.rb">lib/csl/sort.rb</a></li>
+          
+            <li><a href="./lib/csl/style_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/style.rb">lib/csl/style.rb</a></li>
+          
+            <li><a href="./lib/csl/term_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/term.rb">lib/csl/term.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Bibliography.html">CSL::Bibliography</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Citation.html">CSL::Citation</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Key.html">CSL::Key</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Locale.html">CSL::Locale</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Node.html">CSL::Node</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Nodes.html">CSL::Nodes</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Renderer.html">CSL::Renderer</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Sort.html">CSL::Sort</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Style.html">CSL::Style</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="CSL/Term.html">CSL::Term</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-Node">::Node</a></li>
+          
+          <li><a href="#method-i-default_locale">#default_locale</a></li>
+          
+          <li><a href="#method-i-default_style">#default_style</a></li>
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./CSL.html">CSL</a></li>
+        
+          <li><a href="./CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="./CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="./CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="./CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="./CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="./CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="./CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="./CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="./CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="./CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="./CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="./CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="./CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="./CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="./CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="./CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="./CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="./CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="./CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="./CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="./CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="./CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="./CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="./CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="./CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="./CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="./CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="./CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="./CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="./CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="./CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="./CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="./CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="./CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="./CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="./CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="./CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="./CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="./CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="./Support.html">Support</a></li>
+        
+          <li><a href="./Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="./Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="./Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="./Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="./Extensions.html">Extensions</a></li>
+        
+          <li><a href="./Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="./Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="./Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">CSL</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="Node-method" class="method-detail ">
+          <a name="method-c-Node"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">Node</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="Node-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/node.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Node</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Node</span>.<span class="ruby-identifier">parse</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- Node-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- Node-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="default_locale-method" class="method-detail ">
+          <a name="method-i-default_locale"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_locale</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="default_locale-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_locale</span>
+  <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Locale</span>.<span class="ruby-identifier">default</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_locale-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_locale-method -->
+
+      
+        <div id="default_style-method" class="method-detail ">
+          <a name="method-i-default_style"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">default_style</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="default_style-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_style</span>
+  <span class="ruby-constant">Style</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Style</span>.<span class="ruby-identifier">default</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- default_style-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- default_style-method -->
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(*arguments, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/citeproc.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(*<span class="ruby-identifier">arguments</span>, &amp;<span class="ruby-identifier">block</span>); <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">process</span>(*<span class="ruby-identifier">arguments</span>, &amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

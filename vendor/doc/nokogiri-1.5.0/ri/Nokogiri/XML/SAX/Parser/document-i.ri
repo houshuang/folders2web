@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"document:EFI"(Nokogiri::XML::SAX::Parser#document;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@The Nokogiri::XML::SAX::Document where events will be sent.;T:
+@file0FI"#lib/nokogiri/xml/sax/parser.rb;T

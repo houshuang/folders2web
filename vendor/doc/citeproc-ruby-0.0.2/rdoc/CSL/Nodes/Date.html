@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Nodes::Date</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Node.html">CSL::Nodes::Node</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-date_parts">#date_parts</a></li>
+          
+          <li><a href="#method-i-merge_parts">#merge_parts</a></li>
+          
+          <li><a href="#method-i-parts">#parts</a></li>
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+          <li><a href="#method-i-process_range">#process_range</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Nodes::Date</h1>
+
+    <div id="description" class="description">
+      
+<p>The <a href="Date.html">Date</a> element is used to output dates, in either
+a localized or a non-localized format. The desired date variable (@see <a
+href="../../CiteProc/Date.html">CiteProc::Date</a>) is selected with the
+variable attribute.</p>
+
+<p>Localized date formats are selected with the form attribute. This attribute
+can be set to “numeric” (for numeric date formats, e.g. “12-15-2005”), or
+to “text” (for date formats with a non-numeric month, e.g. “December 15,
+2005”). Localized dates can be customized in two ways. First, the
+date-parts attribute may be used to specify which cs:date-part elements are
+shown. The possible values are:</p>
+<ul><li>
+<p>"year-month-day" - default, displays year, month and day</p>
+</li><li>
+<p>"year-month" - displays year and month</p>
+</li><li>
+<p>"year" - displays year only</p>
+</li></ul>
+
+<p>Secondly, cs:date may include one or more cs:date-part elements (see
+Date-part). The attributes set on these elements override those originally
+specified for the localized date formats (e.g. the form attribute of the
+month-cs:date-part element can be set to “short” to get abbreviated month
+names in all locales.). Note that the use of cs:date-part elements for
+localized dates does not affect which, and in what order, the cs:date-part
+elements are included in the rendered date. Also, the cs:date-part elements
+may not carry the attributes for affixes, as these are considered to be
+locale-specific.</p>
+
+<p>Non-localized date formats are self-contained: the date format is entirely
+controlled by cs:date and its cs:date-part children. In contrast to
+localized dates, cs:date is used without the form and date-parts
+attributes. Only the included cs:date-part elements will be rendered, in
+the order in which they are specified. The cs:date-part elements may carry
+attributes for both affixes and formatting, while cs:date may carry a
+delimiter (delimiting the various cs:date-part elements).</p>
+
+<p>For both localized and non-localized dates, affixes, display and formatting
+attributes may be specified for the cs:date element.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="date_parts-method" class="method-detail ">
+          <a name="method-i-date_parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">date_parts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="date_parts-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 551</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">date_parts</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">'date-parts'</span>] <span class="ruby-operator">||</span> <span class="ruby-string">'year-month-day'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- date_parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- date_parts-method -->
+
+      
+        <div id="merge_parts-method" class="method-detail ">
+          <a name="method-i-merge_parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge_parts</span><span
+              class="method-args">(p1, p2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Combines two lists of date-part elements; includes only the parts set in
+the ‘date-parts’ attribute and retains the order of elements in the first
+list.</p>
+            
+
+            
+            <div class="method-source-code" id="merge_parts-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 544</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge_parts</span>(<span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span>)
+  <span class="ruby-identifier">merged</span> = <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">DatePart</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">part</span>.<span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">style</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">'name'</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">part</span>[<span class="ruby-string">'name'</span>] })
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">merged</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_parts</span>.<span class="ruby-identifier">match</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">part</span>[<span class="ruby-string">'name'</span>])) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge_parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge_parts-method -->
+
+      
+        <div id="parts-method" class="method-detail ">
+          <a name="method-i-parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parts</span><span
+              class="method-args">(processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parts-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 536</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parts</span>(<span class="ruby-identifier">processor</span>)
+  <span class="ruby-identifier">has_form?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">merge_parts</span>(<span class="ruby-identifier">localized_date_parts</span>(<span class="ruby-identifier">form</span>, <span class="ruby-identifier">processor</span>), <span class="ruby-identifier">children</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">children</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parts-method -->
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(data, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-identifier">date</span> = <span class="ruby-identifier">data</span>[<span class="ruby-identifier">variable</span>]
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-string">''</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">literal?</span>
+    <span class="ruby-identifier">date</span>.<span class="ruby-identifier">literal</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">range?</span>
+    <span class="ruby-identifier">process_range</span>(<span class="ruby-identifier">date</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parts</span>(<span class="ruby-identifier">processor</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-identifier">part</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">date</span>, <span class="ruby-identifier">processor</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">delimiter</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">handle_processing_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+        <div id="process_range-method" class="method-detail ">
+          <a name="method-i-process_range"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process_range</span><span
+              class="method-args">(date, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>By default, date ranges are delimited by an en-dash (e.g. “May-July 2008”).
+The range-delimiter attribute can be used to specify custom date range
+delimiters. The attribute value set on the largest date-part (“day”,
+“month” or “year”) that differs between the two dates of the date range
+will then be used instead of the en-dash. For example,</p>
+
+<p>&lt;style&gt;</p>
+
+<pre>&lt;citation&gt;
+  &lt;layout&gt;
+    &lt;date variable=&quot;issued&quot;&gt;
+      &lt;date-part name=&quot;month&quot; suffix=&quot; &quot;/&gt;
+      &lt;date-part name=&quot;year&quot; range-delimiter=&quot;/&quot;/&gt;
+    &lt;/date&gt;
+  &lt;/layout&gt;
+&lt;/citation&gt;</pre>
+
+<p>&lt;/style&gt;</p>
+
+<p>would result in “May-July 2008” and “May 2008/June 2009”.</p>
+            
+
+            
+            <div class="method-source-code" id="process_range-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 494</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process_range</span>(<span class="ruby-identifier">date</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-identifier">order</span> = <span class="ruby-identifier">parts</span>(<span class="ruby-identifier">processor</span>)
+
+  <span class="ruby-identifier">parts</span> = [<span class="ruby-identifier">order</span>, <span class="ruby-identifier">order</span>].<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">date</span>.<span class="ruby-identifier">display_parts</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">order</span>, <span class="ruby-identifier">parts</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">order</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">part</span>[<span class="ruby-string">'name'</span>]) <span class="ruby-operator">?</span> <span class="ruby-identifier">part</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> }.<span class="ruby-identifier">compact</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">zip</span>([<span class="ruby-identifier">date</span>, <span class="ruby-identifier">date</span>.<span class="ruby-identifier">to</span>]).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">parts</span>, <span class="ruby-identifier">date</span><span class="ruby-operator">|</span> <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span> <span class="ruby-identifier">part</span>.<span class="ruby-identifier">process</span>(<span class="ruby-identifier">date</span>, <span class="ruby-identifier">processor</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">delimiter</span>) }.<span class="ruby-identifier">compact</span>
+  <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\s+$/</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">parts</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">last</span>.<span class="ruby-identifier">range_delimiter</span>)
+
+  <span class="ruby-comment"># case</span>
+  <span class="ruby-comment"># when date.open_range?</span>
+  <span class="ruby-comment">#   result &lt;&lt; parts.map { |part| part.process(date, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   result &lt;&lt; parts.last.range_delimiter</span>
+  <span class="ruby-comment">#   </span>
+  <span class="ruby-comment"># when discriminator == 'month'</span>
+  <span class="ruby-comment">#   month_parts = parts.reject { |part| part['name'] == 'year' }</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment">#   result &lt;&lt; month_parts.map { |part| part.process(date, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   result &lt;&lt; month_parts.last.range_delimiter</span>
+  <span class="ruby-comment">#   result &lt;&lt; parts.map { |part| part.process(date.to, processor) }.join(delimiter)</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment"># when discriminator == 'day'</span>
+  <span class="ruby-comment">#   day_parts = parts.select { |part| part['name'] == 'day' }</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment">#   result &lt;&lt; day_parts.map { |part| part.process(date, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   result &lt;&lt; day_parts.last.range_delimiter</span>
+  <span class="ruby-comment">#   result &lt;&lt; parts.map { |part| part.process(date.to, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   </span>
+  <span class="ruby-comment"># else # year</span>
+  <span class="ruby-comment">#   year_parts = parts.select { |part| part['name'] == 'year' }</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment">#   result &lt;&lt; parts.map { |part| part.process(date, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   result &lt;&lt; year_parts.last.range_delimiter</span>
+  <span class="ruby-comment">#   result &lt;&lt; year_parts.map { |part| part.process(date.to, processor) }.join(delimiter)</span>
+  <span class="ruby-comment">#   </span>
+  <span class="ruby-comment"># end</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment"># result.join</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process_range-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process_range-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

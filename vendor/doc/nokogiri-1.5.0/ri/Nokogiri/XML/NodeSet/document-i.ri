@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"document:EFI"$Nokogiri::XML::NodeSet#document;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1The Document this NodeSet is associated with;T:
+@file0FI"!lib/nokogiri/xml/node_set.rb;T

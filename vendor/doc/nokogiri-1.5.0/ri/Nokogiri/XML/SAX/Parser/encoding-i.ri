@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"encoding:EFI"(Nokogiri::XML::SAX::Parser#encoding;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"0The encoding beings used for this document.;T:
+@file0FI"#lib/nokogiri/xml/sax/parser.rb;T

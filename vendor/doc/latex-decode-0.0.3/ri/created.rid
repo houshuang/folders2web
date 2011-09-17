@@ -1,0 +1,11 @@
+Fri, 16 Sep 2011 23:36:16 -0400
+lib/latex/decode/accents.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/base.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/compatibility.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/diacritics.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/punctuation.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/symbols.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode/version.rb	Fri, 16 Sep 2011 23:36:13 -0400
+lib/latex/decode.rb	Fri, 16 Sep 2011 23:36:13 -0400
+README.md	Fri, 16 Sep 2011 23:36:13 -0400
+LICENSE	Fri, 16 Sep 2011 23:36:13 -0400

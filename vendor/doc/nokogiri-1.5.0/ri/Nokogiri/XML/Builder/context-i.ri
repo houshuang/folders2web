@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"context:EFI"#Nokogiri::XML::Builder#context;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=A context object for use when the block has no arguments;T:
+@file0FI" lib/nokogiri/xml/builder.rb;T

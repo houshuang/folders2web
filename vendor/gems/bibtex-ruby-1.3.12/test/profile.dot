@@ -1,0 +1,191 @@
+digraph "Profile" {
+label="PROCESS_TIME >=5%\nTotal: 0.189466";
+labelloc=t;
+labeljust=l;
+subgraph "Thread 2151894860" {
+2157373160 [label="_reduce_4\n(22%)"];
+2157373160 -> 2157379420 [label="49/50" fontsize=10 fontcolor="#666666"];
+2157375840 [label="do_scan\n(8%)"];
+2157375840 -> 2157384340 [label="2350/12500" fontsize=10 fontcolor="#666666"];
+2157375920 [label="scan\n(8%)"];
+2157375920 -> 2157375840 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157375920 -> 2157387400 [label="50/654" fontsize=10 fontcolor="#666666"];
+2157376000 [label="parse\n(17%)"];
+2157376000 -> 2157375920 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157376000 -> 2157383560 [label="50/51" fontsize=10 fontcolor="#666666"];
+2157376460 [label="parse\n(18%)"];
+2157376460 -> 2157376000 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157376460 -> 2157387400 [label="100/654" fontsize=10 fontcolor="#666666"];
+2157376960 [label="to_name\n(19%)"];
+2157376960 -> 2157376460 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157377620 [label="parse_names\n(20%)"];
+2157377620 -> 2157380380 [label="50/700" fontsize=10 fontcolor="#666666"];
+2157377920 [label="added_to_bibliography\n(20%)"];
+2157377920 -> 2157377620 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157379420 [label="add\n(23%)"];
+2157379420 -> 2157380380 [label="50/700" fontsize=10 fontcolor="#666666"];
+2157380380 [label="each\n(23%)"];
+2157380380 -> 2157377920 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157380380 -> 2157376960 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157380600 [label="_reduce_23\n(7%)"];
+2157380600 -> 2157381820 [label="50/100" fontsize=10 fontcolor="#666666"];
+2157381480 [label="each_pair\n(7%)"];
+2157381480 -> 2157387400 [label="450/654" fontsize=10 fontcolor="#666666"];
+2157381820 [label="add\n(7%)"];
+2157381820 -> 2157381480 [label="100/100" fontsize=10 fontcolor="#666666"];
+2157383160 [label="next_token\n(9%)"];
+2157383260 [label="_racc_do_parse_c\n(51%)"];
+2157383260 -> 2157373160 [label="49/49" fontsize=10 fontcolor="#666666"];
+2157383260 -> 2157383160 [label="2851/2851" fontsize=10 fontcolor="#666666"];
+2157383260 -> 2157380600 [label="50/50" fontsize=10 fontcolor="#666666"];
+2157383560 [label="do_parse\n(51%)"];
+2157383560 -> 2157383260 [label="51/51" fontsize=10 fontcolor="#666666"];
+2157384000 [label="parse_content\n(8%)"];
+2157384000 -> 2157384780 [label="800/2902" fontsize=10 fontcolor="#666666"];
+2157384220 [label="parse_bibtex\n(23%)"];
+2157384220 -> 2157384340 [label="9950/12500" fontsize=10 fontcolor="#666666"];
+2157384220 -> 2157384780 [label="1900/2902" fontsize=10 fontcolor="#666666"];
+2157384340 [label="scan\n(8%)"];
+2157384780 [label="push\n(9%)"];
+2157385460 [label="to_s\n(8%)"];
+2157385940 [label="analyse\n(49%)"];
+2157385940 -> 2157384220 [label="2900/2900" fontsize=10 fontcolor="#666666"];
+2157385940 -> 2157384000 [label="400/400" fontsize=10 fontcolor="#666666"];
+2157385940 -> 2157385460 [label="3401/3951" fontsize=10 fontcolor="#666666"];
+2157385940 -> 2157384780 [label="1/2902" fontsize=10 fontcolor="#666666"];
+2157386060 [label="parse\n(100%)"];
+2157386060 -> 2157383560 [label="1/51" fontsize=10 fontcolor="#666666"];
+2157386060 -> 2157385940 [label="1/1" fontsize=10 fontcolor="#666666"];
+2157387400 [label="new\n(8%)"];
+2157387460 [label="parse\n(100%)"];
+2157387460 -> 2157386060 [label="1/1" fontsize=10 fontcolor="#666666"];
+2157387460 -> 2157387400 [label="1/654" fontsize=10 fontcolor="#666666"];
+2157387640 [label="parse\n(100%)"];
+2157387640 -> 2157387460 [label="1/1" fontsize=10 fontcolor="#666666"];
+2157387700 [label="[No method]\n(100%)"];
+2157387700 -> 2157387640 [label="1/1" fontsize=10 fontcolor="#666666"];
+}
+subgraph cluster_2156953300 {
+label = "Global";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157387700;
+}
+subgraph cluster_2156953140 {
+label = "<Module::BibTeX>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157387640;
+}
+subgraph cluster_2156952860 {
+label = "<Class::BibTeX::Bibliography>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157387460;
+}
+subgraph cluster_2156952760 {
+label = "Class";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157387400;
+}
+subgraph cluster_2156952540 {
+label = "BibTeX::Parser";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157386060;
+2157383160;
+2157380600;
+2157373160;
+}
+subgraph cluster_2156952460 {
+label = "Hash";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157381480;
+}
+subgraph cluster_2156952140 {
+label = "BibTeX::Lexer";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157385940;
+2157384780;
+2157384220;
+2157384000;
+}
+subgraph cluster_2156952020 {
+label = "Array";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157380380;
+}
+subgraph cluster_2156951940 {
+label = "Symbol";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157385460;
+}
+subgraph cluster_2156940780 {
+label = "StringScanner";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157384340;
+}
+subgraph cluster_2156939700 {
+label = "Racc::Parser";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157383560;
+2157383260;
+}
+subgraph cluster_2156939220 {
+label = "BibTeX::Entry";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157381820;
+2157377920;
+2157377620;
+}
+subgraph cluster_2156938100 {
+label = "BibTeX::Value";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157376960;
+}
+subgraph cluster_2156937600 {
+label = "BibTeX::Bibliography";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157379420;
+}
+subgraph cluster_2156935320 {
+label = "<Class::BibTeX::Names>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157376460;
+}
+subgraph cluster_2156935220 {
+label = "BibTeX::NameParser";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+2157376000;
+2157375920;
+2157375840;
+}
+}

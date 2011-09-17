@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: LittlePlugger</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/little-plugger_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/little-plugger.rb">lib/little-plugger.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="LittlePlugger/ClassMethods.html">LittlePlugger::ClassMethods</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-version">::version</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./History_txt.html">History.txt</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./LittlePlugger.html">LittlePlugger</a></li>
+        
+          <li><a href="./LittlePlugger/ClassMethods.html">LittlePlugger::ClassMethods</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">LittlePlugger</h1>
+
+    <div id="description" class="description">
+      
+<h2>Synopsis</h2>
+
+<p><a href="LittlePlugger.html">LittlePlugger</a> is a module that provides
+Gem based plugin management. By extending your own class or module with <a
+href="LittlePlugger.html">LittlePlugger</a> you can easily manage the
+loading and initializing of plugins provided by other gems.</p>
+
+<h2>Details</h2>
+
+<p>Plugins are great! They allow other developers to add functionality to an
+application but relieve the application developer of the responsibility for
+mainting some other developer’s plugin code. <a
+href="LittlePlugger.html">LittlePlugger</a> aims to make it dead simple to
+manage external plugins as gems.</p>
+
+<h3>Naming</h3>
+
+<p>Every plugin managed by <a href="LittlePlugger.html">LittlePlugger</a> will
+have a name represented as a Symbol. This name is used to register the
+plugin, load the plugin file, and manage the plugin class/module. Here are
+the three rules for plugin names:</p>
+
+<p>1) all lowercase with underscores 2) maps to a file of the same name with
+an ‘.rb’ extension 3) converting the name to camel case yields the plugin
+class / module</p>
+
+<p>These rules are essentially the standard ruby practice of naming files
+after the class / module the file defines.</p>
+
+<h3>Finding &amp; Loading</h3>
+
+<p>Plugins are found by searching through the lib folders of all installed
+gems; these gems are not necessarily loaded - just searched. If the lib
+folder has a subdirectory that matches the <tt>plugin_path</tt>, then all
+ruby files in the gem’s <tt>plugin_path</tt> are noted for later loading.</p>
+
+<p>A file is only loaded if the basename of the file matches one of the
+registered plugin names. If no plugins are registered, then every file in
+the <tt>plugin_path</tt> is loaded.</p>
+
+<p>The plugin classes / modules are all expected to live in the same namespace
+for a particular application. For example, all plugins for the “Foo”
+application should reside in a “Foo::Plugins” namespace. This allows the
+plugins to be automatically initialized by <a
+href="LittlePlugger.html">LittlePlugger</a>.</p>
+
+<h3>Initializing</h3>
+
+<p>Optionally, plugins can provide an initialization method for running any
+setup code needed by the plugin. This initialize method should be named as
+follows: “initializer_#{plugin_name}” where the name of the plugin is
+appended to the end of the initializer method name.</p>
+
+<p>If this method exists, it will be called automatically when plugins are
+loaded. The order of loading of initialization is not strictly defined, so
+do not rely on another plugin being initialized for your own plugin
+successfully initialize.</p>
+
+<h2>Usage</h2>
+
+<p><a href="LittlePlugger.html">LittlePlugger</a> is used by extending your
+own class or module with the <a href="LittlePlugger.html">LittlePlugger</a>
+module.</p>
+
+<pre>module Logging
+  extend LittlePlugger
+end</pre>
+
+<p>This defines a <tt>plugin_path</tt> and a <tt>plugin_module</tt> for our
+Logging module. The <tt>plugin_path</tt> is set to “logging/plugins”, and
+therefore, the <tt>plugin_modlue</tt> is defined as Logging::Plugins. All
+plugins for the Logging module should be found underneath this plugin
+module.</p>
+
+<p>The plugins for the Logging module are loaded and initialized by calling
+the <tt>initialize_plugins</tt> method.</p>
+
+<pre>Logging.initialize_plugins</pre>
+
+<p>If you only want to load the plugin files but not initialize the plugin
+classes / modules then you can call the <tt>load_plugins</tt> method.</p>
+
+<pre>Logging.load_plugins</pre>
+
+<p>Finally, you can get a hash of all the loaded plugins.</p>
+
+<pre>Logging.plugins</pre>
+
+<p>This returns a hash keyed by the plugin names with the plugin class /
+module as the value.</p>
+
+<p>If you only want a certain set of plugins to be loaded, then pass the names
+to the <tt>plugin</tt> method.</p>
+
+<pre>Logging.plugin :foo, :bar, :baz</pre>
+
+<p>Now only three plugins for the Logging module will be loaded.</p>
+
+<h3>Customizing</h3>
+
+<p><a href="LittlePlugger.html">LittlePlugger</a> allows the use of a custom
+plugin path and module. These are specified when extending with
+LilttlePlugger by passing the specific path and module to <a
+href="LittlePlugger.html">LittlePlugger</a>.</p>
+
+<pre>class Hoe
+  extend LittlePlugger( :path =&gt; 'hoe', :module =&gt; Hoe )
+
+  plugin(
+      :clean, :debug, :deps, :flay, :flog, :package,
+      :publish, :rcov, :signing, :test
+  )
+end</pre>
+
+<p>All ruby files found under the “hoe” directory will be treated as plugins,
+and the plugin classes / modules should reside directly under the Hoe
+namespace.</p>
+
+<p>We also specify a list of plugins to be loaded. Only these plugins will be
+loaded and initialized by the <a
+href="LittlePlugger.html">LittlePlugger</a> module. The <tt>plugin</tt>
+method can be called multiple times to add more plugins.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="version-method" class="method-detail ">
+          <a name="method-c-version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the version string for the library.</p>
+            
+
+            
+            <div class="method-source-code" id="version-source">
+<pre>
+<span class="ruby-comment"># File lib/little-plugger.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-constant">VERSION</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

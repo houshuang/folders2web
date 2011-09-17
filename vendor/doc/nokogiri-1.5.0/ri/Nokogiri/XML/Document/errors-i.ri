@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"errors:EFI"#Nokogiri::XML::Document#errors;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GA list of Nokogiri::XML::SyntaxError found when parsing a document;T:
+@file0FI"!lib/nokogiri/xml/document.rb;T

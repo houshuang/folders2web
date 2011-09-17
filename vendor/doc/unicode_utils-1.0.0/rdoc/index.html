@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>unicode_utils-1.0.0 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>unicode_utils-1.0.0 Documentation</h1>
+
+  
+  <div id="main">
+    
+
+<p><a href="UnicodeUtils.html">UnicodeUtils</a> implements Unicode algorithms
+for case conversion, normalization, text segmentation and more in pure Ruby
+code.</p>
+
+<h2>Installation</h2>
+
+<p>Install with RubyGems:</p>
+
+<pre>gem install unicode_utils</pre>
+
+<p>Or get the source from Github: <a
+href="http://github.com/lang/unicode_utils">github.com/lang/unicode_utils</a>
+and follow the instructions in <a
+href="files/INSTALL_txt.html">INSTALL.txt</a>.</p>
+
+<p><a href="UnicodeUtils.html">UnicodeUtils</a> works with Ruby 1.9.1 or
+later.</p>
+
+<h2>Synopsis</h2>
+
+<pre>require &quot;unicode_utils/upcase&quot;
+
+UnicodeUtils.upcase(&quot;weiß&quot;) =&gt; &quot;WEISS&quot;
+
+UnicodeUtils.upcase(&quot;i&quot;, :tr) =&gt; &quot;İ&quot;</pre>
+
+<p>Start with the <a href="UnicodeUtils.html">UnicodeUtils</a> module in the
+API documentation for complete documentation.</p>
+
+<h2>License</h2>
+
+<p>unicode_utils is licensed under the BSD license. Read the file LICENSE.txt
+in the unicode_utils package for details.</p>
+
+<h2>Links</h2>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Online documentation</p></td>
+<td>
+<p><a
+href="http://unicode-utils.rubyforge.org">unicode-utils.rubyforge.org</a></p>
+</td></tr><tr><td class="rdoc-term"><p>Source code</p></td>
+<td>
+<p><a
+href="http://github.com/lang/unicode_utils">github.com/lang/unicode_utils</a></p>
+</td></tr><tr><td class="rdoc-term"><p>Rubyforge project</p></td>
+<td>
+<p><a
+href="http://rubyforge.org/projects/unicode-utils">rubyforge.org/projects/unicode-utils</a></p>
+</td></tr><tr><td class="rdoc-term"><p>Home of the Unicode Consortium</p></td>
+<td>
+<p><a href="http://unicode.org">unicode.org</a></p>
+</td></tr></table>
+
+<h2>Who?</h2>
+
+<p><a href="UnicodeUtils.html">UnicodeUtils</a> is written by Stefan Lang. You
+can contact me at <tt>langstefan AT gmx.at</tt>. Contributions welcome!</p>
+
+  </div>
+  
+
+  
+  
+  <h2>Files</h2>
+  <ul>
+    
+      <li class="file"><a href="INSTALL_txt.html">INSTALL.txt</a></li>
+    
+      <li class="file"><a href="README_txt.html">README.txt</a></li>
+    
+  </ul>
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="UnicodeUtils.html">UnicodeUtils</a></li>
+    
+    <li class="module"><a href="UnicodeUtils.html">UnicodeUtils</a></li>
+    
+    <li class="class"><a href="UnicodeUtils/Codepoint.html">UnicodeUtils::Codepoint</a></li>
+    
+    <li class="module"><a href="UnicodeUtils/Impl.html">UnicodeUtils::Impl</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+    <li class="module"><a href="UnicodeUtils.html">Object::U</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_decomposition">::canonical_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_decomposition">::canonical_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_decomposition">::canonical_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_equivalents-3F">::canonical_equivalents? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_equivalents-3F">::canonical_equivalents? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-canonical_equivalents-3F">::canonical_equivalents? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-case_ignorable_char-3F">::case_ignorable_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-case_ignorable_char-3F">::case_ignorable_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-case_ignorable_char-3F">::case_ignorable_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-cased_char-3F">::cased_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-cased_char-3F">::cased_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-cased_char-3F">::cased_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-casefold">::casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-casefold">::casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-casefold">::casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-char_name">::char_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-char_name">::char_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-char_name">::char_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-combining_class">::combining_class &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-combining_class">::combining_class &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-combining_class">::combining_class &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-compatibility_decomposition">::compatibility_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-compatibility_decomposition">::compatibility_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-compatibility_decomposition">::compatibility_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-downcase">::downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-downcase">::downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-downcase">::downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_grapheme">::each_grapheme &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_grapheme">::each_grapheme &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_grapheme">::each_grapheme &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_word">::each_word &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_word">::each_word &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-each_word">::each_word &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-grep">::grep &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-grep">::grep &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-grep">::grep &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-hangul_syllable_decomposition">::hangul_syllable_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-hangul_syllable_decomposition">::hangul_syllable_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-hangul_syllable_decomposition">::hangul_syllable_decomposition &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-jamo_short_name">::jamo_short_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-jamo_short_name">::jamo_short_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-jamo_short_name">::jamo_short_name &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-lowercase_char-3F">::lowercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-lowercase_char-3F">::lowercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-lowercase_char-3F">::lowercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-c-new">::new &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfc">::nfc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfc">::nfc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfc">::nfc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfd">::nfd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfd">::nfd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfd">::nfd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkc">::nfkc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkc">::nfkc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkc">::nfkc &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkd">::nfkd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkd">::nfkd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-nfkd">::nfkd &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_casefold">::simple_casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_casefold">::simple_casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_casefold">::simple_casefold &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_downcase">::simple_downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_downcase">::simple_downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_downcase">::simple_downcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_upcase">::simple_upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_upcase">::simple_upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-simple_upcase">::simple_upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-soft_dotted_char-3F">::soft_dotted_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-soft_dotted_char-3F">::soft_dotted_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-soft_dotted_char-3F">::soft_dotted_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase">::titlecase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase">::titlecase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase">::titlecase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase_char-3F">::titlecase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase_char-3F">::titlecase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-titlecase_char-3F">::titlecase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-upcase">::upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-upcase">::upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-upcase">::upcase &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-uppercase_char-3F">::uppercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-uppercase_char-3F">::uppercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils.html#method-c-uppercase_char-3F">::uppercase_char? &mdash; UnicodeUtils</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-hexbytes">#hexbytes &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-inspect">#inspect &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-name">#name &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-ord">#ord &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-to_s">#to_s &mdash; UnicodeUtils::Codepoint</a></li>
+    
+      <li><a href="UnicodeUtils/Codepoint.html#method-i-uplus">#uplus &mdash; UnicodeUtils::Codepoint</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

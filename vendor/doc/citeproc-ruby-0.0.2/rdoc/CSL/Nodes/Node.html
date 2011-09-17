@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Nodes::Node</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-format_on">::format_on</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-copy">#copy</a></li>
+          
+          <li><a href="#method-i-handle_processing_error">#handle_processing_error</a></li>
+          
+          <li><a href="#method-i-inherit_attributes">#inherit_attributes</a></li>
+          
+          <li><a href="#method-i-inherit_attributes_from">#inherit_attributes_from</a></li>
+          
+          <li><a href="#method-i-locale">#locale</a></li>
+          
+          <li><a href="#method-i-locales">#locales</a></li>
+          
+          <li><a href="#method-i-localize">#localize</a></li>
+          
+          <li><a href="#method-i-localized_date_parts">#localized_date_parts</a></li>
+          
+          <li><a href="#method-i-localized_options">#localized_options</a></li>
+          
+          <li><a href="#method-i-localized_terms">#localized_terms</a></li>
+          
+          <li><a href="#method-i-merge">#merge</a></li>
+          
+          <li><a href="#method-i-parse">#parse</a></li>
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+          <li><a href="#method-i-reverse_merge">#reverse_merge</a></li>
+          
+          <li><a href="#method-i-set_defaults">#set_defaults</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+        
+        
+          <li><a class="include" href="../../Support/Tree.html">Support::Tree</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Nodes::Node</h1>
+
+    <div id="description" class="description">
+      
+<h2><a href="Node.html">Node</a></h2>
+
+<p>A <a href="Node.html">Node</a> represents a <a
+href="../../CSL.html">CSL</a> rendering element. Rendering elements are
+used to specify which, and in what order, bibliographic data should be
+included in citations and bibliographies. Rendering elements also partly
+control the formatting of this data.</p>
+
+<p>Each <a href="Node.html">Node</a> is bound to a node in a <a
+href="../../CSL.html">CSL</a> <a href="../Style.html">Style</a> document.
+Furthermore, before any processiong can be done, the <a
+href="Node.html">Node</a> must be linked with a processor, in order to be
+able to access items, format, or locale information.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="style-attribute-method" class="method-detail">
+          <a name="style"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">style</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="format_on-method" class="method-detail ">
+          <a name="method-c-format_on"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format_on</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Chains the format method to the given methods</p>
+            
+
+            
+            <div class="method-source-code" id="format_on-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format_on</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method_id</span><span class="ruby-operator">|</span>
+
+    <span class="ruby-comment"># Set up Around Alias Chain</span>
+    <span class="ruby-identifier">original_method</span> = [<span class="ruby-identifier">method_id</span>, <span class="ruby-string">'without_formatting'</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'_'</span>)
+    <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">original_method</span>, <span class="ruby-identifier">method_id</span>
+
+    <span class="ruby-identifier">define_method</span> <span class="ruby-identifier">method_id</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">string</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">original_method</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+        <span class="ruby-identifier">processor</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">argument</span><span class="ruby-operator">|</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">CiteProc</span><span class="ruby-operator">::</span><span class="ruby-constant">Processor</span>) }
+        
+        <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">format</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">attributes</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span> <span class="ruby-value">:error</span>, <span class="ruby-node">&quot;failed to format string #{ string.inspect }&quot;</span>, <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format_on-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format_on-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@style</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">argument</span><span class="ruby-operator">|</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Style</span>) }
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@style</span>) <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@style</span>.<span class="ruby-identifier">nil?</span>
+  
+  <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">argument</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span>          
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Node</span>)
+      <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">argument</span>
+      <span class="ruby-ivar">@style</span> = <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">style</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@style</span>
+      
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^\s*&lt;/</span>)
+      <span class="ruby-identifier">parse</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">argument</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>.<span class="ruby-identifier">strict</span>.<span class="ruby-identifier">noblanks</span> }.<span class="ruby-identifier">root</span>)
+    
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+      <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">argument</span>)
+    
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">argument</span>)
+    
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;cannot initialize Node from argument #{ argument.inspect }&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">set_defaults</span>
+  
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="copy-method" class="method-detail ">
+          <a name="method-i-copy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a new <a href="Node.html">Node</a> that contains the same
+attributes and style as self.</p>
+            
+
+            
+            <div class="method-source-code" id="copy-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy</span>; <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">style</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- copy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy-method -->
+
+      
+        <div id="localized_date_parts-method" class="method-detail ">
+          <a name="method-i-localized_date_parts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">localized_date_parts</span><span
+              class="method-args">(key, processor=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns the localized date parts.</p>
+            
+
+            
+            <div class="method-source-code" id="localized_date_parts-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">localized_date_parts</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">localize</span>(<span class="ruby-value">:date</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- localized_date_parts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- localized_date_parts-method -->
+
+      
+        <div id="localized_options-method" class="method-detail ">
+          <a name="method-i-localized_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">localized_options</span><span
+              class="method-args">(key, processor=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="localized_options-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">localized_options</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">localize</span>(<span class="ruby-value">:options</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- localized_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- localized_options-method -->
+
+      
+        <div id="localized_terms-method" class="method-detail ">
+          <a name="method-i-localized_terms"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">localized_terms</span><span
+              class="method-args">(key, processor=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns the localized term with the given key.</p>
+            
+
+            
+            <div class="method-source-code" id="localized_terms-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">localized_terms</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">localize</span>(<span class="ruby-value">:term</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>        
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- localized_terms-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- localized_terms-method -->
+
+      
+        <div id="merge-method" class="method-detail ">
+          <a name="method-i-merge"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">merge</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a new <a href="Node.html">Node</a> with the attributes and style
+of self and other merged.</p>
+            
+
+            
+            <div class="method-source-code" id="merge-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">copy</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">attributes</span>), <span class="ruby-identifier">other</span>.<span class="ruby-identifier">style</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">style</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- merge-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- merge-method -->
+
+      
+        <div id="parse-method" class="method-detail ">
+          <a name="method-i-parse"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parses the given XML node.</p>
+            
+
+            
+            <div class="method-source-code" id="parse-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">nil?</span>
+  
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">value</span> }
+  
+  <span class="ruby-ivar">@children</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Nodes</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">child</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">inherit_attributes</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse-method -->
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(data, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Processes the supplied data. @returns a formatted string.</p>
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+        <div id="reverse_merge-method" class="method-detail ">
+          <a name="method-i-reverse_merge"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reverse_merge</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns a new <a href="Node.html">Node</a> with the attributes of self and
+other merged; attributes in other take precedence.</p>
+            
+
+            
+            <div class="method-source-code" id="reverse_merge-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse_merge</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reverse_merge-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reverse_merge-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-string">'node'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">inspect</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="handle_processing_error-method" class="method-detail ">
+          <a name="method-i-handle_processing_error"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">handle_processing_error</span><span
+              class="method-args">(e, data, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="handle_processing_error-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">handle_processing_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span> <span class="ruby-value">:error</span>, <span class="ruby-node">&quot;failed to process item #{ data.inspect }&quot;</span>, <span class="ruby-identifier">e</span>
+  <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- handle_processing_error-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- handle_processing_error-method -->
+
+      
+        <div id="inherit_attributes-method" class="method-detail ">
+          <a name="method-i-inherit_attributes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inherit_attributes</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Empty method; nodes may override this method.</p>
+            
+
+            
+            <div class="method-source-code" id="inherit_attributes-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inherit_attributes</span>(<span class="ruby-identifier">node</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inherit_attributes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inherit_attributes-method -->
+
+      
+        <div id="inherit_attributes_from-method" class="method-detail ">
+          <a name="method-i-inherit_attributes_from"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inherit_attributes_from</span><span
+              class="method-args">(node, nodes=[], attributes=[], prefix='')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Attributes for the cs:names and cs:name elements may also be set on
+cs:style, cs:citation and cs:bibliography. This eliminates the need to
+repeat the same attributes and attribute values for every occurrence of the
+cs:names and cs:name elements.</p>
+
+<p>The available inheritable attributes for cs:name are and,
+delimiter-precedes-last, et-al-min, et-al-use-first, et-al-subsequent-min,
+et-al-subsequent-use-first, initialize-with, name-as-sort-order and
+sort-separator. The attributes name-form and name-delimiter accompany the
+form and delimiter attributes on cs:name. Similarly, names-delimiter, the
+only inheritable attribute available for cs:names, accompanies the
+delimiter attribute on cs:names.</p>
+
+<p>When an inheritable name attribute is set on cs:style, cs:citation or
+cs:bibliography, its value is used for all cs:names elements within the
+element carrying the attribute. When an element lower in the hierarchy
+includes the same attribute with a different value, this latter value will
+override the value(s) specified higher in the hierarchy.</p>
+
+<p>This mehtod traverses a nodes ancestor chain and inherits all specified
+attributes from each parent that matches a name in names.</p>
+            
+
+            
+            <div class="method-source-code" id="inherit_attributes_from-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inherit_attributes_from</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">nodes</span>=[], <span class="ruby-identifier">attributes</span>=[], <span class="ruby-identifier">prefix</span>=<span class="ruby-string">''</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>
+  
+  <span class="ruby-comment"># TODO refactor so that node is not required anymore</span>
+  <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">parent</span>        
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'document'</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">attribute</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">parent</span>[[<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">attribute</span>].<span class="ruby-identifier">join</span>] } <span class="ruby-keyword">if</span> <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">parent</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inherit_attributes_from-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inherit_attributes_from-method -->
+
+      
+        <div id="locale-method" class="method-detail ">
+          <a name="method-i-locale"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locale</span><span
+              class="method-args">(processor = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns the locale with the highest priority</p>
+            
+
+            
+            <div class="method-source-code" id="locale-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locale</span>(<span class="ruby-identifier">processor</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">locales</span>(<span class="ruby-identifier">processor</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locale-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locale-method -->
+
+      
+        <div id="locales-method" class="method-detail ">
+          <a name="method-i-locales"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locales</span><span
+              class="method-args">(processor = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="locales-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locales</span>(<span class="ruby-identifier">processor</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">style</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">locales</span> <span class="ruby-operator">||</span> []
+  <span class="ruby-keyword">else</span>
+    (<span class="ruby-identifier">style</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">style</span>.<span class="ruby-identifier">locales</span>(<span class="ruby-identifier">processor</span>.<span class="ruby-identifier">language</span>, <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">region</span>) <span class="ruby-operator">||</span> []) <span class="ruby-operator">+</span> [<span class="ruby-constant">Locale</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">processor</span>.<span class="ruby-identifier">language</span>)]
+  <span class="ruby-keyword">end</span>  <span class="ruby-operator">+</span> [<span class="ruby-constant">Locale</span>.<span class="ruby-identifier">default</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locales-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locales-method -->
+
+      
+        <div id="localize-method" class="method-detail ">
+          <a name="method-i-localize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">localize</span><span
+              class="method-args">(type, key, processor, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Prioritized locale look-up.</p>
+            
+
+            
+            <div class="method-source-code" id="localize-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">localize</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">processor</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@style</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">style</span>.<span class="ruby-identifier">locales</span>(<span class="ruby-identifier">processor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">locale</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">type</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span> 
+  
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">locale</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">type</span>) 
+    <span class="ruby-keyword">yield</span> <span class="ruby-constant">CSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Locale</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">processor</span>.<span class="ruby-identifier">language</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-constant">CSL</span>.<span class="ruby-identifier">default_locale</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">type</span>)[<span class="ruby-identifier">key</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- localize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- localize-method -->
+
+      
+        <div id="set_defaults-method" class="method-detail ">
+          <a name="method-i-set_defaults"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_defaults</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Empty method; nodes may override this method.</p>
+            
+
+            
+            <div class="method-source-code" id="set_defaults-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_defaults</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_defaults-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_defaults-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

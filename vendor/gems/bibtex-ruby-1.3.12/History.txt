@@ -1,0 +1,106 @@
+1.3.12 / 2011-09-06 
+===================================
+
+* Improved default keys for BibTeX entries
+
+1.3.11 'happy #rbxday' / 2011-08-05 
+===================================
+
+* Rubinius compatibility
+* Cleaned up dependency loading
+
+1.3.10 / 2011-07-16 
+==================
+
+* Fixes gemspec options
+* Added support for cite keys containing spaces (sharnik) 
+
+=== 1.3.9 / 2011-07-05
+
+* Added a LaTeX input filter
+
+=== 1.3.8 / 2011-07-05
+
+* Added a converter-plugin framework
+
+=== 1.3.7 / 2011-06-30
+
+* Added option to toggle dropping/non-dropping behaviour of 'von' parts
+  when exporting to CiteProc/CSL
+* Fixed name parser not accepting 'von' parts starting with upper case words
+  in sort order (#11)
+* Added support for multi-line string literals (#15)
+
+=== 1.3.6 / 2011-06-11
+
+* Refactored lexer and parser for speed
+* Added support for @strings with braced values (#10)
+
+=== 1.3.5 / 2011-06-07
+
+* Removed debugger initialisation
+
+=== 1.3.4 / 2011-06-07
+
+* Performance boost for parsing of large bibliographies
+
+=== 1.3.3 / 2011-06-06
+
+* Fixed name parsing of nested braced expressions
+
+=== 1.3.2
+
+* Fixed numeric keys issue
+* Fixed CiteProc/CSL date export
+* Implemented BibTeX month value conversion
+
+=== 1.3.1
+
+* Added CiteProc/CSL export format
+
+=== 1.3.0 / 2011-05-12
+
+* Improved top-level utility functions
+* Implemented a BibTeX name parser and name value objects
+* Re-factored and cleaned up API and export
+* Added cucumber features
+* Re-implemented string handling using dedicated Value objects
+* Implemented query language to search in bibliographies
+* Improved testing environment
+* Added cucumber features
+
+=== 1.2.1 / 2011-02-26
+
+* Fixed several MacRuby compliancy issues.
+* Fixed compatibility issues and BibTeX parsing of name tokens (lyro)
+
+=== 1.2.0 / 2011-02-12
+
+* Switched to using bundler.
+* Improved BibTeX::Entry constructor (supports hashes for intuitive assignments).
+* Added top-level methods BibTeX.parse, BibTeX.open, BibTeX.valid? and
+  BibTeX::Entry.parse.
+* Rewrote StringReplacement extensions to use monkey patching of Arrays.
+* See README.md or unit tests for updated code examples.
+
+=== 1.1.2 / 2011-01-27
+
+* Added dynamic ghost methods to BibTeX::Entry for more convenient access
+  to BibTeX values.
+
+=== 1.1.1 / 2011-01-25
+
+* Improved JSON and XML export.
+* Added more examples to README.
+
+=== 1.1.0 / 2011-01-24
+
+* Improved YAML export.
+
+=== 1.0.1 / 2011-01-17
+
+* Removed StringScanner extension.
+
+=== 1.0.0 / 2011-01-17
+
+* Initial Release. See README.md for further details.

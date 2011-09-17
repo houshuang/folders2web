@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Nodes::Text</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/csl/nodes_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/nodes.rb">lib/csl/nodes.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Node.html">CSL::Nodes::Node</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-format_page_range">#format_page_range</a></li>
+          
+          <li><a href="#method-i-process">#process</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../CSL.html">CSL</a></li>
+        
+          <li><a href="../../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../../Support.html">Support</a></li>
+        
+          <li><a href="../../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Nodes::Text</h1>
+
+    <div id="description" class="description">
+      
+<p>The cs:text element is used to output text, which can originate from
+different sources. The source-type is indicated with an attribute, and the
+attribute value acts as an identifier within the source-type. For example,</p>
+
+<p>&lt;text variable="title" form="short" font-style="italic"/&gt;</p>
+
+<p>indicates that the source-type is a variable, and that the variable that
+should be displayed is the italicized short form of “title”. The different
+source-types are:</p>
+<ul><li>
+<p>variable - the text contents of a variable (see Standard Variables). The
+optional form attribute can be set to either “long” (the default) or
+“short” to select the long or short forms of variables, e.g. the full and
+short title.</p>
+</li><li>
+<p>macro - the text generated by a macro. The value of macro should correspond
+to the value of the name attribute of the desired cs:macro element.</p>
+</li><li>
+<p>term - the text of a localized term (see Appendix III - Terms and <a
+href="../Locale.html">Locale</a>). The plural attribute can be set to
+choose either the singular (value “false”, the default) or plural variant
+(value “true”) of a term. In addition, the form attribute can be set to
+select the desired term form (“long” [default], “short”, “verb”,
+“verb-short” or “symbol”). If for a given term the desired form does not
+exist, another form may be used: “verb-short” reverts to “verb”, “symbol”
+reverts to “short”, and “verb” and “short” both revert to “long”.</p>
+</li><li>
+<p>value - used to output verbatim text, which is set via the value of value
+(e.g. value=“some text”)</p>
+</li></ul>
+
+<p>In all cases the attributes for affixes, display, formatting, quotes,
+strip-periods and text-case may be applied to cs:text.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="process-method" class="method-detail ">
+          <a name="method-i-process"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">process</span><span
+              class="method-args">(data, processor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="process-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">has_value?</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-identifier">value</span>
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">has_macro?</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-ivar">@style</span>.<span class="ruby-identifier">macros</span>[<span class="ruby-identifier">macro</span>].<span class="ruby-identifier">process</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>) 
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">has_term?</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-identifier">localized_terms</span>(<span class="ruby-identifier">term</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">attributes</span>)
+    
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">has_variable?</span>
+    <span class="ruby-identifier">text</span> = (<span class="ruby-identifier">data</span>[<span class="ruby-node">&quot;short#{variable.capitalize}&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">data</span>[[<span class="ruby-string">'short'</span>, <span class="ruby-identifier">variable</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'-'</span>)] <span class="ruby-operator">||</span> <span class="ruby-identifier">data</span>[<span class="ruby-identifier">variable</span>]).<span class="ruby-identifier">to_s</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">form</span> <span class="ruby-operator">==</span> <span class="ruby-string">'short'</span>
+      <span class="ruby-identifier">text</span> = <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">abbreviate</span>(<span class="ruby-identifier">variable</span>, <span class="ruby-identifier">text</span>)
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">variable</span> <span class="ruby-operator">==</span> <span class="ruby-string">'page'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@style</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'page-range-format'</span>)
+      <span class="ruby-identifier">text</span> = <span class="ruby-identifier">format_page_range</span>(<span class="ruby-identifier">text</span>, <span class="ruby-ivar">@style</span>.<span class="ruby-identifier">options</span>[<span class="ruby-string">'page-range-format'</span>])
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">variable</span> <span class="ruby-operator">==</span> <span class="ruby-string">'page-first'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">text</span> = <span class="ruby-identifier">data</span>[<span class="ruby-string">'page'</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\d+/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+    
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">text</span> = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># Add localized quotes</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_quotes?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">text</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">prefix</span> = [<span class="ruby-keyword">self</span>[<span class="ruby-string">'prefix'</span>], <span class="ruby-identifier">localized_terms</span>(<span class="ruby-string">'open-quote'</span>)].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">localized_options</span>(<span class="ruby-string">'punctuation-in-quote'</span>, <span class="ruby-identifier">processor</span>) <span class="ruby-operator">==</span> <span class="ruby-string">'true'</span>
+      <span class="ruby-identifier">suffix</span> = <span class="ruby-keyword">self</span>[<span class="ruby-string">'suffix'</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^([\.,!?;:]+)/</span>, <span class="ruby-string">''</span>)
+      <span class="ruby-identifier">suffix</span> = [<span class="ruby-node">$1</span>, <span class="ruby-identifier">localized_terms</span>(<span class="ruby-string">'close-quote'</span>), <span class="ruby-identifier">suffix</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/([\.,!?;:]+)$/</span>, <span class="ruby-string">''</span>)
+      <span class="ruby-identifier">suffix</span> = [<span class="ruby-identifier">localized_terms</span>(<span class="ruby-string">'close-quote'</span>), <span class="ruby-node">$1</span>, <span class="ruby-keyword">self</span>[<span class="ruby-string">'suffix'</span>]].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'prefix'</span>] = <span class="ruby-identifier">prefix</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-string">'suffix'</span>] = <span class="ruby-identifier">suffix</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">text</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">handle_processing_error</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">processor</span>)      
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- process-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- process-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="format_page_range-method" class="method-detail ">
+          <a name="method-i-format_page_range"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format_page_range</span><span
+              class="method-args">(value, format)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The page abbreviation rules for the different values of the
+page-range-format attribute on cs:style are:</p>
+<ul><li>
+<p>"minimum": All digits repeated in the second number are left out: 42-5,
+321-8, 2787-816</p>
+</li><li>
+<p>"expanded": Abbreviated page ranges are expanded to their non-abbreviated
+form: 42-45, 321-328, 2787-2816</p>
+</li><li>
+<p>"chicago": Page ranges are abbreviated according to the link Chicago Manual
+of Style-rules</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="format_page_range-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/nodes.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format_page_range</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">format</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/([a-z]*)(\d+)\s*\D\s*([a-z]*)(\d+)/</span>)
+
+  <span class="ruby-identifier">tokens</span> = [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>, <span class="ruby-string">&quot;\u2013&quot;</span>, <span class="ruby-node">$3</span>, <span class="ruby-node">$4</span>]
+
+  <span class="ruby-comment"># normalize page range to expanded form</span>
+  <span class="ruby-identifier">f</span>, <span class="ruby-identifier">t</span> = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">chars</span>.<span class="ruby-identifier">to_a</span>, <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>].<span class="ruby-identifier">chars</span>.<span class="ruby-identifier">to_a</span>
+  <span class="ruby-identifier">d</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">d</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">f</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-string">'0'</span>) } <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">take</span>(<span class="ruby-identifier">d</span>.<span class="ruby-identifier">abs</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>
+  
+  <span class="ruby-comment"># TODO handle prefixes correctly</span>
+  <span class="ruby-comment"># TODO handle multiple ranges</span>
+  
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">format</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-regexp">/mini/</span>
+    <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">t</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> }.<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>)
+    <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'expanded'</span>
+    <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">t</span>
+    <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'chicago'</span>
+    <span class="ruby-keyword">case</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-comment"># use all digits</span>
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">t</span>
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">empty?</span>            
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>
+      <span class="ruby-comment"># use changed part only</span>
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">t</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> }.<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>)
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>
+      <span class="ruby-comment"># use at least two digits, and all if three or more change</span>
+      <span class="ruby-identifier">match</span> = <span class="ruby-identifier">f</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-3</span>].<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">t</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-3</span>]).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> }.<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">-2</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>]
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">match</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">match</span>
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># use at least two digits in second number</span>
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">4</span>] = <span class="ruby-identifier">f</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-3</span>].<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">t</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-3</span>]).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> }.<span class="ruby-identifier">reject</span>(&amp;<span class="ruby-value">:nil?</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">-2</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>]
+      <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tokens</span>.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format_page_range-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format_page_range-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

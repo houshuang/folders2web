@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: CSL::Locale</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/csl/locale_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/csl/locale.rb">lib/csl/locale.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-match_language">::match_language</a></li>
+          
+          <li><a href="#method-c-match_region">::match_region</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-sort">::sort</a></li>
+          
+          <li><a href="#method-i-3C-3D-3E">#<=></a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-date">#date</a></li>
+          
+          <li><a href="#method-i-has_term-3F">#has_term?</a></li>
+          
+          <li><a href="#method-i-language-3D">#language=</a></li>
+          
+          <li><a href="#method-i-options">#options</a></li>
+          
+          <li><a href="#method-i-ordinalize">#ordinalize</a></li>
+          
+          <li><a href="#method-i-parse-21">#parse!</a></li>
+          
+          <li><a href="#method-i-region-3D">#region=</a></li>
+          
+          <li><a href="#method-i-reload-21">#reload!</a></li>
+          
+          <li><a href="#method-i-set">#set</a></li>
+          
+          <li><a href="#method-i-style_options">#style_options</a></li>
+          
+          <li><a href="#method-i-tag">#tag</a></li>
+          
+          <li><a href="#method-i-term">#term</a></li>
+          
+          <li><a href="#method-i-terms">#terms</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Support/Tree.html">Support::Tree</a></li>
+        
+        
+        
+          <li><span class="include">Comparable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../CSL.html">CSL</a></li>
+        
+          <li><a href="../CSL/Bibliography.html">CSL::Bibliography</a></li>
+        
+          <li><a href="../CSL/Citation.html">CSL::Citation</a></li>
+        
+          <li><a href="../CSL/Key.html">CSL::Key</a></li>
+        
+          <li><a href="../CSL/Locale.html">CSL::Locale</a></li>
+        
+          <li><a href="../CSL/Node.html">CSL::Node</a></li>
+        
+          <li><a href="../CSL/Nodes.html">CSL::Nodes</a></li>
+        
+          <li><a href="../CSL/Nodes/Choose.html">CSL::Nodes::Choose</a></li>
+        
+          <li><a href="../CSL/Nodes/ConditionalBlock.html">CSL::Nodes::ConditionalBlock</a></li>
+        
+          <li><a href="../CSL/Nodes/Date.html">CSL::Nodes::Date</a></li>
+        
+          <li><a href="../CSL/Nodes/DatePart.html">CSL::Nodes::DatePart</a></li>
+        
+          <li><a href="../CSL/Nodes/EtAl.html">CSL::Nodes::EtAl</a></li>
+        
+          <li><a href="../CSL/Nodes/Group.html">CSL::Nodes::Group</a></li>
+        
+          <li><a href="../CSL/Nodes/Label.html">CSL::Nodes::Label</a></li>
+        
+          <li><a href="../CSL/Nodes/Layout.html">CSL::Nodes::Layout</a></li>
+        
+          <li><a href="../CSL/Nodes/Macro.html">CSL::Nodes::Macro</a></li>
+        
+          <li><a href="../CSL/Nodes/Name.html">CSL::Nodes::Name</a></li>
+        
+          <li><a href="../CSL/Nodes/NamePart.html">CSL::Nodes::NamePart</a></li>
+        
+          <li><a href="../CSL/Nodes/Names.html">CSL::Nodes::Names</a></li>
+        
+          <li><a href="../CSL/Nodes/Node.html">CSL::Nodes::Node</a></li>
+        
+          <li><a href="../CSL/Nodes/Number.html">CSL::Nodes::Number</a></li>
+        
+          <li><a href="../CSL/Nodes/Substitute.html">CSL::Nodes::Substitute</a></li>
+        
+          <li><a href="../CSL/Nodes/Text.html">CSL::Nodes::Text</a></li>
+        
+          <li><a href="../CSL/Renderer.html">CSL::Renderer</a></li>
+        
+          <li><a href="../CSL/Sort.html">CSL::Sort</a></li>
+        
+          <li><a href="../CSL/Style.html">CSL::Style</a></li>
+        
+          <li><a href="../CSL/Term.html">CSL::Term</a></li>
+        
+          <li><a href="../CiteProc.html">CiteProc</a></li>
+        
+          <li><a href="../CiteProc/Bibliography.html">CiteProc::Bibliography</a></li>
+        
+          <li><a href="../CiteProc/CitationData.html">CiteProc::CitationData</a></li>
+        
+          <li><a href="../CiteProc/Date.html">CiteProc::Date</a></li>
+        
+          <li><a href="../CiteProc/Format.html">CiteProc::Format</a></li>
+        
+          <li><a href="../CiteProc/Format/Default.html">CiteProc::Format::Default</a></li>
+        
+          <li><a href="../CiteProc/Format/Html.html">CiteProc::Format::Html</a></li>
+        
+          <li><a href="../CiteProc/Formatter.html">CiteProc::Formatter</a></li>
+        
+          <li><a href="../CiteProc/Item.html">CiteProc::Item</a></li>
+        
+          <li><a href="../CiteProc/Name.html">CiteProc::Name</a></li>
+        
+          <li><a href="../CiteProc/Processor.html">CiteProc::Processor</a></li>
+        
+          <li><a href="../CiteProc/Selector.html">CiteProc::Selector</a></li>
+        
+          <li><a href="../CiteProc/Variable.html">CiteProc::Variable</a></li>
+        
+          <li><a href="../Support.html">Support</a></li>
+        
+          <li><a href="../Support/Attributes.html">Support::Attributes</a></li>
+        
+          <li><a href="../Support/Attributes/ClassMethods.html">Support::Attributes::ClassMethods</a></li>
+        
+          <li><a href="../Support/Tree.html">Support::Tree</a></li>
+        
+          <li><a href="../Support/Tree/ClassMethods.html">Support::Tree::ClassMethods</a></li>
+        
+          <li><a href="../Extensions.html">Extensions</a></li>
+        
+          <li><a href="../Extensions/Core.html">Extensions::Core</a></li>
+        
+          <li><a href="../Extensions/Core/Numbers.html">Extensions::Core::Numbers</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">CSL::Locale</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="default-attribute-method" class="method-detail">
+          <a name="default"></a>
+          
+          <a name="default="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">default</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="languages-attribute-method" class="method-detail">
+          <a name="languages"></a>
+          
+          <a name="languages="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">languages</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="path-attribute-method" class="method-detail">
+          <a name="path"></a>
+          
+          <a name="path="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">path</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="regions-attribute-method" class="method-detail">
+          <a name="regions"></a>
+          
+          <a name="regions="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">regions</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="language-attribute-method" class="method-detail">
+          <a name="language"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">language</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="region-attribute-method" class="method-detail">
+          <a name="region"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">region</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="match_language-method" class="method-detail ">
+          <a name="method-c-match_language"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match_language</span><span
+              class="method-args">(region)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns first available language for current region.</p>
+            
+
+            
+            <div class="method-source-code" id="match_language-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match_language</span>(<span class="ruby-identifier">region</span>)
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>(<span class="ruby-constant">Locale</span>.<span class="ruby-identifier">path</span>).<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">match</span>(<span class="ruby-node">/^[\w]+-([a-z]{2})-#{region}\.xml$/</span>) }
+  <span class="ruby-node">$1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match_language-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match_language-method -->
+
+      
+        <div id="match_region-method" class="method-detail ">
+          <a name="method-c-match_region"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match_region</span><span
+              class="method-args">(language)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@returns first available region for current language.</p>
+            
+
+            
+            <div class="method-source-code" id="match_region-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match_region</span>(<span class="ruby-identifier">language</span>)
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">entries</span>(<span class="ruby-constant">Locale</span>.<span class="ruby-identifier">path</span>).<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">match</span>(<span class="ruby-node">/^[\w]+-#{language}-([A-Z]{2})\.xml$/</span>) }
+  <span class="ruby-node">$1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match_region-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match_region-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(argument=nil, style=nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@param argument a language tag; or an XML node</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">argument</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">style</span>=<span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+    <span class="ruby-ivar">@language</span>, <span class="ruby-ivar">@region</span> = <span class="ruby-identifier">argument</span>[<span class="ruby-string">'lang'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/-/</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">argument</span>[<span class="ruby-string">'lang'</span>]
+    <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">argument</span>)
+  
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^\s*&lt;locale/</span>)
+    <span class="ruby-identifier">argument</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">argument</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>.<span class="ruby-identifier">strict</span>.<span class="ruby-identifier">noblanks</span> }.<span class="ruby-identifier">root</span>
+    <span class="ruby-ivar">@language</span>, <span class="ruby-ivar">@region</span> = <span class="ruby-identifier">argument</span>[<span class="ruby-string">'lang'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/-/</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">argument</span>[<span class="ruby-string">'lang'</span>]
+    <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">argument</span>)
+  
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-identifier">set</span>(<span class="ruby-identifier">argument</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">style</span>
+  
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="sort-method" class="method-detail ">
+          <a name="method-c-sort"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sort</span><span
+              class="method-args">(language = nil, region = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="sort-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sort</span>(<span class="ruby-identifier">language</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">region</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">language</span>
+      <span class="ruby-keyword">case</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">language</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">language</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span> <span class="ruby-value">-1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">language</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">==</span> <span class="ruby-string">'en'</span> <span class="ruby-keyword">then</span> <span class="ruby-value">-1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">==</span> <span class="ruby-string">'en'</span> <span class="ruby-keyword">then</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">language</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">case</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">region</span> <span class="ruby-keyword">then</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">region</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">region</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span> <span class="ruby-value">-1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">region</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">region</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">regions</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span>] <span class="ruby-keyword">then</span> <span class="ruby-value">-1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">regions</span>[<span class="ruby-identifier">a</span>.<span class="ruby-identifier">language</span>] <span class="ruby-keyword">then</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">region</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">region</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sort-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sort-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3D-3E-method" class="method-detail ">
+          <a name="method-i-3C-3D-3E"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;=&gt;</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Locales are sorted first by language, then by region; sort order is
+alphabetical with the following exceptions: en_US (the default locale) is
+prioritised; in case of a language-match the default region of that
+language will be prioritised (thus, de_DE will comes before de_AT even
+though the alphabetical order would be different).</p>
+            
+
+            
+            <div class="method-source-code" id="3C-3D-3E-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">other</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 3C-3D-3E-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 3C-3D-3E-method -->
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(term)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">terms</span>[<span class="ruby-identifier">term</span>.<span class="ruby-identifier">to_s</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="date-method" class="method-detail ">
+          <a name="method-i-date"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">date</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@example <a
+href="Locale.html#method-i-date">date</a>[‘numeric’][‘month’][‘suffix’]
+=&gt; ‘/’</p>
+            
+
+            
+            <div class="method-source-code" id="date-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">date</span>
+  <span class="ruby-ivar">@date</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>([])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- date-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- date-method -->
+
+      
+        <div id="has_term-3F-method" class="method-detail ">
+          <a name="method-i-has_term-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_term?</span><span
+              class="method-args">(term)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="has_term-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_term?</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">terms</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">term</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- has_term-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- has_term-3F-method -->
+
+      
+        <div id="language-3D-method" class="method-detail ">
+          <a name="method-i-language-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">language=</span><span
+              class="method-args">(language)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="language-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">language=</span>(<span class="ruby-identifier">language</span>)
+  <span class="ruby-ivar">@language</span> = <span class="ruby-identifier">language</span>
+  <span class="ruby-ivar">@region</span> = <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">regions</span>[<span class="ruby-identifier">language</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- language-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- language-3D-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-i-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@example <a
+href="Locale.html#method-i-options">options</a>[‘punctuation-in-quotes’]
+=&gt; ‘true’</p>
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> {}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Locale.html#method-i-style_options">style_options</a>
+          </div>
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="ordinalize-method" class="method-detail ">
+          <a name="method-i-ordinalize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ordinalize</span><span
+              class="method-args">(number, options={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns an ordinalized number according to the rules specified in the given
+locale. Does not conform to <a href="../CSL.html">CSL</a> 1.0 in order to
+work around some shortcomings in the schema: this version tries a useful
+fallback if there is no direct hit in the locale (e.g., if 21 is not
+specified, we will try with 21 and then with 1). The fallback of the
+long-ordinal form is ordinal.</p>
+
+<p>TODO: long-ordinals may be influenced by gender in some locales</p>
+
+<p>@param number a <a href="../Fixnum.html">Fixnum</a> @param options the
+options hash; should contain a ‘form’ attribute @returns a string, e.g.,
+‘1st’</p>
+            
+
+            
+            <div class="method-source-code" id="ordinalize-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ordinalize</span>(<span class="ruby-identifier">number</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-identifier">number</span> = <span class="ruby-identifier">number</span>.<span class="ruby-identifier">to_i</span>
+  
+  <span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">'ordinal'</span>
+  <span class="ruby-identifier">key</span> = [<span class="ruby-identifier">options</span>[<span class="ruby-string">'form'</span>], <span class="ruby-string">'%02d'</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'-'</span>)
+
+  <span class="ruby-identifier">ordinal</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">number</span>].<span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">mod</span> = <span class="ruby-value">100</span>
+  
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">ordinal</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mod</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-string">'ordinal-%02d'</span>
+    <span class="ruby-identifier">ordinal</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span> <span class="ruby-operator">%</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">mod</span>)].<span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">options</span>)
+    <span class="ruby-identifier">mod</span> = <span class="ruby-identifier">mod</span> <span class="ruby-operator">/</span> <span class="ruby-value">10</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">key</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^ordinal/</span>) <span class="ruby-operator">?</span> [<span class="ruby-identifier">number</span>, <span class="ruby-identifier">ordinal</span>].<span class="ruby-identifier">join</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">ordinal</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ordinalize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ordinalize-method -->
+
+      
+        <div id="parse-21-method" class="method-detail ">
+          <a name="method-i-parse-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse!</span><span
+              class="method-args">(node)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse-21-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;expected XML node, was: #{ node.inspect }&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+  
+  <span class="ruby-ivar">@terms</span> = <span class="ruby-constant">Term</span>.<span class="ruby-identifier">build</span>(<span class="ruby-identifier">node</span>)
+  
+  <span class="ruby-ivar">@options</span> = <span class="ruby-constant">Hash</span>[*<span class="ruby-identifier">node</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">'style-options'</span>).<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:attributes</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">a</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">a</span>.<span class="ruby-identifier">value</span>] } }.<span class="ruby-identifier">flatten</span>]    
+  
+  <span class="ruby-ivar">@date</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>([])
+  [<span class="ruby-string">'text'</span>, <span class="ruby-string">'numeric'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">form</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@date</span>[<span class="ruby-identifier">form</span>] = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">css</span>(<span class="ruby-node">&quot;date[form='#{form}'] &gt; date-part&quot;</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">Nodes</span><span class="ruby-operator">::</span><span class="ruby-constant">DatePart</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Hash</span>[*<span class="ruby-identifier">part</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">a</span>.<span class="ruby-identifier">value</span>] }.<span class="ruby-identifier">flatten</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse-21-method -->
+
+      
+        <div id="region-3D-method" class="method-detail ">
+          <a name="method-i-region-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">region=</span><span
+              class="method-args">(region)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="region-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">region=</span>(<span class="ruby-identifier">region</span>)
+  <span class="ruby-ivar">@region</span> = <span class="ruby-identifier">region</span>
+  <span class="ruby-ivar">@language</span> = <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">languages</span>[<span class="ruby-identifier">region</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- region-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- region-3D-method -->
+
+      
+        <div id="reload-21-method" class="method-detail ">
+          <a name="method-i-reload-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reload!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Reloads the XML file. Called automatically whenever language or region
+changes.</p>
+            
+
+            
+            <div class="method-source-code" id="reload-21-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reload!</span>
+  <span class="ruby-ivar">@region</span> = <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">regions</span>[<span class="ruby-ivar">@language</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@region</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-ivar">@language</span> = <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">languages</span>[<span class="ruby-ivar">@region</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@language</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">parse!</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">document_path</span>)) { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>.<span class="ruby-identifier">strict</span>.<span class="ruby-identifier">noblanks</span> }.<span class="ruby-identifier">root</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Failed to open locale file, falling back to default: #{e.message}&quot;</span>
+  <span class="ruby-constant">CiteProc</span>.<span class="ruby-identifier">log</span>.<span class="ruby-identifier">debug</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tag</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">default</span>
+    <span class="ruby-ivar">@language</span>, <span class="ruby-ivar">@region</span> = <span class="ruby-constant">Locale</span>.<span class="ruby-identifier">default</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/-/</span>)
+    <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reload-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reload-21-method -->
+
+      
+        <div id="set-method" class="method-detail ">
+          <a name="method-i-set"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set</span><span
+              class="method-args">(tag)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="set-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-ivar">@language</span>, <span class="ruby-ivar">@region</span> = <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/-/</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set-method -->
+
+      
+        <div id="style_options-method" class="method-detail method-alias">
+          <a name="method-i-style_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">style_options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Locale.html#method-i-options">options</a>
+          </div>
+          
+        </div><!-- style_options-method -->
+
+      
+        <div id="tag-method" class="method-detail ">
+          <a name="method-i-tag"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tag</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="tag-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tag</span>
+  [<span class="ruby-ivar">@language</span>, <span class="ruby-ivar">@region</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'-'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tag-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tag-method -->
+
+      
+        <div id="term-method" class="method-detail method-alias">
+          <a name="method-i-term"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">term</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Locale.html#method-i-terms">terms</a>
+          </div>
+          
+        </div><!-- term-method -->
+
+      
+        <div id="terms-method" class="method-detail ">
+          <a name="method-i-terms"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">terms</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="terms-source">
+<pre>
+<span class="ruby-comment"># File lib/csl/locale.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">terms</span>
+  <span class="ruby-ivar">@terms</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Term</span>.<span class="ruby-identifier">build</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- terms-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Locale.html#method-i-term">term</a>
+          </div>
+          
+
+          
+        </div><!-- terms-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

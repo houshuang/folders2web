@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Nokogiri::CSS::Tokenizer</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/nokogiri/css/tokenizer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/nokogiri/css/tokenizer.rb">lib/nokogiri/css/tokenizer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Tokenizer/ScanError.html">Nokogiri::CSS::Tokenizer::ScanError</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-_next_token">#_next_token</a></li>
+          
+          <li><a href="#method-i-action">#action</a></li>
+          
+          <li><a href="#method-i-load_file">#load_file</a></li>
+          
+          <li><a href="#method-i-next_token">#next_token</a></li>
+          
+          <li><a href="#method-i-scan">#scan</a></li>
+          
+          <li><a href="#method-i-scan_file">#scan_file</a></li>
+          
+          <li><a href="#method-i-scan_setup">#scan_setup</a></li>
+          
+          <li><a href="#method-i-scan_str">#scan_str</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../CHANGELOG_ja_rdoc.html">CHANGELOG.ja.rdoc</a></li>
+        
+          <li class="file"><a href="../../CHANGELOG_rdoc.html">CHANGELOG.rdoc</a></li>
+        
+          <li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+        
+          <li class="file"><a href="../../README_ja_rdoc.html">README.ja.rdoc</a></li>
+        
+          <li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Nokogiri.html">Nokogiri</a></li>
+        
+          <li><a href="../../Nokogiri/CSS.html">Nokogiri::CSS</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Node.html">Nokogiri::CSS::Node</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Parser.html">Nokogiri::CSS::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/SyntaxError.html">Nokogiri::CSS::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Tokenizer.html">Nokogiri::CSS::Tokenizer</a></li>
+        
+          <li><a href="../../Nokogiri/CSS/Tokenizer/ScanError.html">Nokogiri::CSS::Tokenizer::ScanError</a></li>
+        
+          <li><a href="../../Nokogiri/Decorators.html">Nokogiri::Decorators</a></li>
+        
+          <li><a href="../../Nokogiri/Decorators/Slop.html">Nokogiri::Decorators::Slop</a></li>
+        
+          <li><a href="../../Nokogiri/EncodingHandler.html">Nokogiri::EncodingHandler</a></li>
+        
+          <li><a href="../../Nokogiri/HTML.html">Nokogiri::HTML</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/Builder.html">Nokogiri::HTML::Builder</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/Document.html">Nokogiri::HTML::Document</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/DocumentFragment.html">Nokogiri::HTML::DocumentFragment</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/ElementDescription.html">Nokogiri::HTML::ElementDescription</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/EntityDescription.html">Nokogiri::HTML::EntityDescription</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/EntityLookup.html">Nokogiri::HTML::EntityLookup</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX.html">Nokogiri::HTML::SAX</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX/Parser.html">Nokogiri::HTML::SAX::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/HTML/SAX/ParserContext.html">Nokogiri::HTML::SAX::ParserContext</a></li>
+        
+          <li><a href="../../Nokogiri/SyntaxError.html">Nokogiri::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML.html">Nokogiri::XML</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Attr.html">Nokogiri::XML::Attr</a></li>
+        
+          <li><a href="../../Nokogiri/XML/AttributeDecl.html">Nokogiri::XML::AttributeDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Builder.html">Nokogiri::XML::Builder</a></li>
+        
+          <li><a href="../../Nokogiri/XML/CDATA.html">Nokogiri::XML::CDATA</a></li>
+        
+          <li><a href="../../Nokogiri/XML/CharacterData.html">Nokogiri::XML::CharacterData</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Comment.html">Nokogiri::XML::Comment</a></li>
+        
+          <li><a href="../../Nokogiri/XML/DTD.html">Nokogiri::XML::DTD</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Document.html">Nokogiri::XML::Document</a></li>
+        
+          <li><a href="../../Nokogiri/XML/DocumentFragment.html">Nokogiri::XML::DocumentFragment</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Element.html">Nokogiri::XML::Element</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ElementContent.html">Nokogiri::XML::ElementContent</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ElementDecl.html">Nokogiri::XML::ElementDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/EntityDecl.html">Nokogiri::XML::EntityDecl</a></li>
+        
+          <li><a href="../../Nokogiri/XML/EntityReference.html">Nokogiri::XML::EntityReference</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Namespace.html">Nokogiri::XML::Namespace</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Node.html">Nokogiri::XML::Node</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Node/SaveOptions.html">Nokogiri::XML::Node::SaveOptions</a></li>
+        
+          <li><a href="../../Nokogiri/XML/NodeSet.html">Nokogiri::XML::NodeSet</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Notation.html">Nokogiri::XML::Notation</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP.html">Nokogiri::XML::PP</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP/CharacterData.html">Nokogiri::XML::PP::CharacterData</a></li>
+        
+          <li><a href="../../Nokogiri/XML/PP/Node.html">Nokogiri::XML::PP::Node</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ParseOptions.html">Nokogiri::XML::ParseOptions</a></li>
+        
+          <li><a href="../../Nokogiri/XML/ProcessingInstruction.html">Nokogiri::XML::ProcessingInstruction</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Reader.html">Nokogiri::XML::Reader</a></li>
+        
+          <li><a href="../../Nokogiri/XML/RelaxNG.html">Nokogiri::XML::RelaxNG</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX.html">Nokogiri::XML::SAX</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Document.html">Nokogiri::XML::SAX::Document</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Parser.html">Nokogiri::XML::SAX::Parser</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/Parser/Attribute.html">Nokogiri::XML::SAX::Parser::Attribute</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/ParserContext.html">Nokogiri::XML::SAX::ParserContext</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SAX/PushParser.html">Nokogiri::XML::SAX::PushParser</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Schema.html">Nokogiri::XML::Schema</a></li>
+        
+          <li><a href="../../Nokogiri/XML/SyntaxError.html">Nokogiri::XML::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML/Text.html">Nokogiri::XML::Text</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPath.html">Nokogiri::XML::XPath</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPath/SyntaxError.html">Nokogiri::XML::XPath::SyntaxError</a></li>
+        
+          <li><a href="../../Nokogiri/XML/XPathContext.html">Nokogiri::XML::XPathContext</a></li>
+        
+          <li><a href="../../Nokogiri/XSLT.html">Nokogiri::XSLT</a></li>
+        
+          <li><a href="../../Nokogiri/XSLT/Stylesheet.html">Nokogiri::XSLT::Stylesheet</a></li>
+        
+          <li><a href="../../XSD.html">XSD</a></li>
+        
+          <li><a href="../../XSD/XMLParser.html">XSD::XMLParser</a></li>
+        
+          <li><a href="../../XSD/XMLParser/Nokogiri.html">XSD::XMLParser::Nokogiri</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Nokogiri::CSS::Tokenizer</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="filename-attribute-method" class="method-detail">
+          <a name="filename"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">filename</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="lineno-attribute-method" class="method-detail">
+          <a name="lineno"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">lineno</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="state-attribute-method" class="method-detail">
+          <a name="state"></a>
+          
+          <a name="state="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">state</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="_next_token-method" class="method-detail ">
+          <a name="method-i-_next_token"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">_next_token</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="_next_token-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_next_token</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">peek</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@lineno</span>  <span class="ruby-operator">+=</span>  <span class="ruby-value">1</span>  <span class="ruby-keyword">if</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;\n&quot;</span>
+  <span class="ruby-identifier">token</span> = <span class="ruby-keyword">case</span> <span class="ruby-ivar">@state</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">case</span>
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/has\([\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:HAS</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[-@]?([_A-Za-z]|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])([_A-Za-z0-9-]|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])*\([\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:FUNCTION</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[-@]?([_A-Za-z]|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])([_A-Za-z0-9-]|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:IDENT</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\#([_A-Za-z0-9-]|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])+/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:HASH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*~=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:INCLUDES</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\|=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:DASHMATCH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\^=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:PREFIXMATCH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\$=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:SUFFIXMATCH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\*=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:SUBSTRINGMATCH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*!=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:NOT_EQUAL</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*=[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:EQUAL</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\)/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:RPAREN</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\[[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:LSQUARE</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\]/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:RSQUARE</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\+[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:PLUS</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*&gt;[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:GREATER</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*,[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:COMMA</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*~[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:TILDE</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\:not\([\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:NOT</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/-?([0-9]+|[0-9]*\.[0-9]+)/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:NUMBER</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\/\/[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:DOUBLESLASH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]*\/[\s]*/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:SLASH</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/U\+[0-9a-f?]{1,6}(-[0-9a-f]{1,6})?/</span>))
+       <span class="ruby-identifier">action</span> {[<span class="ruby-value">:UNICODE_RANGE</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/[\s]+/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:S</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/&quot;([^\n\r\f&quot;]|\n|\r\n|\r|\f|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])*&quot;|'([^\n\r\f']|\n|\r\n|\r|\f|[^\00--\1177]|\\[0-9A-Fa-f]{1,6}(\r\n|[\s])?|\\[^\n\r\f0-9A-Fa-f])*'/</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-value">:STRING</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">when</span> (<span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/./</span>))
+       <span class="ruby-identifier">action</span> { [<span class="ruby-identifier">text</span>, <span class="ruby-identifier">text</span>] }
+
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">text</span> = <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">string</span>[<span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">pos</span> <span class="ruby-operator">..</span> <span class="ruby-value">-1</span>]
+      <span class="ruby-identifier">raise</span>  <span class="ruby-constant">ScanError</span>, <span class="ruby-string">&quot;can not match: '&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;'&quot;</span>
+    <span class="ruby-keyword">end</span>  <span class="ruby-comment"># if</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span>  <span class="ruby-constant">ScanError</span>, <span class="ruby-string">&quot;undefined state: '&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;'&quot;</span>
+  <span class="ruby-keyword">end</span>  <span class="ruby-comment"># case state</span>
+  <span class="ruby-identifier">token</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- _next_token-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- _next_token-method -->
+
+      
+        <div id="action-method" class="method-detail ">
+          <a name="method-i-action"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">action</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="action-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">action</span>
+  <span class="ruby-keyword">yield</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- action-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- action-method -->
+
+      
+        <div id="load_file-method" class="method-detail ">
+          <a name="method-i-load_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_file</span><span
+              class="method-args">( filename )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="load_file-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_file</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-ivar">@filename</span> = <span class="ruby-identifier">filename</span>
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&quot;r&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">scan_setup</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_file-method -->
+
+      
+        <div id="next_token-method" class="method-detail ">
+          <a name="method-i-next_token"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">next_token</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="next_token-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">next_token</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">eos?</span>
+  
+  <span class="ruby-comment"># skips empty actions</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">token</span> = <span class="ruby-identifier">_next_token</span> <span class="ruby-keyword">or</span> <span class="ruby-ivar">@ss</span>.<span class="ruby-identifier">eos?</span>; <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">token</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- next_token-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- next_token-method -->
+
+      
+        <div id="scan-method" class="method-detail method-alias">
+          <a name="method-i-scan"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scan</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Tokenizer.html#method-i-scan_str">scan_str</a>
+          </div>
+          
+        </div><!-- scan-method -->
+
+      
+        <div id="scan_file-method" class="method-detail ">
+          <a name="method-i-scan_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scan_file</span><span
+              class="method-args">( filename )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scan_file-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scan_file</span>( <span class="ruby-identifier">filename</span> )
+  <span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-identifier">do_parse</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scan_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scan_file-method -->
+
+      
+        <div id="scan_setup-method" class="method-detail ">
+          <a name="method-i-scan_setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scan_setup</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scan_setup-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scan_setup</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-ivar">@ss</span> = <span class="ruby-constant">StringScanner</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-ivar">@lineno</span> =  <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@state</span>  = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scan_setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scan_setup-method -->
+
+      
+        <div id="scan_str-method" class="method-detail ">
+          <a name="method-i-scan_str"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scan_str</span><span
+              class="method-args">(str)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scan_str-source">
+<pre>
+<span class="ruby-comment"># File lib/nokogiri/css/tokenizer.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scan_str</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">scan_setup</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">do_parse</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scan_str-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Tokenizer.html#method-i-scan">scan</a>
+          </div>
+          
+
+          
+        </div><!-- scan_str-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

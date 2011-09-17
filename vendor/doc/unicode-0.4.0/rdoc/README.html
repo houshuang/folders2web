@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: README [unicode-0.4.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./Makefile.html">Makefile</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+          <li class="file"><a href="./tools/README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./Unicode.html">Unicode</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<pre>Unicode Library for Ruby
+     Version 0.4.0
+
+    Yoshida Masato</pre>
+<ul><li>
+<p>Introduction</p>
+
+<p><a href="Unicode.html">Unicode</a> string manipulation library for Ruby.
+This library is based on UTR #15 <a href="Unicode.html">Unicode</a>
+Normalization Forms(*1).</p>
+
+<pre>*1 &lt;URL:http://www.unicode.org/unicode/reports/tr15/&gt;</pre>
+</li><li>
+<p>Install</p>
+
+<p>This can work with ruby-1.8 or later. I recommend you to use ruby-1.9.2 or
+later.</p>
+
+<p>Make and install usually. For example, when Ruby supports dynamic linking
+on your OS,</p>
+
+<pre>ruby extconf.rb
+make
+make install</pre>
+</li><li>
+<p>Usage</p>
+
+<p>If you do not link this module with Ruby statically,</p>
+
+<pre>require &quot;unicode&quot;</pre>
+
+<p>before using.</p>
+</li><li>
+<p>Module Functions</p>
+
+<p>All parameters of functions must be UTF-8 strings.</p>
+
+<p><a href="Unicode.html#method-c-strcmp">Unicode::strcmp</a>(str1, str2) <a
+href="Unicode.html#method-c-strcmp_compat">Unicode::strcmp_compat</a>(str1,
+str2)</p>
+
+<pre>Compare Unicode strings with a normalization.
+strcmp uses the Normalization Form D, strcmp_compat uses
+Normalization Form KD.</pre>
+
+<p><a href="Unicode.html#method-c-decompose">Unicode::decompose(str)</a> <a
+href="Unicode.html#method-c-decompose_compat">Unicode::decompose_compat(str)</a></p>
+
+<pre>Decompose Unicode string. Then the trailing characters
+are sorted in canonical order.
+decompose uses the canonical decomposition,
+decompose_compat uses the compatibility decomposition.
+The decomposition is based on the character decomposition
+mapping in UnicodeData.txt and the Hangul decomposition
+algorithm.</pre>
+
+<p><a href="Unicode.html#method-c-compose">Unicode::compose(str)</a></p>
+
+<pre>Compose Unicode string. Before composing, the trailing
+characters are sorted in canonical order.
+The parameter must be decomposed.
+The composition is based on the reverse of the
+character decomposition mapping in UnicodeData.txt,
+CompositionExclusions.txt and the Hangul composition
+algorithm.</pre>
+
+<p><a href="Unicode.html#method-c-normalize_D">Unicode::normalize_D(str)</a> 
+(<a href="Unicode.html#method-c-nfd">Unicode::nfd(str)</a>) <a
+href="Unicode.html#method-c-normalize_KD">Unicode::normalize_KD(str)</a> 
+(<a href="Unicode.html#method-c-nfkd">Unicode::nfkd(str)</a>)</p>
+
+<pre>Normalize Unicode string in form D or form KD.
+These are aliases of decompose/decompose_compat.</pre>
+
+<p><a href="Unicode.html#method-c-normalize_C">Unicode::normalize_C(str)</a>
+(<a href="Unicode.html#method-c-nfc">Unicode::nfc(str)</a>) <a
+href="Unicode.html#method-c-normalize_KC">Unicode::normalize_KC(str)</a>
+(<a href="Unicode.html#method-c-nfkc">Unicode::nfkc(str)</a>)</p>
+
+<pre>Normalize Unicode string in form C or form KC.
+  normalize_C  = decompose + compose
+  normalize_KC = decompose_compat + compose</pre>
+
+<p><a href="Unicode.html#method-c-upcase">Unicode::upcase(str)</a> <a
+href="Unicode.html#method-c-downcase">Unicode::downcase(str)</a> <a
+href="Unicode.html#method-c-capitalize">Unicode::capitalize(str)</a></p>
+
+<pre>Case conversion functions.
+The mappings that are used by these functions are not normative
+in UnicodeData.txt.</pre>
+</li><li>
+<p>Bugs</p>
+
+<p>UTR #15 suggests that the look up for Normalization Form C should not be
+implemented with a hash of string for better performance.</p>
+
+<p>Case conversion functions should reflecte UTR #21.</p>
+</li><li>
+<p>Copying</p>
+
+<p>This extension module is copyrighted free software by Yoshida Masato.</p>
+
+<p>You can redistribute it and/or modify it under the same term as Ruby.</p>
+</li><li>
+<p>Author</p>
+
+<p>Yoshida Masato &lt;yoshidam@yoshidam.net&gt;</p>
+</li><li>
+<p>History</p>
+
+<p>Oct 14, 2010 version 0.4.0 fix the composition algorithm, and support <a
+href="Unicode.html">Unicode</a> 6.0 Feb 26, 2010 version 0.3.0 fix a
+capitalize bug and support SpecialCasing Dec 29, 2009 version 0.2.0 update
+for Ruby 1.9.1 and <a href="Unicode.html">Unicode</a> 5.2 Sep 10, 2005
+version 0.1.2 update unidata.map for <a href="Unicode.html">Unicode</a>
+4.1.0 Aug 26, 2004 version 0.1.1 update unidata.map for <a
+href="Unicode.html">Unicode</a> 4.0.1 Nov 23, 1999 version 0.1</p>
+</li></ul>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+
