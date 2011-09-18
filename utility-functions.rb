@@ -2,6 +2,8 @@
 # utility functions for researchr
 require 'settings'
 
+# comment the three next lines to use your own gems, instead of the frozen ones, if you don't have OSX 10.7
+# or there are other errors with incompatible libraries etc
 Dir.glob(File.join(File.dirname($0), "vendor", "gems", "*", "lib")).each do |lib|
   $LOAD_PATH.unshift(File.expand_path(lib))
 end

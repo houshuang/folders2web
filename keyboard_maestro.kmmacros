@@ -421,7 +421,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/skim-screenshots.rb</string>
+						<string>ruby -KU /Volumes/Home/stian/src/folders2web/skim.rb screenshots</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
