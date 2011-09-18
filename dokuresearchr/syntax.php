@@ -180,7 +180,7 @@ function render($mode, &$renderer, $data)
 		}
 		else 
 		{ 
-			$renderer->doc .= $renderer->internallink($data[0]);
+			$renderer->doc .= $renderer->internallink(":ref:".$data[0]);
 		}
 		return true;
 	}
