@@ -14,6 +14,33 @@ end
  
 #### keyboard commands ####
 
+# adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch
+# is executed
+def add_to_rss
+  require 'open-uri'
+  fname = Wiki_path + "/rss-temp"
+  internalurl = cururl.split("/").last
+
+  if File.exists?(fname)
+    rss_entries = Marshal::load(File.read(fname))
+  else
+    rss_entries = Array.new
+  end
+
+  page_contents = open("http://localhost/wiki/#{internalurl}?vecdo=print").read
+  contents = page_contents.scan(/<\!\-\- start rendered wiki content \-\-\>(.+?)\<\!\-\- end rendered wiki content \-\-\>/m)[0][0]
+
+  contents.gsub!(/\<div class\=\"hiddenGlobal(.+?)\<div class\=\"plugin_include_content/m, '<div ')
+  puts contents
+  title = page_contents.scan(/\<h1(.+?)id(.+?)>(.+)\<(.+?)\<\/h1\>/)[0][2]
+  rss_entries << {:title => title, :date => Time.now, :link => "#{Internet_path}/#{internalurl}", :description => contents}
+
+  rss_entries = rss_entries.drop(1) if rss_entries.size > 10
+  File.write(fname, Marshal::dump(rss_entries))
+  growl("\"#{title}\" added to RSS feed")
+end
+
+
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
 def clip
@@ -43,7 +70,7 @@ def clip
   elsif cururl.index("localhost/wiki")
     curpage = "[[:#{capitalize_word(curpage.gsub("_", " "))}]]"
   else
-    title = (pagetmp['fb'] == "" ? Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.title.get : pagetmp['fb'])
+    title = (pagetmp['fb'] == "" ? title : pagetmp['fb'])
     curpage ="[[#{cururl}|#{title}]]"
   end
 

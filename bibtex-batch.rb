@@ -5,6 +5,7 @@ require 'bibtex'
 require 'citeproc'
 require 'find'
 require 'appscript'
+require 'rss/maker'
 include Appscript
 
 # batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
@@ -21,6 +22,32 @@ end
 def sort_pubs(pubs)
   return pubs.sort {|x,y| x.to_s.scan(/[0-9]+/)[0].to_i <=> y.to_s.scan(/[0-9]+/)[0].to_i}
 end
+
+def make_rss_feed
+  fname = Wiki_path + "/rss-temp"
+  rss_entries = Marshal::load(File.read(fname))
+
+  version = "2.0" # ["0.9", "1.0", "2.0"]
+
+  content = RSS::Maker.make(version) do |m|
+    m.channel.title = Wiki_title
+    m.channel.link = Internet_path
+    m.channel.description = Wiki_desc
+    m.items.do_sort = true # sort items by date
+  
+    rss_entries.each do |entry|
+      i = m.items.new_item
+      i.title = entry[:title]
+      i.link = entry[:link]
+      i.date = entry[:date]
+      i.description = entry[:description]
+    end
+  end
+
+  File.write(Wiki_path + "/data/media/pages.xml", content) 
+end
+
+make_rss_feed
 
 b = BibTeX.open("/Volumes/Home/stian/Dropbox/Archive/Bibliography.bib")
 b.parse_names
@@ -116,6 +143,9 @@ authors.each do |axx, pubs|
   out1 = ''
   out2 =''
   author = axx.strip
+  
+  # only generates individual author pages for authors with full names. this is because I want to deduplicate author names
+  # when you import bibtex, you get many different spellings etc. 
   next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase || author[1] == '.')
   out = "h2. #{author}'s publications\n\n"
   sort_pubs(pubs).each do |i|
