@@ -169,3 +169,26 @@ def filename_in_series(pre,post)
   pagenum = "0" + pagenum if pagenum.size == 1
   return "#{pre}#{pagenum}#{post}", pagenum
 end
+
+# enables you to do 
+#   a = Hash.new
+#   a.add(:peter,1)
+# without checking if a[:peter] has been initialized yet
+# works differently for integers (incrementing number) and other objects (adding a new object to array)
+class Hash
+  def add(var,val)
+    if val.class == Fixnum
+      if self[var].nil?        
+        self[var] = val 
+      else
+        self[var] = self[var] + val
+      end
+    else
+      if self[var].nil?        
+        self[var] = [val] 
+      else
+        self[var] = self[var] + [val]
+      end
+    end
+  end
+end

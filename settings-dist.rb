@@ -16,3 +16,6 @@ JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"
 Internet_path = "http://reganmian.net/wiki"
 Wiki_title = "Stian's PhD wiki"
 Wiki_desc = "Raw research notes and article annotations related to online collaborative learning"
+Bibliography_header = "h1. Bibliography\n\n
+Download [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\n
+Publications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\n"

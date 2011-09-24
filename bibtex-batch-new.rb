@@ -60,6 +60,33 @@ def make_rss_feed
   File.write(Wiki_path + "/data/media/pages.xml", content) 
 end
 
+# take an array of publications of the BibTex class, sort, and create an HTML list
+def generate_pub_list(publications)
+  # sorting bibliography, first on how many files (notes etc), and then on citekey
+  # it's weird [0][1] because in the sort above, it gets transformed first to a hash and then to an array. don't ask me :)
+  # this way of trying to sort on two different criteria is not perfect, but mostly works
+  
+  # make hash if bibtex, if array leave alone, this allows for sorting
+  pubs = publications.class == BibTeX::Bibliography ? publications.to_hash.sort[0][1] : publications
+
+  pubsort = pubs.sort do |x,y| 
+    if debrace(y[:hasfiles]).to_s.strip.size == debrace(x[:hasfiles]).to_s.strip.size
+      x[:key].to_s <=> y[:key].to_s
+    else
+      debrace(y[:hasfiles]).to_s <=> debrace(x[:hasfiles]).to_s
+    end
+  end
+
+  # adding each item to the HTML output, properly formatted
+  outcit = ''
+  pubsort.each do |item|      
+    link = item[:hasfiles].to_s.index("H") ? "<a href = '/wiki/ref:#{item[:key]}'>" : ""   # only link if ref exists
+    outcit << "<tr><td>#{link}#{item[:key]}</a></td><td>#{debrace(item[:hasfiles]).split("").join("</td><td>&nbsp;")}</td><td>#{debrace(item[:cit])}</td></tr>\n"
+  end
+  return outcit
+end
+
+
 # executing actions
 # bibdesk_save
 # make_rss_feed
@@ -73,11 +100,11 @@ f_to_check = {
   :hasref => ["ref"]
 }
 
-publications = BibTeX.open(Bibliography)
+publications = BibTeX.open("bibliography-short.bib")   # !!using a smaller pub file for more rapid testing
 publications.parse_names
 
-author_pubs, json, keywords, counter, category = [Hash.new] * 4
-
+author_pubs, json, keywords, counter, category = Hash.new, Hash.new, Hash.new, Hash.new, Hash.new
+json = Hash.new
 
 publications.each do |item|
 
@@ -85,15 +112,15 @@ publications.each do |item|
   # last name to the list of
   pub_authors = []
   if item.respond_to? :author
-    item.author.each do |a|                   # for each author of the publication
-      pub_authors << debrace(a.last) # add the last name without BibTex artefacts to the pub_authors array (for use)
-                                              # in generating json citation
-      author_pubs.add(nice_name(a), item.key) # add it to the author index (for abib:)
+    item.author.each do |a|                 # for each author of the publication
+      pub_authors << debrace(a.last)      # add the last name without BibTex artefacts to the pub_authors array (for use)
+                                          # in generating json citation
+      author_pubs.add(nice_name(a), item) # add it to the author index (for abib:)
     end
   end
 
   # add item to the keyword index if it has a keyword
-  item.keywords.split(";").each { |a| keywords.add(a.strip, item.key) } if item.respond_to? :keywords
+  item.keywords.split(";").each { |a| keywords.add(a.strip, item) } if item.respond_to? :keywords
 
   # render APA citation of publication
   item.cit = CiteProc.process item.to_citeproc, :style => :apa
@@ -103,7 +130,7 @@ publications.each do |item|
   year = $1 if year == "n.d." and item.cit.to_s.match(/\((....)\)/)     # if not, try to get it from the generated APA citation
 
   # add json entry for this publication, with author string, year, and full citation
-  json[item.key.to_s] = [namify(pub_authors), year, item.cit]
+  json[item.key.to_s] = [namify(pub_authors), year, item.cit.to_s]
 
   # check the paths listed in f_to_check, increment global counters, and store values for bibliography printout
   hasfiles = ""
@@ -119,32 +146,42 @@ publications.each do |item|
 
 end
 
-# sorting bibliography, first on how many files (notes etc), and then on citekey
-# it's weird [0][1] because in the sort above, it gets transformed first to a hash and then to an array. don't ask me :)
-# this way of trying to sort on two different criteria is not perfect, but mostly works
-pubsort = publications.to_hash.sort[0][1].sort do |x,y| 
-  if debrace(y[:hasfiles]).to_s.strip.size == debrace(x[:hasfiles]).to_s.strip.size
-    x[:key].to_s <=> y[:key].to_s
-  else
-    debrace(y[:hasfiles]).to_s <=> debrace(x[:hasfiles]).to_s
-  end
-end
-
-# adding each item to the HTML output, properly formatted
-outcit = ''
-pubsort.each do |item|      
-  link = item[:hasfiles].to_s.index("H") ? "<a href = '/wiki/ref:#{item[:key]}'>" : ""   # only link if ref exists
-  outcit << "<tr><td>#{link}#{item[:key]}</a></td><td>#{debrace(item[:hasfiles]).split("").join("</td><td>&nbsp;")}</td><td>#{debrace(item[:cit])}</td></tr>\n"
-end
+outcit = generate_pub_list(publications)
 
 stats = "Statistics: Totally **#{publications.size}** publications, and **#{counter[:hasref]}** publications have their own wikipages **(H)**. Of these, **#{counter[:notes]}** with notes (key ideas) **(N)**, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, and **#{counter[:images]}** with images (imported from Skim) **(I)**.<html><table>\n\n"
 out = Bibliography_header << stats << outcit << "</table></html>"   # combining the various texts and generated bibliography
 
 File.write("#{Wikipages_path}/bib/bibliography.txt", out)           # write HTML bibliography (using HTML because DW cannot
                                                                     # render table with a thousand rows)
-
+                                                                    
 File.write(JSON_path, JSON.fast_generate(json) )                    # generating JSON file
+
+authorlisted = Array.new
+author_pubs.each do |author, pubs|
+  
+  # only generates individual author pages for authors with full names. this is because I want to deduplicate author names
+  # when you import bibtex, you get many different spellings etc. 
+  next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase || author[1] == '.')
+  puts author
+  out = "h2. #{author}'s publications\n\n<html>\n<table>\n"
+
+  out << generate_pub_list(pubs) << "</table></html>"              # add sorted list of that author's publications
+
+  authorname = clean_pagename(author)
+  authorlisted << [authorname,author,pubs.size]
+  File.write("#{Wikipages_path}/abib/#{authorname}.txt", out)
+end
+
 
 exit(0)
 
-#PerfTools::CpuProfiler.stop
+# File.open("#{Wikipages_path}/abib/start.txt","w") do |f|
+#   f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications, with full names.\n\n"
+#   authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
+#     apage = ''
+#     if File.exists?("#{Wikipages_path}/a/#{ax[0]}.txt")
+#       apage = "[[:a:#{ax[0]}|author page]]"
+#     end
+#     f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
+#   end
+# end
