@@ -9,9 +9,13 @@ require 'appscript'
 #### utility functions ####
 
 def cururl
-  Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.get
+  Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
 end
  
+def curtitle
+ title = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.title.get.strip
+end
+
 #### keyboard commands ####
 
 # adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch
@@ -40,26 +44,9 @@ def add_to_rss
   growl("\"#{title}\" added to RSS feed")
 end
 
-
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
-def clip
-  require 'pashua'
-  title = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.title.get
-  
-  # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
-  pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
-  xb.type = checkbox
-  xb.label = only insert link to this page
-  xb.tooltip = Otherwise, it will take the currently selected text and insert
-  fb.type = textbox
-  fb.default = #{title.strip}
-  fb.label = Link title\n"
-  )
-  
-  exit if pagetmp["cancel"] == 1
-  onlylink = true if pagetmp['xb'] == "1"
-  pagename = pagetmp['cb'].strip
+def do_clip(pagename, titletxt,onlylink = false)
   pagepath = (Wikipages_path + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
 
   curpage = cururl.split("/").last
@@ -70,7 +57,7 @@ def clip
   elsif cururl.index("localhost/wiki")
     curpage = "[[:#{capitalize_word(curpage.gsub("_", " "))}]]"
   else
-    title = (pagetmp['fb'] == "" ? title : pagetmp['fb'])
+    title = (titletxt == "" ? title : titletxt)
     curpage ="[[#{cururl}|#{title}]]"
   end
 
@@ -87,6 +74,39 @@ def clip
 
   dwpage(pagename, filetext)
   growl("Text added", growltext)
+end
+
+def clip
+  require 'pashua'
+  title = curtitle
+  
+  # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
+  pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
+  xb.type = checkbox
+  xb.label = only insert link to this page
+  xb.tooltip = Otherwise, it will take the currently selected text and insert
+  fb.type = textbox
+  fb.default = #{title.strip}
+  fb.label = Link title\n"
+  )
+  
+  exit if pagetmp["cancel"] == 1
+  onlylink = pagetmp['xb'] == "1" ? true : false
+  pagename = pagetmp['cb'].strip
+  title = pagetmp['fb'].strip
+  File.write("/tmp/dokuwiki-clip.tmp","#{pagename}\n#{title}")
+  title = '' if title == curtitle
+  do_clip(pagename, title)
+end
+
+# uses info stored in temp file to do a clipping from the same page, to the same page
+def clip_again
+  a = File.read("/tmp/dokuwiki-clip.tmp")
+  page, title = a.split("\n")
+  if title.strip == ""
+    title = curtitle
+  end
+  do_clip(page, title)
 end
 
 # cleans up a text into bulleted list, either separated by commas or by line shifts
