@@ -165,7 +165,7 @@ def image
   wiki = cururl[22..-1]
   w,dummy = wiki.split("?")
   wikipage = w.gsub(":","_").gsub("%3A","_").gsub("%20","_").downcase
-  curfile =  File.last_added("#{Home_path}/Desktop/Screen Shot*") # this might be different between different OSX versions
+  curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png") # this might be different between different OSX versions
 
   if curfile == nil
     growl("No screenshots available")
