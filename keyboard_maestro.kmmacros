@@ -27,6 +27,107 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
+						<string>/usr/bin/ruby /Volumes/Home/stian/src/folders2web/dokuwiki.rb add_to_rss</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Add to RSS feed</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>3</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>9570A34C-0371-49E5-81AC-CF5D281A7CB5</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>Alias</key>
+					<data>
+					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
+					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
+					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
+					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
+					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
+					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
+					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
+					EwABLwD//wAA
+					</data>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
 						<string>ruby -KU /Volumes/Home/stian/src/folders2web/bibdesk.rb linkfile</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
@@ -76,9 +177,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -101,121 +202,6 @@
 		</dict>
 		<key>UID</key>
 		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb clip</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Automatically insert</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>34</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>8A6DA53D-375B-4C3D-84BD-DCEF459B3726</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -288,6 +274,84 @@
 				</array>
 				<key>UID</key>
 				<string>35231D2C-837B-474D-B176-7957FAC3AFC5</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>UID</key>
+		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/bin/ruby -Ku /Volumes/Home/stian/src/folders2web/convert-text.rb onlylist</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Convert references</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>42</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>C56E8D37-F4FD-4BC0-9A60-5C13553C1F16</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -570,9 +634,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -698,9 +762,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -899,9 +963,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1199,9 +1263,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1299,9 +1363,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1399,9 +1463,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1499,9 +1563,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1599,9 +1663,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1699,9 +1763,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1799,9 +1863,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -1899,9 +1963,9 @@
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -2511,6 +2575,236 @@
 				<key>Actions</key>
 				<array>
 					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb clip</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Insert clip</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>34</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>8A6DA53D-375B-4C3D-84BD-DCEF459B3726</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>Alias</key>
+					<data>
+					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
+					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
+					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
+					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
+					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
+					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
+					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
+					EwABLwD//wAA
+					</data>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/bin/ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb clip_again</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Insert clip again</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>38</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A5756B6F-8A72-4605-8C72-12D5C95BE24A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>Alias</key>
+					<data>
+					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
+					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
+					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
+					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
+					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
+					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
+					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
+					EwABLwD//wAA
+					</data>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
 						<key>DisplayKind</key>
 						<string>Pasting</string>
 						<key>File</key>
@@ -2600,55 +2894,6 @@
 		</dict>
 		<key>UID</key>
 		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<true/>
-						<key>Text</key>
-						<string>/Volumes/Home/stian/</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>Case</key>
-						<string>Exact</string>
-						<key>MacroTriggerType</key>
-						<string>TypedString</string>
-						<key>SimulateDeletes</key>
-						<true/>
-						<key>TypedString</key>
-						<string>/VO</string>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>189323D0-A0FE-49DD-BDA9-A4C883E45CCC</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -2940,9 +3185,9 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -3078,183 +3323,6 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>AddToMacroPalette</key>
-						<false/>
-						<key>AddToStatusMenu</key>
-						<false/>
-						<key>EnableRepeat</key>
-						<true/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>KeyCode</key>
-						<integer>122</integer>
-						<key>MacroActionType</key>
-						<string>QuickMacro</string>
-						<key>Modifiers</key>
-						<integer>2048</integer>
-						<key>QuickMacroUID</key>
-						<string>31393F5A-FB52-4BF5-A1CA-4252B04A0523</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Quick Macro for ⌥F1</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>122</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>159CD82D-3A1D-4DB7-A10D-5AD5672C854C</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>AddToMacroPalette</key>
-						<false/>
-						<key>AddToStatusMenu</key>
-						<false/>
-						<key>EnableRepeat</key>
-						<true/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>KeyCode</key>
-						<integer>120</integer>
-						<key>MacroActionType</key>
-						<string>QuickMacro</string>
-						<key>Modifiers</key>
-						<integer>2048</integer>
-						<key>QuickMacroUID</key>
-						<string>085987C9-472C-47DB-939F-21C9A4C9CF9A</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Quick Macro for ⌥F2</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>120</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>B9FFF849-AA6D-400F-B77A-AE5531B58DF7</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>AddToMacroPalette</key>
-						<false/>
-						<key>AddToStatusMenu</key>
-						<false/>
-						<key>EnableRepeat</key>
-						<true/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>KeyCode</key>
-						<integer>99</integer>
-						<key>MacroActionType</key>
-						<string>QuickMacro</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>QuickMacroUID</key>
-						<string>C94FDB80-CD07-4790-B053-DCE57261151A</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Quick Macro for ⌥F3</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>99</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>19435CB7-E01F-4418-B4D4-27938910B998</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
 						<key>File</key>
@@ -3318,9 +3386,9 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -3448,12 +3516,12 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 							cHAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAAAcFSWcmj
-							Bo8AAAAAAAAAAP////8A
+							AAAAAAAAAAAABIDUeMqd
+							1uwAAAAAAAAAAP////8A
 							AAkgAAAAAAAAAAAAAAAA
 							AAAADEFwcGxpY2F0aW9u
 							cwAQAAgAAMl5ligAAAAR
-							AAgAAMmjPs8AAAABAAQC
+							AAgAAMqeDywAAAABAAQC
 							n3jOAAIAJk1hY2ludG9z
 							aCBIRDpBcHBsaWNhdGlv
 							bnM6AEJpYkRlc2suYXBw
@@ -3653,9 +3721,9 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAcFSWcmjBo8AAAAAAAAAAP////8A
+					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmjPs8A
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
 					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
 					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
 					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
@@ -3969,95 +4037,6 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 		</dict>
 		<key>UID</key>
 		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<true/>
-						<key>Text</key>
-						<string>%CurrentApplication%</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<false/>
-				<key>Name</key>
-				<string>Test</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>17</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>51057986-9544-40F7-9FD0-ACB9B92CEAEE</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<false/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array/>
-				<key>IsActive</key>
-				<true/>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>48</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>4352</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>1E72533A-7BA8-442F-90F9-1078B91E17A6</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Switcher Group</string>
-		<key>UID</key>
-		<string>3DF36FA9-188C-4A83-ACE7-AA00DB8B65FC</string>
 	</dict>
 </array>
 </plist>
