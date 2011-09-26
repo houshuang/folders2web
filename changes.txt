@@ -1,0 +1,3 @@
+Change log
+
+Sep 26: convert-text.rb can now be run with the argument onlylist, which will only output a bibliography, without generating an in-text citation. This is useful if you just need a few quick references in an e-mail, or are creating a bibliography. I've mapped this new functionality to Ctrl+Alt+Cmd+\ (normal convert-text.rb is mapped to Ctrl+Alt+Cmd+/)
