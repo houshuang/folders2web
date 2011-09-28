@@ -44,7 +44,7 @@ def make_rss_feed
     end
   end
 
-  File.write(Wiki_path + "/data/media/pages.xml", content) 
+  File.write(Wiki_path + "/feed.xml", content) 
 end
 
 make_rss_feed

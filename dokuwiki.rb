@@ -19,12 +19,13 @@ end
 #### keyboard commands ####
 
 # adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch
-# is executed
+# is executed (Ctrl+Alt+Cmd+F)
 def add_to_rss
   require 'open-uri'
   fname = Wiki_path + "/rss-temp"
   internalurl = cururl.split("/").last
 
+  # load existing holding file, or start form scratch
   if File.exists?(fname)
     rss_entries = Marshal::load(File.read(fname))
   else
@@ -34,14 +35,24 @@ def add_to_rss
   page_contents = open("http://localhost/wiki/#{internalurl}?vecdo=print").read
   contents = page_contents.scan(/<\!\-\- start rendered wiki content \-\-\>(.+?)\<\!\-\- end rendered wiki content \-\-\>/m)[0][0]
 
-  contents.gsub!(/\<div class\=\"hiddenGlobal(.+?)\<div class\=\"plugin_include_content/m, '<div ')
-  puts contents
+  contents.gsub!(/\<div class\=\"hiddenGlobal(.+?)\<div class\=\"plugin_include_content/m, '<div ') # remove pure bibtex
+  contents.gsub!(/\<span class\=\"tip\"\>(.+?)\<\/span\>/, '') # remove citation tooltips
+  # remove wiki clippings
+  contents.gsub!(/\<div class\=\"plugin\_include\_content\ plugin\_include\_\_clip(.+?)\<\/div\>/m, '')
+  contents.gsub!(/\<div class\=\"plugin\_include\_content\ plugin\_include\_\_kindle(.+?)\<\/div\>/m, '')
+
+  # remove title (already given in metadata)
+  contents.sub!(/\<h1 class\=\"sectionedit1\"\>(.+?)\<\/a\>\<\/h1\>/, '')
+
+  contents.gsub!(/\<\!\-\- TOC START \-\-\>(.+?)\<\!\-\- TOC END \-\-\>/m, '')
+
+
   title = page_contents.scan(/\<h1(.+?)id(.+?)>(.+)\<(.+?)\<\/h1\>/)[0][2]
   rss_entries << {:title => title, :date => Time.now, :link => "#{Internet_path}/#{internalurl}", :description => contents}
 
   rss_entries = rss_entries.drop(1) if rss_entries.size > 10
   File.write(fname, Marshal::dump(rss_entries))
-  growl("\"#{title}\" added to RSS feed")
+  growl("Article added to feed", "'#{title}' added to RSS feed")
 end
 
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
