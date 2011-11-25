@@ -26,7 +26,8 @@ end
 # stores a link to the last screenshot taken, and the current PDF page. when export to the wiki happens, the picture is
 # moved to the wiki media folder, and linked to the notes
 def screenshot
-  a = File.open("/tmp/skim-screenshots-tmp","a")
+  dname = Document.name.get[0][0..-5]
+  a = File.open("/tmp/skim-#{dname}-tmp","a")
   page = Document.get[0].current_page.get.index.get
 
   curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png")
@@ -41,7 +42,7 @@ def splitpdf
   require 'pashua'
   include Pashua
   docu = Document.path.get[0]
-  dname = Document.name.get[0]
+  dname = Document.name.get[0][0..-5]
   page = Document.get[0].current_page.get.index.get
 
   # configuring Pashua dialogue

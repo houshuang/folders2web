@@ -81,8 +81,8 @@ outfinal = "h2. Highlights (#{percentage.to_i}%)\n\n" + @out.join('')
 File.write("/tmp/skimtmp", outfinal)
 `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
 
-if File.exists?("/tmp/skim-screenshots-tmp")
-  a = File.readlines("/tmp/skim-screenshots-tmp")
+if File.exists?("/tmp/skim-#{docu}-tmp")
+  a = File.readlines("/tmp/skim-#{docu}-tmp")
   @out = "h2. Images\n\n"
   c = 0
   a.each do |line|
@@ -91,7 +91,7 @@ if File.exists?("/tmp/skim-screenshots-tmp")
     @out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg.strip}|p. #{pg.strip}]]\n----\n\n"
     c += 1
   end
-  `rm "/tmp/skim-screenshots-tmp"`
+  `rm "/tmp/skim-#{docu}-tmp"`
   File.open("/tmp/skimtmp", "w") {|f| f << @out}
   `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
 end
