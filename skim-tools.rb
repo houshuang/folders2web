@@ -11,6 +11,7 @@ require 'appscript'
 # launched by skimx:// url in Chrome (skimx.app must be registered first)
 def url(argv)
   arg = argv[8..-1]
+  arg.gsub!("#","%23")
   pdf, page = arg.split("%23")
   fname = "#{PDF_path}/#{pdf}.pdf"
   if File.exists?(fname)
@@ -28,7 +29,7 @@ def screenshot
   a = File.open("/tmp/skim-screenshots-tmp","a")
   page = Document.get[0].current_page.get.index.get
 
-  curfile =  File.last_added("/Volumes/Home/stian/Desktop/Screen*.png")
+  curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png")
   a << "#{curfile},#{page}\n"
   growl("One picture added to wiki notes cache")
 end

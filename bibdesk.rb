@@ -21,7 +21,7 @@ def authorlist
     splt = ","
   end
 
-  a= a.split(splt).join("||").gsub(" and ","").gsub("&","").gsub("||", " and ").gsub(/ +/," ")
+  a= a.split(splt).join("||").gsub(" and ","").gsub("&","").gsub("||", " and ").gsub(/ +/," ").gsub(/\(.+?\)/, '')
   pbcopy(a)
 end
 
@@ -44,6 +44,10 @@ end
 # launched by ctrl+alt+cmd+L
 def linkfile
   curfile =  File.last_added("#{Downloads_path}/*.pdf")
+  unless curfile # no last file found
+    growl("Sorry, no PDFs found in that directory")
+    exit(0)
+  end
 
   f = MacTypes::FileURL.path(curfile)
   Selection[0].linked_files.add(f,{:to =>Selection[0]})

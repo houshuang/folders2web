@@ -1,12 +1,13 @@
 # encoding: UTF-8
 # utility functions for researchr
+$:.push(File.dirname($0))
 require 'settings'
 
 # comment the three next lines to use your own gems, instead of the frozen ones, if you don't have OSX 10.7
 # or there are other errors with incompatible libraries etc
-Dir.glob(File.join(File.dirname($0), "vendor", "gems", "*", "lib")).each do |lib|
-  $LOAD_PATH.unshift(File.expand_path(lib))
-end
+# Dir.glob(File.join(File.dirname($0), "vendor", "gems", "*", "lib")).each do |lib|
+#   $LOAD_PATH.unshift(File.expand_path(lib))
+# end
 
 # shows notification on screen. one or two arguments, if one, just shows a message, if two, the first is the title
 # notice the path to growl
