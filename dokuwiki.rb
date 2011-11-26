@@ -200,15 +200,14 @@ def sbs
   exit unless page
 
   if cururl.index("localhost/wiki")
-    cururl = cururl.to_s + "?do=edit&vecdo=print"
+    url = cururl.to_s + "?do=edit&vecdo=print"
   else
     # uses Instapaper to nicely format the article text, for fitting into a split-screen window
-    cururl = "http://www.instapaper.com/text?u=\"+encodeURIComponent(\"#{cururl}\")+\""
+    url = "http://www.instapaper.com/text?u=\"+encodeURIComponent(\"#{cururl}\")+\""
   end
-
   newurl = "http://localhost/wiki/#{page.gsub(" ","_")}"
 
-  js = "var MyFrame=\"<frameset cols=\'*,*\'><frame src=\'#{cururl}\'><frame src=\'#{newurl}?do=edit&vecdo=print\'></frameset>\";with(document) {    write(MyFrame);};return false;"
+  js = "var MyFrame=\"<frameset cols=\'*,*\'><frame src=\'#{url}\'><frame src=\'#{newurl}?do=edit&vecdo=print\'></frameset>\";with(document) {    write(MyFrame);};return false;"
   Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
 end
 
@@ -243,4 +242,4 @@ end
 #### Running the right function, depending on command line input ####
 
 Chrome = Appscript.app('Google Chrome')
-send *ARGV
+send *ARGV unless ARGV == []
