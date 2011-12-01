@@ -18,7 +18,8 @@ questions = [
   ["Wiki_desc","The description of your wiki (for the RSS feed)","Raw research notes and article annotations",:textbox]
 ]
 
-pash = ""
+pash = "text.text=\"Welcome to researchr. This script will create your settings.rb, modify the path in the Keyboard Maestro scripts and set the wikititle. After running this script, move or link the wiki folder to /Library/WebServer/Documents, and turn on web sharing. More instructions here: http://reganmian.net/wiki/researchr:start.\"\n"
+
 questions.each do |q|
   case q[3]
   when :directory
@@ -48,11 +49,6 @@ settings << "# If you rerun install.rb, this file will be overwritten. \n\n"
 answers.each do |x|
   settings << "#{x[0]} = \"#{x[1]}\"\n"
 end
-
-# add some derived paths
-settings << 'Wikipages_path = "#{Wiki_path}/data/pages"
-Wikimedia_path = "#{Wiki_path}/data/media/pages"
-JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"' << "\n"
 
 # write the settings file
 File.write("#{Script_path}/settings.rb", settings)

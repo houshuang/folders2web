@@ -58,7 +58,7 @@ end
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
 def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
-  pagepath = (Wikipages_path + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
+  pagepath = ("#{Wiki_path}/data/pages" + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
 
   curpage = cururl.split("/").last
 
@@ -183,7 +183,7 @@ def image
     exit
   end
 
-  newfilename, pagenum = filename_in_series("#{Wikimedia_path}/#{wikipage}",".png")
+  newfilename, pagenum = filename_in_series("#{Wiki_path}/data/media/pages/#{wikipage}",".png")
   if File.exists?(newfilename)
     growl("Error!", "File already exists, aborting!")
     exit
