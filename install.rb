@@ -14,7 +14,7 @@ questions = [
   ["Bibliography","The database file that BibDesk uses (typically called Bibliography.bib)","",:file],
   ["Downloads_path","Directory where you store your downloads","#{Home_path}/Downloads",:directory],
   ["Internet_path","URL to your wiki when it's on the server (for example http://reganmian.net/wiki)","http://",:text],
-  ["Wiki_title","The title of your wiki (for the RSS feed)","My Research Wiki",:text],
+  ["Wiki_title","The title of your wiki","My Research Wiki",:text],
   ["Wiki_desc","The description of your wiki (for the RSS feed)","Raw research notes and article annotations",:textbox]
 ]
 
@@ -65,5 +65,9 @@ if File.exists?("#{Script_path}/wiki/conf/local.php")
   title = Regexp.new("\\$conf\\[\\'title\\'\\](.+?)$")
   a = File.replace("#{Script_path}/wiki/conf/local.php", title, "$conf['title'] = \"#{answers["Wiki_desc"]}\";")
 end
+
+# executes these apps once to register their extensions
+`open #{Script_path}/skimx.app`
+`open #{Script_path}/bibdeskx.app`
 
 growl "Your settings have been modified. You can rerun this at any point. "
