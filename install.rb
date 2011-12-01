@@ -38,4 +38,9 @@ answers.each do |x|
   settings << "#{x[0]} = \"#{x[1]}\"\n"
 end
 File.write("#{Script_path}/settings.rb", settings)
+
+a = File.read("#{Script_path}/keyboard_maestro.dist.kmmacros")
+a.gsub!("/Users/Stian/src/folders2web",Script_path)
+a = File.write("#{Script_path}/install_this_to_keyboard_maestro.kmmacros", a)
+
 growl "Your settings have been modified. You can rerun this at any point. "
