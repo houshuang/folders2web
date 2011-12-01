@@ -1,6 +1,6 @@
-# README: These are constants which will have to be modified for every install, please modify the paths below and
-# save this file as settings.rb. The reason I am distributing this as settings-dist.rb is so that your modified
-# settings.rb will not be overwritten the next time you update researchr.
+# Attempt at an INSTALL script for researchr. This will ask for key paths and some info, and fill out settings.rb
+# (overwritten every time it is run), insert the correct path in keyboard_maestro.dist.kmmacros and save as
+# import_into_keyboard_maestro.kmmacros, and search and replace the title in wiki/conf/local.php if it exists
 
 # constants
 $:.push(File.dirname($0))
@@ -15,7 +15,7 @@ questions = [
   ["Downloads_path","Directory where you store your downloads","#{Home_path}/Downloads",:directory],
   ["Internet_path","URL to your wiki when it's on the server (for example http://reganmian.net/wiki)","http://",:text],
   ["Wiki_title","The title of your wiki (for the RSS feed)","My Research Wiki",:text],
-  ["Wiki_desc","The description of your wiki (for the RSS feed)","Raw research notes and article annotations related to online collaborative learning",:text]
+  ["Wiki_desc","The description of your wiki (for the RSS feed)","Raw research notes and article annotations",:textbox]
 ]
 
 pash = ""
@@ -27,20 +27,43 @@ questions.each do |q|
     pash << "#{q[0]}.type = openbrowser\n#{q[0]}.filetype = bib\n"
   when :text
     pash << "#{q[0]}.type = textfield\n"
+  when :textbox
+    pash << "#{q[0]}.type = textbox\n"
   end
   pash << "#{q[0]}.default = #{q[2]}\n#{q[0]}.label = #{q[1]}\n"    
 
 end
+pash << "cancel.type = cancelbutton \ncancel.label = Cancel \ncancel.tooltip = Closes this window without taking action\n" 
+
 answers = pashua_run pash
+
+# if cancel
+if answers['cancel'] == "1"
+  growl "Exiting without writing config. You can rerun this program at any time."
+  exit(0)
+end
+
 settings = "# Settings generated automatically by install.rb. You can modify these manually, or rerun install.rb\n"
 settings << "# If you rerun install.rb, this file will be overwritten. \n\n"
 answers.each do |x|
   settings << "#{x[0]} = \"#{x[1]}\"\n"
 end
+
+# add some derived paths
+settings << 'Wikipages_path = "#{Wiki_path}/data/pages"
+Wikimedia_path = "#{Wiki_path}/data/media/pages"
+JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"' << "\n"
+
+# write the settings file
 File.write("#{Script_path}/settings.rb", settings)
 
-a = File.read("#{Script_path}/keyboard_maestro.dist.kmmacros")
-a.gsub!("/Users/Stian/src/folders2web",Script_path)
-a = File.write("#{Script_path}/install_this_to_keyboard_maestro.kmmacros", a)
+# modify the path in the Keyboard Maestro macros
+File.replace("#{Script_path}/keyboard_maestro.dist.kmmacros", "/Users/Stian/src/folders2web", Script_path, "#{Script_path}/import_to_keyboard_maestro.kmmacros")
+
+# modify the title in the wiki 
+if File.exists?("#{Script_path}/wiki/conf/local.php")
+  title = Regexp.new("\\$conf\\[\\'title\\'\\](.+?)$")
+  a = File.replace("#{Script_path}/wiki/conf/local.php", title, "$conf['title'] = \"#{answers["Wiki_desc"]}\";")
+end
 
 growl "Your settings have been modified. You can rerun this at any point. "
