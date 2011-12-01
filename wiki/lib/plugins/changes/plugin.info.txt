@@ -1,0 +1,9 @@
+# General Plugin Info do not edit
+
+base   changes
+author Andreas Gohr
+email  andi@splitbrain.org
+date   2011-04-27
+name   Changes Plugin
+desc   List the most recent changes of the wiki
+url    http://www.dokuwiki.org/plugin:changes

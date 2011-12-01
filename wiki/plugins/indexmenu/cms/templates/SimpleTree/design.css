@@ -1,0 +1,23 @@
+/*
+*  Tree menu has "expanded" and "collapsed" states
+*/
+ul.CmsListMenuSimpleTree {
+    font: 12px/1.1 Arial, Helvetica;
+}
+ul.CmsListMenuSimpleTree ul {
+    padding-left: 14px;
+}
+ul.CmsListMenuSimpleTree li a {
+    padding-left: 14px;
+    display: inline;
+}
+ul.CmsListMenuSimpleTree li.CmsMenuItemFolderExpanded a {
+    background: url(i/menu-expanded.gif) center left no-repeat;
+}
+ul.CmsListMenuSimpleTree li.CmsMenuItemFolderCollapsed a {
+    background: url(i/menu-collapsed.gif) center left no-repeat;
+}
+ul.CmsListMenuSimpleTree li.CmsMenuItemFile a {
+/*    background: url(i/sub.gif) center left no-repeat;*/
+    background: none;
+}

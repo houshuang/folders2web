@@ -1,0 +1,9 @@
+<- [[:@BACK@]]
+
+====== @TITLE@ ======
+
+@AVATAR@//@NAME@, @DATE@ //
+
+@TAG@
+
+~~DISCUSSION~~

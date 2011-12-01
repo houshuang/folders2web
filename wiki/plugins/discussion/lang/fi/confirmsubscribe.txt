@@ -1,0 +1,10 @@
+﻿Hei!
+
+Olet tekemässä tilauksen kommenteista sivulle @PAGE@ DokuWikissä @TITLE@ .
+
+Vahvistaaksesi tilauksen, ole hyvä ja klikkaa:
+@SUBSCRIBE@
+
+--
+Tämä posti on lähetetty DokuWiki-ohjelmalla osoitteesta
+@DOKUWIKIURL@

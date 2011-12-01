@@ -1,0 +1,12 @@
+  * [[:About this wiki]] 
+  * [[http://reganmian.net/wiki/researchr:start|Researchr]]
+<html><hr></html>
+  * [[:All pages]]
+  * [[:bib:Bibliography]]
+  * [[:abib:start|By author]]
+  * [[:kbib:start|By keyword]]
+  * [[:bib:Needs key ideas]]
+
+<html><hr></html>
+**Recently created pages**
+{{changes>type=create&render=list}}

@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+}
+table td.movers {
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+}
+table td.movers button {
+  margin: 0 auto;
+}
+table td.leftcol, table td.rightcol {
+  width: 50%;
+  vertical-align: center;
+}
+table td.rightcol {
+  text-align: right;
+}
+input, select {
+}
+input {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+input.mover {
+  width: 30px;
+}
+input.button {
+  width: 180px;
+}
+select {
+  height: 200px;
+  width: 100%;
+}
+textarea {
+  display: block;
+  width: 80%;
+}

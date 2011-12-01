@@ -1,0 +1,24 @@
+div.dokuwiki table.columns-plugin td {
+    vertical-align: top;
+    padding: 0 0.3cm 0 0.3cm;
+}
+
+div.dokuwiki table.columns-plugin td.first {
+    padding-left: 0;
+}
+
+div.dokuwiki table.columns-plugin td.last {
+    padding-right: 0;
+}
+
+div.dokuwiki table.columns-plugin td.left {
+    text-align: left;
+}
+
+div.dokuwiki table.columns-plugin td.center {
+    text-align: center;
+}
+
+div.dokuwiki table.columns-plugin td.right {
+    text-align: right;
+}

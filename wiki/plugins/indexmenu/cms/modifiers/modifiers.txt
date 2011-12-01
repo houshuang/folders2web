@@ -1,0 +1,1 @@
+It's the place for menu modifiers like "rounded corners" for menu item, etc.

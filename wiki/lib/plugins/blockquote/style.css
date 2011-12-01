@@ -1,0 +1,25 @@
+/* blockquote */
+blockquote.blockquote-plugin {
+	margin: 1em 3em 1em 3em !important;
+	border: 1px dotted __border__ !important;
+	background: __background_neu__ url(images/blockquote.gif) no-repeat 0.3em 0.3em !important;
+	padding: 1em !important;
+}
+
+blockquote.blockquote-plugin[cite]:after {
+	font-style: italic;
+	text-align: right;
+	display: block;
+	content: "—" attr(cite);
+}
+
+/* cite */
+cite.blockquote-plugin {
+	font-style: italic;
+	text-align: right;
+	display: block;
+}
+
+cite.blockquote-plugin:before {
+	content: "—";
+}

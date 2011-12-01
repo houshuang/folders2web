@@ -1,0 +1,15 @@
+h1. Welcome to researchr!
+
+Welcome, and congratulations. You've successfully installed a modified version of [[http://www.dokuwiki.org/dokuwiki|Dokuwiki]]. You can install a clean copy of Dokuwiki from the url above, but this version has been especially modified to work with the [[stian>researchr:start|Researchr]] system. It has another theme ([[http://forum.dokuwiki.org/thread/4083|Vector]]), [[stian>researchr:dokuwiki_plugins|a bunch of plugins]], etc.
+
+h2. Setting up:
+  * To modify the icon on the top left, just change the file in lib/tpl/vector/user/logo.jpg.
+  * To modify the menu to the right, edit [[wiki:navigation|wiki:navigation]].
+  * Edit the [[About this wiki]] to reflect what this wiki is about, how to contact you, etc.
+  * To [[start?do=login|login]], use the username "admin" and password "password"
+  * Use [[start?do=admin|the admin menu]] to change settings, control plugins, etc
+  * (Optional) Edit the [[interwiki]] page to set up wiki redirects ([[http://www.dokuwiki.org/interwiki|read more]])
+  * Some of the pages to the let (Bibliography, By author, etc) will be automatically generated the first time you run bibtex-batch.rb
+
+
+

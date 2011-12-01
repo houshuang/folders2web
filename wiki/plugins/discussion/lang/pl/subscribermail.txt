@@ -1,0 +1,19 @@
+Witaj!
+
+Nowy komentarz został dodany na stronie @PAGE@ w pod tytułem @TITLE@.
+
+Data:   @DATE@
+Nazwa:  @NAME@
+URL:	@COMMENTURL@
+
+Komentarz:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Aby zrezygnować z powiadomień o nowych komentarzach na tej stronie, użyj poniższego linku:
+@UNSUBSCRIBE@
+
+--
+Ten mail został wygenerowany automatycznie przez DokuWiki na
+@DOKUWIKIURL@

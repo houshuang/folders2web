@@ -1,0 +1,20 @@
+Ciao!
+
+Un nuovo commento è stato aggiunto alla pagina @PAGE@ nel wiki: @TITLE@
+
+Data:   @DATE@
+Nome:   @NAME@
+URL:    @COMMENTURL@
+
+Commento:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Per annullare questo servizio di notifica, autenticati nel wiki 
+e quindi vai a questo indirizzo:
+@UNSUBSCRIBE@
+
+--
+questa mail è  stata generata dal DokuWiki 
+@DOKUWIKIURL@

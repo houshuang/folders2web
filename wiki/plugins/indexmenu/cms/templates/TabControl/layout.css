@@ -1,0 +1,63 @@
+/*
+*  TabControl layout scheme
+*/
+ul.CmsListMenuTabControl, ul.CmsListMenuTabControl ul.tabBody {
+    border: 0;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ul.CmsListMenuTabControl:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+ul.CmsListMenuTabControl {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html ul.CmsListMenuTabControl {height: 1px;}
+ul.CmsListMenuTabControl {display: block;}
+/* End hide from IE-mac */
+
+ul.CmsListMenuTabControl li.CmsMenuItemFolderTabControl {
+    float: left;
+    display: block;
+    overflow: visible;
+    width: 1%;                 /* required by IE */
+}
+html>body ul.CmsListMenuTabControl li.CmsMenuItemFolderTabControl {
+    width: auto;
+}
+
+ul.CmsListMenuTabControl li.CmsMenuItemFolderExpandedTabControl {
+
+}
+ul.CmsListMenuTabControl li.CmsMenuItemFolderTabControl a.tabHead {
+    display: block;
+    position: relative;
+}
+ul.CmsListMenuTabControl li.CmsMenuItemFolderExpandedTabControl a.tabHead {
+    z-index: 2;
+}
+ul.CmsListMenuTabControl li.CmsMenuItemFolderTabControl ul.tabBody {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+}
+* html ul.CmsListMenuTabControl li.CmsMenuItemFolderTabControl ul.tabBody {
+    width: expression(this.parentNode.parentNode.clientWidth+'px');
+}
+ul.CmsListMenuTabControl li.CmsMenuItemFolderCollapsedTabControl ul.tabBody {
+    display: none;
+}
+ul.CmsListMenuTabControl li.CmsMenuItemFolderExpandedTabControl ul.tabBody {
+    display: block;
+}

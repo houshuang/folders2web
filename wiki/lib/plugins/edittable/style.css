@@ -1,0 +1,181 @@
+/* Table edit toolbar */
+div.toolbar #tool__bar_table button.selected {
+    background: __background__ url(images/buttonshadow_toggled.png) repeat-x bottom;
+}
+
+div.toolbar #tool__bar_table button.disabled {
+    background: __background__ url(images/buttonshadow_toggled2.png) repeat-x bottom;
+    opacity: 0.4;
+}
+
+div.toolbar #tool__bar_table button.separator {
+    margin-left: 0.5em;
+}
+
+div.toolbar #tool__bar_table {
+    margin-bottom: 0.5em;
+}
+
+#dw__editform #edit__wrap {
+    margin-top: 1.5em;
+    overflow: auto;
+    border: 1px solid __border__;
+}
+
+div.dokuwiki table.edit {
+    margin: -1px;
+}
+
+div.dokuwiki table.edit th,
+div.dokuwiki table.edit td {
+    min-width: 5em;
+}
+
+div.dokuwiki table.edit input {
+    border: none;
+    background: transparent;
+    font: inherit;
+    width: 100%;
+}
+
+/* nice alphatransparency background except for IE <7 */
+html>body div.dokuwiki table.edit th,
+html>body div.dokuwiki table.edit td {
+    background-image: url(images/inputshadow.png);
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+/* ----------- Row and col handles ------------- */
+
+div.dokuwiki table.edit td.handle {
+    color: __text_neu__;
+    background-color: __background_neu__;
+    padding: 0;
+    vertical-align: bottom;
+    /* For the handle dropdowns */
+    position: relative;
+}
+
+div.dokuwiki table.edit td.rowhandle {
+    width: 3em;
+}
+
+div.dokuwiki table.edit td.handle {
+    cursor: move;
+}
+
+div.dokuwiki table.edit td.curhandle {
+    background-color: __background_alt__;
+}
+
+div.dokuwiki table.edit td.disabledhandle {
+    background-image: none;
+    background-color: #c0c0c0;
+    cursor: no-drop;
+}
+
+/* nice alphatransparency background except for IE <7 */
+html>body div.dokuwiki table.edit td.handle {
+    background-image: url(images/buttonshadow.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+#table__dragmarker {
+    display:block;
+    height:100%;
+    width:100%;
+    position:relative;
+}
+
+#table__dragmarker .dragmarker_topright {
+    position: absolute;
+    top: -0.5em;
+    right: 0px;
+}
+
+#table__dragmarker .dragmarker_bottomright {
+    position: absolute;
+    top: 0.5em;
+    right: 0px;
+}
+
+#table__dragmarker .dragmarker_bottomleft {
+    position: absolute;
+    top: 0.5em;
+    left: 0px;
+}
+
+.handle .handle_dropdown {
+    float: right;
+    margin-top: 3px;
+}
+
+.handle .handle_dropdown img {
+    padding: 4px 2px 1px;
+    cursor: pointer;
+}
+
+#dw__editform .handle .handle_dropdown div {
+    position: absolute;
+    z-index: 25;
+}
+
+#dw__editform .handle .handle_dropdown div ul {
+    background:__background__ none repeat scroll 0 0;
+    border:1px solid;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    opacity:0.9;
+    padding:0.3em;
+    margin:0;
+    cursor: auto;
+    font-size: 0.9em;
+}
+
+#dw__editform .handle .handle_dropdown div ul li {
+    width: 100%;
+    text-align: left;
+}
+
+#dw__editform .handle .handle_dropdown div ul li a {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+#dw__editform .handle .handle_dropdown div ul li a:hover {
+    background: __background_alt__;
+}
+
+/* the section edit button - yes, it's not the most beautiful CSS you've ever seen */
+div.dokuwiki div.editbutton_table {
+    margin-top: -1em; /* depends on the table margin in template */
+}
+
+div.dokuwiki div.editbutton_table form input.button {
+    float: none;
+    margin-left: 0.6em;
+    padding: 0 0.3em;
+    background-image: none;
+    border-top: none;
+
+    border-bottom-right-radius: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+
+    border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+}
+
+/* Section highlighting fix */
+div.dokuwiki div.section_highlight table {
+  background-color: __background_alt__;
+}
+
+div.dokuwiki div.table.section_highlight {
+  background-color: transparent !important;
+}

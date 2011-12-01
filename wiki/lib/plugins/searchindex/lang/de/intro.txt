@@ -1,0 +1,12 @@
+====== Suchindex Manager ======
+
+Mit dieser Seite können Sie den Index neu erstellen, der von der Volltextsuche benutzt wird.
+Normalerweise ist das nicht nötig, da sich der Index von selbst erstellt und aktualisiert,
+während Besucher das Wiki benutzen. Aber falls Sie gerade eine große Menge Seiten aktualisiert,
+hinzugefügt oder entfernt haben, kann es hilfreich sein, den Suchindex neu zu erstellen.
+
+Dieser Manager benötigt einen aktuellen Browser, da er modernes JavaScript benutzt,
+um mehrere Aufgaben im Hintergrund mit [[wp>AJAX]] auszuführen.
+
+Den Index neu zu erstellen dauert lange. Sie sollten diese Seite so lange
+geöffnet lassen, bis die Indizierung beendet ist.

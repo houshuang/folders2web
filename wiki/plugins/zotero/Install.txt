@@ -1,0 +1,13 @@
+1) Extract archive to [DokuWikiRoot]/lib/plugins/zotero or use the plugin
+   manager and point to http://f.macke.it/ZoteroPlugin for an automatic 
+   installation.
+2) Enter your Zotero username, key and user ID into zotero.ini.
+3) If you would like to use a wiki page as the cache page for Zotero entries, 
+   create a new page and enter its name into zotero.ini (e.g. zotero:sources).
+   If you don't want to use the cache page, delete the entry in zotero.ini.
+4) Enter your Zotero entries into the cache file (the newly created wiki page
+   or sources.txt if you don't want to use the wiki page). This can be 
+   automated by calling readEntries.php from the command line.
+5) If you cite a source that is not already in the cache, the plugin will
+   automatically download your latest Zotero entries and add them to the 
+   cache. For this to work you have to enable autoupdating in zotero.ini.

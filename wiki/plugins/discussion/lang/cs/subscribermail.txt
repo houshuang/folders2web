@@ -1,0 +1,20 @@
+Dobry den,
+
+komentar byl pridan na strance @PAGE@ s titulkem @TITLE@ wiki.
+
+Datum: 	@DATE@
+Jmeno: 	@NAME@
+URL:    @COMMENTURL@
+
+Komentar:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Pokud se chcete odregistrovat od zasilani informaci prihlaste
+se na dane strance a pote kliknete na tento link:
+@UNSUBSCRIBE@
+
+--
+E-mail generovan systemem DokuWiki na adrese
+@DOKUWIKIURL@

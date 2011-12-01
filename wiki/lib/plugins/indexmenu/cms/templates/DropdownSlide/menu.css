@@ -1,0 +1,83 @@
+/*
+*  this file describes only menu structure level-by level
+*  it does nothing with menu look and feel
+*/
+ul.CmsListMenu, ul.CmsListMenu ul, ul.CmsListMenu li, ul.CmsListMenu a {
+        border:0;
+        list-style: none;
+        display:block;
+        margin:0;
+        padding:0;
+}
+
+ul.CmsListMenu {
+        clear: both;
+        float: left;
+}
+
+
+ul.CmsListMenu li.CmsListMenu_level1 {
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+ul.CmsListMenu li.horizontal span.title {
+  display: block;
+  font-weight: bold;
+  height: 22px;
+  line-height: 23px;
+  overflow: hidden;
+  padding-left: 12px;
+  vertical-align: top;
+  width: 148px;
+}
+
+ul.CmsListMenu li.horizSpacer {
+  display: block;
+  float: left;
+  font-size: 1px;
+  width: 4px;
+}
+ul.CmsListMenu div.dropdownContainer {
+  position: absolute;
+  top: 26px;
+  left: 3px
+}
+ul.CmsListMenu li.horizontal ul.dropdown {
+  display: none;
+}
+ul.CmsListMenu li.horizontal ul.dropdown li, ul.CmsListMenu li.horizontal ul.dropdown li.folder ul li {
+  background: transparent;
+  height: 20px;
+  width: 176px;
+  padding: 0;
+}
+html>body ul.CmsListMenu li.horizontal ul.dropdown li, html>body ul.CmsListMenu li.horizontal ul.dropdown li.folder ul li {
+  height: auto;
+  min-height: 20px;
+}
+ul.CmsListMenu li.horizontal ul.dropdown li a, ul.CmsListMenu li.horizontal ul.dropdown li.folder ul li a, ul.CmsListMenu li.horizontal ul.dropdown li.folder ul li a:hover {
+  background: #FFC081;
+  color: #000;
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+ul.CmsListMenu li.horizontal ul.dropdown li.folder {
+  background: url(images/ddmi_bg.png) no-repeat;
+  behavior: url('js/iepngfix.htc');
+}
+
+ul.CmsListMenu li.horizontal ul.dropdown li.folder a {
+  background: url(images/ddmi_bg.gif) repeat-x;
+  height: 16px;
+}
+ul.CmsListMenu li.horizontal ul.dropdown li.folder a:hover {
+  background-image: url('images/ddmi_s_bg.gif');
+}
+ul.CmsListMenu li.horizontal ul.dropdown li.folder ul {
+  padding-top: 4px;
+  display: none;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html>
+  <head>
+<!--
+  $Id$
+  $HeadURL$
+  
+  Automated tests for the NumberExtensions module
+  @author Ilya Lebedev <ilya@lebedev.net>
+-->      
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>BrowserExtensions/NumberExtensions tests</title>
+   <link rel="stylesheet" type="text/css" href="../css/jsUnitStyle.css">
+   <script language="JavaScript" type="text/javascript" src="jsUnitCore.js"></script>
+   <script language="JavaScript" type="text/javascript" src="../helpers.js"></script>
+   <script language="JavaScript" type="text/javascript" src="../stringextensions.js"></script>
+   <script language="JavaScript" type="text/javascript" src="../numberextensions.js"></script>
+   <script language="JavaScript" type="text/javascript" src="../regexpextensions.js"></script>
+   <script language="JavaScript" type="text/javascript">
+
+        function testRadix() {
+            assertEquals("Radix does return values 'as is' if not radix param specified", 1234, Number(1234).radix());
+            assertEquals("Radix pads number with 0s by default", "0012", Number(12).radix(10,4));
+            assertEquals("Radix pads number only on the left", "0012", Number(12).radix(10,-4));
+            assertEquals("Radix pads number with any valid symbol supplied", "   12", Number(12).radix(10,5, " "));
+            assertEquals("Radix pads number with only the first symbol from supplied string", "   12", Number(12).radix(10,5, " asdf"));
+        }
+    </script>
+</head>
+
+<body>
+<h1>Tests for the Number extensions</h1>
+
+<p>This page contains tests for the Number.prototype extension methods. To see them, take a look at the source.</p>
+</body>
+</html>

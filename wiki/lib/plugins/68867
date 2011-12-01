@@ -1,0 +1,1140 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="FF ">
+
+<head id="ctl00_ctl00_HeadTag"><link id="ctl00_ctl00_MasterCss" type="text/css" rel="stylesheet" href="http://i1.codeplex.com/css/v18207/i5159/StyleSheet.ashx" /><link rel="SHORTCUT ICON" href="../../favicon.ico" />
+    <style type="text/css">.SideBar, .SideBarPadding{display:none;}.MainContent{width:auto;}.SiteContentTable{width:100%;}</style>
+    <style id="ctl00_ctl00_Header_ProjectStyles" type="text/css">.SiteHeader,.SiteHeaderLeft{height:45px !important;overflow:hidden;}.SiteContent{padding:0 1em 1em 1em;margin-top:0;min-height:225px;}.FF .SiteContentTable{clear:both;}.ProjectContent{min-height:225px;}.Safari .ProjectContent{padding-top:0em;}.IE6 .ProjectTitleControl{position:relative;}.CanvasMargin{width:0;}h1.ProjectHeader{font-size:2em;font-weight:bold;margin-bottom:0;}.ProjectHeader a{color:#3E62A6;}.IE table.MinWidthContent{table-layout:auto !important;}.ProjectMessage{border:solid 0.1em #ccc;background-color:#F1FCEE;padding:1em;}</style>
+    
+    
+    
+    
+    <style id="ctl00_ctl00_Header_Header_ProjectReleasesStyles" type="text/css">.ProjectReleasesSidebar{min-height:16em;max-height:16em;overflow:auto;}.IE6 .ProjectReleasesSidebar{height:8em;width:19em;}.IE6 .ProjectReleasesSidebar .Scrollable{width:19em;overflow:auto;overflow-x:hidden;overflow-y:auto;}</style>
+
+    <meta id="ctl00_ctl00_Header_WTProjectName" name="WT.pi" content="LittleWikiPlugins"></meta>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href='http://littlewikiplugins.codeplex.com/rsd' />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href='/wlwmanifest.xml' />
+<link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins" href="http://littlewikiplugins.codeplex.com/project/feeds/rss" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Discussions" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2flittlewikiplugins" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Issue Tracker" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2flittlewikiplugins" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Releases" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2flittlewikiplugins" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Source Code" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2flittlewikiplugins" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Wiki" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2flittlewikiplugins" /><link rel="alternate" type="application/rss+xml" title="Little Wiki Plugins-Reviews" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2flittlewikiplugins" /><title>
+	Little Wiki Plugins - Download: asciimathml 0.21
+</title></head>
+
+<body onload="masterLoad();">
+    <form name="aspnetForm" method="POST" action="/releases/view/68867" id="aspnetForm" autocomplete="off" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDIxNjM2MzMPZBYCZg9kFgJmD2QWBGYPZBYEZg8WAh4EaHJlZgU3aHR0cDovL2kxLmNvZGVwbGV4LmNvbS9jc3MvdjE4MjA3L2k1MTU5L1N0eWxlU2hlZXQuYXNoeGQCAg9kFgZmDxYCHglpbm5lcmh0bWwFngQuU2l0ZUhlYWRlciwuU2l0ZUhlYWRlckxlZnR7aGVpZ2h0OjQ1cHggIWltcG9ydGFudDtvdmVyZmxvdzpoaWRkZW47fS5TaXRlQ29udGVudHtwYWRkaW5nOjAgMWVtIDFlbSAxZW07bWFyZ2luLXRvcDowO21pbi1oZWlnaHQ6MjI1cHg7fS5GRiAuU2l0ZUNvbnRlbnRUYWJsZXtjbGVhcjpib3RoO30uUHJvamVjdENvbnRlbnR7bWluLWhlaWdodDoyMjVweDt9LlNhZmFyaSAuUHJvamVjdENvbnRlbnR7cGFkZGluZy10b3A6MGVtO30uSUU2IC5Qcm9qZWN0VGl0bGVDb250cm9se3Bvc2l0aW9uOnJlbGF0aXZlO30uQ2FudmFzTWFyZ2lue3dpZHRoOjA7fWgxLlByb2plY3RIZWFkZXJ7Zm9udC1zaXplOjJlbTtmb250LXdlaWdodDpib2xkO21hcmdpbi1ib3R0b206MDt9LlByb2plY3RIZWFkZXIgYXtjb2xvcjojM0U2MkE2O30uSUUgdGFibGUuTWluV2lkdGhDb250ZW50e3RhYmxlLWxheW91dDphdXRvICFpbXBvcnRhbnQ7fS5Qcm9qZWN0TWVzc2FnZXtib3JkZXI6c29saWQgMC4xZW0gI2NjYztiYWNrZ3JvdW5kLWNvbG9yOiNGMUZDRUU7cGFkZGluZzoxZW07fWQCAQ9kFgICAw8WAh8BBeABLlByb2plY3RSZWxlYXNlc1NpZGViYXJ7bWluLWhlaWdodDoxNmVtO21heC1oZWlnaHQ6MTZlbTtvdmVyZmxvdzphdXRvO30uSUU2IC5Qcm9qZWN0UmVsZWFzZXNTaWRlYmFye2hlaWdodDo4ZW07d2lkdGg6MTllbTt9LklFNiAuUHJvamVjdFJlbGVhc2VzU2lkZWJhciAuU2Nyb2xsYWJsZXt3aWR0aDoxOWVtO292ZXJmbG93OmF1dG87b3ZlcmZsb3cteDpoaWRkZW47b3ZlcmZsb3cteTphdXRvO31kAgIPFgQeB2NvbnRlbnQFEUxpdHRsZVdpa2lQbHVnaW5zHgdWaXNpYmxlZ2QCAQ9kFgZmD2QWCAIBD2QWBAIBD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFJmh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vZGQCAw8PFgIfBAUmaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9kFgJmD2QWAgIBDw8WAh4EVGV4dAUTTGl0dGxlIFdpa2kgUGx1Z2luc2RkAgMPZBYCZg9kFgICAQ8PFgIeCEltYWdlVXJsBTpodHRwOi8vaTMuY29kZXBsZXguY29tL0ltYWdlcy92MTgyMDcvc2VhcmNoLWJ1dHRvbi1vZmYuZ2lmFgQeC29ubW91c2VvdmVyBVBqYXZhc2NyaXB0OnRoaXMuc3JjPSdodHRwOi8vaTMuY29kZXBsZXguY29tL0ltYWdlcy92MTgyMDcvc2VhcmNoLWJ1dHRvbi1vbi5naWYnOx4Kb25tb3VzZW91dAVRamF2YXNjcmlwdDp0aGlzLnNyYz0naHR0cDovL2kzLmNvZGVwbGV4LmNvbS9JbWFnZXMvdjE4MjA3L3NlYXJjaC1idXR0b24tb2ZmLmdpZic7ZAIDD2QWBAIBD2QWBGYPDxYCHwNoZBYCAgMPZBYCZg9kFgICAQ9kFgQCBQ8PFgIfA2hkZAIHDw8WAh8DaGRkAgEPZBYCAgMPZBYCAgEPZBYCAgEPZBYCAgEPZBYCAgEPFgIfAAVLaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9wcm9qZWN0L2VkaXQ/Rm9jdXNFbGVtZW50PURlc2NyaXB0aW9uZAIDD2QWAmYPFgIfA2gWAmYPDxYCHwQFMmh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vcHJvamVjdC9lZGl0ZGQCBQ8PFgIfA2hkZAIHD2QWBAIBD2QWEgIBDxYCHgVjbGFzcwUSVGFiIEluYWN0aXZlVGFiTmV3FgICAQ8PFgIfBAUmaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9kZAIDDxYCHwkFEFRhYiBBY3RpdmVUYWJOZXcWAgIBDw8WAh8EBS5odHRwOi8vbGl0dGxld2lraXBsdWdpbnMuY29kZXBsZXguY29tL3JlbGVhc2VzZGQCBQ8WAh8JBRJUYWIgSW5hY3RpdmVUYWJOZXcWAgIBDw8WAh8EBTNodHRwOi8vbGl0dGxld2lraXBsdWdpbnMuY29kZXBsZXguY29tL2RvY3VtZW50YXRpb25kZAIHDxYCHwkFElRhYiBJbmFjdGl2ZVRhYk5ldxYCAgEPDxYCHwQFMWh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vZGlzY3Vzc2lvbnNkZAIJDxYCHwkFElRhYiBJbmFjdGl2ZVRhYk5ldxYCAgEPDxYCHwQFOWh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vd29ya2l0ZW0vbGlzdC9iYXNpY2RkAgsPFgIfCQUSVGFiIEluYWN0aXZlVGFiTmV3FgICAQ8PFgIfBAVDaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9Tb3VyY2VDb250cm9sL2xpc3QvY2hhbmdlc2V0c2RkAg0PFgIfCQUSVGFiIEluYWN0aXZlVGFiTmV3FgICAQ8PFgIfBAUvaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS90ZWFtL3ZpZXdkZAIPDxYCHwkFElRhYiBJbmFjdGl2ZVRhYk5ldxYCAgEPDxYCHwQFLWh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vbGljZW5zZWRkAhEPZBYEAgIPZBYCAgMPZBYEZg9kFgICAQ9kFgQCAQ8PFgIfBgU4aHR0cDovL2kzLmNvZGVwbGV4LmNvbS9JbWFnZXMvdjE4MjA3L2Fycm93X2RzY19ncmVlbi5naWZkZAIDDw8WAh8GBTFodHRwOi8vaTMuY29kZXBsZXguY29tL0ltYWdlcy92MTgyMDcvaWNvbl9yc3MuZ2lmZGQCAQ9kFgICAQ9kFgICAQ9kFg4CAQ9kFgICAQ8PFgIfBAU3aHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9wcm9qZWN0L2ZlZWRzL3Jzc2RkAgMPZBYCAgEPDxYCHwQFcWh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vcHJvamVjdC9mZWVkcy9yc3M/UHJvamVjdFJTU0ZlZWQ9Y29kZXBsZXglM2ElMmYlMmZmb3J1bSUyZmxpdHRsZXdpa2lwbHVnaW5zZGQCBQ9kFgICAQ8PFgIfBAV0aHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9wcm9qZWN0L2ZlZWRzL3Jzcz9Qcm9qZWN0UlNTRmVlZD1jb2RlcGxleCUzYSUyZiUyZndvcmtpdGVtJTJmbGl0dGxld2lraXBsdWdpbnNkZAIHD2QWAgIBDw8WAh8EBXNodHRwOi8vbGl0dGxld2lraXBsdWdpbnMuY29kZXBsZXguY29tL3Byb2plY3QvZmVlZHMvcnNzP1Byb2plY3RSU1NGZWVkPWNvZGVwbGV4JTNhJTJmJTJmcmVsZWFzZSUyZmxpdHRsZXdpa2lwbHVnaW5zZGQCCQ9kFgICAQ8PFgIfBAVyaHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9wcm9qZWN0L2ZlZWRzL3Jzcz9Qcm9qZWN0UlNTRmVlZD1jb2RlcGxleCUzYSUyZiUyZnJldmlldyUyZmxpdHRsZXdpa2lwbHVnaW5zZGQCCw9kFgICAQ8PFgIfBAV5aHR0cDovL2xpdHRsZXdpa2lwbHVnaW5zLmNvZGVwbGV4LmNvbS9wcm9qZWN0L2ZlZWRzL3Jzcz9Qcm9qZWN0UlNTRmVlZD1jb2RlcGxleCUzYSUyZiUyZnNvdXJjZWNvbnRyb2wlMmZsaXR0bGV3aWtpcGx1Z2luc2RkAg0PZBYCAgEPDxYCHwQFcGh0dHA6Ly9saXR0bGV3aWtpcGx1Z2lucy5jb2RlcGxleC5jb20vcHJvamVjdC9mZWVkcy9yc3M/UHJvamVjdFJTU0ZlZWQ9Y29kZXBsZXglM2ElMmYlMmZ3aWtpJTJmbGl0dGxld2lraXBsdWdpbnNkZAIED2QWBGYPDxYCHwYFOmh0dHA6Ly9pMy5jb2RlcGxleC5jb20vSW1hZ2VzL3YxODIwNy9hcnJvd19yaWdodF9ncmVlbi5naWZkZAICDw8WAh8GBTFodHRwOi8vaTMuY29kZXBsZXguY29tL0ltYWdlcy92MTgyMDcvaWNvbl9yc3MuZ2lmZGQCBw8WAh4Fd2lkdGgFAzE1JRYCAgEPDxYEHghDc3NDbGFzcwU0U3RhbmRhcmRQYWRkaW5nIFNpZGVCYXIgUmlnaHRTaWRlQmFyIEdyYWRpZW50U2lkZUJhch4EXyFTQgICZGQCAQ8WAh8FBUo8c2NyaXB0IHNyYz0iL3NpdGUvbGlicmFyeS9zdnkvYnJva2VyLmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0PmQCAg8PFgIfBgUuaHR0cDovL2kzLmNvZGVwbGV4LmNvbS9JbWFnZXMvdjE4MjA3L2JsYW5rLnBuZxYCHgZvbmxvYWQFGXNlbGYubG9nb0ltYWdlTG9hZGVkPXRydWVkZG7XOFeCisT48GXccCTQUmM5GWcr" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKrrLfXAwLYp/iUDqHMz0MvSRo/Jj1PIb9pPfZnb7cI" />
+</div>
+    <script src="http://i1.codeplex.com/scripts/v18207/i7/ScriptLoader.ashx" type="text/javascript"></script>
+    <table id="CanvasTable" cellpadding=0 cellspacing=0>
+        <tr valign="top">
+            <td>
+                <div id="Canvas">
+                    <div id="CanvasContent">
+                        
+    <div id="ctl00_ctl00_MasterContent_ProjectHeader">
+        <table class="FullWidth" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td class="FullWidth" valign="bottom">
+                    <div class="ProjectLogoLeft">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="height:90px;" valign="middle">
+                                    <div style="padding-left: 1.1em; padding-top: 1.1em; padding-bottom:.8em;">
+                                        
+                                        
+<div class="ProjectTitleControl HalfMarginBottom">
+    <a id="ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink" href="http://littlewikiplugins.codeplex.com/"></a>
+    <a id="ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectTitleLink1" href="http://littlewikiplugins.codeplex.com/"><h1 id="ctl00_ctl00_MasterContent_ProjectTitleControl1_ProjectHeader" class="ProjectHeader NoMargin">
+            <span id="ctl00_ctl00_MasterContent_ProjectTitleControl1_TitleLabel">Little Wiki Plugins</span>
+        </h1></a>
+</div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>    
+                </td>
+                <td valign="top">
+                    <div class="ProjectLogoRight" onmouseover="this.style.cursor = 'hand';" onmouseout="this.style.cursor = 'default';">
+                        <div class="LogoLinkOuter">
+                            <a href='http://www.codeplex.com' class="LogoLink" title="CodePlex Home"><div class="LogoLinkInner">CodePlex Home</div></a>
+                        </div>
+                    </div>
+                </td>
+                <td valign="top" class="StandardPaddingTop SiteHeaderProjectRight" style="padding-right: 1.7em; padding-left: .1em">
+                    
+        <div class="NoWrap ProjectSignInControl">
+            <a href="/site/register/new" id="registerLink" class="ZoomFix">Register</a>
+            <span class="VerticalBarTop ZoomFix">|</span>
+            <a href="https://www.codeplex.com/site/login?RedirectUrl=http%3a%2f%2flittlewikiplugins.codeplex.com%2freleases%2fview%2f68867%3fProjectName%3dlittlewikiplugins" id="signInLink" class="ZoomFix">Sign In</a>
+            <span class="VerticalBarTop ZoomFix">|</span>
+            <a class="ZoomFix" href='http://www.codeplex.com'>CodePlex Home</a>
+        </div>
+    
+                    <div style="margin-top: .5em;">
+                        <div id="ctl00_ctl00_MasterContent_ProjectSearchControl_ProjectSearchPanel" class="ProjectSearchPanel NoWrap">
+	
+    <div class="ProjectSearchPanel">
+        <input name="ctl00$ctl00$MasterContent$ProjectSearchControl$SearchTextBox" type="text" maxlength="500" id="ctl00_ctl00_MasterContent_ProjectSearchControl_SearchTextBox" class="SingleLineTextBox ProjectSearchTextBox" />
+        <img id="ctl00_ctl00_MasterContent_ProjectSearchControl_SearchButton" class="ProjectSearchButton" onmouseover="javascript:this.src=&#39;http://i3.codeplex.com/Images/v18207/search-button-on.gif&#39;;" onmouseout="javascript:this.src=&#39;http://i3.codeplex.com/Images/v18207/search-button-off.gif&#39;;" src="http://i3.codeplex.com/Images/v18207/search-button-off.gif" alt="Search" style="border-width:0px;" />
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $loadScript('http://i4.services.social.microsoft.com/search/Widgets/SearchBox.jss?appid=1000&scopeid=1&boxId=ctl00_ctl00_MasterContent_ProjectSearchControl_SearchTextBox&btnId=ctl00_ctl00_MasterContent_ProjectSearchControl_SearchButton&watermark=Search%20all%20CodePlex%20projects&overrideWatermark=true&searchLocation=http%3a%2f%2fwww.codeplex.com%2fsite%2fsearch&allowEmptySearch=true&minimumTermLength=3');
+                if (typeof epx_loaded === 'undefined' || !epx_loaded) {
+                    $('#ctl00_ctl00_MasterContent_ProjectSearchControl_SearchButton').bind('click', doProjectSearch);
+                    $('#ctl00_ctl00_MasterContent_ProjectSearchControl_SearchTextBox').bind('keydown', function (e) { { if ($keyCode(e) === 13) return doProjectSearch(); } });
+                }
+            })
+            function doProjectSearch() {
+                window.location.replace('http://www.codeplex.com/site/search?query=' + $('#ctl00_ctl00_MasterContent_ProjectSearchControl_SearchTextBox').val());
+                return false;
+            }
+        </script>
+    </div>
+
+</div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ProjectBody" class="SiteContent">
+        <div id="ctl00_ctl00_MasterContent_ProjectDetailsDiv">
+            
+
+<script type="text/javascript">
+    function VerifyProjectDeletion()
+    {
+        var result = confirm("Are you sure you want to delete this project?  You will not be able to recover it later");
+        if (result)
+            ShowUpdatingPanel();
+        else
+            allowUnsavedDataAlert();
+        return result;
+    }
+    function ShowPublishPanel()
+    {
+        ShowUpdatingPanel();
+    }
+    function ShowUpdatingPanel()
+    {
+        var publishButton=$('#ctl00_ctl00_MasterContent_ProjectCountdown_PublishProject_PublishButton')[0];
+        var deleteButton=$('#ctl00_ctl00_MasterContent_ProjectCountdown_PublishProject_DeleteButton')[0];
+
+        setTimeout(function() { CodePlex.UpdateProgress.displayPanelAndDisableControls('Updating...', publishButton, deleteButton) }, 1);
+    }
+</script>
+<div class="ClearBoth"></div>
+<div class="StandardPaddingBottom">
+
+
+</div>
+<script type="text/javascript">
+    // replaces the smartdatecontrol's "Today" with "today" or "on {Date}" for this user control
+    function formatDate() {
+        var dateSpan = $('#ctl00_ctl00_MasterContent_ProjectCountdown_PublishProject_DeletionDateLiteral');
+        if (dateSpan.text().toLowerCase() == "today")
+            dateSpan.text("today");
+        else
+            dateSpan.text("on " + dateSpan.text());
+    }
+    formatDate();
+</script>
+
+            
+
+        </div>
+            
+        <table class="SiteContentTable" cellspacing="0" cellpadding="0">
+            <tr valign="top">
+               <td class="MainContent">
+                    <div class="MainContentMinWidthContent">
+                        
+                        
+                        <div id="ctl00_ctl00_MasterContent_ProjectContentPanel" class="ProjectContent">
+	
+                            <div id="MenuDiv">
+                                
+    
+<div class="TabStripNew">
+    <table cellpadding="0" cellspacing="0" border="0" class="FullWidth">
+        <tr>
+            <td id="ctl00_ctl00_MasterContent_Tabs_homeTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_homeTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/"><div class="TabPadding">Home</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_releasesTabCell" class="Tab ActiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_releasesTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/releases"><div class="TabPadding">Downloads</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_documentationTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_documentationTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/documentation"><div class="TabPadding">Documentation</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_discussionTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_discussionTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/discussions"><div class="TabPadding">Discussions</div></a> 
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_workItemsTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_workItemsTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/workitem/list/basic"><div class="TabPadding">Issue Tracker</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_sourceTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_sourceTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/SourceControl/list/changesets"><div class="TabPadding">Source Code</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_peopleTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_peopleTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/team/view"><div class="TabPadding">People</div></a>
+            </td>
+	
+            <td id="ctl00_ctl00_MasterContent_Tabs_licenseTabCell" class="Tab InactiveTabNew">
+                <a id="ctl00_ctl00_MasterContent_Tabs_licenseTab" class="TabLinkNew" href="http://littlewikiplugins.codeplex.com/license"><div class="TabPadding">License</div></a>
+            </td>
+	
+            <td class="FullWidth LastTabNew" nowrap="nowrap">
+                <style id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_ProjectDirectoryStyles" type="text/css">
+        .FF .RightMarginFix{
+            margin-right: 1px;
+        }
+        .HoverPanel{
+            position: absolute; 
+            display: none;
+            z-index: 3; 
+        }
+        .IE .HoverPanel{
+            margin-left: -1px;
+        }
+        .IE7 HoverPanel{
+            margin-top: 1px;
+        }
+        .IE6 .HoverPanel .Content{
+	        margin-top: -13px;
+        }
+        .LeftHoverWidth{
+            width: 16.4em;
+        }
+        .HoverClosePanel{
+            width: 4em;
+            position: absolute; 
+            right: 2em;
+            top: -1.9em;
+            z-index: 1;
+        }
+        .HoverClosePanel .RoundedContent{
+            min-height: 2em;
+            height: 2em;
+        }
+        .HoverContentPanel{
+            position:relative;
+            z-index: 2;
+        }
+        .MockPanelBorder{
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+</style>
+    
+<script type="text/javascript">
+        function setMaxHeight(divName, bottomPixelPadding){
+            var constraindiv = $('#' + divName)[0];
+            var divpoint = CodePlex.UI.getElementPosition(constraindiv);
+            var maxHeight = $('#Canvas').offset().top - divpoint.y - bottomPixelPadding;
+            var scrollHeight = constraindiv.scrollHeight;
+            constraindiv.style.height = (scrollHeight > maxHeight) ? maxHeight + 'px' : 'auto';
+        }
+        function placeHover(linkname, hovername) {
+            var link = $('#' + linkname)[0];
+            var $hover = $('#' + hovername);
+            var point = CodePlex.UI.getElementPosition(link);
+            $hover.css('left', (point.x - 135) + 'px');
+            $hover.css('top', (point.y - 7) + 'px');
+            $hover.css('display', 'block');
+        }
+        
+        function closeHover(hovername) {
+            $('#' + hovername).css('display', '');
+        }
+        function closeHovers() {
+            $('#rssHoverDiv').css('display', '');
+        }
+</script>
+    
+<div id="rssHoverDiv" class="HoverPanel LeftHoverWidth AlignLeft">
+        <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel" class="ContentPanelBox SideBarControl HoverContentPanel" style="">
+		<div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_headerPanel" class="HeaderPanel Header">
+			
+    
+                <div class="StandardPaddingBottom">
+                    <div style="float:right">
+                        <a href="#" onclick="allowUnsavedDataAlert();closeHover('rssHoverDiv'); return false;">Close</a>
+                    </div>
+                    <div style="float:left" onclick="allowUnsavedDataAlert();closeHover('rssHoverDiv');">
+                        <a href="#" onclick="return false;"><img id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ArrowDownImg3" src="http://i3.codeplex.com/Images/v18207/arrow_dsc_green.gif" style="height:9px;width:9px;border-width:0px;" /></a>
+                        <a href="#" onclick="return false;">RSS</a>
+                        <img id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_rssFeedImageHover" hspace="5" src="http://i3.codeplex.com/Images/v18207/icon_rss.gif" alt="RSS Feed" style="border-width:0px;border: 0px; vertical-align: bottom;" />
+                    </div>
+                    <div class="ClearBoth"></div>
+                </div>
+           
+
+		</div><div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_contentPanel" class="StandardPadding">
+			
+    
+           <ul id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_FeedsPanel" class="RssFeedsPanel">
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ProjectPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ProjectRssLink" title="All Project Updates" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss">All Project Updates</a>
+                </li>
+            
+			</div>
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_DiscussionsPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_DiscussionsRssLink" title="New threads and posts" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2flittlewikiplugins">Discussions</a>
+                </li>
+            
+			</div>
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_IssueTrackerPanel">
+				
+                <li>    
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_IssueTrackerRssLink" title="New and updated work items" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2flittlewikiplugins">Issue Tracker</a>
+                </li>
+            
+			</div>
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ReleasesPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ReleasesRssLink" title="New and updated releases" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2flittlewikiplugins">Releases</a>
+                </li>
+            
+			</div>  
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ReviewsPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_ReviewsRssLink" title="New and updated reviews" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2flittlewikiplugins">Reviews</a>
+                </li>
+            
+			</div>          
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_SourceControlPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_SourceControlRssLink" title="New check-ins" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2flittlewikiplugins">Source Code</a>
+                </li>
+            
+			</div>
+            <div id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_WikiPanel">
+				
+                <li>
+                    <a id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_RssHoverContentPanel_WikiRssLink" title="New and updated wiki pages" class="ArrowSmall NoUnderline" href="http://littlewikiplugins.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2flittlewikiplugins">Wiki & Documentation</a>
+                </li>
+            
+			</div>
+        </ul>
+           
+
+		</div>
+	</div>  
+</div>
+    
+<div class="StandardPaddingBottom">
+    <span  id="rssHoverLink" onclick="closeHovers();placeHover('rssHoverLink', 'rssHoverDiv');">
+    <span id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_FeedsLabel"><img id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_rssRightArrow" title="RSS Feed" src="http://i3.codeplex.com/Images/v18207/arrow_right_green.gif" align="absmiddle" style="border-width:0px;" />
+        <a href="#" onclick="return false;">RSS</a>
+        <img id="ctl00_ctl00_MasterContent_Tabs_rssFeeds_rssFeedImage" hspace="5" src="http://i3.codeplex.com/Images/v18207/icon_rss.gif" alt="RSS Feed" style="border-width:0px;border: 0px; vertical-align:bottom; " /></span>
+    </span>
+</div>
+    
+        
+
+            </td>
+        </tr>
+    </table>
+</div>
+                                
+    <div id="SubTabs">
+        
+    </div>
+
+                            </div>
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="top" >
+                                        <div id="ctl00_ctl00_MasterContent_ContentPanel" class="Content">
+		
+                                            
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            downloadFile(null, false, false); 
+            
+
+            if ($('#rateRelease').length === 1 && $getQuerystring("RateReview").toLowerCase() === "true") {
+                ShowRatingsLightBox();
+            }
+        });
+
+    
+    </script>
+    <div id="ProjectRelease" class="ItemContainer" style="padding: 0em 0em 0em .63em;">
+        <table class="FullPanel" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="FullWidth AlignTop">
+                    <div id="ContentDiv" class="Content StandardMarginTop">
+
+                    
+                        <div id="ErrorPanel" class="Error" style="clear: both; font-size: 1.25em; display:none;"></div>
+                    
+                        <div class="TitleBar">
+                            <div id="TitleContentDiv" class="TitleContentDiv">
+                                <div class="Title StandardMarginBottom">
+                                    <span id="TitleLabel" class="CodePlexPageHeader">asciimathml 0.21</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+
+<script language="javascript">
+
+    $(function() {
+        $('#BeTheFirstToReviewAnchor').click(function() {
+            ShowRatingsLightBox();
+            return false;
+        });
+    });
+
+</script>
+
+<table cellspacing="0" cellpadding="0" border="0" style="border: 1px solid #c0c0c0; margin-top: 10px;">
+    <tr>
+        <td valign="top" style="border-right: 1px solid #c0c0c0;">
+            <div id="metadataLeft" style="width: 250px;">
+            
+                <div class="metadataRow">
+                    <span class="metadataItemHeader">Rating:</span>
+                
+                    <span id="NoReviewsLabel">No reviews yet</span>
+                    
+                </div>
+                
+                <div class="metadataRow">
+                    <span id="DownloadsCountLabel" class="metadataItemHeader">Downloads:</span>
+                    <span id="DownloadCount">52</span>
+                </div>
+                
+            </div>
+        </td>
+        <td valign="top">
+            <div id="metadataRight" style="width: 250px;">
+                
+                <div class="metadataRow">
+                    <span class="metadataItemHeader">Released:</span>
+                    <span id="ReleaseDateLiteral" class="smartDate dateOnlyNoShort" LocalTimeTicks="1308837600">Jun 23 2011</span>
+                </div>
+                
+                <div class="metadataRow">
+                    <span class="metadataItemHeader">Updated:</span>
+                        <span id="ReleaseModifierDateLiteral" class="smartDate dateOnlyNoShort" LocalTimeTicks="1308863049">Jun 23 2011</span>
+                        by <a id="UpdatedByUserAnchor" href="http://www.codeplex.com/site/users/view/atronoush">atronoush</a>
+                </div>
+                <div class="metadataRow">
+                    <span id="DevStatusLabel" class="metadataItemHeader">Dev status:</span> 
+                    <span id="DevStatusValue">
+                    Stable
+                        <img id="DevStatusHelpImage" style="padding-left:.5em;vertical-align: bottom;" src="http://i3.codeplex.com/Images/v18207/HelpIcon.gif" title="Stable: This software is believed to be ready for use" />
+                    
+                    </span>
+                </div>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    function isPlatformInstallerAgent() {
+        return navigator.userAgent.toLowerCase().indexOf('platform-installer/') != -1;
+    }
+
+    function downloadFile(link, userClick, alreadyLoaded) {
+        if (userClick)
+            return downloadFileImpl(link, null);
+
+        if (!alreadyLoaded) {
+            var downloadId = $getQuerystring("DownloadId");
+            if (!downloadId)
+                downloadId = getIdFromFragment();
+            if (downloadId)
+                return downloadFileImpl(null, downloadId);
+        }
+
+        return false;
+    }
+
+    function downloadFileImpl(link, fromHash) {
+        if (!link && !fromHash)
+            return false;
+
+        var fileId = fromHash;
+        var releaseId = 68867
+        if (link) {
+            fileId = $(link).attr('fileId');
+            clickOncePath = $(link).attr('d:clickOncePath');
+            releaseId = $(link).attr('d:releaseId');
+        } else {
+            clickOncePath = $("a[fileId='" + fileId + "']").attr('d:clickOncePath');
+        }
+
+        $('#downloadFileId').val(fileId);
+        $('#clickOncePath').val('').val(clickOncePath);
+        $('#downloadReleaseId').val(releaseId);
+
+        if (isPlatformInstallerAgent()) {
+            submitDownloadFile();
+            return false;
+        }
+
+        
+        OpenDialog('#LicenseAgreePanel', true, '58em', 'LicensePanel');
+        
+        return false;
+    }
+
+    function getIdFromFragment() {
+        var path = document.location.toString();
+
+        if (path.match('#')) {
+            var fileID = '#' + path.split('#')[1];
+
+            if (fileID.toLowerCase().indexOf("downloadid=") > 0) {
+                fileID = fileID.split("=");
+
+                if (fileID[1].length > 0) {
+                    return fileID[1];
+                }
+            }
+        }
+    }
+
+    function submitDownloadFile() {
+        OpenDialog('#LicenseAgreePanel', false);
+    
+        postDownload();
+    
+    }
+
+    function operaContinue() {
+        OpenDialog('#ClickOnceOperaPanel', false);
+        postDownload();
+    }
+
+    function postDownload() {
+        $('<form method="POST" action="http://littlewikiplugins.codeplex.com/releases/acceptLicense">' +
+          '<input type="hidden" name="fileId" value="' + $('#downloadFileId').val() + '" />' +
+          '<input type="hidden" name="releaseId" value="' + $('#downloadReleaseId').val() + '" />' +
+          '<input type="hidden" name="clickOncePath" value="' + $('#clickOncePath').val() + '" />' +
+          '</form>').appendTo('body').submit().remove();
+    }
+</script>
+<div class="ReleaseNotesDiv">
+    <a id="ReleaseFiles"></a>
+    
+        <div id="recommendedFileDiv">
+            <h3 class="Header"><img alt="download file icon" src="http://i3.codeplex.com/Images/v18207/dl_small.png" />&nbsp;Recommended Download</h3><br /><br />
+            
+
+<div id="FileListItem0" class="FileListItemDiv">
+    <img id="fileImage0" class="FileTypeImage" style="vertical-align:middle;" src="http://i3.codeplex.com/Images/v18207/SourceCode.gif" alt="Source Code" />
+    <a class="FileNameLink" d:releaseId="68867" fileId="252007" href="http://littlewikiplugins.codeplex.com/releases/view/68867#DownloadId=252007" id="fileDownload0" onclick="suppressUnsavedData();return downloadFile(this, true, false)" tabIndex="9">asciimathml 0.21</a>
+    <div>
+        <span id="fileItemInfo0" class="SubText">
+            source code,
+            14K, uploaded
+            <span class="smartDate dateOnly" LocalTimeTicks="1308863048">Jun 23</span>
+             -
+            52 downloads
+        </span>
+    </div>
+</div>
+            <div class="ClearLeft"></div><br />
+        </div>
+        
+</div>
+<div class="ReleaseNotesDiv">
+    <table cellspacing="0" cellpadding="0" border="0" class="FullWidth Fixed">
+        <tr>
+            <td>
+                <div id="ReleaseDescriptionPanel" class="StandardMarginTop Description">
+                    <h3 class="Header">Release Notes</h3>
+                    <div id="ReleaseNotes" class="WikiContent">
+                        <div class="wikidoc"><ul><li> Rev. 0.21: Some bugs fixed, support for the latest version of Dokuwiki (2011-05-25a)</li></ul>
+ *  Date: Thursday, June 23, 2011<br /> *  Note use &lt;acm&gt; tag for inline formatting<br /> *          use &lt;acmath&gt; tag for block formatting</div><div class="ClearBoth"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="ReviewsPanel">
+    <a id="ReviewsAnchor"></a>
+    <div id="ReviewsDivisionHeader" class="DivisionHeader">&nbsp;<b>Reviews</b> for this release</div>
+    
+            <input type="button" id="RateReleaseButton" value="Review this release" class="DefaultButton" style="width:auto;" onclick="location.href='https://www.codeplex.com/site/login?RedirectUrl=http%3a%2f%2flittlewikiplugins.codeplex.com%2freleases%2fview%2f68867%3fRateReview%3dtrue'" />
+        
+    <div id="Reviews">
+    No reviews yet for this release.
+    
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function LicenseDisagree() {
+        allowUnsavedDataAlert();
+        OpenDialog('#LicenseAgreePanel', false);
+        
+    }
+</script>
+<div id="LicenseAgreePanel" style="display: none;" title="To download the file you must agree to the following license.">
+    <div class="Body">
+        <textarea class="CommentBox" cols="20" id="LicenseText" name="LicenseText" readonly="readonly" rows="20">
+Version 2.1, February 1999
+
+Copyright (C) 1991, 1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+[This is the first released version of the Lesser GPL. It also counts as the successor of the GNU Library Public License, version 2, hence the version number 2.1.]
+
+Preamble
+
+The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public Licenses are intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.
+
+This license, the Lesser General Public License, applies to some specially designated software packages--typically libraries--of the Free Software Foundation and other authors who decide to use it. You can use it too, but we suggest you first think carefully about whether this license or the ordinary General Public License is the better strategy to use in any particular case, based on the explanations below.
+
+When we speak of free software, we are referring to freedom of use, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for this service if you wish); that you receive source code or can get it if you want it; that you can change the software and use pieces of it in new free programs; and that you are informed that you can do these things.
+
+To protect your rights, we need to make restrictions that forbid distributors to deny you these rights or to ask you to surrender these rights. These restrictions translate to certain responsibilities for you if you distribute copies of the library or if you modify it.
+
+For example, if you distribute copies of the library, whether gratis or for a fee, you must give the recipients all the rights that we gave you. You must make sure that they, too, receive or can get the source code. If you link other code with the library, you must provide complete object files to the recipients, so that they can relink them with the library after making changes to the library and recompiling it. And you must show them these terms so they know their rights.
+
+We protect your rights with a two-step method: (1) we copyright the library, and (2) we offer you this license, which gives you legal permission to copy, distribute and/or modify the library.
+
+To protect each distributor, we want to make it very clear that there is no warranty for the free library. Also, if the library is modified by someone else and passed on, the recipients should know that what they have is not the original version, so that the original author&#39;s reputation will not be affected by problems that might be introduced by others.
+
+Finally, software patents pose a constant threat to the existence of any free program. We wish to make sure that a company cannot effectively restrict the users of a free program by obtaining a restrictive license from a patent holder. Therefore, we insist that any patent license obtained for a version of the library must be consistent with the full freedom of use specified in this license.
+
+Most GNU software, including some libraries, is covered by the ordinary GNU General Public License. This license, the GNU Lesser General Public License, applies to certain designated libraries, and is quite different from the ordinary General Public License. We use this license for certain libraries in order to permit linking those libraries into non-free programs.
+
+When a program is linked with a library, whether statically or using a shared library, the combination of the two is legally speaking a combined work, a derivative of the original library. The ordinary General Public License therefore permits such linking only if the entire combination fits its criteria of freedom. The Lesser General Public License permits more lax criteria for linking other code with the library.
+
+We call this license the &quot;Lesser&quot; General Public License because it does Less to protect the user&#39;s freedom than the ordinary General Public License. It also provides other free software developers Less of an advantage over competing non-free programs. These disadvantages are the reason we use the ordinary General Public License for many libraries. However, the Lesser license provides advantages in certain special circumstances.
+
+For example, on rare occasions, there may be a special need to encourage the widest possible use of a certain library, so that it becomes a de-facto standard. To achieve this, non-free programs must be allowed to use the library. A more frequent case is that a free library does the same job as widely used non-free libraries. In this case, there is little to gain by limiting the free library to free software only, so we use the Lesser General Public License.
+
+In other cases, permission to use a particular library in non-free programs enables a greater number of people to use a large body of free software. For example, permission to use the GNU C Library in non-free programs enables many more people to use the whole GNU operating system, as well as its variant, the GNU/Linux operating system.
+
+Although the Lesser General Public License is Less protective of the users&#39; freedom, it does ensure that the user of a program that is linked with the Library has the freedom and the wherewithal to run that program using a modified version of the Library.
+
+The precise terms and conditions for copying, distribution and modification follow. Pay close attention to the difference between a &quot;work based on the library&quot; and a &quot;work that uses the library&quot;. The former contains code derived from the library, whereas the latter must be combined with the library in order to run.
+
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. This License Agreement applies to any software library or other program which contains a notice placed by the copyright holder or other authorized party saying it may be distributed under the terms of this Lesser General Public License (also called &quot;this License&quot;). Each licensee is addressed as &quot;you&quot;.
+
+A &quot;library&quot; means a collection of software functions and/or data prepared so as to be conveniently linked with application programs (which use some of those functions and data) to form executables.
+
+The &quot;Library&quot;, below, refers to any such software library or work which has been distributed under these terms. A &quot;work based on the Library&quot; means either the Library or any derivative work under copyright law: that is to say, a work containing the Library or a portion of it, either verbatim or with modifications and/or translated straightforwardly into another language. (Hereinafter, translation is included without limitation in the term &quot;modification&quot;.)
+
+&quot;Source code&quot; for a work means the preferred form of the work for making modifications to it. For a library, complete source code means all the source code for all modules it contains, plus any associated interface definition files, plus the scripts used to control compilation and installation of the library.
+
+Activities other than copying, distribution and modification are not covered by this License; they are outside its scope. The act of running a program using the Library is not restricted, and output from such a program is covered only if its contents constitute a work based on the Library (independent of the use of the Library in a tool for writing it). Whether that is true depends on what the Library does and what the program that uses the Library does.
+
+1. You may copy and distribute verbatim copies of the Library&#39;s complete source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice and disclaimer of warranty; keep intact all the notices that refer to this License and to the absence of any warranty; and distribute a copy of this License along with the Library.
+
+You may charge a fee for the physical act of transferring a copy, and you may at your option offer warranty protection in exchange for a fee.
+
+2. You may modify your copy or copies of the Library or any portion of it, thus forming a work based on the Library, and copy and distribute such modifications or work under the terms of Section 1 above, provided that you also meet all of these conditions:
+
+a) The modified work must itself be a software library.
+
+b) You must cause the files modified to carry prominent notices stating that you changed the files and the date of any change.
+
+c) You must cause the whole of the work to be licensed at no charge to all third parties under the terms of this License.
+
+d) If a facility in the modified Library refers to a function or a table of data to be supplied by an application program that uses the facility, other than as an argument passed when the facility is invoked, then you must make a good faith effort to ensure that, in the event an application does not supply such function or table, the facility still operates, and performs whatever part of its purpose remains meaningful.
+
+(For example, a function in a library to compute square roots has a purpose that is entirely well-defined independent of the application. Therefore, Subsection 2d requires that any application-supplied function or table used by this function must be optional: if the application does not supply it, the square root function must still compute square roots.)
+
+These requirements apply to the modified work as a whole. If identifiable sections of that work are not derived from the Library, and can be reasonably considered independent and separate works in themselves, then this License, and its terms, do not apply to those sections when you distribute them as separate works. But when you distribute the same sections as part of a whole which is a work based on the Library, the distribution of the whole must be on the terms of this License, whose permissions for other licensees extend to the entire whole, and thus to each and every part regardless of who wrote it.
+
+Thus, it is not the intent of this section to claim rights or contest your rights to work written entirely by you; rather, the intent is to exercise the right to control the distribution of derivative or collective works based on the Library.
+
+In addition, mere aggregation of another work not based on the Library with the Library (or with a work based on the Library) on a volume of a storage or distribution medium does not bring the other work under the scope of this License. 
+
+3. You may opt to apply the terms of the ordinary GNU General Public License instead of this License to a given copy of the Library. To do this, you must alter all the notices that refer to this License, so that they refer to the ordinary GNU General Public License, version 2, instead of to this License. (If a newer version than version 2 of the ordinary GNU General Public License has appeared, then you can specify that version instead if you wish.) Do not make any other change in these notices.
+
+Once this change is made in a given copy, it is irreversible for that copy, so the ordinary GNU General Public License applies to all subsequent copies and derivative works made from that copy.
+
+This option is useful when you wish to copy part of the code of the Library into a program that is not a library.
+
+4. You may copy and distribute the Library (or a portion or derivative of it, under Section 2) in object code or executable form under the terms of Sections 1 and 2 above provided that you accompany it with the complete corresponding machine-readable source code, which must be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange.
+
+If distribution of object code is made by offering access to copy from a designated place, then offering equivalent access to copy the source code from the same place satisfies the requirement to distribute the source code, even though third parties are not compelled to copy the source along with the object code.
+
+5. A program that contains no derivative of any portion of the Library, but is designed to work with the Library by being compiled or linked with it, is called a &quot;work that uses the Library&quot;. Such a work, in isolation, is not a derivative work of the Library, and therefore falls outside the scope of this License.
+
+However, linking a &quot;work that uses the Library&quot; with the Library creates an executable that is a derivative of the Library (because it contains portions of the Library), rather than a &quot;work that uses the library&quot;. The executable is therefore covered by this License. Section 6 states terms for distribution of such executables.
+
+When a &quot;work that uses the Library&quot; uses material from a header file that is part of the Library, the object code for the work may be a derivative work of the Library even though the source code is not. Whether this is true is especially significant if the work can be linked without the Library, or if the work is itself a library. The threshold for this to be true is not precisely defined by law.
+
+If such an object file uses only numerical parameters, data structure layouts and accessors, and small macros and small inline functions (ten lines or less in length), then the use of the object file is unrestricted, regardless of whether it is legally a derivative work. (Executables containing this object code plus portions of the Library will still fall under Section 6.)
+
+Otherwise, if the work is a derivative of the Library, you may distribute the object code for the work under the terms of Section 6. Any executables containing that work also fall under Section 6, whether or not they are linked directly with the Library itself.
+
+6. As an exception to the Sections above, you may also combine or link a &quot;work that uses the Library&quot; with the Library to produce a work containing portions of the Library, and distribute that work under terms of your choice, provided that the terms permit modification of the work for the customer&#39;s own use and reverse engineering for debugging such modifications.
+
+You must give prominent notice with each copy of the work that the Library is used in it and that the Library and its use are covered by this License. You must supply a copy of this License. If the work during execution displays copyright notices, you must include the copyright notice for the Library among them, as well as a reference directing the user to the copy of this License. Also, you must do one of these things:
+
+a) Accompany the work with the complete corresponding machine-readable source code for the Library including whatever changes were used in the work (which must be distributed under Sections 1 and 2 above); and, if the work is an executable linked with the Library, with the complete machine-readable &quot;work that uses the Library&quot;, as object code and/or source code, so that the user can modify the Library and then relink to produce a modified executable containing the modified Library. (It is understood that the user who changes the contents of definitions files in the Library will not necessarily be able to recompile the application to use the modified definitions.)
+
+b) Use a suitable shared library mechanism for linking with the Library. A suitable mechanism is one that (1) uses at run time a copy of the library already present on the user&#39;s computer system, rather than copying library functions into the executable, and (2) will operate properly with a modified version of the library, if the user installs one, as long as the modified version is interface-compatible with the version that the work was made with.
+
+c) Accompany the work with a written offer, valid for at least three years, to give the same user the materials specified in Subsection 6a, above, for a charge no more than the cost of performing this distribution.
+
+d) If distribution of the work is made by offering access to copy from a designated place, offer equivalent access to copy the above specified materials from the same place.
+
+e) Verify that the user has already received a copy of these materials or that you have already sent this user a copy.
+
+For an executable, the required form of the &quot;work that uses the Library&quot; must include any data and utility programs needed for reproducing the executable from it. However, as a special exception, the materials to be distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable.
+
+It may happen that this requirement contradicts the license restrictions of other proprietary libraries that do not normally accompany the operating system. Such a contradiction means you cannot use both them and the Library together in an executable that you distribute.
+
+7. You may place library facilities that are a work based on the Library side-by-side in a single library together with other library facilities not covered by this License, and distribute such a combined library, provided that the separate distribution of the work based on the Library and of the other library facilities is otherwise permitted, and provided that you do these two things:
+
+a) Accompany the combined library with a copy of the same work based on the Library, uncombined with any other library facilities. This must be distributed under the terms of the Sections above.
+
+b) Give prominent notice with the combined library of the fact that part of it is a work based on the Library, and explaining where to find the accompanying uncombined form of the same work.
+
+8. You may not copy, modify, sublicense, link with, or distribute the Library except as expressly provided under this License. Any attempt otherwise to copy, modify, sublicense, link with, or distribute the Library is void, and will automatically terminate your rights under this License. However, parties who have received copies, or rights, from you under this License will not have their licenses terminated so long as such parties remain in full compliance.
+
+9. You are not required to accept this License, since you have not signed it. However, nothing else grants you permission to modify or distribute the Library or its derivative works. These actions are prohibited by law if you do not accept this License. Therefore, by modifying or distributing the Library (or any work based on the Library), you indicate your acceptance of this License to do so, and all its terms and conditions for copying, distributing or modifying the Library or works based on it.
+
+10. Each time you redistribute the Library (or any work based on the Library), the recipient automatically receives a license from the original licensor to copy, distribute, link with or modify the Library subject to these terms and conditions. You may not impose any further restrictions on the recipients&#39; exercise of the rights granted herein. You are not responsible for enforcing compliance by third parties with this License.
+
+11. If, as a consequence of a court judgment or allegation of patent infringement or for any other reason (not limited to patent issues), conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot distribute so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not distribute the Library at all. For example, if a patent license would not permit royalty-free redistribution of the Library by all those who receive copies directly or indirectly through you, then the only way you could satisfy both it and this License would be to refrain entirely from distribution of the Library.
+
+If any portion of this section is held invalid or unenforceable under any particular circumstance, the balance of the section is intended to apply, and the section as a whole is intended to apply in other circumstances.
+
+It is not the purpose of this section to induce you to infringe any patents or other property right claims or to contest validity of any such claims; this section has the sole purpose of protecting the integrity of the free software distribution system which is implemented by public license practices. Many people have made generous contributions to the wide range of software distributed through that system in reliance on consistent application of that system; it is up to the author/donor to decide if he or she is willing to distribute software through any other system and a licensee cannot impose that choice.
+
+This section is intended to make thoroughly clear what is believed to be a consequence of the rest of this License.
+
+12. If the distribution and/or use of the Library is restricted in certain countries either by patents or by copyrighted interfaces, the original copyright holder who places the Library under this License may add an explicit geographical distribution limitation excluding those countries, so that distribution is permitted only in or among countries not thus excluded. In such case, this License incorporates the limitation as if written in the body of this License.
+
+13. The Free Software Foundation may publish revised and/or new versions of the Lesser General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Library specifies a version number of this License which applies to it and &quot;any later version&quot;, you have the option of following the terms and conditions either of that version or of any later version published by the Free Software Foundation. If the Library does not specify a license version number, you may choose any version ever published by the Free Software Foundation.
+
+14. If you wish to incorporate parts of the Library into other free programs whose distribution conditions are incompatible with these, write to the author to ask for permission. For software which is copyrighted by the Free Software Foundation, write to the Free Software Foundation; we sometimes make exceptions for this. Our decision will be guided by the two goals of preserving the free status of all derivatives of our free software and of promoting the sharing and reuse of software generally.
+
+NO WARRANTY
+
+15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE LIBRARY &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE LIBRARY IS WITH YOU. SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE LIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</textarea>
+        <input type="hidden" id="downloadFileId" />
+        <input type="hidden" id="downloadReleaseId" />
+        <input type="hidden" id="clickOncePath" />
+    </div>
+    <div class="Buttons">
+        <input type="button" id="AgreeButton" class="DefaultButton" onclick="submitDownloadFile();allowUnsavedDataAlert();" value="I Agree" />
+        <input type="button" id="DisagreeButton" class="Button" onclick="LicenseDisagree();" value="I Disagree" />
+    </div>
+</div>
+<div id="ClickOnceOperaPanel" style="display: none;" title="Opera does not support ClickOnce">
+    <div class="Body">
+        To install this application, save it and then open it.  Opening it directly from Opera will not work correctly.
+    </div>
+    <div class="Buttons">
+        <input type="button" class="Button" onclick="operaContinue();" value="Ok" />
+    </div>
+</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+                                        
+	</div>
+                                    </td>
+                                    <td id="ctl00_ctl00_MasterContent_RightSideBarCell" valign="top" width="15%">
+                                        <div id="ctl00_ctl00_MasterContent_RightSideBarPanel" class="StandardPadding SideBar RightSideBar GradientSideBar">
+		
+                                            
+    
+<script type="text/javascript">
+    function toggleFavoriteProject() {
+        
+            location.href = 'https://www.codeplex.com/site/login?RedirectUrl=http%3a%2f%2flittlewikiplugins.codeplex.com%2f'
+        
+    }
+</script>
+
+<div class="ContentPanelBox SideBarControl"><div class="Content">
+    <div id="favoriteProjectContainer">
+
+<img id="favoriteProject" src="http://i3.codeplex.com/Images/v18207/favorite-star-off.gif" onclick="toggleFavoriteProject();return false;" style="cursor:pointer;vertical-align:middle;" />
+    
+
+    <a href="http://littlewikiplugins.codeplex.com/team/view">0 people</a> are following this project
+
+
+(<a id="followLink" href="#" onclick="toggleFavoriteProject();return false;" class="followLink">follow</a>)</div>
+</div></div>
+
+<script type="text/javascript">
+    function toggleView(link) {
+        setReleaseClasses(['#releasedTypeLink', '#plannedTypeLink', '#hiddenTypeLink']);
+        hideReleaseDivs(['#releasedList', '#plannedList', '#hiddenList']);
+        var jLink = $(link);
+        jLink.addClass('ProjectReleaseHeaderViewSelectedLink');
+        $('#' + jLink.attr('d:associatedDiv')).show();
+    }
+    function hideReleaseDivs(args) {
+        for (i = 0; i < args.length; i++)
+            $(args[i]).hide();
+    }
+    function setReleaseClasses(args) {
+        for (i = 0; i < args.length; i++)
+            $(args[i]).removeClass('ProjectReleaseHeaderViewSelectedLink').addClass('ProjectReleaseHeaderViewLink');
+    }
+</script>
+
+<div class="ContentPanelBox SideBarControl"><div class="Content">
+    <div class="Header StandardPaddingBottom">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td valign="top">
+                    <h2><span class="ProjectReleasesHeaderLabel">Other Downloads</span></h2>
+                </td>
+                <td valign="bottom" align="right">
+                    <div id="HeaderLinksPanel" class="ProjectReleasesHeaderViewLinks">
+                        <a id="releasedTypeLink" href="#" onclick="toggleView(this);return false;" class="ProjectReleaseHeaderViewSelectedLink" d:associatedDiv="releasedList">Released</a> |
+                        <a id="plannedTypeLink" href="#" onclick="toggleView(this);return false;" class="ProjectReleaseHeaderViewLink" d:associatedDiv="plannedList">Planned</a>
+                        
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ProjectReleasesSidebarPanel" class="ProjectReleasesSidebar">
+        <div id="ReleasesListDiv" class="Scrollable">
+            <div id="releasedList" >
+            
+<table cellpadding="0" cellspacing="0" width="100%">
+
+    <tr>
+        <td class="DefaultCellIcon">
+            
+            <img id="DefaultReleaseImage" src="http://i3.codeplex.com/Images/v18207/defaultReleaseStar.gif" title="Recommended Release" />
+            
+        </td>
+        <td class="ReleaseCell ">
+            <a id="ReleaseLinkStable0" 
+               class="ReleaseLink DefaultRelease" 
+               title="Recommended Release: asciisvg-0.2"
+                
+                href="http://littlewikiplugins.codeplex.com/releases/view/68871" 
+               >asciisvg-0<wbr></wbr>.2</a>
+            <div>
+                <span id="releaseListReleaseDateStable0" class="smartDate dateOnlyNoShort" LocalTimeTicks="1308837600">Jun 23 2011</span>, 
+                Stable
+            </div>
+            <div>
+                
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="DefaultCellIcon">
+            
+            <img id="DefaultReleaseImage" src="http://i3.codeplex.com/Images/v18207/defaultReleaseStar.gif" title="Recommended Release" />
+            
+        </td>
+        <td class="ReleaseCell AlternateBackground">
+            <a id="ReleaseLinkStable1" 
+               class="SelectedRelease" 
+               title="Recommended Release: asciimathml&#32;0.21"
+               >asciimathm<wbr></wbr>l 0.21</a>
+            <div>
+                <span id="releaseListReleaseDateStable1" class="smartDate dateOnlyNoShort" LocalTimeTicks="1308837600">Jun 23 2011</span>, 
+                Stable
+            </div>
+            <div>
+                
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="DefaultCellIcon">
+            
+        </td>
+        <td class="ReleaseCell ">
+            <a id="ReleaseLinkStable2" 
+               class="ReleaseLink" 
+               title="asciimathml-dokuwiki"
+                
+                href="http://littlewikiplugins.codeplex.com/releases/view/68415" 
+               >asciimathm<wbr></wbr>l-dokuwiki</a>
+            <div>
+                <span id="releaseListReleaseDateStable2" class="smartDate dateOnlyNoShort" LocalTimeTicks="1308232800">Jun 16 2011</span>, 
+                Stable
+            </div>
+            <div>
+                
+            </div>
+        </td>
+    </tr>
+
+</table>    
+
+            </div>
+            <div id="plannedList" style="display:none;">
+            
+<div style="text-align:center;">
+    <span id="NoReleaseErrorLabelPlanning" class="NoReleaseErrorLabel">There are no Planned releases for this project.</span>
+</div>
+
+            </div>
+            
+        </div>
+    </div>
+</div></div>
+<script type="text/javascript">
+    function saveSubscriptionDataDirectly(type) {
+        return saveSubscriptionDataCore(type, false);
+    }
+
+    function saveSubscriptionData() {
+        closeSubscriptionDialog();
+
+        var type = $('input[name=EmailSubscriptionTypeList]:checked').val();
+        if (type === '')
+            return false;
+        var removeIndividual = $('input[name=StopNotificationsCheckBox]:checked').val();
+        if (removeIndividual === undefined)
+            removeIndividual = false;
+        $('#subscriptionSettings').remove();
+        return saveSubscriptionDataCore(type, removeIndividual);
+    }
+
+    function saveSubscriptionDataCore(type, removeIndividual) {
+
+        var isSubscribed = $('#SubscribeCheckBox').is(':checked') && $('#SubscribeCheckBox').is(':enabled');
+        CodePlex.UpdateProgress.displayPanelAndDisableControls('Saving...');
+        $('#subscriptionContent').load('http://littlewikiplugins.codeplex.com/subscriptions/Release/save',
+                                       { isIndividualSubscribed: isSubscribed, deliveryStatus: type, displayType: 'Full', removeIndividualSubscriptions: removeIndividual },
+                                       function () { CodePlex.UpdateProgress.hide(); });
+        if (type === '1' || type === '2') {
+            $('#unsubscribeSection').show();
+        }
+        else {
+            $('#unsubscribeSection').hide();
+            $('#stopNotificationsDiv').hide();
+        }
+
+        return false;
+    }
+
+    function saveIndividualSubscription(type) {
+
+        CodePlex.UpdateProgress.displayPanelAndDisableControls('Saving...');
+        $('#subscriptionContent').load('',
+                                       { deliveryStatus: type },
+                                       function () { CodePlex.UpdateProgress.hide(); });
+        return false;
+    }
+
+    function showSubscriptionSelection() {
+        OpenDialog('#subscriptionSettings', true, '37em');
+        return false;
+    }
+
+    function closeSubscriptionDialog() {
+        OpenDialog('#subscriptionSettings', false);
+        return false;
+    }
+
+    function showStopNotifications() {
+        $('#stopNotificationsDiv').hide();
+        $('#StopNotificationsCheckBox').attr('checked', false);
+    }
+
+    var currentToolTipHeight = null;
+
+    function showUnsubscribeToolTip() {
+      if (currentToolTipHeight == null) { currentToolTipHeight = $('#unsubscribeToolTip').height()+30 };
+      var toolTip = $('#unsubscribeToolTipImage');
+
+      $('#unsubscribeToolTip').dialog('destroy');
+      $('#unsubscribeToolTip').dialog({ 
+        height: currentToolTipHeight, 
+        width: 275, 
+        position: [toolTip.offset().left-$(window).scrollLeft()+10, toolTip.offset().top-$(window).scrollTop()+10],
+        dialogClass: 'tooltip',
+        open: function() { $('#unsubscribeToolTip').show(); } 
+      });
+
+    }
+
+    function hideUnsubscribeToolTip() {
+      $('#unsubscribeToolTip').dialog('close');
+    }
+</script>
+
+<div id="subscriptionContent">
+    
+
+<div id="EmptyNotificationsContainer"></div>
+<div class="ContentPanelBox SideBarControl"><div class="Content">
+        <div id="IssueNotification">
+            <div class="Header StandardPaddingBottom">
+                <div class="NoWrap FixedLayoutRoundPanelHeaderTemplatePadding">
+                    <img src="http://i3.codeplex.com/Images/v18207/small-envelope.gif" />
+                    <span id="SubscriptionTitleLabel" class="NoWrap Selected AlignTop">Release Notification</span>
+                </div>
+            </div>
+            <div id="SubscriptionMessage">
+                <a id="subscriptionSignIn" href="https://www.codeplex.com/site/login?RedirectUrl=http%3a%2f%2flittlewikiplugins.codeplex.com%2freleases%2fview%2f68867">Sign in</a> to display notification settings.
+            </div>
+        </div>
+    </div></div>
+<div id="subscriptionSettings" class="ModalDialog" style="display:none; width: 250px;"> 
+    <div class="ModalDialogHeader">
+        <div class="ModalDialogHeaderIcon">
+            <img src="http://i3.codeplex.com/Images/v18207/envelope.png" />
+        </div>
+        <div class="ModalDialogHeaderText">
+            <div class="ModalDialogHeaderTitle"></div>
+            <div class="ModalDialogHeaderSubText"></div>
+        </div>
+    </div>
+    <div class="ModalDialogContent">
+        <div class="ModalDialogContentBody">
+            <div style="margin-top: 2px;">Email me <span id="changeEmailAddressLink"><a href="/site/users/update?FocusElement=EmailAddressForChange">(change e-mail address)</a></span></div>
+            <div style="margin-top: 2px;"><input type="radio" id="EmailSubscription_EachNewIssue" name="EmailSubscriptionTypeList" value="1" onclick="$('#stopNotificationsDiv').hide()"  /><label for="EmailSubscription_EachNewIssue"></label></div>
+            <div style="margin-top: 2px;"><input type="radio" id="EmailSubscription_DailyDigest" name="EmailSubscriptionTypeList" value="2" onclick="$('#stopNotificationsDiv').hide()"  /><label for="EmailSubscription_DailyDigest"></label></div>
+            <div id="unsubscribeSection" style="display:none;">
+                <input type="radio" id="EmailSubscription_Unsubscribe" name="EmailSubscriptionTypeList" value="0" onclick="$('#stopNotificationsDiv').show()" checked="checked" /><label for="EmailSubscription_Unsubscribe">Unsubscribe</label>
+            </div>
+
+            <div id="stopNotificationsDiv" style="display:none;overflow:hidden;width:330px;margin-top:4px;" class="EmailSubscriptionCheck">
+                <div style="float: left; width:24px;">
+                <input id="StopNotificationsCheckBox" name="StopNotificationsCheckBox" type="checkbox" value="true" /><input name="StopNotificationsCheckBox" type="hidden" value="false" />
+                </div>
+                <div style="float: left; width: 300px;">
+                <label for="StopNotificationsCheckBox">
+                    Also stop notifications for <i>individual</i> issue(s) I subscribed to.
+                    <img id="unsubscribeToolTipImage" src="http://i3.codeplex.com/Images/v18207/helpicon.gif" onmouseover="showUnsubscribeToolTip()" onmouseout="hideUnsubscribeToolTip()" />
+                </label>
+                </div>
+                <div id="unsubscribeToolTip" style="display: none;">
+                
+                </div>
+            </div>
+        </div>
+        <div class="ModalDialogContentButtons">
+            <table id="NearlyUselessButtonHoldingTable">
+                <tr>
+                    <td> 
+                        <input id="SaveButton" type="button" value="Save" class="DefaultButton" onclick="saveSubscriptionData();" />
+                    </td>
+                    <td>
+                        <a id="subscriptionDialogCancelButton" href="#" onclick="return closeSubscriptionDialog()">Cancel</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" name="SelectedSubscriptionItem" value="0" />
+
+</div>
+                                        
+	</div>
+                                    </td>
+	
+                                </tr>
+                            </table>
+                        
+</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+                    </div>
+                </div>
+                <div id="UpdateProgressPanel" class="UpdateProgress">
+                    <span id="UpdateProgressText" class="UpdateProgressText">Updating...</span>
+                </div>
+                <div id="Analytics" style="width: 70%">
+                    <script src="/site/library/svy/broker.js" type="text/javascript"></script>
+                    <img id="ctl00_ctl00_BlankImage" onload="self.logoImageLoaded=true" src="http://i3.codeplex.com/Images/v18207/blank.png" style="height:0px;width:0px;border-width:0px;" />
+                    <script language="javascript" type="text/javascript">
+                        var date = new Date();
+                        var timezoneOffset = date.getTimezoneOffset() / 60 * -1;
+                        var timezoneOffsetCookie = getCookie("TimezoneOffset");
+                        var firstTimeSetTimezoneCookie = false;
+
+                        if (timezoneOffsetCookie == null || timezoneOffsetCookie != timezoneOffset) {
+                            firstTimeSetTimezoneCookie = true;
+                            document.cookie = "TimezoneOffset=" + timezoneOffset + '; domain=.codeplex.com';
+                        }
+                    </script>
+                    
+                    
+                        <noscript><a href="http://www.omniture.com" title="Web Analytics">
+                            <img src="http://msstonojstemp.112.2O7.net/b/ss/msstonojstemp/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" />
+                        </a></noscript>
+                    
+       
+                </div>
+            </td>
+        </tr>
+        <tr valign="bottom">
+            <td>
+                <div id="CanvasFooter">
+                    © 2006-2011 Microsoft
+                    <span class="VerticalBar">|</span>
+                    <a href='http://www.codeplex.com/site/help'>Get Help</a>
+                    <span class="VerticalBar">|</span>
+                    <a href='/site/legal/privacy'>Privacy Statement</a>
+                    <span class="VerticalBar">|</span>
+                    <a href='http://www.codeplex.com/site/legal/terms'>Terms of Use</a>
+                    <span class="VerticalBar">|</span>
+                    <a href='http://www.codeplex.com/site/legal/conduct'>Code of Conduct</a>
+                    <span class="VerticalBar">|</span>
+                    <a href="http://www.lakequincy.com" target="_blank">Advertise With Us</a>
+                    <span class="VerticalBar">|</span>
+                    Version 2011.9.13.18207
+                </div>
+            </td>
+        </tr>
+    </table>
+     </form>
+</body>
+</html>

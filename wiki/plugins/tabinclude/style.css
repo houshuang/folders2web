@@ -1,0 +1,62 @@
+div.dokuwiki div.pl_ti{
+}
+/**
+ * Container
+ */
+div.dokuwiki div.pl_ti div.tabcontainer{
+  width:99%;
+}
+
+/**
+ * Tabs
+ */
+div.dokuwiki div.pl_ti div.tabcontainer div.tabs{
+  border-top:  solid 1px #aaa;
+  border-left: solid 1px #aaa;
+  border-right:solid 2px #aaa;
+  padding:5px;
+  margin-left:10px;
+  float:left;
+  font-size:90%;
+  cursor:pointer;
+  background-color:#EEF;
+}
+div.dokuwiki div.pl_ti div.tabcontainer div.tabs:hover{
+  background-color:#69F;
+  color:#FFF;
+}
+
+div.dokuwiki div.pl_ti div.container{
+  border-top:  solid 1px #aaa;
+  border-left: solid 1px #aaa;
+  border-right:solid 2px #aaa;
+  border-bottom:solid 2px #aaa;
+}
+/**
+ * Including content
+ */
+div.dokuwiki div.pl_ti div#ti_content{
+  overflow:auto;
+  padding:0 10px 10px 10px;
+}
+/**
+ * AJAX loading
+ */
+div.dokuwiki div.pl_ti div#ti_loading{
+  background:url('img/loading.gif') no-repeat;
+  padding-left:20px;
+  display:none;
+}
+/**
+ * Page name if allowdebug is set true
+ */
+div.dokuwiki div.pl_ti div.ti_source{
+  float:right;
+  clear:both;
+  padding:2px;
+}
+div.dokuwiki div.pl_ti span.ti_source_page{
+  font-size:90%;
+  padding-left:15px;
+  background:url('img/page_go.png') no-repeat;
+}

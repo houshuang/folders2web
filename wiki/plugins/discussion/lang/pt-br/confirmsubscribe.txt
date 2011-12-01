@@ -1,0 +1,10 @@
+Olá!
+
+Você se inscreveu nos comentários da página @PAGE@ no wiki @TITLE@.
+
+Para confirmar sua inscrição, por favor acesse este link:
+@SUBSCRIBE@
+
+--
+Este e-mail foi gerado pelo DokuWiki em
+@DOKUWIKIURL@

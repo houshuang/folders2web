@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Autosuggest demo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <style type="text/css">
+     div.Autosuggest {
+         background-color:#fff;
+         border: 1px solid black;
+         display: inline;
+         position: absolute;
+         width: 1px;
+         top:0
+     }
+     div.Autosuggest select {
+         border: 3px solid transparent;
+         background: transparent;
+         margin: -3px;
+         width: 150px;
+     }
+     html>body div.Autosuggest {
+         overflow: hidden;
+         width: auto;
+     }
+     dt {
+         color: #555;
+     }
+     input {
+         width: 200px;
+     } 
+  </style>
+ </head>
+ <body>
+   <h5><a href="http://debugger.ru/projects/browserextensions/dom/autosuggest">BrowserExtensions/DOM/Autosuggest demo</a></h5>
+   <form>
+    <div>
+      <table>
+          <tr>
+              <td valign="top">
+                  Управляющие кнопки, при курсоре в поле ввода:
+                   <dl>
+                       <dt>Ctrl+space</dt>
+                       <dt>Arrow Up</dt>
+                       <dt>Arrow Down</dt>
+                       <dd>Отображение списка подсказок</dd>
+                       <dt>PageUp</dt>
+                       <dt>Pagedown</dt>
+                       <dt>Home</dt>
+                       <dt>End</dt>
+                       <dd>Отображение списка подсказок, если скрыт. При видимом списке - управление перемещением по нему.</dd>
+                       <dt>Esc</dt>
+                       <dd>Скрытие списка, если показан. Удаление введённого текста в противоположном случае.</dd>
+                       <dt>Enter</dt>
+                       <dd>Выбор подсказки, если список показан. Отправка формы на сервер в противоположном случае.</dd>
+                       <dt>Ввод 2 и более латинских букв</dt>
+                       <dd>Отображение списка подсказок, если скрыт. Фильтрация подсказок по введённым буквам.</dd>
+                       <dt>Backspace</dt>
+                       <dd>Отображение списка подсказок, если в поле после удаления остаётся более 2 символов и в списке подсказок есть соответствия.</dd>
+                   </dl>
+              </td>
+              <td valign="top">
+                  Control keys:
+                   <dl>
+                       <dt>Ctrl+space</dt>
+                       <dt>Arrow Up</dt>
+                       <dt>Arrow Down</dt>
+                       <dd>Display suggestions list</dd>
+                       <dt>PageUp</dt>
+                       <dt>Pagedown</dt>
+                       <dt>Home</dt>
+                       <dt>End</dt>
+                       <dd>Display suggestions list, when hidden. Otherwise - contol the list movement.</dd>
+                       <dt>Esc</dt>
+                       <dd>Hide suggestions list, when visible. Delete entered text otherwise.</dd>
+                       <dt>Enter</dt>
+                       <dd>Paste suggestion in the field, when the list is visible. Submit form otherwise.</dd>
+                       <dt>Typing 2+ letters</dt>
+                       <dd>Display suggestions list, when hidden. Filter suggestions.</dd>
+                       <dt>Backspace</dt>
+                       <dd>Display suggestions list, when after deletion 2+ letters are still available and list has the matches.</dd>
+                   </dl>
+              </td>
+          </tr>
+          <tr>
+              <td valign="bottom" width="300px">
+                  <label style="color: blue">Type here: </label><input id="suggest_target" />
+              </td>
+              <td valign="bottom">
+                  Input match: <br />
+                  <select onchange="s.setFilterMatch(this.value)">
+                      <option value="any">at any position</option>
+                      <option value="start" selected="selected">from start</option>
+                      <option value="end">from end</option>
+                      <option value="exact">exact string</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2">Possible matches:<br />
+                  <div id="pos_matches"></div>
+              </td>
+          </tr>
+      </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+     </div>
+   </form>
+   <script src="../helpers.js" type="text/javascript"></script>
+   <script src="../domextensions.js" type="text/javascript"></script>
+   <script src="../objectextensions.js" type="text/javascript"></script>
+   <script src="../arrayextensions.js" type="text/javascript"></script>
+   <script src="../regexpextensions.js" type="text/javascript"></script>
+   <script src="../documentselection.js" type="text/javascript"></script>
+   <script src="../dom/selectbox.js" type="text/javascript"></script>
+   <script src="../dom/autosuggest.js" type="text/javascript"></script>
+   <script type="text/javascript">
+        var s = new Autosuggest('suggest_target')
+           ,suggestions = ['St Petersburg','Moscow','Arkhangelsk','Astrakhan',
+                           'Belgorod','Blagoveschensk','Bratsk','Bryansk',
+                           'Cheboksary','Chelyabinsk','Chita',
+                           'Ekaterinburg','Elista','Gelendzhik','Irkutsk','Izhevsk',
+                           'Kaliningrad','Kaluga','Kazan','Khabarovsk','Kirov','Kislovodsk','Kostroma',
+                           'Krasnodar','Krasnoyarsk','Kursk',
+                           'Magadan','Magnitogorsk','Murmansk',
+                           'Naberezhnye chelny','Nakhodka','Nalchik','Nizhny novgorod','Novosibirsk',
+                           'Omsk','Orel','Orenburg',
+                           'Penza','Perm','Petropavlovsk-kamchatsky','Petrozavodsk','Pskov','Pyatigorsk',
+                           'Rostov-on-don','Ryazan','Samara','Saratov','Smolensk','Sochi','Stavropol','Suzdal',
+                           'Tobolsk','Togliatti','Tuapse','Tula','Tver','Tyumen','Ufa','Ulan-ude','Ulyanovsk',
+                           'Veliky novgorod','Vladimir','Vladivostok','Volgograd','Vologda','Voronezh','Vyborg',
+                           'Yakutsk','Yaroslavl','Yoshkar-ola','Yuzhno-sakhalinsk','Salekhard','Tomsk','Tambov'
+                          ];
+        s.setSuggestions(suggestions);
+        document.getElementById('pos_matches').innerHTML = suggestions.join(", ");
+   </script>
+  </div>
+ </body>
+</html> 

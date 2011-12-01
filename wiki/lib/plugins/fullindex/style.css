@@ -1,0 +1,26 @@
+/* Turn off list triangles */
+div.dokuwiki ul.aqtree3clickable li, #aqNav li { list-style: none; }
+ul.aqtree3clickable li.bullet a {background: url(images/bullet.gif) center left no-repeat; padding-left: 10px;}
+ul.aqtree3clickable a.cat img{cursor:pointer}
+.aqtree3clickable .open, .aqtree3clickable .closed {background-image:none}
+
+div.dokuwiki ul.aqtree3clickable ul{margin-bottom:0}
+
+/* This controls the indent for each sublist */
+ul.aqtree3clickable ul {padding-left: 1em;}
+
+ul.aqtree3clickable li{padding-top: .2em}
+ul.aqtree3clickable ul li{position:relative;border-left:1px solid #666;}
+
+/* Provide space for our own "bullet" inside the link */
+ul.aqtree3clickable li a, ul.aqtree3clickable li span { padding-left: 1px; }
+
+/* Actually show and hide sublists */
+ul.aqtree3clickable li.open ul { display: block; }
+ul.aqtree3clickable li.closed ul { display: none; }
+
+/*navigation*/
+#aqNav {display:inline}
+#aqNav li{display:inline;padding-left:.3em}
+#aqNav li a{text-decoration:none}
+#aqNav li.on a{color:__text__;font-weight:bold;cursor: text}

@@ -1,0 +1,19 @@
+Saluton!
+
+Nova komento estis aldonata al la pagxo @PAGE@ en la vikio @TITLE@.
+
+Dato:   @DATE@
+Nomo:   @NAME@
+URL:    @COMMENTURL@
+
+Komento:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Por malaligxi el cxi tiu pagxo, ensalutu en la vikio kaj musklaku tie:
+@UNSUBSCRIBE@
+
+--
+Cxi tiu mesagxo estis naskita de DokuWiki en
+@DOKUWIKIURL@

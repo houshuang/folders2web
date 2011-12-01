@@ -1,0 +1,8 @@
+base    searchindex
+author  Andreas Gohr
+email   andi@splitbrain.org
+date    2010-1-26
+name    Searchindex Manager
+desc    Allows to rebuild the fulltext search index
+url     http://www.dokuwiki.org/plugin:searchindex
+

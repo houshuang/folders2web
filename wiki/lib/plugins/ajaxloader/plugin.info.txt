@@ -1,0 +1,7 @@
+base   ajaxloader
+author Adrian Lang
+email  lang@cosmocode.de
+date   2009-12-11
+name   ajaxloader plugin
+desc   Simplifies common AJAX-based actions
+url    http://www.dokuwiki.org/plugin:ajaxloader

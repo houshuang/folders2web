@@ -1,0 +1,25 @@
+/*
+Makes the default template display much better with this plugin.
+If using other templates, you may want to make your own adjustments.
+
+This moves the section edit button down onto the same "line" as the header 
+that it belongs to.
+
+Note: Adding the 'body' selector makes these rules more specific, and so 
+ensures that they will augment DokuWiki's 'secedit' css rules. You should 
+be able to override this by adding the 'html' selector to the 'secedit' css 
+rules in your template.
+*/
+
+body div.dokuwiki div.secedit {
+  overflow: visible;
+}
+
+body div.dokuwiki div.secedit input.button {
+  margin-top: 1.25em;
+}
+
+/* Hiding the header will stop Dokuwiki from displaying special content */
+body div.dokuwiki h0 {
+  display: none;
+}

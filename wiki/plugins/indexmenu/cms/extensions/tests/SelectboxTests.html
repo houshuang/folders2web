@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+        <head>
+                <title>Tests for the Selectbox widget</title>
+<!--
+  $Id: ArrayTests.html 130 2006-11-30 20:44:53Z wingedfox $
+  $HeadURL: https://svn.debugger.ru/repos/jslibs/BrowserExtensions/trunk/tests/ArrayTests.html $
+  
+  Automated tests for the Selectbox widget
+  @author Ilya Lebedev <ilya@lebedev.net>
+-->      
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BrowserExtensions/Array extensions tests</title>
+        <link rel="stylesheet" type="text/css" href="../css/jsUnitStyle.css">
+        <script language="JavaScript" type="text/javascript" src="jsUnitCore.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../helpers.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../arrayextensions.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../objectextensions.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../regexpextensions.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../dom/selectbox.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            var sbx1, sbx2,
+                sel1, sel2;
+            function setUp() {
+                inform('setUp()');
+                document.body.innerHTML = '<select id="testselect1" multiple="true">'
+                                         +' <option value="1-1">test1-1</option>'
+                                         +' <option value="1-2" selected="selected">test1-2</option>'
+                                         +' <option value="1-3">test1-3</option>'
+                                         +' <option value="1-4">test1-4</option>'
+                                         +' <option value="1-5" selected="selected">test1-5</option>'
+                                         +'</select>'
+                                         +'<select id="testselect2" multiple="true">'
+                                         +' <option value="2-1">test2-1</option>'
+                                         +' <option value="2-2">test2-2</option>'
+                                         +' <option value="2-3">test2-3</option>'
+                                         +' <option value="2-4">test2-4</option>'
+                                         +' <option value="2-5" selected="selected">test2-5</option>'
+                                         +'</select>';
+                sbx1 = new Selectbox('testselect1');
+                sel1 = document.getElementById('testselect1');
+                sbx2 = new Selectbox('testselect2');
+                sel2 = document.getElementById('testselect2');
+                setUpPageStatus = 'complete';
+            }
+
+            function testSelectboxCreation() {
+                try {
+                    assertNull("Selectbox should produce an exception, when called with non-existent ID", new Selectbox('notexists'));
+                } catch(err) {}
+                assertNotNull("Selectbox should be initialized", sbx1);
+                assertNotNull("Selectbox should be initialized", sbx2);
+
+                assertNotNull("Selectbox should not produce an exception, when called with empty ID", new Selectbox());
+                var so = new Selectbox();
+                assertNotNull("Selectbox should create empty selectbox, when no id is specified.",so.getEl());
+                assertEvaluatesToTrue("Selectbox should set not empty id on the created box",so.getEl());
+            }
+            function testGetters() {
+                assertEquals(".getId() method should return the correct ID", 'testselect1', sbx1.getId()); 
+                assertEquals(".getEl() method should return a reference to the correct selectbox", 
+                             sel1, sbx1.getEl());
+                assertEquals(".getSelectedIndex check", 1, sbx1.getSelectedIndex());
+                assertEquals(".getSelectedIndex check", sel1.selectedIndex, sbx1.getSelectedIndex());
+                assertEquals(".getSelectedIndex check", 4, sbx2.getSelectedIndex());
+                var so = [['test2-5','2-5']];
+                assertEquals(".getSelectedIndex check", sel2.selectedIndex, sbx2.getSelectedIndex());
+                var so = [['test1-2','1-2'],['test1-5','1-5']];
+                assertObjectEquals(".getSelectedOptions check", so, sbx1.getSelectedOptions());
+                var so = ['test1-1','test1-2','test1-3','test1-4','test1-5'];
+                assertObjectEquals(".getOptionsNames check 1", so, sbx1.getOptionsNames());
+                var so = [];
+                assertObjectEquals(".getOptionsNames check 2: partial value mask is not allowed", so, sbx1.getOptionsNames(['-2','-5']));
+                assertObjectEquals(".getOptionsNames check 3: partial value mask is not allowed", so, sbx1.getOptionsNames('-5'));
+                assertObjectEquals(".getOptionsNames check 4: regexps are not supported", so, sbx1.getOptionsNames(/(-2|-5)/));
+                var so = ['test1-2','test1-5'];
+                assertObjectEquals(".getOptionsNames check 5: matches only the whole option value", so, sbx1.getOptionsNames(['1-2','1-5']));
+            }
+            function testSelectboxOptionAddition() {
+                sbx1.addOption('t1','t2');
+                assertEquals("Option will be added immediately",6,sel1.options.length);
+                var so = ['test1-1','test1-2','test1-3','test1-4','test1-5','t1'];
+                assertObjectEquals("Options will not be sorted, if 'sort' options was not set to 'true' or .sort() called explicitly",so,sbx1.getOptionsNames());
+                assertEquals("Added value == 't1' on the 5th position",'t2',sel1.options[5].value);
+                assertEquals("Added text == 't2' on the 5th position",'t1',sel1.options[5].text);
+
+                sbx1.addOption('t5','t6');
+                sbx1.addOption('t3','t4',false,false,true);
+                var so = ['t1','t3','t5','test1-1','test1-2','test1-3','test1-4','test1-5'];
+                assertObjectEquals("All options will be added immediately and in the sorted order",8,sel1.options.length);
+                assertObjectEquals("All options will be added immediately and in the sorted order",so,sbx1.getOptionsNames());
+            }
+            function testAddOption() {
+                assertTrue("Adding scalar values is fine, even if it is evaluates to false", sbx1.addOption(0,0));
+                assertTrue("Adding scalar values is fine, even if it is evaluates to false", sbx1.addOption("",""));
+                assertTrue("Adding scalar values is fine, even if it is evaluates to false", sbx1.addOption("test",0));
+                assertFalse("Adding non-scalar value is prohibited", sbx1.addOption([],{}));
+                assertFalse("Adding non-scalar value is prohibited", sbx1.addOption({},new RegExp()));
+            }
+            function testSelection () {
+                assertEquals("selectMatchingOptions should add new options to the selection and return the number of added options", 1, sbx1.selectMatchingOptions('test1-1','exact'));
+                assertEquals("selectMatchingOptions should not change selection on the matching option", 0, sbx1.selectMatchingOptions('test1-1','exact'));
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Tests for the Array extensions</h1>
+        <p>This page contains tests for the Helpers functions. To see them, take a look at the source.</p>
+        </body>
+</html>

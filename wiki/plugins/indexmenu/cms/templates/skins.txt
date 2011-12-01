@@ -1,0 +1,1 @@
+This is the place for menu skins - server-side scripts, javascript, css, images, etc.

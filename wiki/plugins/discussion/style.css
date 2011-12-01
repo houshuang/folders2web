@@ -1,0 +1,132 @@
+div.dokuwiki div.comment_wrapper {
+  background-color: __background_alt__;
+  margin: 1em; 
+  padding: 0.5em 1em 1.5em 0;
+  clear: both;
+}
+
+div.dokuwiki div.comment_text {
+  padding-top: 0.5em
+}
+
+div.dokuwiki div#discussion__comment_preview {
+  padding: 1em;
+  margin-top: 1em;
+  visibility: hidden;
+}
+
+div.dokuwiki div.comment_preview {
+  padding: 1em;
+  border: 1px dashed __border__;
+}
+
+div.dokuwiki div.comment_form {
+  margin-top: 2em;
+  margin-right: 1em;
+  clear: both;
+}
+
+div.dokuwiki div.comment_form .error {
+  background: #fcc;
+}
+
+div.dokuwiki #discussion__comment_form label input.edit {
+  width: 75%;
+}
+
+div.dokuwiki .comment_head {
+  font-size: 80%;
+  color: __text_neu__;
+  padding-top: 0.5em;
+  margin-top: 1em;
+  clear: both;
+}
+
+div.dokuwiki .comment_head abbr {
+  border-bottom: 0;
+}
+
+div.dokuwiki .comment_head span.author {
+  background: transparent url(images/user.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;
+}
+
+div.dokuwiki .comment_head abbr.published {
+  background: transparent url(images/date.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;
+}
+
+div.dokuwiki .comment_body {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dotted __border__;
+}
+
+div.dokuwiki div.comment_replies {
+}
+
+div.dokuwiki div.comment_subscribe {
+  float: left;
+  display: inline;
+  padding: 0.6em;
+}
+
+div.dokuwiki div.comment_subscribe input {
+  float: left;
+  display: inline;
+}
+
+div.dokuwiki div.comment_subscribe label {
+  float: left;
+  padding-left: 0.8em;
+}
+
+div.dokuwiki input.comment_submit {
+  float: left;
+  display: inline;
+}
+
+div.dokuwiki div.comment_hidden {
+  opacity: 0.5;
+}
+
+div.dokuwiki div.comment_buttons {
+  float: right;
+  font-size: 10px;
+  cursor: pointer;
+  margin-top: -21px;
+  padding-bottom: 1em;
+}
+
+div.dokuwiki div.comment_buttons input.button {
+  border: 1px solid __border__;
+  color: __text__;
+  background-color: __background__;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 0 0 0.5em;
+}
+
+div.dokuwiki div.newthread_form {
+  clear: both;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+div.dokuwiki #discussion__newthread_form input.edit {
+  width: 95%;
+}
+
+div.dokuwiki ul.admin_discussion li.hidden {
+  display: list-item;
+  opacity: 0.5;
+}
+
+div.dokuwiki ul.admin_discussion span.abstract {
+  color: __text_neu__;
+}
+
+div.dokuwiki table.pagelist tr.discussion_status2 a {
+  color: __text_neu__ !important;
+}

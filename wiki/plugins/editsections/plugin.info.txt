@@ -1,0 +1,7 @@
+base   editsections
+author Christophe Drevet
+email  dr4ke@dr4ke.net
+date   2011-04-17
+name   Edit Section Reorganizer
+desc   The “editsections” plugin moves edit section buttons up to the heading they originated from. Configurable for nested (hierarchical) or flat edit sections. Nested edit sections cover the same indentation level as their heading. Please review settings in the configuration page. Original author: Ben Coburn
+url    http://www.dokuwiki.org/plugin:editsections

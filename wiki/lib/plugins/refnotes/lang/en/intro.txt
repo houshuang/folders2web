@@ -1,0 +1,15 @@
+====== RefNotes Configuration ======
+
+On this page you modify the configuration settings used by [[doku>plugin:refnotes|RefNotes plugin]]. There are three sections that group related settings:
+
+  * **General settings**
+    * //Use footnotes syntax// --- if enabled the RefNotes plugin will be used to handle native DokuWiki footnotes along with it's own syntax.
+    * //Enable reference database// --- if enabled the plugin will load predefined notes form the [[doku>plugin:refnotes:refdb|reference database]].
+    * //Reference database namespace// --- DokuWiki namespace for the reference database.
+  * **Namespaces** --- in this section you can specify rendering style for predefined namespaces. For a detailed explanation of each style see the [[doku>plugin:refnotes:style|style reference]].
+  * **Notes** --- this section is used to predefine commonly used notes.
+    * //Inline// --- specifies if the note text should be [[doku>plugin:refnotes:syntax#inline_notes|inlined]].
+
+Settings that are shown on a blue background are the default values. In the //Namespaces// section settings that are shown on a green background are inherited from the parent namespace.
+
+Remember to press the **Save** button on the bottom of this page before leaving otherwise your changes will be lost.

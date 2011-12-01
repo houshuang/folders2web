@@ -1,0 +1,18 @@
+¡Hola!
+
+Se ha añadido un nuevo comentario en la página @PAGE@ en la @TITLE@ wiki.
+
+Fecha: 	@DATE@
+Nombre: @NAME@
+URL:    @COMMENTURL@	
+
+Comentario:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Para quitar tu suscripción de esta página, accede al wiki y pulsa sobre este enlace:
+@UNSUBSCRIBE@
+--
+Este e-mail fue generado por DokuWiki en
+@DOKUWIKIURL@

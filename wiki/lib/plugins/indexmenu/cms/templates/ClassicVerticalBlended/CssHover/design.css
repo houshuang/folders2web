@@ -1,0 +1,54 @@
+ul.CmsListMenuClassicVerticalBlendedCssHover, ul.CmsListMenuClassicVerticalBlendedCssHover ul {
+    background: white;
+    border: 1px solid #9d9da1;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover, ul.CmsListMenuClassicVerticalBlendedCssHover ul, 
+ul.CmsListMenuClassicVerticalBlendedCssHover div.blendIeBugfix {
+    width: 170px;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li {
+    padding: 1px;
+    padding-left: 26px;
+    width: 100%;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li.CmsMenuItemFolder {
+    background: url("images/item_folder.gif") no-repeat; 
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li.CmsMenuItemFolder div.blendIeBugfix {
+    left: 140px;
+    top: 5px;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li.CmsMenuItemFile {
+    background: url("images/item_moz.gif") no-repeat;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li.CmsMenuItemFolder a {
+    background: url("images/sub.gif") right no-repeat;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover li.CmsMenuItemFile a {
+    background-image: none;
+}
+
+ul.CmsListMenuClassicVerticalBlendedCssHover a {
+    padding: 2px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+ul.CmsListMenuClassicVerticalBlendedCssHover a:hover {
+    border-color: gray;
+    background-color: #bbb7c7;
+    color: black;
+}
+
+ul.CmsListMenuClassicVerticalBlended li.CmsMenuItemFolderExpanded ul.FolderOverflowRight {
+   left: -100%;
+}
+ul.CmsListMenuClassicVerticalBlended li.CmsMenuItemFolderExpanded ul.FolderOverflowBottom {
+   top: auto;
+   bottom: 0;
+}

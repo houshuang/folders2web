@@ -1,0 +1,27 @@
+/*
+*  menu font
+*/
+ul.CmsListMenu * {
+        font: 0.9em/1em Arial, Tahoma, Verdana, Helvetica;
+}
+
+/*
+*  Current skin menu definitions
+*/
+ul.CmsListMenu {
+  width: 100%;
+}
+
+ul.CmsListMenu {
+  background: url(images/_select_bg.gif) no-repeat;
+  width: 179px;
+}
+
+/*
+*  Main colors and decorations
+*/
+ul.CmsListMenu a {
+  color: #000;
+  text-decoration: none;
+}
+

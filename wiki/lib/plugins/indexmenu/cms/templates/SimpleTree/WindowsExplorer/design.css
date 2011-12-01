@@ -1,0 +1,25 @@
+/*
+*  Tree menu has "expanded" and "collapsed" states
+*/
+ul.CmsListMenuSimpleTreeWindowsExplorer,
+ul.CmsListMenuSimpleTreeWindowsExplorer a {
+    font-size: 12px;
+    line-height: 18px;
+}
+ul.CmsListMenuSimpleTreeWindowsExplorer ul {
+    padding-left: 8px;
+}
+ul.CmsListMenuSimpleTreeWindowsExplorer li a {
+    padding-left: 19px;
+    padding-bottom: 4px;
+    display: inline;
+}
+ul.CmsListMenuSimpleTreeWindowsExplorer li.CmsMenuItemFolderExpanded a {
+    background: url(i/folderopen.gif) top left no-repeat;
+}
+ul.CmsListMenuSimpleTreeWindowsExplorer li.CmsMenuItemFolderCollapsed a {
+    background: url(i/folder.gif) top left no-repeat;
+}
+ul.CmsListMenuSimpleTreeWindowsExplorer li.CmsMenuItemFile a {
+    background: url(i/page.gif) top left no-repeat;
+}

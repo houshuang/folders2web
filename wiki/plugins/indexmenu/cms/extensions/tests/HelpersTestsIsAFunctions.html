@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+        <head>
+                <title>Tests for the Helper functions</title>
+<!--
+  $Id: HelpersTestsIsAFunctions.html 108 2006-11-15 12:30:32Z wingedfox $
+  $HeadURL: https://svn.debugger.ru/repos/jslibs/BrowserExtensions/tags/BrowserExtensions.001/tests/HelpersTestsIsAFunctions.html $
+  
+  Automated tests for the Helper is* functions
+  @author Ilya Lebedev <ilya@lebedev.net>
+-->      
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BrowserExtensions/Helpers tests</title>
+        <link rel="stylesheet" type="text/css" href="../css/jsUnitStyle.css">
+        <script language="JavaScript" type="text/javascript" src="jsUnitCore.js"></script>
+        <script language="JavaScript" type="text/javascript" src="../helpers.js"></script>
+        <script language="JavaScript" type="text/javascript">
+            function testIsUndefined() {
+                assertTrue("Check for undefined vs JSUNIT_UNDEFINED_VALUE", isUndefined(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for undefined vs an empty array",  isUndefined([]));
+                assertFalse("Check for undefined vs an empty object", isUndefined({}));
+                assertFalse("Check for undefined vs an empty string", isUndefined(""));
+                assertFalse("Check for undefined vs an string with content", isUndefined("test"));
+                assertFalse("Check for undefined vs 0", isUndefined(0));
+                assertFalse("Check for undefined vs 1", isUndefined(1));
+                assertFalse("Check for undefined vs function", isUndefined(function(){}));
+            }
+            function testIsFunction() {
+                assertFalse("Check for Function vs JSUNIT_UNDEFINED_VALUE" ,isFunction(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for Function vs an empty array",  isFunction([]));
+                assertFalse("Check for Function vs an empty object", isFunction({}));
+                assertFalse("Check for Function vs an empty string", isFunction(""));
+                assertFalse("Check for Function vs an string with content", isFunction("test"));
+                assertFalse("Check for Function vs 0", isFunction(0));
+                assertFalse("Check for Function vs 1", isFunction(1));
+                assertTrue("Check for Function vs Function", isFunction(function(){}));
+            }
+            function testIsString() {
+                assertFalse("Check for String vs JSUNIT_UNDEFINED_VALUE" ,isString(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for String vs an empty array",  isString([]));
+                assertFalse("Check for String vs an empty object", isString({}));
+                assertTrue("Check for String vs an empty string", isString(""));
+                assertTrue("Check for String vs an string with content", isString("test"));
+                assertFalse("Check for String vs 0", isString(0));
+                assertFalse("Check for String vs 1", isString(1));
+                assertFalse("Check for String vs Function", isString(function(){}));
+            }
+            function testIsNumber() {
+                assertFalse("Check for Number vs JSUNIT_UNDEFINED_VALUE" ,isNumber(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for Number vs an empty array",  isNumber([]));
+                assertFalse("Check for Number vs an empty object", isNumber({}));
+                assertFalse("Check for Number vs an empty String", isNumber(""));
+                assertFalse("Check for Number vs an String with content", isNumber("test"));
+                assertTrue("Check for Number vs 0", isNumber(0));
+                assertTrue("Check for Number vs 1", isNumber(1));
+                assertFalse("Check for Number vs Function", isNumber(function(){}));
+            }
+            function testIsNumeric() {
+                assertFalse("Check for Numeric (calculable) value vs JSUNIT_UNDEFINED_VALUE" ,isNumeric(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for Numeric (calculable) value vs an empty array",  isNumeric([]));
+                assertFalse("Check for Numeric (calculable) value vs an empty object", isNumeric({}));
+                assertFalse("Check for Numeric (calculable) value vs an empty String", isNumeric(""));
+                assertFalse("Check for Numeric (calculable) value vs an String with content", isNumeric("test"));
+                assertTrue("Check for Numeric (calculable) value vs 0", isNumeric(0));
+                assertTrue("Check for Numeric (calculable) value vs 1", isNumeric(1));
+                assertTrue("Check for Numeric (calculable) value vs Number.MAX_VALUE", isNumeric(Number.MAX_VALUE));
+                assertTrue("Check for Numeric (calculable) value vs Number.MIN_VALUE", isNumeric(Number.MIN_VALUE));
+                assertFalse("Check for Numeric (calculable) value vs Number.NEGATIVE_INFINITY", isNumeric(Number.NEGATIVE_INFINITY));
+                assertFalse("Check for Numeric (calculable) value vs Number.POSITIVE_INFINITY", isNumeric(Number.POSITIVE_INFINITY));
+                assertFalse("Check for Numeric (calculable) value vs Number.NaN", isNumeric(Number.NaN));
+                assertFalse("Check for Numeric (calculable) value vs Function", isNumeric(function(){}));
+            }
+            function testIsArray() {
+                assertFalse("Check for Array vs JSUNIT_UNDEFINED_VALUE" ,isArray(JSUNIT_UNDEFINED_VALUE));
+                assertTrue("Check for Array vs an empty array",  isArray([]));
+                assertTrue("Check for Array vs an array",  isArray([1]));
+                assertFalse("Check for Array vs an empty object", isArray({}));
+                assertFalse("Check for Array vs an empty String", isArray(""));
+                assertFalse("Check for Array vs an String with content", isArray("test"));
+                assertFalse("Check for Array vs 0", isArray(0));
+                assertFalse("Check for Array vs 1", isArray(1));
+                assertFalse("Check for Array vs Function", isArray(function(){}));
+            }
+            function testIsRegExp() {
+                assertFalse("Check for RegExp vs JSUNIT_UNDEFINED_VALUE" ,isRegExp(JSUNIT_UNDEFINED_VALUE));
+                assertFalse("Check for RegExp vs an empty array",  isRegExp([]));
+                assertFalse("Check for RegExp vs an empty object", isRegExp({}));
+                assertFalse("Check for RegExp vs an empty String", isRegExp(""));
+                assertFalse("Check for RegExp vs an String with content", isRegExp("test"));
+                assertFalse("Check for RegExp vs 0", isRegExp(0));
+                assertFalse("Check for RegExp vs 1", isRegExp(1));
+                assertFalse("Check for RegExp vs Function", isRegExp(function(){}));
+                assertTrue("Check for RegExp vs RegExp", isRegExp(new RegExp("/a/")));
+                assertTrue("Check for RegExp vs /regexp/", isRegExp(/a/));
+            }
+            function testIsBoolean() {
+                assertFalse("Check for Boolean vs JSUNIT_UNDEFINED_VALUE" ,isBoolean(JSUNIT_UNDEFINED_VALUE));
+                assertTrue("Check for Boolean vs a true",  isBoolean(true));
+                assertTrue("Check for Boolean vs a false", isBoolean(false));
+                assertFalse("Check for Boolean vs an empty array",  isBoolean([]));
+                assertFalse("Check for Boolean vs an empty object", isBoolean({}));
+                assertFalse("Check for Boolean vs an empty String", isBoolean(""));
+                assertFalse("Check for Boolean vs an String with content", isBoolean("test"));
+                assertFalse("Check for Boolean vs 0", isBoolean(0));
+                assertFalse("Check for Boolean vs 1", isBoolean(1));
+                assertFalse("Check for Boolean vs Function", isBoolean(function(){}));
+                assertFalse("Check for Boolean vs RegExp", isBoolean(new RegExp("/a/")));
+                assertFalse("Check for Boolean vs /regexp/", isBoolean(/a/));
+            }
+            function testIsEmpty() {
+                assertTrue("Check for Empty value vs JSUNIT_UNDEFINED_VALUE" ,isEmpty(JSUNIT_UNDEFINED_VALUE));
+                assertTrue("Check for Empty value vs an empty array",  isEmpty([]));
+                assertFalse("Check for Empty value vs an array with values",  isEmpty([1,2]));
+                assertTrue("Check for Empty value vs an empty object", isEmpty({}));
+                assertFalse("Check for Empty value vs an object with values", isEmpty({'a':'b'}));
+                assertTrue("Check for Empty value vs an empty String", isEmpty(""));
+                assertFalse("Check for Empty value vs an String with spaces", isEmpty("  "));
+                assertFalse("Check for Empty value vs an String with content", isEmpty("test"));
+                assertTrue("Check for Empty value vs 0", isEmpty(0));
+                assertFalse("Check for Empty value vs 1", isEmpty(1));
+                assertFalse("Check for Empty value vs Function", isEmpty(function(){}));
+                assertTrue("Check for Empty value vs empty dynamic RegExp", isEmpty(new RegExp("")));
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Tests for the Helpers functions</h1>
+        <p>This page contains tests for the Helpers functions. To see them, take a look at the source.</p>
+        </body>
+</html>

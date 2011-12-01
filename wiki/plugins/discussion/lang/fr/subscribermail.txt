@@ -1,0 +1,19 @@
+Bonjour!
+
+Un nouveau commentaire a été ajouté à la page @PAGE@ dans le wiki @TITLE@.
+
+Date:   @DATE@
+Nom:    @NAME@
+URL:    @COMMENTURL@
+
+Commentaire:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Pour vous désinscrire de cette page connectez vous au wiki puis cliquez sur ce lien:
+@UNSUBSCRIBE@
+
+--
+Ce mail a été créé par DokuWiki à
+@DOKUWIKIURL@

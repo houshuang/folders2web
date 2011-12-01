@@ -1,0 +1,55 @@
+ul.CmsListMenuTabControlFlatPanel {
+    border: 1px solid #c5c4bd;
+    border-bottom: 423px solid #ece9d8; /* calculated as li.tabBodyContainer.height + a.tabHead.height + ul.tabBody.borderBottomWidth */
+    background: #ece9d8;
+    font-size: 11px;
+    font-family: tahoma, arial, serif;
+    margin: 0 0 0 0;                    /* required to draw the borders and push down next content */
+    padding: 10px 0 0 5px;
+    width: 100%;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderTabControlFlatPanel {
+    background: #ccccbd;
+    margin: 0 2px 0 0;
+    padding: 0;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderTabControlFlatPanel a.tabHead {
+    border: 1px solid #85847d;
+    height: 20px;
+    line-height: 20px;                  /* used to align text vertically */
+    padding: 0 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderExpandedTabControlFlatPanel a.tabHead {
+    background: #ece9d8;
+    border-bottom: 1px solid #ece9d8;   /* hide the bottom border */
+    height: 22px;
+    line-height: 24px;
+    margin-top: -2px;                   /* should match this active state height - inactive state height */
+    overflow: hidden;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderExpandedTabControlFlatPanel a.tabHead:focus {
+    outline: none;
+    -moz-outline: none;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderTabControl ul.tabBody {
+    left: -1px;
+}
+ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderTabControlFlatPanel ul.tabBody {
+    background: #ece9d8;
+    border: 1px solid #85847d;
+    margin: -1px 0 0 0;                 /* top margin should overlap top border width */
+}
+* html ul.CmsListMenuTabControlFlatPanel li.CmsMenuItemFolderTabControlFlatPanel ul.tabBody {
+    z-index: -1;                        /* special for IE, to overlap the border */
+}
+ul.CmsListMenuTabControlFlatPanel ul.tabBody li.tabBodyContainer {
+    border: 1px solid #85847d;
+    float: none;
+    height: 400px;
+    margin: 5px;
+    overflow: auto;
+    padding: 5px;
+    width: auto;
+}

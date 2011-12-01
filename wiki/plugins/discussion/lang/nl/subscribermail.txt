@@ -1,0 +1,19 @@
+Hallo!
+
+Een nieuw commentaar is toegevoegd aan pagina @PAGE@ in de @TITLE@ wiki.
+
+Datum:    @DATE@
+Autheur:  @NAME@
+URL:      @COMMENTURL@	
+
+Commentaar:
+--------------------------------------------------------
+@TEXT@
+--------------------------------------------------------
+
+Om u af te melden voor deze pagina, volg de volgende link:
+@UNSUBSCRIBE@
+
+--
+Deze email is automatisch gegenereerd door DokuWiki:
+@DOKUWIKIURL@

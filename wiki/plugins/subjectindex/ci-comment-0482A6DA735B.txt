@@ -1,0 +1,10 @@
+  *  CHG: changed tag syntax to #<tag>#, e.g. #dev#; #tag is too easily confused with other genuine writing needs
+  
+# Enter comments on this check-in.  Lines beginning with # are ignored.
+# The check-in comment follows wiki formatting rules.
+#
+# tags: trunk
+#
+# EDITED     action/indexer.php
+# EDITED     inc/common.php
+# EDITED     syntax/entry.php

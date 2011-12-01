@@ -1,0 +1,11 @@
+Dobry den,
+
+Byl vytvoren pozadavek zasilani upozorneni na nove komentare na strance @PAGE@ 
+v @TITLE@ wiki.
+
+Pro potvrzeni zasilani upozorneni prosim navstivte nasledujici odkaz
+@SUBSCRIBE@
+
+--
+Tento email byl generovan DokuWiki na
+@DOKUWIKIURL@
