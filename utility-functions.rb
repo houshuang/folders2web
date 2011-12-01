@@ -1,15 +1,13 @@
 # encoding: UTF-8
 # utility functions for researchr
 $:.push(File.dirname($0))
-require 'settings'
-Wikipages_path = "#{Wiki_path}/data/pages"
-Wikimedia_path = "#{Wiki_path}/data/media/pages"
-JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"
 Bibliography_header = "h1. Bibliography\n\n
 Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\n
 Publications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\n"
 Home_path = ENV['HOME']
 Script_path = File.dirname(__FILE__)
+
+require 'settings' if File.exists?("#{Script_path}/settings.rb")
 
 # comment the three next lines to use your own gems, instead of the frozen ones, if you don't have OSX 10.7
 # or there are other errors with incompatible libraries etc
@@ -47,7 +45,13 @@ class File
       path += "*" unless path.index("*")
       Dir[path].select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop
     end
-
+    
+    def replace(path, before, after, newpath = "")
+      a = File.read(path)
+      a.gsub!(before, after)
+      newpath = path if newpath == ""
+      File.write(newpath, a)
+    end
   end
 end
 
