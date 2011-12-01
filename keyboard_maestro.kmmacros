@@ -27,7 +27,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/bin/ruby /Volumes/Home/stian/src/folders2web/dokuwiki.rb add_to_rss</string>
+						<string>/usr/bin/ruby /Users/Stian/src/folders2web/dokuwiki.rb add_to_rss</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -72,20 +72,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -128,7 +127,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/bibdesk.rb linkfile</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb linkfile</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -173,19 +172,18 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -242,7 +240,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/bin/ruby -Ku /Volumes/Home/stian/src/folders2web/convert-text.rb</string>
+						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -320,7 +318,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/bin/ruby -Ku /Volumes/Home/stian/src/folders2web/convert-text.rb onlylist</string>
+						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb onlylist</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -384,7 +382,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/qlmanage-doc2pdf.rb</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/qlmanage-doc2pdf.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -429,20 +427,20 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAF0AAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeK8KRmlu
+					AAAAAAFmAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAASFngKRmlu
 					ZGVyLmFwcAAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAqAx4soodHcAAAAAAAAAAP////8A
+					AAAAAAAAABJVvsoodHcAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADENvcmVTZXJ2
 					aWNlcwAQAAgAAMl5ligAAAARAAgAAMoorLcA
-					AAABAAwCn3ivAp94ogKfeKEAAgA2TWFjaW50
-					b3NoIEhEOlN5c3RlbToATGlicmFyeToAQ29y
-					ZVNlcnZpY2VzOgBGaW5kZXIuYXBwAA4AFgAK
-					AEYAaQBuAGQAZQByAC4AYQBwAHAADwAaAAwA
-					TQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAm
-					U3lzdGVtL0xpYnJhcnkvQ29yZVNlcnZpY2Vz
-					L0ZpbmRlci5hcHAAEwABLwD//wAA
+					AAABAAwAEhZ4AA+15gAPteQAAgAxU1NESG9t
+					ZTpTeXN0ZW06AExpYnJhcnk6AENvcmVTZXJ2
+					aWNlczoARmluZGVyLmFwcAAADgAWAAoARgBp
+					AG4AZABlAHIALgBhAHAAcAAPABAABwBTAFMA
+					RABIAG8AbQBlABIAJlN5c3RlbS9MaWJyYXJ5
+					L0NvcmVTZXJ2aWNlcy9GaW5kZXIuYXBwABMA
+					AS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.apple.finder</string>
@@ -485,7 +483,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/skim.rb screenshots</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/skim-tools.rb screenshot</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -530,19 +528,18 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFGAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4IU2tp
+					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
 					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAA0jmkspuVJ0AAAAAAAAAAP////8A
+					AAAAAAAAAA9aOMq4ME8AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMpujN0A
-					AAABAAQCn3jOAAIAI01hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AFNraW0uYXBwAAAOABIA
-					CABTAGsAaQBtAC4AYQBwAHAADwAaAAwATQBh
-					AGMAaQBuAHQAbwBzAGgAIABIAEQAEgAVQXBw
-					bGljYXRpb25zL1NraW0uYXBwAAATAAEvAP//
-					AAA=
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMq4aI8A
+					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
+					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
+					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
+					cHAAABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>net.sourceforge.skim-app.skim</string>
@@ -585,7 +582,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/bibdesk.rb copy</string>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb copy</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -630,19 +627,18 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -699,7 +695,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -Ku /Volumes/Home/stian/src/folders2web/bibdesk.rb authorlist</string>
+						<string>ruby -Ku /Users/Stian/src/folders2web/bibdesk.rb authorlist</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -758,19 +754,18 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -813,7 +808,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb go</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb go</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -858,20 +853,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -888,106 +882,6 @@
 		</dict>
 		<key>UID</key>
 		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Google Scholar</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>5</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>E0C355D5-C252-4BD2-A75E-5A80E0788D14</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -1038,6 +932,8 @@
 						<real>1</real>
 						<key>Time</key>
 						<string>1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -1158,1395 +1054,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 1</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 1</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>18</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>9C543538-BC7C-4721-B9D6-511764E72231</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 2</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 2</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>19</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>FF212218-B97E-4533-B4D8-C6AEC0F597C1</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 3</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 3</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>20</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>C4AB155E-1569-4D8E-962A-81A9C9770A00</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 4</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 4</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>21</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>CCC6F75B-2245-46EE-90AB-955DFB361B7A</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 5</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>23</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>63308891-0DAE-45A0-9709-635B746B26C7</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 6</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 6</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>22</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>2F1BBF16-DFBA-40FF-8A97-B5AA4B46BEC6</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 7</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 7</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>26</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>3A833976-1512-4AA6-8162-F01B9EE88F83</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/gscholar-y.rb 8</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>GScholar 8</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>28</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>BD2C5B56-11E3-448F-A6D1-82F308227109</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Window</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/imfeelinglucky.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm feeling lucky</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>37</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>BF212A91-5988-475E-B0BB-DAC31B42BE26</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/imfeelinglucky-y.rb 1</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 1</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>18</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>3F89D673-D9C2-4252-8E14-08D1846ABBC2</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/imfeelinglucky-y.rb 2</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 2</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>19</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>D4BA5045-3C30-4384-B49D-10C2813F2EF2</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/imfeelinglucky-y.rb 3</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 3</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>20</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>547ADC86-F56C-48C3-855A-04E3DD6A5C9F</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/imfeelinglucky-y.rb 4</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 4</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>21</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>BF61EB41-4B68-437F-BA77-A8F09DAF1B27</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -2603,7 +1123,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb clip</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb clip</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -2648,20 +1168,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -2718,7 +1237,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/bin/ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb clip_again</string>
+						<string>/usr/bin/ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb clip_again</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -2732,7 +1251,7 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Insert clip again</string>
+				<string>Insert clip to the same page as last time</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -2763,20 +1282,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -2819,7 +1337,7 @@
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb image</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb image</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -2864,20 +1382,19 @@
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -2935,7 +1452,7 @@
 						<string></string>
 						<key>Text</key>
 						<string>declare -x LANG="en_CA.utf-8"
-ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
+ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -2980,20 +1497,19 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -3036,7 +1552,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/local/bin/ruby19 -KU /Volumes/Home/stian/src/folders2web/skim.rb</string>
+						<string>/usr/local/bin/ruby19 -KU /Users/Stian/src/folders2web/skim.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3081,19 +1597,18 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFGAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4IU2tp
+					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
 					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAA0jmkspuVJ0AAAAAAAAAAP////8A
+					AAAAAAAAAA9aOMq4ME8AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMpujN0A
-					AAABAAQCn3jOAAIAI01hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AFNraW0uYXBwAAAOABIA
-					CABTAGsAaQBtAC4AYQBwAHAADwAaAAwATQBh
-					AGMAaQBuAHQAbwBzAGgAIABIAEQAEgAVQXBw
-					bGljYXRpb25zL1NraW0uYXBwAAATAAEvAP//
-					AAA=
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMq4aI8A
+					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
+					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
+					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
+					cHAAABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>net.sourceforge.skim-app.skim</string>
@@ -3122,6 +1637,96 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<key>Actions</key>
 				<array>
 					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>17</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>New task</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>45</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>DDFA7B51-7BCB-465C-83DA-5365948896FA</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Pomodoro</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>Alias</key>
+					<data>
+					AAAAAAFuAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUWTXkg
+					TGl0dGxlIFBvbW9kb3JvLmFwcAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAL3hZcnb0ZoAAAAAAAAAAP////8A
+					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMncCdoA
+					AAABAAQACj7VAAIALFNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBNeSBMaXR0bGUgUG9tb2Rvcm8u
+					YXBwAA4ALgAWAE0AeQAgAEwAaQB0AHQAbABl
+					ACAAUABvAG0AbwBkAG8AcgBvAC4AYQBwAHAA
+					DwAQAAcAUwBTAEQASABvAG0AZQASACNBcHBs
+					aWNhdGlvbnMvTXkgTGl0dGxlIFBvbW9kb3Jv
+					LmFwcAAAEwABLwD//wAA
+					</data>
+					<key>BundleIdentifier</key>
+					<string>com.voltagesoftware.MyLittlePomodoro</string>
+					<key>Creator</key>
+					<integer>1061109567</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>My Little Pomodoro.app</string>
+					<key>NewFile</key>
+					<string>/Applications/My Little Pomodoro.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>3F8BC7EC-2FFB-4A42-A918-6BC55D744F5F</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
 						<key>File</key>
@@ -3136,7 +1741,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/bibdesk.rb open</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb open</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3181,19 +1786,18 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -3236,7 +1840,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/devonthink.rb</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/devonthink.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3281,20 +1885,19 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFuAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4SREVW
+					AAAAAAFeAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUSREVW
 					T050aGluayBQcm8uYXBwAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAA/aQNMpnudwAAAAAAAAAAP////8A
+					AAAAAAAAAL5Xm8rZJ+EAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMpn8hwA
-					AAABAAQCn3jOAAIALU1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AERFVk9OdGhpbmsgUHJv
-					LmFwcAAADgAmABIARABFAFYATwBOAHQAaABp
-					AG4AawAgAFAAcgBvAC4AYQBwAHAADwAaAAwA
-					TQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgAf
-					QXBwbGljYXRpb25zL0RFVk9OdGhpbmsgUHJv
-					LmFwcAAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMrZYCEA
+					AAABAAQACj7VAAIAKFNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBERVZPTnRoaW5rIFByby5hcHAA
+					DgAmABIARABFAFYATwBOAHQAaABpAG4AawAg
+					AFAAcgBvAC4AYQBwAHAADwAQAAcAUwBTAEQA
+					SABvAG0AZQASAB9BcHBsaWNhdGlvbnMvREVW
+					T050aGluayBQcm8uYXBwAAATAAEvAP//AAA=
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.devon-technologies.thinkpro2</string>
@@ -3337,7 +1940,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/bibdesk.rb qlook</string>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb qlook</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3382,19 +1985,18 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -3509,29 +2111,28 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<dict>
 							<key>Alias</key>
 							<data>
-							AAAAAAFQAAIAAQxNYWNp
-							bnRvc2ggSEQAAAAAAAAA
+							AAAAAAFCAAIAAQdTU0RI
+							b21lAAAAAAAAAAAAAAAA
 							AAAAAAAAAADJeU/YSCsA
-							AAKfeM4LQmliRGVzay5h
+							AAAKPtULQmliRGVzay5h
 							cHAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAA
 							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAABIDUeMqd
-							1uwAAAAAAAAAAP////8A
+							AAAAAAAAAAAAAA8WI8qp
+							tOEAAAAAAAAAAP////8A
 							AAkgAAAAAAAAAAAAAAAA
 							AAAADEFwcGxpY2F0aW9u
 							cwAQAAgAAMl5ligAAAAR
-							AAgAAMqeDywAAAABAAQC
-							n3jOAAIAJk1hY2ludG9z
-							aCBIRDpBcHBsaWNhdGlv
-							bnM6AEJpYkRlc2suYXBw
-							AA4AGAALAEIAaQBiAEQA
-							ZQBzAGsALgBhAHAAcAAP
-							ABoADABNAGEAYwBpAG4A
-							dABvAHMAaAAgAEgARAAS
-							ABhBcHBsaWNhdGlvbnMv
-							QmliRGVzay5hcHAAEwAB
-							LwD//wAA
+							AAgAAMqp7SEAAAABAAQA
+							Cj7VAAIAIVNTREhvbWU6
+							QXBwbGljYXRpb25zOgBC
+							aWJEZXNrLmFwcAAADgAY
+							AAsAQgBpAGIARABlAHMA
+							awAuAGEAcABwAA8AEAAH
+							AFMAUwBEAEgAbwBtAGUA
+							EgAYQXBwbGljYXRpb25z
+							L0JpYkRlc2suYXBwABMA
+							AS8A//8AAA==
 							</data>
 							<key>BundleIdentifier</key>
 							<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -3616,20 +2217,19 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -3672,7 +2272,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby /Volumes/Home/stian/src/folders2web/bibdesk-kindle.rb</string>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk-kindle.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3717,19 +2317,18 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFQAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4LQmli
+					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
 					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABIDUeMqd1uwAAAAAAAAAAP////8A
+					AAAAAAAAAA8WI8qptOEAAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqeDywA
-					AAABAAQCn3jOAAIAJk1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEJpYkRlc2suYXBwAA4A
-					GAALAEIAaQBiAEQAZQBzAGsALgBhAHAAcAAP
-					ABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgA
-					RAASABhBcHBsaWNhdGlvbnMvQmliRGVzay5h
-					cHAAEwABLwD//wAA
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMqp7SEA
+					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
+					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
+					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
+					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
@@ -3772,7 +2371,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Volumes/Home/stian/src/folders2web/dokuwiki.rb sbs</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb sbs</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3817,20 +2416,19 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
@@ -3873,7 +2471,7 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 						<key>NewFile</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -Ku /Volumes/Home/stian/src/folders2web/skim-splitpdf.rb</string>
+						<string>ruby -Ku /Users/Stian/src/folders2web/skim-tools.rb splitpdf</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3918,19 +2516,18 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFGAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4IU2tp
+					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
 					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAA0jmkspuVJ0AAAAAAAAAAP////8A
+					AAAAAAAAAA9aOMq4ME8AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMpujN0A
-					AAABAAQCn3jOAAIAI01hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AFNraW0uYXBwAAAOABIA
-					CABTAGsAaQBtAC4AYQBwAHAADwAaAAwATQBh
-					AGMAaQBuAHQAbwBzAGgAIABIAEQAEgAVQXBw
-					bGljYXRpb25zL1NraW0uYXBwAAATAAEvAP//
-					AAA=
+					aW9ucwAQAAgAAMl5ligAAAARAAgAAMq4aI8A
+					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
+					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
+					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
+					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
+					cHAAABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>net.sourceforge.skim-app.skim</string>
@@ -4007,20 +2604,19 @@ ruby -Ku /Volumes/Home/stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<dict>
 					<key>Alias</key>
 					<data>
-					AAAAAAFoAAIAAQxNYWNpbnRvc2ggSEQAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAKfeM4RR29v
+					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
+					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
 					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
 					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAALhXa8mm7k0AAAAAAAAAAP////8A
+					AAAAAAAAAA9i/cmm7k0AAAAAAAAAAP////8A
 					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
 					aW9ucwAQAAgAAMl5ligAAAARAAgAAMmnJo0A
-					AAABAAQCn3jOAAIALE1hY2ludG9zaCBIRDpB
-					cHBsaWNhdGlvbnM6AEdvb2dsZSBDaHJvbWUu
-					YXBwAA4AJAARAEcAbwBvAGcAbABlACAAQwBo
-					AHIAbwBtAGUALgBhAHAAcAAPABoADABNAGEA
-					YwBpAG4AdABvAHMAaAAgAEgARAASAB5BcHBs
-					aWNhdGlvbnMvR29vZ2xlIENocm9tZS5hcHAA
-					EwABLwD//wAA
+					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
+					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
+					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
+					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
+					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
+					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
 					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
