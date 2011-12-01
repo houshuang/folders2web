@@ -11,14 +11,16 @@ include Pashua
 questions = [
   ["Wiki_path","Path to your wiki installation", "/Library/WebServer/Documents/wiki",:directory],
   ["PDF_path","Directory where BibDesk stores the PDFs","#{Home_path}/Documents/Bibdesk",:directory],
-  ["Bibliography","The database file that BibDesk uses (typically called Bibliography.bib)","",:file],
+  ["Bibliography","The database file that BibDesk uses (Bibliography.bib)","",:file],
   ["Downloads_path","Directory where you store your downloads","#{Home_path}/Downloads",:directory],
-  ["Internet_path","URL to your wiki when it's on the server (for example http://reganmian.net/wiki)","http://",:text],
+  ["Internet_path","URL to your wiki on the server (e.g. http://hi.com/wiki)","http://",:text],
   ["Wiki_title","The title of your wiki","My Research Wiki",:text],
   ["Wiki_desc","The description of your wiki (for the RSS feed)","Raw research notes and article annotations",:textbox]
 ]
 
-pash = "text.text=\"Welcome to researchr. This script will create your settings.rb, modify the path in the Keyboard Maestro scripts and set the wikititle. After running this script, move or link the wiki folder to /Library/WebServer/Documents, and turn on web sharing. More instructions here: http://reganmian.net/wiki/researchr:start.\"\n"
+pash = "*.title = researchr
+text.text = Welcome to researchr. This script will create your settings.rb, modify the path in the Keyboard Maestro scripts and set the wikititle. After running this script, move or link the wiki folder to /Library/WebServer/Documents, and turn on web sharing. More instructions here: http://reganmian.net/wiki/researchr:start.
+text.type=text\n"
 
 questions.each do |q|
   case q[3]
@@ -37,6 +39,7 @@ end
 pash << "cancel.type = cancelbutton \ncancel.label = Cancel \ncancel.tooltip = Closes this window without taking action\n" 
 
 answers = pashua_run pash
+exit(0) if answers == {} # Pashua hiccuped
 
 # if cancel
 if answers['cancel'] == "1"
