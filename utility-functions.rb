@@ -2,6 +2,14 @@
 # utility functions for researchr
 $:.push(File.dirname($0))
 require 'settings'
+Wikipages_path = "#{Wiki_path}/data/pages"
+Wikimedia_path = "#{Wiki_path}/data/media/pages"
+JSON_path = "#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp"
+Bibliography_header = "h1. Bibliography\n\n
+Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\n
+Publications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\n"
+Home_path = ENV['HOME']
+Script_path = File.dirname(__FILE__)
 
 # comment the three next lines to use your own gems, instead of the frozen ones, if you don't have OSX 10.7
 # or there are other errors with incompatible libraries etc
@@ -16,7 +24,7 @@ def growl(title,text='')
     text = title
     title = ''
   end
-  `#{Growl_path} -t "#{title}" -m "#{text}"`
+  `#{Script_path}/growlnotify -t "#{title}" -m "#{text}"`
 end
 
 
