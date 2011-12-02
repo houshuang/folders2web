@@ -25,6 +25,9 @@ def growl(title,text='')
   `#{Script_path}/growlnotify -t "#{title}" -m "#{text}"`
 end
 
+def log(text)
+  File.append("#{Script_path}/log.txt",text)
+end
 
 # a few extra file functions
 class File
@@ -37,7 +40,7 @@ class File
 
     # adds File.append - analogous to File.read, writes text to filename
     def append(filename, text)
-      File.open(filename,"a") {|f| f << text}
+      File.open(filename,"a") {|f| f << text + "\n"}
     end
 
     # find the last file added in directory
@@ -103,9 +106,10 @@ def wikipage_selector(title, retfull = false, additional_code = "")
   db.tooltip = Closes this window without taking action" + "\n" + additional_code + "\n"
 
   # insert list of all wiki pages from filesystem into Pashua config
-  Find.find(Wikipages_path) do |path|
+  wpath = "#{Wiki_path}/data/pages/"
+  Find.find(wpath) do |path|
     next unless File.file?(path)
-    fname = path[17..-5].gsub("/",":").gsub("_", " ")
+    fname = path[wpath.size..-5].gsub("/",":").gsub("_", " ")
     idx = fname.index(":")
     config << "cb.option = #{capitalize_word(fname)}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
   end
