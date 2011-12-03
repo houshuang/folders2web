@@ -4,15 +4,19 @@ require 'utility-functions'
 require 'bibtex'
 require 'citeproc'
 require 'find'
-require 'appscript'
 require 'rss/maker'
-include Appscript
 
 # batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
 
-dt = app('BibDesk')
-dt.document.save
+log "Started bibtex-batch on #{Time.now}"
 
+# trigger generating different categories of pages - takes a long time
+authoropt = true
+journalopt = true
+keywordopt = true
+
+# dt = app('BibDesk')
+# dt.document.save
 def pdfpath(citekey)
   if File.exists?("#{PDF_path}/#{citekey.to_s}.pdf")
     return "[[skimx://#{citekey}|PDF]]"
@@ -49,9 +53,9 @@ end
 
 make_rss_feed
 
-b = BibTeX.open(Bibliography)
+b = BibTeX.parse(File.read(Bibliography))
 b.parse_names
-
+log "parsed it"
 out1 = ''
 out2 = ''
 out3 = ''
@@ -59,6 +63,7 @@ out4 = ''
 authors = Hash.new
 json = Hash.new
 keywords = Hash.new
+journals = Hash.new
 
 counter = Hash.new
 counter[:hasref] = 0
@@ -83,6 +88,12 @@ b.each do |item|
       keywords[a] << item.key
     end    
   end
+  if item.respond_to? :journal
+    j = item[:journal].to_s
+    journals[j] = Array.new unless journals[j]
+    journals[j] << item.key
+  end
+  
   cit = CiteProc.process item.to_citeproc, :style => :apa
   year = (defined? item.year) ? item.year.to_s : "n.d."
   if year == "n.d." and cit.match(/\((....)\)/) 
@@ -124,11 +135,15 @@ b.each do |item|
   # end
 
 end
+
+
+
+
 out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\nStatistics: Totally **#{counter[:hasref] + counter[:noref]}** publications, and **#{counter[:hasref]}** publications have their own wikipages. Of these, **#{counter[:images]}** with notes (key ideas) **(N)**, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, and **#{counter[:images]}** with images (imported from Skim) **(I)** and.<html><table>"
 
-dt.document.save
+#dt.document.save
 
-File.open(JSON_path,"w"){|f| f << JSON.fast_generate(json)}
+File.open("#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp","w"){|f| f << JSON.fast_generate(json)}
 
 out << out1 << out2 << out3 << out4 << "</table></html>"
 File.open("#{Wiki_path}/data/pages/bib/bibliography.txt", 'w') {|f| f << out}  
@@ -136,7 +151,7 @@ File.open("#{Wiki_path}/data/pages/bib/bibliography.txt", 'w') {|f| f << out}
 ###############################################
 # generate individual files for each author
 
-
+if authoropt
 authorlisted = Array.new
 authors.each do |axx, pubs|
   out ='' 
@@ -169,16 +184,17 @@ File.open("#{Wiki_path}/data/pages/abib/start.txt","w") do |f|
   f << "h1.List of authors with publications\n\nList of authors with publications. Only includes authors with three or more publications, with full names.\n\n"
   authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
     apage = ''
-    if File.exists?("#{Wikipages_path}/a/#{ax[0]}.txt")
+    if File.exists?("#{Wiki_path}/data/pages/a/#{ax[0]}.txt")
       apage = "[[:a:#{ax[0]}|author page]]"
     end
     f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
   end
 end
-
+end
 ###############################################
 # generate individual files for each keyword
 
+if keywordopt 
 keywordslisted = Array.new
 keywords.each do |keyword, pubs|
   out ='' 
@@ -208,6 +224,51 @@ File.open("#{Wiki_path}/data/pages/kbib/start.txt","w") do |f|
     f << "|[[#{ax[0]}|#{ax[1]}]]|#{ax[2]}|\n"
   end
 end
+end
+###############################################
+# generate individual files for each journal with more than five cits.
+
+if journalopt 
+authorlisted = Array.new
+journals.each do |axx, pubs|
+  out ='' 
+  out1 = ''
+  out2 =''
+  author = axx.strip
+  p pubs, pubs.size 
+  next unless pubs.size > 5
+  # only generates individual author pages for authors with full names. this is because I want to deduplicate author names
+  # when you import bibtex, you get many different spellings etc. 
+  out = "h2. Publications in #{author}\n\n"
+  sort_pubs(pubs).each do |i|
+    item = b[i]
+    cit = CiteProc.process item.to_citeproc, :style => :apa
+    if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
+      out1 << "| [[..:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
+    else
+      out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
+    end
+  end
+
+  out << out1 << out2
+  authorname = clean_pagename(author)
+  authorlisted << [authorname,author,pubs.size]
+  File.open("#{Wiki_path}/data/pages/jbib/#{authorname}.txt", 'w') {|f| f << out}  
+  puts author
+end
+end
+
+File.open("#{Wiki_path}/data/pages/jbib/start.txt","w") do |f|
+  f << "h1.List of journals with publications\n\nList of journals with publications. Only includes journals with five or more publications.\n\n"
+  authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
+    apage = ''
+    if File.exists?("#{Wiki_path}/data/pages/a/#{ax[0]}.txt")
+      apage = "[[:a:#{ax[0]}|author page]]"
+    end
+    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
+  end
+end
+
 
 ###############################################
 # generate file with imported citations missing key ideas
