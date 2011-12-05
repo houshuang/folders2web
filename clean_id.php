@@ -9,11 +9,7 @@ function cleanID($raw_id){
 
     //alternative namespace seperator
     $id = strtr($id,';',':');
-    if($conf['useslash']){
-        $id = strtr($id,'/',':');
-    }else{
         $id = strtr($id,'/',$sepchar);
-    }
 
 $id = utf8_romanize($id);
 $id = utf8_deaccent($id,-1);

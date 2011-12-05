@@ -43,7 +43,21 @@ docu = dt.document.name.get[0][0..-5]
 Citekey = docu
 filename = dt.document.file.get[0].to_s
 `/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{filename}`
-a = File.readlines("#{PDF_path}/#{docu}.txt") 
+
+
+# make sure the metadata page is written
+ensure_refpage(docu)
+
+fname = "#{PDF_path}/#{docu}.txt"
+
+# if no annotations, we're done
+unless File.exists?(fname)
+  growl "Skim did not export any data. Either you have not made any highlights, or there is an error (check the paths in settings.rb). Just creating the ref: page with metadata."
+  `open http://localhost/wiki/ref:#{docu}`
+  exit(0)
+end
+
+File.readlines(fname) 
 
 page = nil
 @out = Array.new
