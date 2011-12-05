@@ -1,6 +1,0 @@
-div.dokuwiki form.ajax_loader {
-    background-image: url('../../images/throbber.gif');
-    width: 16px;
-    height: 16px;
-    display: block;
-}

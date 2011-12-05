@@ -1,1 +1,0 @@
-CompleteMenuSolution.prototype.theme.ClassicVerticalBlended={menuOptions:{'transitions':{'blend':{'start':0,'end':1,'useIeBlendFix':true},'windowborderschecker':{}},'modifiers':['activeontop','blendiebugfix']}};

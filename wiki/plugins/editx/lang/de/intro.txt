@@ -1,5 +1,0 @@
-====== Seitenverwaltung ======
-
-Wenn Sie diese Seite umbenennen oder verschieben wollen klicken sie hier: @LINK@.
-
-====== Diese Seite bearbeiten ======

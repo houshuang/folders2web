@@ -1,4 +1,0 @@
-<?php
-
-$conf['template']    = 'dokuwiki';
-

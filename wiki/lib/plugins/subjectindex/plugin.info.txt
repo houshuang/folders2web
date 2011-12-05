@@ -1,8 +1,0 @@
-base    subjectindex
-author  Symon Bent
-email   hendrybadao@gmail.com
-date    2011-03-26
-name    Subjectindex Plugin
-desc    Creates A-Z subject index pages for your wiki, based in in-place entries in pages.  Rather like structured tagging.  Entry syntax: {{entry>[0/heading/]entry text[|display text]}}.  Subject Index syntax: {{subjectindex>[abstract;border;cols=?;index=?;proper;title]}}. [..] = optional
-url     http://wiki.splitbrain.org/plugin:subjectindex
-version 0.5

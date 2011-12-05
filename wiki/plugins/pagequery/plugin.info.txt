@@ -1,8 +1,0 @@
-﻿base    pagequery
-author  Symon Bent
-email   hendrybadao@gmail.com
-date    2011-04-14
-name    PageQuery Plugin
-desc    Search for (fulltext) and list wiki pages, sorted and optionally grouped by name, date, creator, abc, etc. in columns. Insert the pagequery markup wherever you want your list to appear.  E.g.{{pagequery>[query;fulltext;sort=key:direction,key2:direction;group;limit=??;cols=?;inwords;proper]}} [..] = optional
-url     http://wiki.splitbrain.org/plugin:pagequery
-version 0.7.2

@@ -1,7 +1,0 @@
-base   dokuresearchr
-author Stian Haklev
-email  shaklev@gmail.com
-date   2011-06-14
-name   DokuResearchr
-desc   Display bibtex citations in researchr
-url    http://reganmian.net/wiki/researchr:start

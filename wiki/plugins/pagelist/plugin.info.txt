@@ -1,8 +1,0 @@
-# General Plugin Info do not edit
-base   pagelist
-author Michael Klier, Gina Haeussge
-email  dokuwiki@chimeric.de
-date   2010-01-07
-name   Pagelist Plugin
-desc   Lists pages in a nice formatted way
-url    http://www.dokuwiki.org/plugin:pagelist

@@ -1,7 +1,0 @@
-base   discussion
-author Gina Häussge, Christopher Smith, Michael Klier, Esther Brunner
-email  dokuwiki@chimeric.de
-date   2010-11-16
-name   discussion plugin
-desc   Provides discussion funtionality for wiki pages
-url    http://dokuwiki.org/plugin:discussion

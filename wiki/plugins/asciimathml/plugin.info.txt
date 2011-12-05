@@ -1,7 +1,0 @@
-base   asciimathml
-author Mohammad Rahmani
-email  m [dot] rahmani [at] aut [dot] ac [dot] ir
-date   2011-06-23
-name   asciimathml plugin
-desc   ASCIIMathML is an easy way of writing mathematics to go on the web.
-url    http://www.dokuwiki.org/plugin:asciimathml
