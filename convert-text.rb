@@ -10,7 +10,7 @@ onlylist = (ARGV[0] == 'onlylist')
 bib = json_bib
 citations = Hash.new
 doc = utf8safe(pbpaste)
-doc.scan( /(\[?\@[a-zA-Z]+[0-9]+[a-zA-Z]+\]?)/ ).each do |hit|
+doc.scan( /(\[?\@[a-zA-Z0-9\-\_]+\]?)/ ).each do |hit|
   hit = hit[0]
   hitnobraces = hit.gsub(/[\@\[\]]/,"")
   if bib[hitnobraces]

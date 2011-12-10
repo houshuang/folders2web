@@ -168,7 +168,7 @@ end
 # entire bibliography pre-parsed read in from json
 def json_bib()
   require 'json'
-  return JSON.parse(File.read(JSON_path))
+  return JSON.parse(File.read(Wiki_path+"/lib/plugins/dokuresearchr/json.tmp"))
 end
 
 # given a start of a filename, and an end, looks if there are already any files existing with the filename (pre)01(post)
