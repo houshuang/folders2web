@@ -11,7 +11,7 @@
 </Files>
 
 # to enable php 5.3 on Site5 (required for some DokuWiki plugins)
-AddHandler application/x-httpd-php53 .php
+# AddHandler application/x-httpd-php53 .php
 
 ## Uncomment these rules if you want to have nice URLs using
 ## $conf['userewrite'] = 1 - not needed for rewrite mode 2
