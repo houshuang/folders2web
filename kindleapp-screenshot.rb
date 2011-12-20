@@ -18,13 +18,17 @@ def export(docu)
     c = 0
     a.each do |line|
       f,pg = line.split(",")
+      puts "mv \"#{f.strip}\" \"/wiki/data/media/skim/#{docu}#{c.to_s}.png\""
       `mv "#{f.strip}" "/wiki/data/media/skim/#{docu}#{c.to_s}.png"`
       @out << "{{skim:#{docu}#{c.to_s}.png}}\n----\n\n"
       c += 1
     end
     `rm "/tmp/skim-#{docu}-tmp"`
-    File.open("/tmp/skimtmp", "w") {|f| f << @out}
+    File.write("/tmp/skimtmp", @out)
+    puts @out
+    growl("#{c} images added to #{docu}")
     `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
+    `open http://localhost/wiki/ref:#{docu}`
   else
     growl "No image cache found for #{docu}"
   end
@@ -46,5 +50,5 @@ if curfile == nil
   exit
 end
 
-File.append("/tmp/skim-#{dname}-tmp","#{curfile},0\n")
-growl("One picture added to wiki notes cache")
+File.append("/tmp/skim-#{dname}-tmp","#{curfile},0")
+growl("One picture added to wiki notes cache for #{dname}")

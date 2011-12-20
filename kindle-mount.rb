@@ -7,6 +7,11 @@ require 'wiki-lib'
 require 'appscript'
 include Appscript
 
+def format(text,label, loc)
+  highlight = (label == 2 ? "::" : "")
+  return "#{highlight}#{text.strip}#{highlight} **(loc: #{loc})**\n\n"
+end
+
 `/usr/local/bin/growlnotify -m "Starting import of Kindle highlights"`
 
 app("BibDesk").document.save
@@ -15,11 +20,7 @@ filename = ( ARGV[0] ? ARGV[0] : "/Volumes/Home/stian/src/folders2web/My Clippin
 a = File.open(filename)
 annotations = Hash.new
 
-def format(text,label, loc)
-  highlight = (label == 2 ? "::" : "")
-  return "#{highlight}#{text.strip}#{highlight} **(loc: #{loc})**\n\n"
-end
-
+bibsearch = ( ARGV[1] ? ARGV[1] : "")
 
 while !a.eof?   # until we've gone through the whole file, line by line
   title = a.readline.strip
@@ -47,6 +48,7 @@ c = 0
 new_imports = Array.new
 annotations.each do |title, article|
   next unless title =~ /\[\@?(.+?)\] \((.+?)\)$/
+  next unless title.index(bibsearch)
   citekey = $1
   puts $1
   app("BibDesk").document.search({:for =>citekey})[0].fields["Read"].value.set("1")
