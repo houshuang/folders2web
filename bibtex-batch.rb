@@ -14,6 +14,7 @@ log "Started bibtex-batch on #{Time.now}"
 authoropt = true
 journalopt = true
 keywordopt = true
+#######################################################################
 
 # dt = app('BibDesk')
 # dt.document.save
@@ -115,11 +116,11 @@ b.each do |item|
     if File.exists?("#{Wiki_path}/data/pages/notes/#{item.key}.txt")
       counter[:notes] += 1 
       hasfiles[0] = "N"
-      out1 << "<tr><td><a href = '#{Wiki_path}/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+      out1 << "<tr><td><a href = 'ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
     elsif hasfiles[1] == "C"
-      out2 << "<tr><td><a href = '#{Wiki_path}/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+      out2 << "<tr><td><a href = 'ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
     else
-      out3 << "<tr><td><a href = '#{Wiki_path}/ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
+      out3 << "<tr><td><a href = 'ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
 
       
     end
@@ -167,7 +168,7 @@ authors.each do |axx, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[..:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
+      out1 << "| [[:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
     else
       out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
     end
@@ -205,7 +206,7 @@ keywords.each do |keyword, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[..:ref:#{item.key}]] | #{cit}| #{pdfpath(item.key)} |\n"
+      out1 << "| [[:ref:#{item.key}]] | #{cit}| #{pdfpath(item.key)} |\n"
     else
       out2 << "| #{item.key} | #{cit} | #{pdfpath(item.key)}|\n"
     end
@@ -244,7 +245,7 @@ journals.each do |axx, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[..:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
+      out1 << "| [[:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
     else
       out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
     end

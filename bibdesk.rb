@@ -8,6 +8,23 @@ require 'appscript'
  
 #### keyboard commands ####
  
+# email selected files to Kindle - needs some polish 
+# launched by ctrl+alt+cmd+K
+def send_to_kindle
+  require 'mail-lib'
+  Selection.each do |dd|
+    docu = dd.cite_key.get
+    title = dd.title.get.gsub(/[\{|\}]/,"")
+    authors = dd.author.name.get.join(", ")
+    `/usr/local/bin/pdftotext "#{PDF_path}/#{docu}.pdf" /tmp/#{docu}.txt`
+    `ebook-convert /tmp/#{docu}.txt /tmp/#{docu}.mobi`
+    `ebook-meta /tmp/#{docu}.mobi -t "#{title} [#{docu}]" -a "#{authors}" --category="Bibdesk"`
+    `cp /tmp/#{docu}.mobi /Volumes/Kindle/documents`
+  #  mail_file("/tmp/[#{docu}].pdf")
+  end
+  growl("#{d.size} file(s) sent")
+end 
+
 # properly formats an author list for BibDesk with " and " as separator
 # launched by ctrl+alt+cmd+P
 def authorlist
