@@ -2,6 +2,8 @@
 # (overwritten every time it is run), insert the correct path in keyboard_maestro.dist.kmmacros and save as
 # import_into_keyboard_maestro.kmmacros, and search and replace the title in wiki/conf/local.php if it exists
 
+# This script is not finished.
+
 # constants
 $:.push(File.dirname($0))
 require 'utility-functions'
