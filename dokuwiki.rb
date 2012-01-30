@@ -58,7 +58,7 @@ end
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
 def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
-  pagepath = (Wikipages_path + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
+  pagepath = ("#{Wiki_path}/data/pages" + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
 
   curpage = cururl.split("/").last
 
@@ -183,7 +183,7 @@ def image
     exit
   end
 
-  newfilename, pagenum = filename_in_series("#{Wikimedia_path}/#{wikipage}",".png")
+  newfilename, pagenum = filename_in_series("#{Wiki_path}/data/media/pages/#{wikipage}",".png")
   if File.exists?(newfilename)
     growl("Error!", "File already exists, aborting!")
     exit
@@ -231,13 +231,44 @@ EOS
   page = pagetmp["cb"]
   pname = "/wiki/data/pages/a/#{clean_pagename(page)}.txt"
   
-  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]
+  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]\nh3. Links in wiki\n {{backlinks>.}}
   \n{{page>abib:#{page}}}"}
   
   `chmod a+rw "#{pname}"`
   
   `open "http://localhost/wiki/a:#{page}?do=edit"`
 end
+
+# asks for name, and creates a new journal page from a template
+def newjournal
+  require 'Pashua'
+  include Pashua
+
+  config = <<EOS
+  *.title = Add a new journal page
+  cb.type = textfield 
+  cb.label = Name of journal page to create
+  cb.width = 220 
+  db.type = cancelbutton
+  db.label = Cancel
+  db.tooltip = Closes this window without taking action
+EOS
+
+  pagetmp = pashua_run config
+  exit if pagetmp["cancel"] == 1
+  page = pagetmp["cb"]
+  pname = "/wiki/data/pages/j/#{clean_pagename(page)}.txt"
+  
+  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Links\n  * [[ |Homepage]]\n**Links in wiki**\n{{backlinks>.}}\n\nh2. Publications in Journal 
+  \n{{page>jbib:#{page}}}\n\nh2. About\n(date information is collected)\n\nh4. Editors\n\nh4. Review board\n\nh4. Aims\n\nh4. Topics\n\nh2. Other\n
+  Connected conferences \n\nh4. RSS\n{{rss> 10 author date 1h }}"}
+    
+      
+  `chmod a+rw "#{pname}"`
+  
+  `open "http://localhost/wiki/j:#{page}?do=edit"`
+end
+
 
 #### Running the right function, depending on command line input ####
 
