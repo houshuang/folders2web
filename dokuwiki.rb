@@ -135,6 +135,9 @@ def bulletlist
 
   if a.scan("\n").size > 1  # determine whether to split on newline, space or comma
     splt = "\n"
+  elsif a.scan(")").size > a.scan("(").size + 2
+    splt = ")"
+    a.gsub!(/[, ]*\d+\)/,")")
   elsif a.scan(";").size > 1
     splt = ";"
   elsif a.scan(".").size > 2
