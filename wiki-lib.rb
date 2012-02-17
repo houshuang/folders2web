@@ -16,11 +16,11 @@ end
 # ensure that main refpage exists for a given citekey, taking info from BibDesk (needs to be running,
 # maybe replace with taking info from Bibtex file eventually)
 def ensure_refpage(citekey,override=false)
-  if  !File.exists?("/wiki/data/pages/ref/#{citekey}.txt") || override
+  if  true#!File.exists?("/wiki/data/pages/ref/#{citekey}.txt") || override
     dt = app('Bibdesk')
     find = dt.document.search({:for => citekey})
     if find == []
-      growl("File not found", "Cannot find citation #{ARGV[0]} in BibDesk")
+      growl("File not found", "Cannot find citation #{citekey} in BibDesk, the citekey in BibDesk needs to be the same as the name of the PDF.")
       exit
     end
     bib = BibTeX.parse(find[0].BibTeX_string.get.to_s)
