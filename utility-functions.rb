@@ -58,6 +58,17 @@ class File
   end
 end
 
+def dl_file(full_url, to_here, require_type = false)
+    require 'open-uri'    
+    writeOut = open(to_here, "wb")
+    url = open(full_url)
+    if require_type
+      raise NameError if url.content_type.strip.downcase != require_type
+    end
+    writeOut.write(url.read)
+    writeOut.close
+end
+
 
 # writes text to clipboard, using a pipe to avoid shell mangling
 def pbcopy(text)
@@ -208,4 +219,19 @@ class Hash
       end
     end
   end
+end
+
+# calculate SHA-2 hash for a given file
+def hashsum(filename)
+  require 'digest/sha2'    
+  hashfunc = Digest::SHA2.new
+  File.open(filename, "r") do |io|
+    counter = 0
+    while (!io.eof)
+      readBuf = io.readpartial(1024)
+      #				putc '.' if ((counter+=1) % 3 == 0)
+      hashfunc.update(readBuf)
+    end
+  end
+  return hashfunc.hexdigest
 end
