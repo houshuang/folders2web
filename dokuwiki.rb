@@ -18,6 +18,66 @@ end
 
 #### keyboard commands ####
 
+# if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to 
+# import citation to BibDesk
+def import_bibtex
+  unless cururl.index("/ref:")
+    growl "This page is not a Researchr wiki, cannot import citation"
+    exit
+  end
+  # returns the content of the BibTeX hidden div
+  js = 'document.querySelectorAll(".code")[0].innerHTML;'
+
+  bibtex = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+  unless bibtex.index("author")
+    growl "Could not extract BibTeX citation from this page."
+    exit
+  end
+
+  bibtex_final = bibtex.gsub("&amp;","&").gsub(/bdsk\-file.+?\}/,"}").gsub("read = {1}", "read = {0}").gsub(/keywords.+?\}\,\n/,"")
+
+  bibdesk = Appscript::app("BibDesk")
+  bibdesk.activate
+  document = bibdesk.document.get[0].import({:from => bibtex_final})
+  citekey = document[0].cite_key.get
+
+  if bibtex_final.scan(/url \= \{(.+?)\}/)
+    fname = $~[1]
+    exit unless fname.index("http")
+    growl "Attempting to automatically download and link PDF..."
+    `rm "/tmp/pdftmp.pdf"`
+    begin
+      puts fname
+      dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
+    rescue 
+    end
+    `ls -l /tmp/pdftmp.pdf`
+
+    unless File.size?("/tmp/pdftmp.pdf")
+      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,'\1://\2.myaccess.library.utoronto.ca/\3') 
+      puts fname
+      begin
+        puts fname
+        dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
+      rescue 
+      end
+    end
+    unless File.size?("/tmp/pdftmp.pdf")
+      growl "Not able to download file URL, make sure you are connected to MyAccess portal"
+      exit
+    end
+    
+    d = bibdesk.search({:for=>citekey})
+    f = MacTypes::FileURL.path('/tmp/pdftmp.pdf')
+    d[0].linked_files.add(f,{:to =>d[0]})
+    d[0].auto_file
+
+    growl("PDF added", "File added successfully to #{citekey}")    
+  end
+
+# Chrome.windows[0].get.make({:new=>:tab,:with_properties=>{:URL => "http://www.springerlink.com.myaccess.library.utoronto.ca/content/j55358wu71846331/fulltext.pdf"}})
+end
+
 # adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch
 # is executed (Ctrl+Alt+Cmd+F)
 def add_to_rss
