@@ -10,7 +10,7 @@ include Appscript
 
 def process(type, text, page)
    if type == "Underline"
-    if @out[-1].index(text.strip)
+    if @out[-1] && @out[-1].index(text.strip)
       @out << @out.pop.gsub(text.strip,"::::#{text.strip}::::")
     else
       type = "Underline-standalone"
@@ -38,26 +38,39 @@ end
 
 app('BibDesk').document.save
 dt = app('Skim')
-dt.save(dt.document)
-docu = dt.document.name.get[0][0..-5]
-Citekey = docu
-filename = dt.document.file.get[0].to_s
-`/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{filename}`
+skimdoc = dt.documents[0]
+skimdoc.save(skimdoc)
+Citekey = skimdoc.name.get[0..-5]
+filename = skimdoc.file.get.to_s
 
-
-# make sure the metadata page is written
-ensure_refpage(docu)
-
-fname = "#{PDF_path}/#{docu}.txt"
-
-# if no annotations, we're done
-unless File.exists?(fname)
-  growl "Skim did not export any data. Either you have not made any highlights, or there is an error (check the paths in settings.rb). Just creating the ref: page with metadata."
-  `open http://localhost/wiki/ref:#{docu}`
+# ensure that the PDF is named the same as the cite key (inspired by Cresencia)
+begin
+  ck_found = (app("BibDesk").document.search({:for =>Citekey})[0].cite_key.get.to_s == Citekey)
+rescue
+  false
+end
+unless ck_found
+  growl "Error!","PDF filename doesn't match any citekeys in the BibDesk database. The name of a PDF file must be exactly the same as the citekey in the database + the .PDF extension, for export to function properly. Aborting."
   exit(0)
 end
 
-File.readlines(fname) 
+fname = "/tmp/#{Citekey}.txt"
+
+skimdoc.save(skimdoc, {:as => "Notes as Text", :in => fname})
+# `/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{filename}`
+
+# make sure the metadata page is written
+ensure_refpage(Citekey)
+
+
+# if no annotations, we're done
+unless File.exists?(fname)
+  growl "Error!","Skim did not export any data. Either you have not made any highlights, or there is an error (check the paths in settings.rb). Just creating the ref: page with metadata."
+  `open http://localhost/wiki/ref:#{Citekey}`
+  exit(0)
+end
+
+a = File.readlines(fname) 
 
 page = nil
 @out = Array.new
@@ -86,17 +99,17 @@ File.write("/tmp/skimnote-tmp", alltext)
 ntlines = `wc "/tmp/skimnote-tmp"`.split(" ")[1].to_f
 `rm "/tmp/skimnote-tmp"`
 `/usr/local/bin/pdftotext "#{filename}"`
-ftlines = `wc "#{PDF_path}/#{docu}.txt"`.split(" ")[1].to_f
-`rm "#{PDF_path}/#{docu}.txt"`
+ftlines = `wc "#{PDF_path}/#{Citekey}.txt"`.split(" ")[1].to_f
+`rm "#{PDF_path}/#{Citekey}.txt"`
 percentage = ntlines/ftlines*100
 
 @out << process(type, text, page)  # pick up the last annotation
 outfinal = "h2. Highlights (#{percentage.to_i}%)\n\n" + @out.join('')
 File.write("/tmp/skimtmp", outfinal)
-`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{docu}'`
+`/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{Citekey}'`
 
-if File.exists?("/tmp/skim-#{docu}-tmp")
-  a = File.readlines("/tmp/skim-#{docu}-tmp")
+if File.exists?("/tmp/skim-#{Citekey}-tmp")
+  a = File.readlines("/tmp/skim-#{Citekey}-tmp")
   @out = "h2. Images\n\n"
   c = 0
   a.each do |line|
@@ -105,14 +118,16 @@ if File.exists?("/tmp/skim-#{docu}-tmp")
     @out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg.strip}|p. #{pg.strip}]]\n----\n\n"
     c += 1
   end
-  `rm "/tmp/skim-#{docu}-tmp"`
+#  `rm "/tmp/skim-#{Citekey}-tmp"`
   File.open("/tmp/skimtmp", "w") {|f| f << @out}
-  `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{docu}'`
+  `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{Citekey}'`
 end
 
-app("BibDesk").document.search({:for =>docu})[0].fields["Read"].value.set("1")
-ensure_refpage(docu)
+srch = app("BibDesk").document.search({:for =>Citekey})[0]
+srch.fields["Read"].value.set("1")
+srch.fields["Date-read"].value.set(Time.now.to_s)
+ensure_refpage(Citekey)
 dt.save(dt.document)
 
-#make_newimports_page([docu])
-`open http://localhost/wiki/ref:#{docu}`
+#make_newimports_page([Citekey])
+`open http://localhost/wiki/ref:#{Citekey}`
