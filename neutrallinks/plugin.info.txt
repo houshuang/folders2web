@@ -1,0 +1,7 @@
+base   neutrallinks
+author Stian Haklev
+email  shaklev@gmail.com
+date   2011-06-14
+name   Neutral Links
+desc   Provide optional link format [#], does not cause backlinks
+url    http://reganmian.net/wiki/researchr:start
