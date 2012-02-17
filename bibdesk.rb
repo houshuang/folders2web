@@ -73,6 +73,51 @@ def linkfile
   growl("PDF added", "File added successfully to #{Selection[0].cite_key.get}")
 end
 
+
+# if cannot manage to overwrite a publication, grab PDF, delete publication, create new publication from
+# bibtex import, attach PDF, and autofile
+def get_bibtexnet
+  require 'open-uri'
+  
+  growl "Bibtexnet", "Trying to acquire metadata for #{Selection.size} publication(s)"
+
+  c = 0
+
+  Selection.each do |item|    
+    begin
+      file =  item.linked_files.get[0].to_s
+    rescue
+      next
+    end
+    
+    next unless File.exists?(file)
+
+    hash = hashsum(file)
+    puts hash
+    bibtex = open("http://localhost/bibtexnet/#{hash}").read
+    puts bibtex
+
+  # ensure proper reply
+    next unless bibtex.index("BIBTEX<<<")
+
+    btxstring = bibtex.match(/BIBTEX\<\<\<(.+?)\>\>\>/m)[1]
+    begin
+      newpub = BibDesk.documents[0].import(BibDesk.documents[0], {:from => btxstring})[0]
+    rescue
+      next
+    end
+    
+    f = MacTypes::FileURL.path(file)
+    newpub.linked_files.add(f,{:to =>newpub})
+    newpub.auto_file
+    
+    item.remove
+    c += 1
+  end
+
+  growl "Successfully imported metadata for #{c} publications from bibtexnet"
+end
+
 # uses quicklook to preview the PDF of the currently selected publication
 # launched by cmd+space
 def qlook
@@ -80,14 +125,14 @@ def qlook
   if File.exists?(file)
     `qlmanage -p '#{file}'`
   else
-    growl('No file available', 'No file available for #{Selection[0].cite_key.get}')
+    growl('No file available', "No file available for #{Selection[0].cite_key.get}")
   end
 end
 
 # opens a given reference as passed by bibdesk:// URL in BibDesk
 # launched by bibdesk:// url in Chrome (bibdesk.app must be registered first)
 def url(argv)
-  arg = argv[10..-1]
+  arg = argv[11..-1]
   find = BibDesk.search({:for => arg})
   unless find == []
     find[0].show
@@ -99,19 +144,18 @@ end
 
 # makes sure that all selected citations have corresponding wiki pages, and opens the first selected citation in Chrome
 # launched by ctrl+alt+cmd+E
-def open
+def open_page
   require 'wiki-lib'
   ary = Array.new
   Selection.each do |dd|
     docu = dd.cite_key.get
-    ary << docu unless File.exists?("#{Wikipages_path}/ref/#{docu}.txt")
+    ary << docu unless File.exists?("#{Wiki_path}/data/pages/ref/#{docu}.txt")
     ensure_refpage(docu)
   end
   `open http://localhost/wiki/ref:#{Selection[0].cite_key.get}`
 end
 
 #### Running the right function, depending on command line input ####
-
 BibDesk = Appscript.app('BibDesk')
 Selection = BibDesk.document.selection.get[0]
 send *ARGV
