@@ -52,11 +52,13 @@ def make_rss_feed
   File.write(Wiki_path + "/feed.xml", content) 
 end
 
+puts "Making RSS feed"
 make_rss_feed
-
+puts "RSS feed complete (will be updated next time you sync with server)"
+puts "Parsing BibTeX"
 b = BibTeX.parse(File.read(Bibliography))
 b.parse_names
-log "parsed it"
+puts "Initial parse complete"
 out1 = ''
 out2 = ''
 out3 = ''
@@ -72,7 +74,7 @@ counter[:noref] = 0
 counter[:notes] = 0
 counter[:clippings] = 0
 counter[:images] = 0
-
+puts "Starting secondary parse"
 b.each do |item|
   ax = []
   if item.respond_to? :author
@@ -138,7 +140,7 @@ b.each do |item|
 end
 
 
-
+puts "Finished secondary parse, generating main bibliography"
 
 out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliography.bib|entire BibTeX file]]. Also see bibliography by [[abib:start|author]] or by [[kbib:start|keyword]].\n\nPublications that have their own pages are listed on top, and hyperlinked. Most of these also have clippings and many have key ideas.\n\nStatistics: Totally **#{counter[:hasref] + counter[:noref]}** publications, and **#{counter[:hasref]}** publications have their own wikipages. Of these, **#{counter[:images]}** with notes (key ideas) **(N)**, **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, and **#{counter[:images]}** with images (imported from Skim) **(I)** and.<html><table>"
 
@@ -153,6 +155,7 @@ File.open("#{Wiki_path}/data/pages/bib/bibliography.txt", 'w') {|f| f << out}
 # generate individual files for each author
 
 if authoropt
+puts "Generating individual files for each author"
 authorlisted = Array.new
 authors.each do |axx, pubs|
   out ='' 
@@ -168,7 +171,7 @@ authors.each do |axx, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
+      out1 << "| [#:ref:#{item.key}] | #{cit}|#{pdfpath(item.key)}|\n"
     else
       out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
     end
@@ -186,9 +189,9 @@ File.open("#{Wiki_path}/data/pages/abib/start.txt","w") do |f|
   authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
     apage = ''
     if File.exists?("#{Wiki_path}/data/pages/a/#{ax[0]}.txt")
-      apage = "[[:a:#{ax[0]}|author page]]"
+      apage = "[#:a:#{ax[0]}|author page]"
     end
-    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
+    f << "| [##{ax[0]}|#{ax[1]}] | #{apage} |#{ax[2]}|\n"
   end
 end
 end
@@ -196,6 +199,8 @@ end
 # generate individual files for each keyword
 
 if keywordopt 
+  puts "Generating individual files for each keyword"
+  
 keywordslisted = Array.new
 keywords.each do |keyword, pubs|
   out ='' 
@@ -206,7 +211,7 @@ keywords.each do |keyword, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[:ref:#{item.key}]] | #{cit}| #{pdfpath(item.key)} |\n"
+      out1 << "| [#:ref:#{item.key}] | #{cit}| #{pdfpath(item.key)} |\n"
     else
       out2 << "| #{item.key} | #{cit} | #{pdfpath(item.key)}|\n"
     end
@@ -222,7 +227,7 @@ end
 File.open("#{Wiki_path}/data/pages/kbib/start.txt","w") do |f|
   f << "h1. List of publication keywords\n\n"
   keywordslisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
-    f << "|[[#{ax[0]}|#{ax[1]}]]|#{ax[2]}|\n"
+    f << "|[##{ax[0]}|#{ax[1]}]|#{ax[2]}|\n"
   end
 end
 end
@@ -230,6 +235,8 @@ end
 # generate individual files for each journal with more than five cits.
 
 if journalopt 
+  puts "Generating individual files for each journal"
+  
 authorlisted = Array.new
 journals.each do |axx, pubs|
   out ='' 
@@ -245,7 +252,7 @@ journals.each do |axx, pubs|
     item = b[i]
     cit = CiteProc.process item.to_citeproc, :style => :apa
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [[:ref:#{item.key}]] | #{cit}|#{pdfpath(item.key)}|\n"
+      out1 << "| [#:ref:#{item.key}] | #{cit}|#{pdfpath(item.key)}|\n"
     else
       out2 << "| #{item.key} | #{cit}|#{pdfpath(item.key)}|\n"
     end
@@ -264,9 +271,9 @@ File.open("#{Wiki_path}/data/pages/jbib/start.txt","w") do |f|
   authorlisted.sort {|x,y| y[2].to_i <=> x[2].to_i}.each do |ax|
     apage = ''
     if File.exists?("#{Wiki_path}/data/pages/a/#{ax[0]}.txt")
-      apage = "[[:a:#{ax[0]}|author page]]"
+      apage = "[#:a:#{ax[0]}|author page]"
     end
-    f << "| [[#{ax[0]}|#{ax[1]}]] | #{apage} |#{ax[2]}|\n"
+    f << "| [##{ax[0]}|#{ax[1]}] | #{apage} |#{ax[2]}|\n"
   end
 end
 
@@ -274,14 +281,14 @@ end
 ###############################################
 # generate file with imported citations missing key ideas
 
-pages = Array.new
-out = "h1.Needs key ideas\n\nList of publications with clippings, which do not have key ideas.\n\n"
-
-Find.find("#{Wiki_path}/data/pages/ref") do |path|
-  next unless File.file?(path)
-  fn = File.basename(path)
-  if (File.exists?("#{Wiki_path}/data/pages/kindle/#{fn}") || File.exists?("#{Wiki_path}/data/pages/clip/#{fn}")) && !File.exists?("#{Wiki_path}/data/pages/notes/#{fn}")
-    out << "  * [@#{fn[0..-5]}]\n"
-  end
-end
-File.open("#{Wiki_path}/data/pages/bib/needs_key_ideas.txt","w") {|f| f << out}
+# pages = Array.new
+# out = "h1.Needs key ideas\n\nList of publications with clippings, which do not have key ideas.\n\n"
+# 
+# Find.find("#{Wiki_path}/data/pages/ref") do |path|
+#   next unless File.file?(path)
+#   fn = File.basename(path)
+#   if (File.exists?("#{Wiki_path}/data/pages/kindle/#{fn}") || File.exists?("#{Wiki_path}/data/pages/clip/#{fn}")) && !File.exists?("#{Wiki_path}/data/pages/notes/#{fn}")
+#     out << "  * [@#{fn[0..-5]}]\n"
+#   end
+# end
+# File.open("#{Wiki_path}/data/pages/bib/needs_key_ideas.txt","w") {|f| f << out}
