@@ -1,0 +1,7 @@
+Just experimenting with different ways of getting a bibtex citation for a given DOI (possibly extracted automatically from a PDF file)
+
+doi-bibtex.py was found online, it queries crossref (needs API key), gets XML, rewrites this to bibtex
+doi-bibtex.rb is my translation of the same, functionality identical
+	this works well. not sure if it's flexible enough to handle all kinds of XML returns. currently only enables @journal publication type - I am assuming crossref covers more? 
+	
+another-doi.py also found online, queries ADS and arxiv (mostly useless to us), and GScholar. I had problems querying GScholar in the past, was blocked as robot even when faking webbrowser ID etc. This one does something with a 16 digit hex field, maybe that's the key. Either way, would be wary of relying too much on GScholar, but neat hack.
