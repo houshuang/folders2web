@@ -29,6 +29,34 @@ def log(text)
   File.append("#{Script_path}/log.txt",text)
 end
 
+# a new bibtex filter to recapitalize names with proper unicode
+require 'bibtex'
+class Fix_namecase < BibTeX::Filter
+  def apply(field)
+    require 'namecase'
+    temp = NameCase(Unicode::capitalize(field))
+
+    # fix problem of initials without space between
+    temp.to_s.gsub(/\.([A-Za-z])/, '. \1')
+  end
+end
+
+# providesa new function for bibtex entries to generate a nice looking citekey
+module BibTeX
+  class Entry
+    def std_key
+      k = names[0]
+      k = k.respond_to?(:family) ? k.family : k.to_s
+      cstr = Iconv.conv('us-ascii//translit', 'utf-8', k)
+      cstr << (has_field?(:year) ? year : '')
+      t = title.dup.split.select {|f| f.size > 3}[0]
+      cstr << t ? t : ''
+      cstr.downcase.gsub!(/[^a-zA-Z0-9\-]/, '')
+    end
+  end
+end
+
+
 # a few extra file functions
 class File
   class << self
