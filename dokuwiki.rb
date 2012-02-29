@@ -294,13 +294,44 @@ EOS
   page = pagetmp["cb"]
   pname = "/wiki/data/pages/a/#{clean_pagename(page)}.txt"
   
-  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]
+  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]\nh3. Links in wiki\n {{backlinks>.}}
   \n{{page>abib:#{page}}}"}
   
   `chmod a+rw "#{pname}"`
   
   `open "http://localhost/wiki/a:#{page}?do=edit"`
 end
+
+# asks for name, and creates a new journal page from a template
+def newjournal
+  require 'Pashua'
+  include Pashua
+
+  config = <<EOS
+  *.title = Add a new journal page
+  cb.type = textfield 
+  cb.label = Name of journal page to create
+  cb.width = 220 
+  db.type = cancelbutton
+  db.label = Cancel
+  db.tooltip = Closes this window without taking action
+EOS
+
+  pagetmp = pashua_run config
+  exit if pagetmp["cancel"] == 1
+  page = pagetmp["cb"]
+  pname = "/wiki/data/pages/j/#{clean_pagename(page)}.txt"
+  
+  File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Links\n  * [[ |Homepage]]\n**Links in wiki**\n{{backlinks>.}}\n\nh2. Publications in Journal 
+  \n{{page>jbib:#{page}}}\n\nh2. About\n(date information is collected)\n\nh4. Editors\n\nh4. Review board\n\nh4. Aims\n\nh4. Topics\n\nh2. Other\n
+  Connected conferences \n\nh4. RSS\n{{rss> 10 author date 1h }}"}
+    
+      
+  `chmod a+rw "#{pname}"`
+  
+  `open "http://localhost/wiki/j:#{page}?do=edit"`
+end
+
 
 #### Running the right function, depending on command line input ####
 
