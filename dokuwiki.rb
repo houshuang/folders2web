@@ -11,14 +11,19 @@ require 'appscript'
 def cururl
   Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
 end
- 
+
 def curtitle
  title = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.title.get.strip
 end
 
+# cleans bibtex string on clipboard
+def clean_bibtex
+  pbcopy(cleanup_bibtex_string(pbpaste))
+end
+
 #### keyboard commands ####
 
-# if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to 
+# if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
 # import citation to BibDesk
 def import_bibtex
   unless cururl.index("/ref:")
@@ -49,30 +54,30 @@ def import_bibtex
     begin
       puts fname
       dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
-    rescue 
+    rescue
     end
     `ls -l /tmp/pdftmp.pdf`
 
     unless File.size?("/tmp/pdftmp.pdf")
-      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,'\1://\2.myaccess.library.utoronto.ca/\3') 
+      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,'\1://\2.myaccess.library.utoronto.ca/\3')
       puts fname
       begin
         puts fname
         dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
-      rescue 
+      rescue
       end
     end
     unless File.size?("/tmp/pdftmp.pdf")
       growl "Not able to download file URL, make sure you are connected to MyAccess portal"
       exit
     end
-    
+
     d = bibdesk.search({:for=>citekey})
     f = MacTypes::FileURL.path('/tmp/pdftmp.pdf')
     d[0].linked_files.add(f,{:to =>d[0]})
     d[0].auto_file
 
-    growl("PDF added", "File added successfully to #{citekey}")    
+    growl("PDF added", "File added successfully to #{citekey}")
   end
 
 # Chrome.windows[0].get.make({:new=>:tab,:with_properties=>{:URL => "http://www.springerlink.com.myaccess.library.utoronto.ca/content/j55358wu71846331/fulltext.pdf"}})
@@ -123,9 +128,9 @@ def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
   curpage = cururl.split("/").last
 
   # format properly if citation
-  unless onlytext 
+  unless onlytext
     if curpage.index("ref:")
-      curpage = "[@#{curpage.split(':').last}]" 
+      curpage = "[@#{curpage.split(':').last}]"
     elsif cururl.index("localhost/wiki")
       curpage = "[[:#{capitalize_word(curpage.gsub("_", " "))}]]"
     else
@@ -139,7 +144,7 @@ def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
   insert = (onlylink ? "  *" : utf8safe(pbpaste) )
 
   if File.exists?(pagepath)
-    f = File.read(pagepath) 
+    f = File.read(pagepath)
     growltext = "Selected text added to #{pagename}"
   else
     f = "h1. "+ capitalize_word(pagename) + "\n\n"
@@ -154,7 +159,7 @@ end
 def clip
   require 'pashua'
   title = curtitle
-  
+
   # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
   pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
   xb.type = checkbox
@@ -166,7 +171,7 @@ def clip
   fb.default = #{title.strip}
   fb.label = Link title\n"
   )
-  
+
   exit if pagetmp["cancel"] == 1
   onlylink = pagetmp['xb'] == "1" ? true : false
   onlytext = pagetmp['ob'] == "1" ? true : false
@@ -234,7 +239,7 @@ def go
   Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.set("http://localhost/wiki/#{pagetmp}")
 end
 
-# Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted 
+# Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted
 def image
   wiki = cururl[22..-1]
   w,dummy = wiki.split("?")
@@ -281,9 +286,9 @@ def newauthor
 
   config = <<EOS
   *.title = Add a new author page
-  cb.type = textfield 
+  cb.type = textfield
   cb.label = Name of author page to create
-  cb.width = 220 
+  cb.width = 220
   db.type = cancelbutton
   db.label = Cancel
   db.tooltip = Closes this window without taking action
@@ -293,12 +298,12 @@ EOS
   exit if pagetmp["cancel"] == 1
   page = pagetmp["cb"]
   pname = "/wiki/data/pages/a/#{clean_pagename(page)}.txt"
-  
+
   File.open(pname,"w") {|f| f<<"h1. #{page}\n\nh2. Research\n\nh2. Links\n  * [[ |Homepage]]
   \n{{page>abib:#{page}}}"}
-  
+
   `chmod a+rw "#{pname}"`
-  
+
   `open "http://localhost/wiki/a:#{page}?do=edit"`
 end
 
