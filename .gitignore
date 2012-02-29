@@ -4,3 +4,8 @@ settings.rb
 
 # OS generated
 .DS_Store?
+
+# wiki
+wiki/data/cache/
+wiki/data/index/
+wiki/data/meta
