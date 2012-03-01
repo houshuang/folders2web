@@ -118,7 +118,7 @@ end
 
 # gets text from clipboard
 def pbpaste
-  IO.popen("osascript -e 'the clipboard as unicode text' | tr '\r' '\n'", 'r+').read
+  IO.popen("osascript -e 'the clipboard as unicode text' | tr '\r' '\n'", 'r+').read.strip
 end
 
 
