@@ -1,4 +1,4 @@
-require 'utility-functions'
+require '../utility-functions'
 require 'appscript'
 include Appscript
 dt = app('Google Chrome')

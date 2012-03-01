@@ -1,8 +1,8 @@
+require 'pp'
 require 'open-uri'
 require 'yaml'
 
 curpath = File.dirname(File.expand_path(__FILE__)) + "/"
-conf = YAML::load(File.read(curpath + "config.yaml"))
 
 
 def json_parse(json)
@@ -21,16 +21,16 @@ else
   stext = search
   searchphrase = search
 end
-a = open("https://www.googleapis.com/customsearch/v1?key=#{conf["googleapi"]}&q=#{searchphrase}").read
-pp a
+a = open("http://api.bing.net/json.aspx?AppId=A203F8FB37F05FFF4756C5217E1FCCA156AD7D6C&Query=#{searchphrase}&Sources=Web").read
+pp json_parse(a)
 out = ''
 c =0 
 File.open("/tmp/imfeelinglucky-tmp",'w') do |file|
   file << "#{stext}\n"
-  json_parse(a)["responseData"]["results"].each do |item|
+  json_parse(a)["SearchResponse"]["Web"]["Results"].each do |item|
     c += 1
-    file << "#{item["unescapedUrl"]}\n"
-    out << "#{c}: #{item["titleNoFormatting"]}\n\t#{item["unescapedUrl"]}\n"
+    file << "#{item["Url"]}\n"
+    out << "#{c}: #{item["Title"]}\n\t#{item["Url"]}\n"
   end
 end
 

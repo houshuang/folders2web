@@ -13,7 +13,7 @@ end
 
 def lookup_doi(doi, crossref_api_key)
   debug = false
-  doi = doi.gsub('doi:','').gsub('http://','').gsub('dx.doi.org/','').strip
+  doi = doi.gsub('doi:','').gsub('http://','').gsub('dx.doi.org/','').gsub('doi>','').strip
   url = "http://www.crossref.org/openurl/?id=doi:#{doi}&noredirect=true&pid=#{crossref_api_key}&format=unixref"
   puts url if debug
 
@@ -24,7 +24,7 @@ def lookup_doi(doi, crossref_api_key)
   return false if html.index("<error>") || html.index("<head>")
 
   doc = XmlSimple.xml_in(html)
-
+p doc
   cit = doc['doi_record'][0]['crossref'][0]['journal'][0]
   journal_meta = cit["journal_metadata"][0]
   journal_title = journal_meta['full_title'][0]

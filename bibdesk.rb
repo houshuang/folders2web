@@ -6,6 +6,9 @@ $:.push(File.dirname($0))
 require 'utility-functions'
 require 'appscript'
 
+#### utilities ####
+
+
 #### keyboard commands ####
 
 # email selected files to Kindle - needs some polish
