@@ -5,10 +5,10 @@
 $:.push(File.dirname($0))
 require 'utility-functions'
 require 'appscript'
- 
+
 #### keyboard commands ####
- 
-# email selected files to Kindle - needs some polish 
+
+# email selected files to Kindle - needs some polish
 # launched by ctrl+alt+cmd+K
 def send_to_kindle
   require 'mail-lib'
@@ -23,7 +23,7 @@ def send_to_kindle
   #  mail_file("/tmp/[#{docu}].pdf")
   end
   growl("#{d.size} file(s) sent")
-end 
+end
 
 # properly formats an author list for BibDesk with " and " as separator
 # launched by ctrl+alt+cmd+P
@@ -61,10 +61,7 @@ end
 # launched by ctrl+alt+cmd+L
 def linkfile
   curfile =  File.last_added("#{Downloads_path}/*.pdf")
-  unless curfile # no last file found
-    growl("Sorry, no PDFs found in that directory")
-    exit(0)
-  end
+  fail "Sorry, no PDFs found in that directory" unless curfile # no last file found
 
   f = MacTypes::FileURL.path(curfile)
   Selection[0].linked_files.add(f,{:to =>Selection[0]})
@@ -78,39 +75,29 @@ end
 # bibtex import, attach PDF, and autofile
 def get_bibtexnet
   require 'open-uri'
-  
+
   growl "Bibtexnet", "Trying to acquire metadata for #{Selection.size} publication(s)"
 
   c = 0
 
-  Selection.each do |item|    
-    begin
-      file =  item.linked_files.get[0].to_s
-    rescue
-      next
-    end
-    
-    next unless File.exists?(file)
+  Selection.each do |item|
+    file = try {item.linked_files.get[0].to_s}
+
+    next unless file && File.exists?(file)
 
     hash = hashsum(file)
-    puts hash
     bibtex = open("http://localhost/bibtexnet/#{hash}").read
-    puts bibtex
 
   # ensure proper reply
     next unless bibtex.index("BIBTEX<<<")
 
     btxstring = bibtex.match(/BIBTEX\<\<\<(.+?)\>\>\>/m)[1]
-    begin
-      newpub = BibDesk.documents[0].import(BibDesk.documents[0], {:from => btxstring})[0]
-    rescue
-      next
-    end
-    
+    newpub = try {BibDesk.documents[0].import(BibDesk.documents[0], {:from => btxstring})[0]}
+
     f = MacTypes::FileURL.path(file)
     newpub.linked_files.add(f,{:to =>newpub})
     newpub.auto_file
-    
+
     item.remove
     c += 1
   end
