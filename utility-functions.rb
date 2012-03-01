@@ -286,11 +286,11 @@ end
 
 # returns either the value of the block, or nil, allowing things to fail gracefully. easily
 # combinable with fail unless
-def try(&block)
+def try(default = nil, &block)
   begin
     yield block
   rescue
-    return false
+    return default
   end
 end
 
