@@ -8,19 +8,17 @@ include Appscript
 
 $:.push(File.dirname($0))
 require 'utility-functions'
-
-@pdf_path = '/Users/ramuller/Dropbox/PDFs/*.pdf'
+puts "hello"
 @bd = app("BibDesk").document
 
 def send_citation(bibtex, hashkey)
-  host = 'stormy-leaf-9036.herokuapp.com'
-  port = '80'
+  host = Scrobble_server_host
+  port = Scrobble_server_port
 
   post_ws = "/citations"
-  token = "CKwyA5hpKUDaxENtu4YM"
-
+  token = Scrobble_token
   payload ={ "bibtex" => bibtex, "token" => token }.to_json
-    
+
   req = Net::HTTP::Post.new("/citations", initheader = {'Content-Type' =>'application/json'})
   req.body = payload
   response = Net::HTTP.new(host, port).start {|http| http.request(req) }
@@ -29,8 +27,10 @@ end
 
 if ARGV[0] == "batch"
   c=0
-  path = @pdf_path 
-  Dir[path].select  do |f| 
+  path = PDF_path + "/*.pdf"
+  growl "Beginning to send citation data to Scrobble server"
+  Dir[path].select  do |f|
+    puts f
     fname = File.basename(f)
     citekey = fname[0..-5]
     begin
@@ -38,11 +38,11 @@ if ARGV[0] == "batch"
       hash = hashsum(f)
       send_citation(bibtx, hash)
     rescue
-      puts "Not found"
+      puts "#{citekey} not found in BibDesk database"
       next
     end
     c = c+1
   end
-  puts "Total #{c} entries sent"
+  growl "Total #{c} entries sent"
 end
 
