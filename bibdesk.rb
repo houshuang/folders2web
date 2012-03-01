@@ -7,7 +7,21 @@ require 'utility-functions'
 require 'appscript'
 
 #### utilities ####
+# adds citation to json file, could be expanded to do other post-import cleanup tasks
+def post_import
+  cit = pbpaste
+  puts cit
+  bib = try { cit.scan(/\@(.+?)\{(.+?)\,/)[0][1] }
+  fail "Could not add citation to json, citekey not found in BibTeX" unless bib
 
+  citekey = bib
+
+  add_to_jsonbib(citekey)
+end
+
+def add_to_jsonbib(citekey)
+  puts citekey
+end
 
 #### keyboard commands ####
 
