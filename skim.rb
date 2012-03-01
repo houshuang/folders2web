@@ -134,3 +134,5 @@ dt.save(dt.document)
 
 #make_newimports_page([Citekey])
 `open http://localhost/wiki/ref:#{Citekey}`
+
+add_to_jsonbib(Citekey)
