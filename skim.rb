@@ -16,7 +16,7 @@ def process(type, text, page)
       type = "Underline-standalone"
     end
   end
-  return type == "Underline" ? nil : format(type, text, page) 
+  return type == "Underline" ? nil : format(type, text, page)
 end
 
 def format(type, text, page)
@@ -32,7 +32,7 @@ def format(type, text, page)
   if text.scan(/[•]/).size > 1
     text.gsub!(/[•]/, "\n  * ")
   end
-    
+
   return "#{highlight}#{text}#{highlight} [[skimx://#{Citekey}##{page}|p. #{page}]]\n\n"
 end
 
@@ -70,7 +70,7 @@ unless File.exists?(fname)
   exit(0)
 end
 
-a = File.readlines(fname) 
+a = File.readlines(fname)
 
 page = nil
 @out = Array.new
@@ -89,7 +89,7 @@ a.each do |line|
     type = $1
     text = ''
   else
-    text << line  # just add the text 
+    text << line  # just add the text
     alltext << line
   end
 end
@@ -127,6 +127,9 @@ srch = app("BibDesk").document.search({:for =>Citekey})[0]
 srch.fields["Read"].value.set("1")
 srch.fields["Date-read"].value.set(Time.now.to_s)
 ensure_refpage(Citekey)
+
+scrobble(Citekey)
+
 dt.save(dt.document)
 
 #make_newimports_page([Citekey])
