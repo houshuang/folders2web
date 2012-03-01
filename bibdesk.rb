@@ -10,7 +10,6 @@ require 'appscript'
 # adds citation to json file, could be expanded to do other post-import cleanup tasks
 def post_import
   cit = pbpaste
-  puts cit
   bib = try { cit.scan(/\@(.+?)\{(.+?)\,/)[0][1] }
   fail "Could not add citation to json, citekey not found in BibTeX" unless bib
 
@@ -20,7 +19,27 @@ def post_import
 end
 
 def add_to_jsonbib(citekey)
-  puts citekey
+  require 'json'
+  require 'citeproc'
+  require 'bibtex'
+
+  find = try {BibDesk.search({:for => citekey}) }
+  exit unless find && find != []
+
+  bib = find[0].BibTeX_string.get.to_s
+  item = BibTeX.parse(bib, {:filter => :latex})[0]
+  ax = []
+  item.author.each do |a|
+    ax << a.last.gsub(/[\{\}]/,"")
+  end
+
+  cit = CiteProc.process item.to_citeproc, :style => :apa
+  year = try("n.d.") { item.year.to_s }
+  year = $1 if year == "n.d." and cit.match(/\((....)\)/)
+
+  json = JSON.parse(File.read(JSON_path))
+  json[item.key.to_s] = [namify(ax), year, cit]
+  File.write(JSON_path, JSON.fast_generate(json) )
 end
 
 #### keyboard commands ####
