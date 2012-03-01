@@ -34,6 +34,8 @@ def ensure_refpage(citekey,override=false)
     citation = "^ Citation |#{cb(citation)}  ^ <html><a href=\"#{javascript}\">Sidewiki</a></html>^\n^[[bibdeskx://#{citekey}|BibDesk]] | ::: ^  [[skimx://#{citekey}|PDF]] ^ "
     text = "h1. #{cb(item[:title])}\n\n#{citation}\n\n<hidden BibTex>\n  #{item.to_s}\n</hidden>\n\n{{page>notes:#{citekey}}}\n\nh2. Links here\n{{backlinks>.}}\n\n{{page>clip:#{citekey}}}\n\n{{page>kindle:#{citekey}}}\n\n{{page>skimg:#{citekey}}}"
     dwpage("ref:#{citekey}", text, 'Automatically generated from Bibdesk')
+
+    submit_citation(item.to_s)
   end
 end
 
