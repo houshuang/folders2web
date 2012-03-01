@@ -277,6 +277,23 @@ def hashsum(filename)
   return hashfunc.hexdigest
 end
 
+# displays and error message and exits (could optionally log, not implemented right now)
+# mainly to enable one-liners instead of if...end
+def fail(message)
+  growl "Failure!", message
+  exit
+end
+
+# returns either the value of the block, or nil, allowing things to fail gracefully. easily
+# combinable with fail unless
+def try(&block)
+  begin
+    yield block
+  rescue
+    return false
+  end
+end
+
 ##################################################################
 # Scrobblr functions
 
