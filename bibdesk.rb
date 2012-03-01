@@ -84,9 +84,19 @@ def get_bibtexnet
   c = 0
 
   Selection.each do |item|
+<<<<<<< Updated upstream
     file = try {item.linked_files.get[0].to_s}
 
     next unless file && File.exists?(file)
+=======
+    begin
+      file =  item.linked_files.get[0].to_s
+    rescue
+      next
+    end
+
+    next unless File.exists?(file)
+>>>>>>> Stashed changes
 
     hash = hashsum(file)
     bibtex = open("http://localhost/bibtexnet/#{hash}").read
@@ -95,7 +105,15 @@ def get_bibtexnet
     next unless bibtex.index("BIBTEX<<<")
 
     btxstring = bibtex.match(/BIBTEX\<\<\<(.+?)\>\>\>/m)[1]
+<<<<<<< Updated upstream
     newpub = try {BibDesk.documents[0].import(BibDesk.documents[0], {:from => btxstring})[0]}
+=======
+    begin
+      newpub = BibDesk.documents[0].import(BibDesk.documents[0], {:from => btxstring})[0]
+    rescue
+      next
+    end
+>>>>>>> Stashed changes
 
     f = MacTypes::FileURL.path(file)
     newpub.linked_files.add(f,{:to =>newpub})
