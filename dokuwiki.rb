@@ -21,13 +21,52 @@ def clean_bibtex
   pbcopy(cleanup_bibtex_string(pbpaste))
 end
 
+# gets the bibtex from the current page, whether it's researchr or scrobblr, and cleans it up
+def get_bibtex_from_page
+  # returns the content of the BibTeX hidden div
+  query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
+  js = "document.#{query}.innerHTML;"
+  bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+  bibtex = bibtex.gsub(/keywords.+?\}\,\n/i,"").gsub("<b>Bibtex:</b>", '').gsub("&amp;","&").gsub(/bdsk\-file.+?\}/mi,"}").
+    gsub("read = {1}", "read = {0}").strip
+
+  # final sanity check
+  bibtex = cleanup_bibtex_string(bibtex)
+  raise unless bibtex.index("author")
+
+  return bibtex
+end
+
+def get_pdf_from_refpage
+  bibtex = try {get_bibtex_from_page}
+  fail "Could not read BibTeX metadata from page" unless bibtex
+
+  url = try { bibtex.scan(/url = \{(.+?)\}/)[0][0] }
+  fail "Citation does not have a linked Open Access PDF" unless url
+  dlpath = "/tmp/pdftmp.pdf"
+  growl "Attempting to automatically download the linked PDF"
+
+  dl_file(url, "/tmp/pdftmp.pdf", PDF_content_types)
+  return dlpath
+end
+
 # opens a given reference as passed by skimx:// URL in Skim
 # launched by skimx:// url in Chrome (skimx.app must be registered first)
 def url(argv)
+  require 'uri'
+
   arg = argv[8..-1]
   arg.gsub!("#","%23")
   pdf, page = arg.split("%23")
-  fname = "#{PDF_path}/#{pdf}.pdf"
+
+  # check if this is my page, or someone else's
+  if My_domains.index( URI.parse(cururl).host )
+    fname = "#{PDF_path}/#{pdf}.pdf"
+  else
+    fname = try { get_pdf_from_refpage }
+    fail "Not able to automatically download PDF" unless fname
+  end
+
   if File.exists?(fname)
     skim = Appscript.app('skim')
     dd = skim.open(fname)
@@ -45,15 +84,8 @@ end
 def import_bibtex
   fail "This page is not a Researchr wiki, cannot import citation" unless cururl.index("/ref:") || cururl.index("herokuapp")
 
-  # returns the content of the BibTeX hidden div
-  query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
-  js = "document.#{query}.innerHTML;"
-  bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
-
-  fail "Could not extract BibTeX citation from this page" unless bibtex.downcase.index("author")
-  bibtex = bibtex.gsub(/keywords.+?\}\,\n/i,"").gsub("<b>Bibtex:</b>", '').gsub("&amp;","&").gsub(/bdsk\-file.+?\}/mi,"}").
-    gsub("read = {1}", "read = {0}").strip
-  bibtex_final = cleanup_bibtex_string(bibtex)
+  bibtex_final = try {get_bibtex_from_page}
+  fail "Could not extract BibTeX citation from this page" unless bibtex_final
 
   bibdesk = Appscript.app("BibDesk")
   bibdesk.activate
@@ -65,25 +97,13 @@ def import_bibtex
     exit unless fname.index("http")
     growl "Attempting to automatically download and link PDF..."
     `rm "/tmp/pdftmp.pdf"`
-    begin
-      puts fname
-      dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
-    rescue
-    end
-    `ls -l /tmp/pdftmp.pdf`
-
-    unless File.size?("/tmp/pdftmp.pdf")
-      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,'\1://\2.myaccess.library.utoronto.ca/\3')
-      puts fname
-      begin
-        puts fname
-        dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf")
-      rescue
-      end
+    try { dl_file(fname, "/tmp/pdftmp.pdf", PDF_content_types) }
+    unless File.size?("/tmp/pdftmp.pdf") && Proxy_url != ''
+      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,"\1://\2.#{Proxy_url}/\3")
+      try { dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf") }
     end
     unless File.size?("/tmp/pdftmp.pdf")
-      growl "Not able to download file URL, make sure you are connected to MyAccess portal"
-      exit
+      fail "Not able to download file URL, make sure you are connected to MyAccess portal"
     end
 
     d = bibdesk.search({:for=>citekey})
@@ -93,8 +113,6 @@ def import_bibtex
 
     growl("PDF added", "File added successfully to #{citekey}")
   end
-
-# @chrome.windows[0].get.make({:new=>:tab,:with_properties=>{:URL => "http://www.springerlink.com.myaccess.library.utoronto.ca/content/j55358wu71846331/fulltext.pdf"}})
 end
 
 # adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch

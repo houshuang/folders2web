@@ -11,6 +11,7 @@ PDF_path = "/Users/joeblow/Bibdesk"
 
 # let's researchr know if it's accessing a page in your wiki, or somebody else's wiki
 My_domains = ['localhost', 'joeblow.net']
+Proxy_url = ''
 
 # if you have a crossref_api, otherwise leave empty
 Crossref_API = ''
