@@ -26,22 +26,19 @@ end
 # if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
 # import citation to BibDesk
 def import_bibtex
-  unless cururl.index("/ref:")
-    growl "This page is not a Researchr wiki, cannot import citation"
-    exit
-  end
+  fail "This page is not a Researchr wiki, cannot import citation" unless cururl.index("/ref:") || cururl.index("herokuapp")
+
   # returns the content of the BibTeX hidden div
-  js = 'document.querySelectorAll(".code")[0].innerHTML;'
-
+  query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
+  js = "document.#{query}.innerHTML;"
   bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
-  unless bibtex.index("author")
-    growl "Could not extract BibTeX citation from this page."
-    exit
-  end
 
-  bibtex_final = bibtex.gsub("&amp;","&").gsub(/bdsk\-file.+?\}/,"}").gsub("read = {1}", "read = {0}").gsub(/keywords.+?\}\,\n/,"")
+  fail "Could not extract BibTeX citation from this page" unless bibtex.downcase.index("author")
 
-  bibdesk = Appscript::app("BibDesk")
+  bibtex_final = cleanup_bibtex_string(bibtex).gsub("&amp;","&").gsub(/bdsk\-file.+?\}/m,"").
+    gsub("read = {1}", "read = {0}").gsub(/keywords.+?\}\,\n/,"").gsub("<b>Bibtex:</b>", '').strip
+
+  bibdesk = Appscript.app("BibDesk")
   bibdesk.activate
   document = bibdesk.document.get[0].import({:from => bibtex_final})
   citekey = document[0].cite_key.get
