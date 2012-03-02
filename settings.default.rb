@@ -9,6 +9,9 @@ Internet_path = "/wiki"
 Wiki_title = "My PhD wiki"
 PDF_path = "/Users/joeblow/Bibdesk"
 
+# let's researchr know if it's accessing a page in your wiki, or somebody else's wiki
+My_domains = ['localhost', 'joeblow.net']
+
 # if you have a crossref_api, otherwise leave empty
 Crossref_API = ''
 
