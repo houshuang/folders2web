@@ -347,13 +347,14 @@ def submit_citation(bibtex)
 end
 
 def submit_wikipage(citation)
-  payload = { "ref_link" => { "url" => Internet_path + "/ref:" + citation },
+  payload = { "ref_link" => { "url" => Server_path + "/ref:" + citation },
     "citekey"  => citation,
     "token"    => Scrobble_token }.to_json
   send_to_server("/ref_links", payload)
 end
 
 def scrobble(citation)
+  require 'json'
   payload = { "citekey"  => citation,
     "token"    => Scrobble_token }.to_json
   send_to_server("/scrobbles", payload)
