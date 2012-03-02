@@ -34,9 +34,9 @@ def import_bibtex
   bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
 
   fail "Could not extract BibTeX citation from this page" unless bibtex.downcase.index("author")
-
-  bibtex_final = cleanup_bibtex_string(bibtex).gsub("&amp;","&").gsub(/bdsk\-file.+?\}/m,"").
-    gsub("read = {1}", "read = {0}").gsub(/keywords.+?\}\,\n/,"").gsub("<b>Bibtex:</b>", '').strip
+  bibtex = bibtex.gsub(/keywords.+?\}\,\n/i,"").gsub("<b>Bibtex:</b>", '').gsub("&amp;","&").gsub(/bdsk\-file.+?\}/mi,"}").
+    gsub("read = {1}", "read = {0}").strip
+  bibtex_final = cleanup_bibtex_string(bibtex)
 
   bibdesk = Appscript.app("BibDesk")
   bibdesk.activate
