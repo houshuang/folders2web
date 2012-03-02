@@ -309,5 +309,5 @@ end
 
 #### Running the right function, depending on command line input ####
 
-@chrome = Appscript.app('Google @chrome')
+@chrome = Appscript.app('Google Chrome')
 send *ARGV unless ARGV == []
