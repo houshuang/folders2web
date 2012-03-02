@@ -21,6 +21,23 @@ def clean_bibtex
   pbcopy(cleanup_bibtex_string(pbpaste))
 end
 
+# opens a given reference as passed by skimx:// URL in Skim
+# launched by skimx:// url in Chrome (skimx.app must be registered first)
+def url(argv)
+  arg = argv[8..-1]
+  arg.gsub!("#","%23")
+  pdf, page = arg.split("%23")
+  fname = "#{PDF_path}/#{pdf}.pdf"
+  if File.exists?(fname)
+    skim = Appscript.app('skim')
+    dd = skim.open(fname)
+    dd.go({:to => dd.pages.get[page.to_i-1]}) unless page == nil
+    skim.activate
+  else
+    growl("File not found", "Cannot find PDF #{fname}")
+  end
+end
+
 #### keyboard commands ####
 
 # if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
