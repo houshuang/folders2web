@@ -9,11 +9,11 @@ require 'appscript'
 #### utility functions ####
 
 def cururl
-  Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
+  @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
 end
 
 def curtitle
- title = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.title.get.strip
+ title = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.title.get.strip
 end
 
 # cleans bibtex string on clipboard
@@ -33,7 +33,7 @@ def import_bibtex
   # returns the content of the BibTeX hidden div
   js = 'document.querySelectorAll(".code")[0].innerHTML;'
 
-  bibtex = Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+  bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
   unless bibtex.index("author")
     growl "Could not extract BibTeX citation from this page."
     exit
@@ -80,7 +80,7 @@ def import_bibtex
     growl("PDF added", "File added successfully to #{citekey}")
   end
 
-# Chrome.windows[0].get.make({:new=>:tab,:with_properties=>{:URL => "http://www.springerlink.com.myaccess.library.utoronto.ca/content/j55358wu71846331/fulltext.pdf"}})
+# @chrome.windows[0].get.make({:new=>:tab,:with_properties=>{:URL => "http://www.springerlink.com.myaccess.library.utoronto.ca/content/j55358wu71846331/fulltext.pdf"}})
 end
 
 # adds the currently selected page to RSS feed, adds data to a temp file, will be formatted next time bibtex-batch
@@ -236,7 +236,7 @@ def go
   require 'pashua'
   pagetmp = wikipage_selector("Jump to which page?")
   exit unless pagetmp
-  Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.URL.set("http://localhost/wiki/#{pagetmp}")
+  @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.URL.set("http://localhost/wiki/#{pagetmp}")
 end
 
 # Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted
@@ -276,7 +276,7 @@ def sbs
   newurl = "http://localhost/wiki/#{page.gsub(" ","_")}"
 
   js = "var MyFrame=\"<frameset cols=\'*,*\'><frame src=\'#{url}\'><frame src=\'#{newurl}?do=edit&vecdo=print\'></frameset>\";with(document) {    write(MyFrame);};return false;"
-  Chrome.windows[1].get.tabs[Chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+  @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
 end
 
 # asks for name, and creates a new author page from a template
@@ -309,5 +309,5 @@ end
 
 #### Running the right function, depending on command line input ####
 
-Chrome = Appscript.app('Google Chrome')
+@chrome = Appscript.app('Google @chrome')
 send *ARGV unless ARGV == []
