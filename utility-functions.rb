@@ -7,6 +7,13 @@ Publications that have their own pages are listed on top, and hyperlinked. Most 
 Home_path = ENV['HOME']
 Script_path = File.dirname(__FILE__)
 
+PDF_content_types = [
+    "application/pdf",
+    "application/x-pdf",
+    "application/vnd.pdf",
+    "application/text.pdf"
+  ]
+
 require 'settings' if File.exists?("#{Script_path}/settings.rb")
 
 # comment the three next lines to use your own gems, instead of the frozen ones, if you don't have OSX 10.7
@@ -98,12 +105,13 @@ class File
   end
 end
 
+# download a path to a location, require_type is array of acceptable content_types
 def dl_file(full_url, to_here, require_type = false)
   require 'open-uri'
   writeOut = open(to_here, "wb")
   url = open(full_url)
   if require_type
-    raise NameError if url.content_type.strip.downcase != require_type
+    raise NameError unless require_type.index( url.content_type.strip.downcase )
   end
   writeOut.write(url.read)
   writeOut.close
