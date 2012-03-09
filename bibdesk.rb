@@ -50,7 +50,7 @@ def authorlist
     splt = ","
   end
 
-  a= a.split(splt).join("||").gsub(" and ","").gsub("&","").gsub("||", " and ").gsub(/ +/," ").gsub(/\(.+?\)/, '')
+  a= a.split(splt).join("||").gsubs([" and ",""],["&",""],["||", " and "][/ +/," "],[/\(.+?\)/, ''])
   pbcopy(a)
 end
 

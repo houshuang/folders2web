@@ -7,7 +7,7 @@ require 'utility-functions'
 # use anystyle parser to convert text to bibtex. Paste to clipboard.
 
 def lookup_doi(doi)
-	doi = doi.downcase.gsub('doi:','').gsub('http://','').gsub('dx.doi.org/','').gsub('doi>','').gsub('doi ','').strip
+	doi = doi.downcase.remove(/doi[:>]/,'http://','dx.doi.org/').strip
   url = "http://dx.doi.org/#{doi}"
 	return open(url, "Accept" => "text/bibliography; style=bibtex").read
 end

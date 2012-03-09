@@ -112,6 +112,7 @@ end
 # for example "this is my house".gsubs({:all_with => ''}, 'this', /s.y/)
 # uses the last function to provide remove, which takes a list of search arguments to remove
 # the example above is similar to "this is my house".remove('this', /s.y/)
+# also provides remove! destructive function
 class String
   def gsubs!(*searches)
     self.replace(gsubs(searches))
@@ -134,9 +135,14 @@ class String
   end
 
   def remove(*searches)
-    self.replace(gsubs({:all_with => ''}, *searches))
+    gsubs({:all_with => ''}, *searches)
+  end
+
+  def remove!(*searches)
+    self.replace(remove(*searches))
   end
 end
+
 
 # download a path to a location, require_type is array of acceptable content_types
 def dl_file(full_url, to_here, require_type = false)

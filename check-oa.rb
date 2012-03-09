@@ -6,7 +6,7 @@ require "cgi"
 # this runs on my server, and is used to check if a certain url links to a publicly available PDF
 
 def checkOA(url)
-  url = url.gsub("http:/",'').gsub("http://",'')
+  url = url.remove(/http:\/\/?/)
   uri,*path = url.split("/")
   path = "/" + path.join("/")
   response = nil
