@@ -105,6 +105,23 @@ class File
   end
 end
 
+# to make multiple replacements easier, gsubs accepts array of replacements (each replacement is array of from/to)
+# takes regexp or string replacement
+# for example "stian".gsubs(['s', 'x'], [/^/, "\n"])
+class String
+  def gsubs!(*searches)
+    self.replace(gsubs(searches))
+  end
+
+  def gsubs(*searches)
+    tmp = self.dup
+    searches.each do |search|
+      tmp.gsub!(search[0], search[1])
+    end
+    return tmp
+  end
+end
+
 # download a path to a location, require_type is array of acceptable content_types
 def dl_file(full_url, to_here, require_type = false)
   require 'open-uri'
