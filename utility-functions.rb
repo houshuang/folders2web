@@ -108,17 +108,33 @@ end
 # to make multiple replacements easier, gsubs accepts array of replacements (each replacement is array of from/to)
 # takes regexp or string replacement
 # for example "stian".gsubs(['s', 'x'], [/^/, "\n"])
+# you can also provide a universal "to" string, and a list of "from" strings
+# for example "this is my house".gsubs({:all_with => ''}, 'this', /s.y/)
+# uses the last function to provide remove, which takes a list of search arguments to remove
+# the example above is similar to "this is my house".remove('this', /s.y/)
 class String
   def gsubs!(*searches)
     self.replace(gsubs(searches))
   end
 
   def gsubs(*searches)
+    if searches[0].kind_of?(Hash)
+      args = searches.shift
+      all_replace = try args[:all_with]
+    end
     tmp = self.dup
     searches.each do |search|
-      tmp.gsub!(search[0], search[1])
+      if all_replace
+        tmp.gsub!(search, all_replace)
+      else
+        tmp.gsub!(search[0], search[1])
+      end
     end
     return tmp
+  end
+
+  def remove(*searches)
+    self.replace(gsubs({:all_with => ''}, *searches))
   end
 end
 
@@ -186,7 +202,7 @@ def wikipage_selector(title, retfull = false, additional_code = "")
   wpath = "#{Wiki_path}/data/pages/"
   Find.find(wpath) do |path|
     next unless File.file?(path)
-    fname = path[wpath.size..-5].gsub("/",":").gsub("_", " ")
+    fname = path[wpath.size..-5].gsubs(["/",":"],["_", " "])
     idx = fname.index(":")
     config << "cb.option = #{capitalize_word(fname)}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
   end
