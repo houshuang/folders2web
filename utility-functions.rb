@@ -59,7 +59,7 @@ module BibTeX
       cstr << (has_field?(:year) ? year : '')
       t = title.dup.split.select {|f| f.size > 3}[0]
       cstr << t ? t : ''
-      cstr = cstr.downcase.gsub(/[^a-zA-Z0-9\-]/, '')
+      cstr = cstr.downcase.remove(/[^a-zA-Z0-9\-]/)
       return cstr
     end
   end
@@ -254,7 +254,7 @@ end
 
 # properly format full name, extracted from bibtex
 def nice_name(name)
-  return "#{name.first} #{name.last}".gsub(/[\{\}]/,"")
+  return "#{name.first} #{name.last}".remove(/[\{\}]/)
 end
 
 # properly format list of names for citation
@@ -358,7 +358,7 @@ def add_to_jsonbib(citekey)
   item = BibTeX.parse(bib, {:filter => :latex})[0]
   ax = []
   item.author.each do |a|
-    ax << a.last.gsub(/[\{\}]/,"")
+    ax << a.last.remove(/[\{\}]/)
   end
 
   cit = CiteProc.process item.to_citeproc, :style => :apa

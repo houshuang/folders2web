@@ -2,6 +2,7 @@
 
 # researchr scripts relevant to BibDesk (the right one is executed from the bottom of the file)
 
+
 $:.push(File.dirname($0))
 require 'utility-functions'
 require 'appscript'
@@ -27,9 +28,15 @@ def get_bibtex_from_page
   query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
   js = "document.#{query}.innerHTML;"
   bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
-  bibtex = bibtex.gsub(/keywords.+?\}\,\n/i,"").gsub("<b>Bibtex:</b>", '').gsub("&amp;","&").gsub(/bdsk\-file.+?\}/mi,"}").
-    gsub("read = {1}", "read = {0}").strip
+  bibtex = bibtex.gsubs(
+    [/keywords.+?\}\,\n/i,    ''],                      # no keywords, we want to assign our own
+    ["<b>Bibtex:</b>",        ''],                      # not part of bibtex string
+    ["&amp;",                 '&'],
+    [/bdsk\-file.+?\}/mi,     '}'],                     # the local bibdesk file reference is useless
+    ["read = {1}",            "read = {0}"]             # other's might have read it, we haven't yet
+    ).strip
 
+  bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
   # final sanity check
   bibtex = cleanup_bibtex_string(bibtex)
   raise unless bibtex.index("author")
@@ -82,7 +89,7 @@ end
 # if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
 # import citation to BibDesk
 def import_bibtex
-  fail "This page is not a Researchr wiki, cannot import citation" unless cururl.index("/ref:") || cururl.index("herokuapp")
+  fail "This page is not a Researchr wiki, cannot import citation" unless cururl.downcase.index("/ref:") || cururl.downcase.index("herokuapp")
 
   bibtex_final = try {get_bibtex_from_page}
   fail "Could not extract BibTeX citation from this page" unless bibtex_final
@@ -132,16 +139,16 @@ def add_to_rss
   page_contents = open("http://localhost/wiki/#{internalurl}?vecdo=print").read
   contents = page_contents.scan(/<\!\-\- start rendered wiki content \-\-\>(.+?)\<\!\-\- end rendered wiki content \-\-\>/m)[0][0]
 
-  contents.gsub!(/\<div class\=\"hiddenGlobal(.+?)\<div class\=\"plugin_include_content/m, '<div ') # remove pure bibtex
-  contents.gsub!(/\<span class\=\"tip\"\>(.+?)\<\/span\>/, '') # remove citation tooltips
-  # remove wiki clippings
-  contents.gsub!(/\<div class\=\"plugin\_include\_content\ plugin\_include\_\_clip(.+?)\<\/div\>/m, '')
-  contents.gsub!(/\<div class\=\"plugin\_include\_content\ plugin\_include\_\_kindle(.+?)\<\/div\>/m, '')
+  contents.gsub!(/\<div class\=\"hiddenGlobal(.+?)\<div class\=\"plugin_include_content/m, '<div ')
 
   # remove title (already given in metadata)
-  contents.sub!(/\<h1 class\=\"sectionedit1\"\>(.+?)\<\/a\>\<\/h1\>/, '')
-
-  contents.gsub!(/\<\!\-\- TOC START \-\-\>(.+?)\<\!\-\- TOC END \-\-\>/m, '')
+  contents.remove!(
+    /\<h1 class\=\"sectionedit1\"\>(.+?)\<\/a\>\<\/h1\>/,
+    /\<\!\-\- TOC START \-\-\>(.+?)\<\!\-\- TOC END \-\-\>/m,
+    /\<span class\=\"tip\"\>(.+?)\<\/span\>/,                                                # remove citation tooltips
+    /\<div class\=\"plugin\_include\_content\ plugin\_include\_\_clip(.+?)\<\/div\>/m,       # remove wiki clippings
+    /\<div class\=\"plugin\_include\_content\ plugin\_include\_\_kindle(.+?)\<\/div\>/m
+  )
 
 
   title = page_contents.scan(/\<h1(.+?)id(.+?)>(.+)\<(.+?)\<\/h1\>/)[0][2]
@@ -182,7 +189,7 @@ def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
     f = "h1. "+ capitalize_word(pagename) + "\n\n"
     growltext = "Selected text added to newly created #{pagename}"
   end
-  filetext = f + "\n----\n" + insert.gsub("\n","\n\n").gsub("\n\n\n","\n\n") + " " + curpage
+  filetext = f + "\n----\n" + insert.gsub({:all_with=> "\n\n"}, "\n", "\n\n\n") + " " + curpage
 
   dwpage(pagename, filetext)
   growl("Text added", growltext)
@@ -228,7 +235,7 @@ end
 # there is quite a lot of black magic and guessing in here, a wonder it mostly works
 def bulletlist
   b = pbpaste
-  a = b.gsub(/^[\t]*\*/,"") # strip off bullet etc from beginning
+  a = b.remove(/^[\t]*\*/) # strip off bullet etc from beginning
 
   if a.scan("\n").size > 1  # determine whether to split on newline, space or comma
     splt = "\n"
@@ -256,7 +263,13 @@ def bulletlist
 
   out = ''
   splits.each do |item|
-    i = item.gsub(", and","").gsub(/[\.\*]/,"").gsub(/^ *and /,"").gsub(/\.$/,"").gsub("•","").strip
+    i = item.remove(
+      ", and",
+      /[\.\*]/,
+      /^ *and /,
+      /\.$/,
+      "•",""
+      ).strip
     out << "  * #{i}\n" if i.size > 0
   end
 
@@ -275,7 +288,7 @@ end
 def image
   wiki = cururl[22..-1]
   w,dummy = wiki.split("?")
-  wikipage = w.gsub(":","_").gsub("%3A","_").gsub("%20","_").downcase
+  wikipage = w.gsubs({:all_with => "_"}, ":", "%3A", "%20").downcase
   curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png") # this might be different between different OSX versions
 
   if curfile == nil
