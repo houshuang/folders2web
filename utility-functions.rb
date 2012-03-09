@@ -334,10 +334,14 @@ end
 # returns either the value of the block, or nil, allowing things to fail gracefully. easily
 # combinable with fail unless
 def try(default = nil, &block)
-  begin
-    yield block
-  rescue
-    return default
+  if defined?(DEBUG)
+    yield
+  else
+    begin
+      yield block
+    rescue
+      return default
+    end
   end
 end
 

@@ -12,11 +12,11 @@ citations = Hash.new
 doc = utf8safe(pbpaste)
 doc.scan( /(\[?\@[a-zA-Z0-9\-\_]+\]?)/ ).each do |hit|
   hit = hit[0]
-  hitnobraces = hit.gsub(/[\@\[\]]/,"")
+  hitnobraces = hit.remove(/[\@\[\]]/)
   if bib[hitnobraces]
     citations[hitnobraces] = bib[hitnobraces]
     if onlylist
-      doc.gsub!(hit, "")
+      doc.remove!(hit)
     else
       doc.gsub!(hit, citations[hitnobraces][0] + ", " + citations[hitnobraces][1])
     end
@@ -24,7 +24,7 @@ doc.scan( /(\[?\@[a-zA-Z0-9\-\_]+\]?)/ ).each do |hit|
 end
 doc << "\n\n\References\n" unless onlylist
 citations.sort.each do |item|
-  doc << item[1][2].gsub(/[\{\}]/,'') + "\n\n"
+  doc << item[1][2].remove(/[\{\}]/) + "\n\n"
 end
 
 puts doc.strip
