@@ -41,10 +41,12 @@ require 'bibtex'
 class Fix_namecase < BibTeX::Filter
   def apply(field)
     require 'namecase'
-    temp = NameCase(Unicode::capitalize(field))
+
+    # only capitalize if all-caps, otherwise preserve to avoid deleting things like "McCoy"
+    field = NameCase(Unicode::capitalize(field)) unless field.index(/[a-z]/)
 
     # fix problem of initials without space between
-    temp.to_s.gsub(/\.([A-Za-z])/, '. \1')
+    field.to_s.gsub(/\.([A-Za-z])/, '. \1')
   end
 end
 
