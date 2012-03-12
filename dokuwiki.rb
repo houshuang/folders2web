@@ -32,18 +32,25 @@ end
 # gets the bibtex from the current page, whether it's researchr or scrobblr, and cleans it up
 def get_bibtex_from_page
   # returns the content of the BibTeX hidden div
-  query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
-  js = "document.#{query}.innerHTML;"
-  bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
-  bibtex = bibtex.gsubs(
-    [/keywords.+?\}\,\n/i,    ''],                      # no keywords, we want to assign our own
-    ["<b>Bibtex:</b>",        ''],                      # not part of bibtex string
-    ["&amp;",                 '&'],
-    [/bdsk\-file.+?\}/mi,     '}'],                     # the local bibdesk file reference is useless
-    ["read = {1}",            "read = {0}"]             # other's might have read it, we haven't yet
-    ).strip
+  if cururl.index("/ref:") || cururl.index("herokuapp")
+    query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
+    js = "document.#{query}.innerHTML;"
+    bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+    bibtex = bibtex.gsubs(
+      [/keywords.+?\}\,\n/i,    ''],                      # no keywords, we want to assign our own
+      ["<b>Bibtex:</b>",        ''],                      # not part of bibtex string
+      ["&amp;",                 '&'],
+      [/bdsk\-file.+?\}/mi,     '}'],                     # the local bibdesk file reference is useless
+      ["read = {1}",            "read = {0}"]             # other's might have read it, we haven't yet
+      ).strip
 
-  bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
+    bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
+  else
+    require 'open-uri'
+    url = "http://scraper.bibsonomy.org/service?url=#{cururl}&format=bibtex"
+    bibtex = try { open(url).read }
+  end
+
   # final sanity check
   bibtex = cleanup_bibtex_string(bibtex)
   raise unless bibtex.index("author")
@@ -96,7 +103,7 @@ end
 # if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
 # import citation to BibDesk
 def import_bibtex
-  fail "This page is not a Researchr wiki, cannot import citation" unless cururl.downcase.index("/ref:") || cururl.downcase.index("herokuapp")
+  #fail "This page is not a Researchr wiki, cannot import citation" unless cururl.downcase.index("/ref:") || cururl.downcase.index("herokuapp")
 
   bibtex_final = try {get_bibtex_from_page}
   fail "Could not extract BibTeX citation from this page" unless bibtex_final
