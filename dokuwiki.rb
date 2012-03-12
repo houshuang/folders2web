@@ -168,10 +168,12 @@ end
 
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
-def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
+def do_clip(pagename, titletxt, onlytext = false)
   pagepath = ("#{Wiki_path}/data/pages" + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
 
   curpage = cururl.split("/").last
+
+  sel = has_selection
 
   # format properly if citation
   unless onlytext
@@ -187,7 +189,7 @@ def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
     curpage = ''
   end
 
-  insert = (onlylink ? "  *" : utf8safe(pbpaste) )
+  insert = (sel ? sel : "  *" )
 
   if File.exists?(pagepath)
     f = File.read(pagepath)
@@ -208,9 +210,6 @@ def clip
 
   # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
   pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
-  xb.type = checkbox
-  xb.label = only insert link to this page
-  xb.tooltip = Otherwise, it will take the currently selected text and insert
   ob.type = checkbox
   ob.label = do not include citation information, only insert pure text
   fb.type = textbox
@@ -219,12 +218,11 @@ def clip
   )
 
   exit if pagetmp["cancel"] == 1
-  onlylink = pagetmp['xb'] == "1" ? true : false
   onlytext = pagetmp['ob'] == "1" ? true : false
   pagename = pagetmp['cb'].strip
   title = pagetmp['fb'].strip
   File.write("/tmp/dokuwiki-clip.tmp","#{pagename}\n#{title}\n#{onlytext.to_s}")
-  do_clip(pagename, title, onlylink, onlytext)
+  do_clip(pagename, title, onlytext)
 end
 
 # uses info stored in temp file to do a clipping from the same page, to the same page
@@ -235,7 +233,7 @@ def clip_again
   if title.strip == ""
     title = curtitle
   end
-  do_clip(page, title, false, onlytext)
+  do_clip(page, title, onlytext)
 end
 
 # cleans up a text into bulleted list, either separated by commas or by line shifts
