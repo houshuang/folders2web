@@ -9,8 +9,12 @@ require 'appscript'
 
 #### utility functions ####
 
-def cururl
+def has_selection
+  a = pbpaste
   @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
+
+def cururl
+  @chrome.windows[1].active_tab.get.URL.get.strip
 end
 
 def curtitle
