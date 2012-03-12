@@ -10,8 +10,11 @@ require 'appscript'
 #### utility functions ####
 
 def has_selection
-  a = pbpaste
-  @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.URL.get.strip
+  pbcopy('')
+  @chrome.windows[1].active_tab.copy_selection
+  sel = pbpaste
+  return (sel.size > 0) ? sel : nil
+end
 
 def cururl
   @chrome.windows[1].active_tab.get.URL.get.strip
@@ -193,7 +196,7 @@ def do_clip(pagename, titletxt, onlylink = false, onlytext = false)
     f = "h1. "+ capitalize_word(pagename) + "\n\n"
     growltext = "Selected text added to newly created #{pagename}"
   end
-  filetext = f + "\n----\n" + insert.gsub({:all_with=> "\n\n"}, "\n", "\n\n\n") + " " + curpage
+  filetext = f + "\n----\n" + insert.gsubs({:all_with=> "\n\n"}, "\n", "\n\n\n") + " " + curpage
 
   dwpage(pagename, filetext)
   growl("Text added", growltext)
