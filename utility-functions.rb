@@ -123,7 +123,7 @@ class String
   def gsubs(*searches)
     if searches[0].kind_of?(Hash)
       args = searches.shift
-      all_replace = try args[:all_with]
+      all_replace = try { args[:all_with] }
     end
     tmp = self.dup
     searches.each do |search|
@@ -345,7 +345,7 @@ end
 # combinable with fail unless
 def try(default = nil, &block)
   if defined?(DEBUG)
-    yield
+    yield block
   else
     begin
       yield block
