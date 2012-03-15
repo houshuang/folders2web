@@ -158,6 +158,14 @@ def dl_file(full_url, to_here, require_type = false)
   writeOut.close
 end
 
+# uses online server to check if a file is OA or not
+def check_oa(fname)
+  require 'open-uri'
+  puts "http://reganmian.net/check-oa/#{fname}"
+  result = try { open("http://reganmian.net/check-oa/#{fname}").read }
+  return (try {result.strip} == "true") ? true : false
+end
+
 
 # writes text to clipboard, using a pipe to avoid shell mangling
 # rewritten using osascript for better UTF8 support (from http://www.coderaptors.com/?action=browse&diff=1&id=Random_tips_for_Mac_OS_X)
