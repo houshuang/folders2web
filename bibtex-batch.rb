@@ -50,7 +50,7 @@ def make_rss_feed
     end
   end
 
-  File.write(Wiki_path + "/feed.xml", content) 
+  File.write(Wiki_path + "/feed.xml", content)
 end
 
 puts "Making RSS feed"
@@ -90,17 +90,17 @@ b.each do |item|
       a.strip!
       keywords[a] = Array.new unless keywords[a]
       keywords[a] << item.key
-    end    
+    end
   end
   if item.respond_to? :journal
     j = item[:journal].to_s
     journals[j] = Array.new unless journals[j]
     journals[j] << item.key
   end
-  
+
   cit = CiteProc.process item.to_citeproc, :style => :apa
   year = (defined? item.year) ? item.year.to_s : "n.d."
-  if year == "n.d." and cit.match(/\((....)\)/) 
+  if year == "n.d." and cit.match(/\((....)\)/)
     year = $1
   end
   json[item.key.to_s] = [namify(ax), year, cit]
@@ -112,12 +112,12 @@ b.each do |item|
       counter[:clippings] += 1
       hasfiles[1] = "C"
     end
-    if File.exists?("#{Wiki_path}/data/pages/skimg/#{item.key}.txt") 
+    if File.exists?("#{Wiki_path}/data/pages/skimg/#{item.key}.txt")
       counter[:images] += 1
       hasfiles[2] = "I"
     end
     if File.exists?("#{Wiki_path}/data/pages/notes/#{item.key}.txt")
-      counter[:notes] += 1 
+      counter[:notes] += 1
       hasfiles[0] = "N"
       out1 << "<tr><td><a href = 'ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
     elsif hasfiles[1] == "C"
@@ -125,14 +125,14 @@ b.each do |item|
     else
       out3 << "<tr><td><a href = 'ref:#{item.key}'>#{item.key}</a></td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
 
-      
+
     end
-    
+
   else
     counter[:noref] += 1
     out4 << "<tr><td>#{item.key}</td><td>#{hasfiles.join("</td><td>&nbsp;")}</td><td>#{cit}</td></tr>\n"
   end
-  
+
   # mark as read if notes exist
   # if File.exists?("#{Wiki_path}/data/pages/clip/#{item.key}.txt") || File.exists?("#{Wiki_path}/data/pages/kindle/#{item.key}.txt")
   #   dt.document.search({:for =>item.key.to_s})[0].fields["Read"].value.set("1")
@@ -150,7 +150,7 @@ out = "h1. Bibliography\n\nDownload [[http://dl.dropbox.com/u/1341682/Bibliograp
 File.open("#{Wiki_path}/lib/plugins/dokuresearchr/json.tmp","w"){|f| f << JSON.fast_generate(json)}
 
 out << out1 << out2 << out3 << out4 << "</table></html>"
-File.open("#{Wiki_path}/data/pages/bib/bibliography.txt", 'w') {|f| f << out}  
+File.open("#{Wiki_path}/data/pages/bib/bibliography.txt", 'w') {|f| f << out}
 
 ###############################################
 # generate individual files for each author
@@ -159,13 +159,13 @@ if authoropt
 puts "Generating individual files for each author"
 authorlisted = Array.new
 authors.each do |axx, pubs|
-  out ='' 
+  out =''
   out1 = ''
   out2 =''
   author = axx.strip
-  
+
   # only generates individual author pages for authors with full names. this is because I want to deduplicate author names
-  # when you import bibtex, you get many different spellings etc. 
+  # when you import bibtex, you get many different spellings etc.
   next if (author.strip[-1] == "." || author[-2] == " " || author[-2] == author[-2].upcase || author[1] == '.')
   out = "h2. #{author}'s publications\n\n"
   sort_pubs(pubs).each do |i|
@@ -181,7 +181,7 @@ authors.each do |axx, pubs|
   out << out1 << out2
   authorname = clean_pagename(author)
   authorlisted << [authorname,author,pubs.size]
-  File.open("#{Wiki_path}/data/pages/abib/#{authorname}.txt", 'w') {|f| f << out}  
+  File.open("#{Wiki_path}/data/pages/abib/#{authorname}.txt", 'w') {|f| f << out}
   puts author
 end
 
@@ -199,12 +199,12 @@ end
 ###############################################
 # generate individual files for each keyword
 
-if keywordopt 
+if keywordopt
   puts "Generating individual files for each keyword"
-  
+
 keywordslisted = Array.new
 keywords.each do |keyword, pubs|
-  out ='' 
+  out =''
   out1 = ''
   out2 =''
   out = "h2. Publications with keyword \"#{keyword}\"\n\n"
@@ -221,7 +221,7 @@ keywords.each do |keyword, pubs|
   out << out1 << out2
   kwname = keyword.gsub(/[\,\.\/ ]/,"_").downcase
   keywordslisted << [kwname,keyword,pubs.size]
-  File.open("#{Wiki_path}/data/pages/kbib/#{kwname}.txt", 'w') {|f| f << out}  
+  File.open("#{Wiki_path}/data/pages/kbib/#{kwname}.txt", 'w') {|f| f << out}
   puts kwname
 end
 
@@ -235,19 +235,19 @@ end
 ###############################################
 # generate individual files for each journal with more than five cits.
 
-if journalopt 
+if journalopt
   puts "Generating individual files for each journal"
-  
+
 authorlisted = Array.new
 journals.each do |axx, pubs|
-  out ='' 
+  out =''
   out1 = ''
   out2 =''
   author = axx.strip
-  p pubs, pubs.size 
+  p pubs, pubs.size
   next unless pubs.size > 5
   # only generates individual author pages for authors with full names. this is because I want to deduplicate author names
-  # when you import bibtex, you get many different spellings etc. 
+  # when you import bibtex, you get many different spellings etc.
   out = "h2. Publications in #{author}\n\n"
   sort_pubs(pubs).each do |i|
     item = b[i]
@@ -262,7 +262,7 @@ journals.each do |axx, pubs|
   out << out1 << out2
   authorname = clean_pagename(author)
   authorlisted << [authorname,author,pubs.size]
-  File.open("#{Wiki_path}/data/pages/jbib/#{authorname}.txt", 'w') {|f| f << out}  
+  File.open("#{Wiki_path}/data/pages/jbib/#{authorname}.txt", 'w') {|f| f << out}
   puts author
 end
 end
@@ -284,7 +284,7 @@ end
 
 # pages = Array.new
 # out = "h1.Needs key ideas\n\nList of publications with clippings, which do not have key ideas.\n\n"
-# 
+#
 # Find.find("#{Wiki_path}/data/pages/ref") do |path|
 #   next unless File.file?(path)
 #   fn = File.basename(path)
