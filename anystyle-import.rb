@@ -13,11 +13,12 @@ def lookup_doi(doi)
 end
 
 search = pbpaste
-if search.strip[0..2] == "doi"
+if search.strip.downcase[0..2] == "doi"
   bibtex = lookup_doi(search)
   growl "Failure", "DOI lookup not successful" unless bibtex
 else
   require 'anystyle/parser'
+  search = search.gsub("-\n", "").gsub("\n", " ")
   bibtex = Anystyle.parse(search, :bibtex).to_s
 end
-pbcopy (bibtex)
+pbcopy(cleanup_bibtex_string(bibtex))
