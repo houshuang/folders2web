@@ -5,6 +5,7 @@ require 'bibtex'
 require 'citeproc'
 require 'find'
 require 'rss/maker'
+require 'sanitize'
 
 # batch processes entire bibliography file and generates ref:bibliography in wiki, used for refnotes database
 
@@ -39,13 +40,13 @@ def make_rss_feed
     m.channel.link = Internet_path
     m.channel.description = Wiki_desc
     m.items.do_sort = true # sort items by date
-  
+
     rss_entries.each do |entry|
       i = m.items.new_item
       i.title = entry[:title]
       i.link = entry[:link]
       i.date = entry[:date]
-      i.description = entry[:description]
+      i.description = Sanitize.clean( entry[:description], Sanitize::Config::RELAXED )
     end
   end
 
