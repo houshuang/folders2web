@@ -2,7 +2,6 @@
 
 # researchr scripts relevant to BibDesk (the right one is executed from the bottom of the file)
 
-
 $:.push(File.dirname($0))
 require 'utility-functions'
 require 'appscript'
@@ -118,13 +117,14 @@ def import_bibtex
     exit unless fname.index("http")
     growl "Attempting to automatically download and link PDF..."
     `rm "/tmp/pdftmp.pdf"`
+
     try { dl_file(fname, "/tmp/pdftmp.pdf", PDF_content_types) }
-    unless File.size?("/tmp/pdftmp.pdf") && Proxy_url != ''
-      fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,"\1://\2.#{Proxy_url}/\3")
-      try { dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf") }
-    end
+    # unless File.size?("/tmp/pdftmp.pdf") && Proxy_url != ''
+    #   fname.gsub!(/^(.+?)\:\/\/(.+?)\/(.+?)$/,"\1://\2.#{Proxy_url}/\3")
+    #   try { dl_file(fname, "/tmp/pdftmp.pdf", "application/pdf") }
+    # end
     unless File.size?("/tmp/pdftmp.pdf")
-      fail "Not able to download file URL, make sure you are connected to MyAccess portal"
+      fail "Not able to download file from #{fname}"
     end
 
     d = bibdesk.search({:for=>citekey})
