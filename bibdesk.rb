@@ -75,11 +75,24 @@ def linkfile
   curfile =  File.last_added("#{Downloads_path}/*.pdf")
   fail "Sorry, no PDFs found in that directory" unless curfile # no last file found
 
+  # grab download URL before file gets moved
+  a = `mdls -name kMDItemWhereFroms "#{curfile}"`
+  dlurl = try {a.split('"')[1]}
+
+
+  # import and autolink file
   f = MacTypes::FileURL.path(curfile)
   Selection[0].linked_files.add(f,{:to =>Selection[0]})
   Selection[0].auto_file
 
   growl("PDF added", "File added successfully to #{Selection[0].cite_key.get}")
+
+  # check if OA, and add URL field if yes
+  if dlurl.index('http') && check_oa(dlurl)
+    Selection[0].fields["Url"].value.set(dlurl)
+    growl "Publication is OA, URL successfully added"
+  end
+
 end
 
 
