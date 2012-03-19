@@ -57,6 +57,7 @@ end
 fname = "/tmp/#{Citekey}.txt"
 
 skimdoc.save(skimdoc, {:as => "Notes as Text", :in => fname})
+skimdoc.save(skimdoc, {:as => "Skim Notes", :in => "/tmp/skimnotes-binary-pdf"})
 # `/Applications/Skim.app/Contents/SharedSupport/skimnotes get -format text #{filename}`
 
 # make sure the metadata page is written
@@ -128,7 +129,6 @@ srch.fields["Read"].value.set("1")
 srch.fields["Date-read"].value.set(Time.now.to_s)
 ensure_refpage(Citekey)
 
-scrobble(Citekey)
 
 dt.save(dt.document)
 
@@ -136,3 +136,4 @@ dt.save(dt.document)
 `open http://localhost/wiki/ref:#{Citekey}`
 
 add_to_jsonbib(Citekey)
+try { scrobble(Citekey) }
