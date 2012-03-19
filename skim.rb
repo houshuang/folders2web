@@ -44,14 +44,9 @@ Citekey = skimdoc.name.get[0..-5]
 filename = skimdoc.file.get.to_s
 
 # ensure that the PDF is named the same as the cite key (inspired by Cresencia)
-begin
-  ck_found = (app("BibDesk").document.search({:for =>Citekey})[0].cite_key.get.to_s == Citekey)
-rescue
-  false
-end
-unless ck_found
-  growl "Error!","PDF filename doesn't match any citekeys in the BibDesk database. The name of a PDF file must be exactly the same as the citekey in the database + the .PDF extension, for export to function properly. Aborting."
-  exit(0)
+unless try {(app("BibDesk").document.search({:for =>Citekey})[0].cite_key.get.to_s == Citekey)}
+  fail "PDF filename doesn't match any citekeys in the BibDesk database. The name of a PDF file must be exactly
+  the same as the citekey in the database + the .PDF extension, for export to function properly. Aborting."
 end
 
 fname = "/tmp/#{Citekey}.txt"
