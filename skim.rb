@@ -124,16 +124,14 @@ if File.exists?("/tmp/skim-#{Citekey}-tmp")
   `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{Citekey}'`
 end
 
-srch = app("BibDesk").document.search({:for =>Citekey})[0]
-srch.fields["Read"].value.set("1")
-srch.fields["Date-read"].value.set(Time.now.to_s)
 ensure_refpage(Citekey)
-
-
-dt.save(dt.document)
 
 #make_newimports_page([Citekey])
 `open http://localhost/wiki/ref:#{Citekey}`
+
+srch = app("BibDesk").document.search({:for =>Citekey})[0]
+srch.fields["Read"].value.set("1")
+srch.fields["Date-read"].value.set(Time.now.to_s)
 
 add_to_jsonbib(Citekey)
 try { scrobble(Citekey) }
