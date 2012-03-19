@@ -45,8 +45,8 @@ filename = skimdoc.file.get.to_s
 bibdesk_publication = try { app("BibDesk").document.search({:for =>Citekey})[0] }
 
 unless try { bibdesk_publication.cite_key.get.to_s == Citekey }
-  fail "PDF filename doesn't match any citekeys in the BibDesk database. The name of a PDF file must be exactly
-  the same as the citekey in the database + the .PDF extension, for export to function properly. Aborting."
+  fail "PDF filename doesn't match any citekeys in the BibDesk database. The name of a PDF file must be exactly " +
+    "the same as the citekey in the database + the .PDF extension, for export to function properly. Aborting."
 end
 
 fname = "/tmp/#{Citekey}.txt"
@@ -59,9 +59,9 @@ skimdoc.save(skimdoc, {:as => "Notes as Text", :in => fname})
 ensure_refpage(Citekey)
 
 # if no annotations, we're done
-unless File.exists?(fname)
-  growl "Error!","Skim did not export any data. Either you have not made any highlights, or there is
-  an error (check the paths in settings.rb). Just creating the ref: page with metadata."
+unless File.size(fname)  > 0
+  growl "No clippings","Skim did not export any data. Either you have not made any highlights, or there is "+
+    "an error (check the paths in settings.rb). Just creating the ref: page with metadata."
 else
   # process clippings and images
 
