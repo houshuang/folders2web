@@ -18,6 +18,6 @@ a.gsub!(/^(\t*)- /) { |f| "  " + f.gsubs([/\t/, '  '], ["- ", "* "]) }
 a.gsub!(/\*(.+?)\n\n[^ ]/m) {|f| f.gsub("\n\n", "\n")[0..-2] + "\n" + f[-1] }
 
 # clean up spaces before titles
-a.gsub!(/^ +(h[1-9]\.)/) {|f| p f}#, '\1')
+a.gsub!(/.(h[1-9]\.)/, '\1') # {|f| p f}
 
-File.write(ARGV[0], a)
+File.write(ARGV[0]+".txt", a)
