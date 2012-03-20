@@ -117,7 +117,7 @@ end
 # also provides remove! destructive function
 class String
   def gsubs!(*searches)
-    self.replace(gsubs(searches))
+    self.replace(gsubs(*searches))
   end
 
   def gsubs(*searches)
