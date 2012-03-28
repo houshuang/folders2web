@@ -20,21 +20,38 @@ end
 
 #### keyboard commands ####
 
-# email selected files to Kindle - needs some polish
+# email selected files to Kindle, or copy through USB cable - needs some polish
 # launched by ctrl+alt+cmd+K
 def send_to_kindle
-  require 'mail-lib'
+  pluggedin = File.exists?('/Volumes/Kindle')
+  verb = pluggedin ? ["transferring", "transferred"] : ["sending", "sent"]
+
+  require 'mail-lib' unless pluggedin
+
+  growl "Preparing and #{verb[0]} #{Selection.size} documents to Kindle"
+
+  successful = 0
   Selection.each do |dd|
+
+    # prepare document
     docu = dd.cite_key.get
     title = dd.title.get.gsub(/[\{|\}]/,"")
     authors = dd.author.name.get.join(", ")
     `/usr/local/bin/pdftotext "#{PDF_path}/#{docu}.pdf" /tmp/#{docu}.txt`
     `ebook-convert /tmp/#{docu}.txt /tmp/#{docu}.mobi`
     `ebook-meta /tmp/#{docu}.mobi -t "#{title} [#{docu}]" -a "#{authors}" --category="Bibdesk"`
-    `cp /tmp/#{docu}.mobi /Volumes/Kindle/documents`
-  #  mail_file("/tmp/[#{docu}].pdf")
+
+    next unless File.exists?("/tmp/#{docu}.mobi")
+
+    successful += 1
+
+    if pluggedin
+      `cp /tmp/#{docu}.mobi /Volumes/Kindle/documents`
+    else
+      mail_file("/tmp/#{docu}.mobi")
+    end
   end
-  growl("#{d.size} file(s) sent")
+  growl("#{successful} file(s) #{verb[1]} to Kindle")
 end
 
 # properly formats an author list for BibDesk with " and " as separator
