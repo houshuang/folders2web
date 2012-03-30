@@ -1,5 +1,4 @@
 # encoding: UTF-8
-
 # researchr scripts relevant to BibDesk (the right one is executed from the bottom of the file)
 
 $:.push(File.dirname($0))
@@ -48,6 +47,7 @@ def get_bibtex_from_page
     require 'open-uri'
     url = "http://scraper.bibsonomy.org/service?url=#{cururl}&format=bibtex"
     bibtex = try { open(url).read }
+    bibtex.force_encoding("UTF-8")  # erroneously returns as ASCII-8bit
   end
 
   # final sanity check
