@@ -36,6 +36,14 @@ def log(text)
   File.append("#{Script_path}/log.txt",text)
 end
 
+# lookup DOI, return BibTeX using content negotiation
+def doi_to_bibtex(doi)
+  require 'open-uri'
+  doi = doi.downcase.remove(/doi[:>\/]/,'http://','dx.doi.org/').strip
+  url = "http://dx.doi.org/#{doi}"
+  return try { open(url, "Accept" => "text/bibliography; style=bibtex").read }
+end
+
 # a new bibtex filter to recapitalize names with proper unicode
 require 'bibtex'
 class Fix_namecase < BibTeX::Filter
