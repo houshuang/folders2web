@@ -84,7 +84,7 @@ else
       type = $1
       text = ''
     else
-      text << line  # just add the text
+      text << line.gsub(/([a-zA-Z])\- ([a-zA-Z])/, '\1\2')  # just add the text (mend split words)
       alltext << line
     end
   end
