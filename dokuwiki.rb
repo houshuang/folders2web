@@ -269,7 +269,8 @@ def bulletlist
 
   splits = a.split(splt)
 
-  if splits.last.index(" and ") # deal with situation where the last two items are delimited with "and"
+  # deal with situation where the last two items are delimited with "and", but not for line shift or 1) 2) kind of lists
+  if splits.last.index(" and ") && !(splt == "\n" || splt == ")")
     x,y = splits.last.split(" and ")
     splits.pop
     splits << x
