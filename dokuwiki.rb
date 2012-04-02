@@ -259,6 +259,8 @@ def bulletlist
     splt = ";"
   elsif a.scan(".").size > 2
     splt = "."
+  elsif a.scan("?").size > 2
+    splt = "?"
   elsif a.scan(",").size < 1
     splt = " "
   else
