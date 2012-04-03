@@ -50,7 +50,10 @@ def make_rss_feed
     end
   end
 
-  File.write(Wiki_path + "/feed.xml", content)
+  # make sure all links point to the online version, not the localhost
+  feedcontent = content.to_s.gsub(Internet_path, Server_path)
+
+  File.write(Wiki_path + "/feed.xml", feedcontent)
 end
 
 puts "Making RSS feed"
@@ -77,6 +80,7 @@ counter[:clippings] = 0
 counter[:images] = 0
 puts "Starting secondary parse"
 b.each do |item|
+  puts item.key
   ax = []
   if item.respond_to? :author
     item.author.each do |a|
