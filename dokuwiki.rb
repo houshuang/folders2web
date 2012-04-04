@@ -140,8 +140,12 @@ end
 # is executed (Ctrl+Alt+Cmd+F)
 def add_to_rss
   require 'open-uri'
+  require 'cgi'
+
   fname = Wiki_path + "/rss-temp"
+
   internalurl = cururl.split("/").last
+  url = "#{Internet_path}/#{internalurl}"
 
   # load existing holding file, or start form scratch
   if File.exists?(fname)
@@ -164,13 +168,35 @@ def add_to_rss
     /\<div class\=\"plugin\_include\_content\ plugin\_include\_\_kindle(.+?)\<\/div\>/m
   )
 
-
   title = page_contents.scan(/\<h1(.+?)id(.+?)>(.+)\<(.+?)\<\/h1\>/)[0][2]
-  rss_entries << {:title => title, :date => Time.now, :link => "#{Internet_path}/#{internalurl}", :description => contents}
+  title = CGI.unescapeHTML(title)
 
-  rss_entries = rss_entries.drop(1) if rss_entries.size > 10
+  entry_contents = {:title => title, :date => Time.now, :link => url, :description => contents}
+
+  exists = false
+
+  rss_entries.map! do |entry|
+    if entry[:link] == url
+      exists = true
+      entry_contents
+    else
+      entry
+    end
+  end
+
+  unless exists
+    rss_entries << entry_contents
+  end
+
+  rss_entries = rss_entries.drop(1) if rss_entries.size > 15
+
   File.write(fname, Marshal::dump(rss_entries))
-  growl("Article added to feed", "'#{title}' added to RSS feed")
+
+  if exists
+    growl("Article updated", "Article #{title} updated")
+  else
+    growl("Article added to feed", "'#{title}' added to RSS feed")
+  end
 end
 
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
