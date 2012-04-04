@@ -35,6 +35,8 @@ def make_rss_feed
 
   version = "2.0" # ["0.9", "1.0", "2.0"]
 
+  urls = Array.new
+
   content = RSS::Maker.make(version) do |m|
     m.channel.title = Wiki_title
     m.channel.link = Internet_path
@@ -42,8 +44,12 @@ def make_rss_feed
     m.items.do_sort = true # sort items by date
 
     rss_entries.each do |entry|
+      next if urls.index(entry[:link]) # avoid duplicate content (should not be possible, but just in case)
+      urls << entry[:link]
+
       i = m.items.new_item
       i.title = entry[:title]
+      puts "--#{i.title}"
       i.link = entry[:link]
       i.date = entry[:date]
       i.description = Sanitize.clean( entry[:description], Sanitize::Config::RELAXED )
