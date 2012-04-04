@@ -213,7 +213,7 @@ end
 end
 ###############################################
 # generate individual files for each keyword
-puts "Finished ((#{Time.now - timetmp} s.)"
+puts "Finished (#{Time.now - timetmp} s.)"
 if keywordopt
   timetmp = Time.now
   puts "Generating individual files for each keyword"
@@ -245,7 +245,7 @@ if keywordopt
       f << "|[##{ax[0]}|#{ax[1]}]|#{ax[2]}|\n"
     end
   end
-  puts "Finished ((#{Time.now - timetmp} s.)"
+  puts "Finished (#{Time.now - timetmp} s.)"
 
 end
 ###############################################
@@ -290,7 +290,7 @@ File.open("#{Wiki_path}/data/pages/jbib/start.txt","w") do |f|
     end
     f << "| [##{ax[0]}|#{ax[1]}] | #{apage} |#{ax[2]}|\n"
   end
-  puts "Finished ((#{Time.now - timetmp} s.)"
+  puts "Finished (#{Time.now - timetmp} s.)"
 end
 
 
