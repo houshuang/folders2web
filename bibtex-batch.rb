@@ -68,6 +68,7 @@ timetmp = Time.now
 puts "Making RSS feed"
 
 make_rss_feed
+
 puts "RSS feed complete (will be updated next time you sync with server) (#{Time.now - timetmp} s.)"
 timetmp = Time.now
 puts "Parsing BibTeX"
@@ -93,6 +94,7 @@ counter[:images] = 0
 
 puts "Starting secondary parse"
 b.each do |item|
+  next unless try { item.title } # fragment, doesn't need its own listing
   ax = []
   if item.respond_to? :author
     item.author.each do |a|
