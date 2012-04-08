@@ -121,7 +121,7 @@ b.each do |item|
   if year == "n.d." and cit.match(/\((....)\)/)
     year = $1
   end
-  json[item.key.to_s] = [namify(ax), year, cit]
+  json[item.key.to_s] = [namify(ax), year, cit, item.title]
 
   hasfiles = Array.new
   hasfiles[2] = '' # ensure that array is filled even if some fields are empty, for alignment

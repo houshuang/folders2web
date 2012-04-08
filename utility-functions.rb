@@ -384,7 +384,7 @@ def add_to_jsonbib(citekey)
   year = $1 if year == "n.d." and cit.match(/\((....)\)/)
 
   json = JSON.parse(File.read(JSON_path))
-  json[item.key.to_s] = [namify(ax), year, cit]
+  json[item.key.to_s] = [namify(ax), year, cit, item.title]
   File.write(JSON_path, JSON.fast_generate(json) )
 end
 
