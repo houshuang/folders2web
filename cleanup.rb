@@ -21,7 +21,7 @@ refs_week = bname(`find /wiki/data/pages/ref/*.txt -mtime -7`.split("\n"))
 notes_week = bname(`find /wiki/data/pages/notes/*.txt -mtime -7`.split("\n"))
 
 notes_short_week = []
-notes_week.each {|f| notes_short_week << f unless File.size("#{Wiki_path}/data/pages/notes/#{f}.txt") > 200}
+notes_week.each {|f| notes_short_week << f unless File.size("#{Wiki_path}/data/pages/notes/#{f}.txt") > 500}
 
 # check off all the notes in BibDesk, takes a few seconds
 # notes.each do |n|
@@ -29,13 +29,13 @@ notes_week.each {|f| notes_short_week << f unless File.size("#{Wiki_path}/data/p
 #   bibdesk_publication.fields["Notes"].value.set("1") if bibdesk_publication
 # end
 
-puts "<html><head>Researchr cleanup script report</title></head>"
+puts "<html><head><title>Researchr cleanup script report</title></head><body>"
 puts "<h1>Researchr cleanup script report</h1>"
 
 puts "<h2>New publications added last 7 days with decent-sized notes</h2>"
 (notes_week - notes_short_week).each {|a| puts "<li><a href='#{Internet_path}/ref:#{a}'>#{a}</a></li>"}
 
-puts "<h2>New publications added last 7 days with brief</h2>"
+puts "<h2>New publications added last 7 days with brief notes</h2>"
 (notes_short_week).each {|a| puts "<li><a href='#{Internet_path}/ref:#{a}'>#{a}</a></li>"}
 
 puts "<h2>New publications added last 7 days without notes</h2>"
