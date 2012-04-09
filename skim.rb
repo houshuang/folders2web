@@ -96,10 +96,12 @@ else
   `/usr/local/bin/pdftotext "#{filename}"`
   ftlines = `wc "#{PDF_path}/#{Citekey}.txt"`.split(" ")[1].to_f
   `rm "#{PDF_path}/#{Citekey}.txt"`
-  percentage = ntlines/ftlines*100
 
   @out << process(type, text, page)  # pick up the last annotation
-  outfinal = "h2. Highlights (#{percentage.to_i}%)\n\n" + @out.join('')
+
+  percentage_text = ftlines.to_i > 0 ? " (#{(ntlines/ftlines*100).to_i}%)" : ""
+
+  outfinal = "h2. Highlights#{percentage_text}\n\n" + @out.join('')
   File.write("/tmp/skimtmp", outfinal)
   `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{Citekey}'`
 
