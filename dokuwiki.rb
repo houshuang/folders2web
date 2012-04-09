@@ -306,6 +306,7 @@ def bulletlist
   out = ''
   splits.each do |item|
     i = item.remove(
+      /p\. *\d+$/,
       ", and",
       /[\.\*]/,
       /^ *and /,
