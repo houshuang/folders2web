@@ -394,6 +394,34 @@ EOS
   `open "http://localhost/wiki/a:#{page}?do=edit"`
 end
 
+# removes current page and all related pages (ref, skimg etc) after confirmation
+def delete
+  require 'pashua'
+  include Pashua
+  config = <<EOS
+  *.title = Delete this page?
+  cb.type = text
+  cb.text = This action will delete this page, and all related pages (ref:, notes:, skimg:, kindle:, etc). Are you sure?
+  cb.width = 220
+  db.type = cancelbutton
+  db.label = Cancel
+EOS
+  pagetmp = pashua_run config
+  exit if pagetmp['db'] == "1"
+
+  page = cururl.split(":").last.downcase
+
+  directories = %w[ref notes skimg kindle]
+  paths = directories.map {|f| "#{Wiki_path}/data/pages/#{f}/#{page}.txt"}
+
+  c = 0
+  paths.each do |f|
+    c += 1 if try { File.delete(f) }
+  end
+
+  growl "#{c} pages deleted"
+end
+
 #### Running the right function, depending on command line input ####
 
 @chrome = Appscript.app('Google Chrome')
