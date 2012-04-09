@@ -37,7 +37,22 @@ def bib_selector
   /^(?<citekey>.+?)\:/ =~ pagetmp['cb']  # extract citekey from citekey + title string
 
   pbcopy("[@#{citekey}]")
+end
 
+# grab from clipboard, either look up DOI through API, or
+# use anystyle parser to convert text to bibtex. Paste to clipboard.
+def anystyle_parse
+  search = pbpaste
+  if search.strip.downcase[0..2] == "doi"
+    bibtex = doi_to_bibtex(search)
+    growl "Failure", "DOI lookup not successful" unless bibtex
+  else
+    require 'anystyle/parser'
+    search = search.gsub("-\n", "").gsub("\n", " ")
+    bibtex = Anystyle.parse(search, :bibtex).to_s
+  end
+
+  pbcopy(cleanup_bibtex_string(bibtex))
 end
 
 send *ARGV unless ARGV == []
