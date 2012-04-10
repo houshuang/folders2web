@@ -43,7 +43,7 @@ end
 # use anystyle parser to convert text to bibtex. Paste to clipboard.
 def anystyle_parse
   search = pbpaste
-  if search.strip.downcase[0..2] == "doi"
+  if search.downcase[0..2] == "doi" || (search =~ /^10\./ && !search.strip.index(" "))
     bibtex = doi_to_bibtex(search)
     growl "Failure", "DOI lookup not successful" unless bibtex
   else
