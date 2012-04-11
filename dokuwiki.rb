@@ -30,6 +30,7 @@ end
 # gets the bibtex from the current page, whether it's researchr or scrobblr, and cleans it up
 def get_bibtex_from_page
   # returns the content of the BibTeX hidden div
+  bibtex = ''
   if cururl.index("/ref:") || cururl.index("herokuapp")
     query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
     js = "document.#{query}.innerHTML;"
@@ -43,6 +44,17 @@ def get_bibtex_from_page
       ).strip
 
     bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
+
+  # elsif cururl.index("wikipapers.referata.com")
+  #   title = try { cururl.match(/wikipapers.referata.com\/wiki\/(.+?)$/)[0] }
+  #   if title
+  #     require 'open-uri'
+  #     newurl = "http://wikipapers.referata.com/wiki/Special:Ask/-5B-5Btitle::#{title}/format%3Dbibtex"
+  #     puts newurl
+  #     bibtex = try { open(newurl).read }
+  #   end
+  #   fail "Could not acquire citation from Wikipapers" unless defined?(bibtex) && bibtex
+  #   puts bibtex
   else
     require 'open-uri'
     url = "http://scraper.bibsonomy.org/service?url=#{cururl}&format=bibtex"
@@ -434,7 +446,7 @@ EOS
   page = pname.split(":").last
   ns = pname.split(":").first
 
-  directories = %w[ref notes skimg kindle]
+  directories = %w[ref notes skimg kindle clip]
 
   if directories.index(ns)
     paths = directories.map {|f| "#{Wiki_path}/data/pages/#{f}/#{page}.txt"}
