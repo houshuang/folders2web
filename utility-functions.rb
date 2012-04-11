@@ -183,9 +183,9 @@ end
 
 # gets text from clipboard
 def pbpaste
-  IO.popen("osascript -e 'the clipboard as unicode text' | tr '\r' '\n'", 'r+').read.strip
+  a = IO.popen("osascript -e 'the clipboard as unicode text' | tr '\r' '\n'", 'r+').read
+  a.strip.force_encoding("UTF-8")
 end
-
 
 # runs pagename through php file from DokuWiki to generate a clean version
 def clean_pagename(pname)
