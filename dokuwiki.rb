@@ -202,10 +202,9 @@ end
 # pops up dialogue box, asking where to send text, takes selected text (or just link, if desired) and inserts at the bottom
 # of the selected page, with a context-relevant reference to original source
 def do_clip(pagename, titletxt, onlytext = false)
-  pagepath = ("#{Wiki_path}/data/pages" + "/" + clean_pagename(pagename) + ".txt").gsub(":","/")
+  pagepath = ("#{Wiki_path}/data/pages/#{clean_pagename(pagename)}.txt").gsub(":","/")
 
   curpage = cururl.split("/").last
-
   sel = has_selection
 
   # format properly if citation
@@ -215,58 +214,79 @@ def do_clip(pagename, titletxt, onlytext = false)
     elsif cururl.index("localhost/wiki")
       curpage = "[[:#{capitalize_word(curpage.gsub("_", " "))}]]"
     else
-      title = (titletxt == "" ? title : titletxt)
+      title = (titletxt ? titletxt : curtitle)
       curpage ="[[#{cururl}|#{title}]]"
     end
   else
     curpage = ''
   end
 
-  insert = (sel ? sel : "  *" )
+  insert = (sel ? "#{sel} " : "  * " )   # any text, or just a link (bullet list)
+  insert.gsubs!( {:all_with=> "\n\n"}, "\n", "\n\n\n" )
 
   if File.exists?(pagepath)
-    f = File.read(pagepath)
+    prevcont = File.read(pagepath)
+
+    haslinks = prevcont.match(/\-\-\-(\n  \*[^\n]+?)+?\Z/m)   # a "---"" followed by only lines starting with "  * "
+
+    # bullet lists need an extra blank line after them before the "----"
+    if sel
+      divider = (haslinks ? "\n\n----\n" : "\n----\n")
+    else
+      divider = (haslinks ? "\n" : "\n----\n")
+    end
+
     growltext = "Selected text added to #{pagename}"
   else
-    f = "h1. "+ capitalize_word(pagename) + "\n\n"
+    prevcont = "h1. #{capitalize_word(pagename)}\n\n"
     growltext = "Selected text added to newly created #{pagename}"
   end
-  filetext = f + "\n----\n" + insert.gsubs({:all_with=> "\n\n"}, "\n", "\n\n\n") + " " + curpage
-
+  filetext = [prevcont, divider, insert, curpage].join
   dwpage(pagename, filetext)
+
   growl("Text added", growltext)
 end
 
 def clip
   require 'pashua'
-  title = curtitle
+  title = curtitle.strip
 
   # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
-  pagetmp = wikipage_selector("Which wikipage do you want to add text to?",true, "
-  ob.type = checkbox
-  ob.label = do not include citation information, only insert pure text
-  fb.type = textbox
-  fb.default = #{title.strip}
-  fb.label = Link title\n"
-  )
+  gui = "
+    ob.type = checkbox
+    ob.label = do not include citation information, only insert pure text
+    fb.type = textbox
+    fb.default = #{title}
+    fb.label = Link title\n"
 
+  gui << "ob.disabled = 1\n" unless has_selection # no point in only inserting text, if no text selected
+
+  # get last page inserted to as default, if exists
+  lastclip = try { File.read("/tmp/dokuwiki-clip.tmp").split("\n") }
+  gui << "cb.default = #{lastclip[0]}\n" if lastclip
+
+  pagetmp = wikipage_selector("Which wikipage do you want to add text to?", true, gui)
   exit if pagetmp["cancel"] == 1
+
   onlytext = pagetmp['ob'] == "1" ? true : false
   pagename = pagetmp['cb'].strip
   pashua_title = pagetmp['fb'].strip
-  filetitle = (title.strip == pashua_title) ? nil : pashua_title
+  filetitle = (title.strip == pashua_title.strip) ? nil : pashua_title
+
+  # store for clip_again
   File.write("/tmp/dokuwiki-clip.tmp","#{pagename}\n#{cururl}\n#{filetitle}\n#{onlytext.to_s}")
-  do_clip(pagename, title, onlytext)
+
+  do_clip(pagename, filetitle, onlytext)
 end
 
 # uses info stored in temp file to do a clipping from the same page, to the same page
 def clip_again
   a = File.read("/tmp/dokuwiki-clip.tmp")
   page, url, title, onlytext_s = a.split("\n")
-  onlytext = (onlytext_s == 'true') ? true : false
-  if title.strip == "" || url != cururl
-    title = curtitle
-  end
+  onlytext = (onlytext_s == 'true' && has_selection)
+
+  title = curtitle if (title.strip == "") || (url != cururl)
+
   do_clip(page, title, onlytext)
 end
 
