@@ -430,17 +430,25 @@ EOS
   pagetmp = pashua_run config
   exit if pagetmp['db'] == "1"
 
-  page = cururl.split(":").last.downcase
+  pname = cururl.split("/").last.downcase
+  page = pname.split(":").last
+  ns = pname.split(":").first
 
   directories = %w[ref notes skimg kindle]
-  paths = directories.map {|f| "#{Wiki_path}/data/pages/#{f}/#{page}.txt"}
+
+  if directories.index(ns)
+    paths = directories.map {|f| "#{Wiki_path}/data/pages/#{f}/#{page}.txt"}
+
+  else
+    paths = ["#{Wiki_path}/data/pages/#{clean_pagename(pname).gsub(":", "/")}.txt"]
+  end
 
   c = 0
   paths.each do |f|
     c += 1 if try { File.delete(f) }
   end
 
-  growl "#{c} pages deleted"
+  growl "#{c ? c : 0} pages deleted"
 end
 
 #### Running the right function, depending on command line input ####
