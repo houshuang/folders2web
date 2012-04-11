@@ -138,12 +138,20 @@ function ft_backlinks($id){
     $result = idx_get_indexer()->lookupKey('relation_references', $id);
 
     if(!count($result)) return $result;
-
-    // check ACL permissions
+    // check ACL permissions and modify for !Researchr
+    $remove_ns = '/^(kbib|abib|jbib|bib|start)/';
+    $pattern = '/^(clip:|skimg:|kindle:|notes:)(.*)$/';
     foreach(array_keys($result) as $idx){
-        if(isHiddenPage($result[$idx]) || auth_quickaclcheck($result[$idx]) < AUTH_READ || !page_exists($result[$idx], '', false)){
+        if(isHiddenPage($result[$idx]) || auth_quickaclcheck($result[$idx]) < AUTH_READ || !page_exists($result[$idx], '', false) || preg_match($remove_ns, $result[$idx])){
             unset($result[$idx]);
         }
+
+        // modify links !Researchr
+        if (preg_match($pattern, $result[$idx], $matches)) {
+            $result[] = "ref:" . $matches[2];
+            unset($result[$idx]);
+        }
+
     }
 
     sort($result);
