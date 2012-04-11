@@ -58,16 +58,27 @@ end
 # launched by ctrl+alt+cmd+P
 def authorlist
   a = pbpaste.strip
-  a.force_encoding("ISO-8859-1")
 
   # determine whether to split on newline, space or comma
   if a.scan(";").size > 1
     splt = ";"
+  elsif a.scan(".,").size > 2 # takes care of initials, like Haklev, S. H., Peter, J. H.
+    splt = ".,"
   elsif a.scan(",").size > 2
     splt = ","
   end
 
-  a= a.split(splt).join("||").gsubs([" and ",""],["&",""],["||", " and "][/ +/," "],[/\(.+?\)/, ''])
+  a = a.split(splt)
+
+  a = a.join("||").gsubs(
+    [/\.([^ ])/, '. \1'],     # fixing space between initials, Stian H.Aklev -> Stian H. Aklev
+    [/ ([^ ])\|\|/, ' \1.||'],  # putting the final dot back if removed above, maybe not most elegant way
+    [" and ",""],             # we've already split, hopefully correctly
+    ["&",""],                 # see above
+    ["||", " and "],          # key transformation, put them back together with and (hoping that the split worked)
+    [/ +/," "],               # pruning spaces
+    [/\(.+?\)/, ''],          # removing affiliations Stian Haklev (University of Toronto)
+    )
   pbcopy(a)
 end
 
