@@ -113,6 +113,12 @@ function _ft_pageSearch(&$data) {
         if (isHiddenPage($id) || auth_quickaclcheck($id) < AUTH_READ || !page_exists($id, '', false)) {
             unset($docs[$id]);
         }
+
+        // rewrite all hits from article subpages to point to main article ref page !Researchr
+        if (preg_match($pattern, $id, $matches)) {
+            $docs["ref:" . $matches[2]] = $docs[$id];
+            unset($docs[$id]);
+        }
     }
 
     // sort docs by count
