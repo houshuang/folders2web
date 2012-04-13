@@ -343,7 +343,9 @@ def bulletlist
       /[\.\*]/,
       /^ *and /,
       /\.$/,
-      "•",""
+      "•",
+      "",
+      "􏰀"
       ).strip
     out << "  * #{i}\n" if i.size > 0
   end
