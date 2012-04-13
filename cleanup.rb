@@ -58,6 +58,5 @@ puts "<h2>Kindle pages without ref page</h2>"
 puts "<h2>Ref pages with no sub-pages</h2>"
 (refs - (skimg + clips + notes + kindle)).each {|a| puts "<li><a href='#{Internet_path}/ref:#{a}'>#{a}</a></li>"}
 
-# how to do a union of two arrays?
-#puts "<h2>Kindle pages that also has clipping page</h2>"
-#(kindle ).each {|a| puts "<li><a href='#{Internet_path}/kindle:#{a}'>#{a}</a></li>"}
+puts "<h2>Kindle pages that also has clipping page</h2>"
+(kindle & clips).each {|a| puts "<li><a href='#{Internet_path}/kindle:#{a}'>#{a}</a></li>"}
