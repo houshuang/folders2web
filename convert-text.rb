@@ -7,9 +7,15 @@ require 'utility-functions'
 # a bibliography
 
 onlylist = (ARGV[0] == 'onlylist')
+acm = (ARGV[0] == 'acm')
 bib = json_bib
 citations = Hash.new
-doc = utf8safe(pbpaste)
+if File.exists?(ARGV[1])
+  doc = File.read(ARGV[1])
+else
+  doc = pbpaste
+end
+
 doc.scan( /(\[?\@[a-zA-Z0-9\-\_]+\]?)/ ).each do |hit|
   hit = hit[0]
   hitnobraces = hit.remove(/[\@\[\]]/)
@@ -18,13 +24,13 @@ doc.scan( /(\[?\@[a-zA-Z0-9\-\_]+\]?)/ ).each do |hit|
     if onlylist
       doc.remove!(hit)
     else
-      doc.gsub!(hit, citations[hitnobraces][0] + ", " + citations[hitnobraces][1])
+      doc.gsub!(hit, citations[hitnobraces][0] + ", " + citations[hitnobraces][1]) unless acm
     end
   end
 end
-doc << "\n\n\References\n" unless onlylist
+doc << "\n\n\References (#{citations.size})\n" unless onlylist
 citations.sort.each do |item|
-  doc << item[1][2].remove(/[\{\}]/) + "\n\n"
+  doc << "[@#{item[0]}]: #{item[1][2].remove(/[\{\}]/)}\n\n"
 end
 
 puts doc.strip
