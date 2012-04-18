@@ -340,6 +340,21 @@ class Array
   end
 end
 
+class String
+  def scan2(regexp) # returns named capture groups into compressed hash
+    names = regexp.names
+    captures = Hash.new
+    scan(regexp).collect do |match|
+      nzip = names.zip(match)
+      nzip.each do |m|
+        captgrp = m[0].to_sym
+        captures.add(captgrp, m[1])
+      end
+    end
+    return captures
+  end
+end
+
 
 # calculate SHA-2 hash for a given file
 def hashsum(filename)
