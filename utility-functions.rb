@@ -309,8 +309,8 @@ end
 #   a.add(:peter,1)
 # without checking if a[:peter] has been initialized yet
 # works differently for integers (incrementing number) and other objects (adding a new object to array)
-class Hash
-  def add(var,val)
+class Object
+  def add_safe(var,val)
     if val.class == Fixnum
       if self[var].nil?
         self[var] = val
@@ -326,6 +326,20 @@ class Hash
     end
   end
 end
+
+class Hash
+  def add_safe(var,val)
+    super
+  end
+  alias :add :add_safe  # we've already used this in the code
+end
+
+class Array
+  def add_safe(var,val)
+    super
+  end
+end
+
 
 # calculate SHA-2 hash for a given file
 def hashsum(filename)
