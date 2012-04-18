@@ -71,13 +71,14 @@ def authorlist
   a = a.split(splt)
 
   a = a.join("||").gsubs(
-    [/\.([^ ])/, '. \1'],     # fixing space between initials, Stian H.Aklev -> Stian H. Aklev
+    [/\.([^ ])/, '. \1'],       # fixing space between initials, Stian H.Aklev -> Stian H. Aklev
     [/ ([^ ])\|\|/, ' \1.||'],  # putting the final dot back if removed above, maybe not most elegant way
-    [" and ",""],             # we've already split, hopefully correctly
-    ["&",""],                 # see above
-    ["||", " and "],          # key transformation, put them back together with and (hoping that the split worked)
-    [/ +/," "],               # pruning spaces
-    [/\(.+?\)/, ''],          # removing affiliations Stian Haklev (University of Toronto)
+    [" and ",""],               # we've already split, hopefully correctly
+    ["&",""],                   # see above
+    ["||", " and "],            # key transformation, put them back together with and (hoping that the split worked)
+    [/ +/," "],                 # pruning spaces
+    [/\(.+?\)/, ''],            # removing affiliations Stian Haklev (University of Toronto)
+    [/\d/, '']                  # remove all numbers
     )
   pbcopy(a)
 end
