@@ -123,6 +123,8 @@ end
 # uses the last function to provide remove, which takes a list of search arguments to remove
 # the example above is similar to "this is my house".remove('this', /s.y/)
 # also provides remove! destructive function
+#
+# also adds scan2, which returns named capture groups into compressed hash
 class String
   def gsubs!(*searches)
     self.replace(gsubs(*searches))
@@ -150,6 +152,19 @@ class String
 
   def remove!(*searches)
     self.replace(remove(*searches))
+  end
+
+  def scan2(regexp) # returns named capture groups into compressed hash, inspired by http://stackoverflow.com/a/9485453/764519
+    names = regexp.names
+    captures = Hash.new
+    scan(regexp).collect do |match|
+      nzip = names.zip(match)
+      nzip.each do |m|
+        captgrp = m[0].to_sym
+        captures.add(captgrp, m[1])
+      end
+    end
+    return (captures == {}) ? nil : captures
   end
 end
 
@@ -339,22 +354,6 @@ class Array
     super
   end
 end
-
-class String
-  def scan2(regexp) # returns named capture groups into compressed hash
-    names = regexp.names
-    captures = Hash.new
-    scan(regexp).collect do |match|
-      nzip = names.zip(match)
-      nzip.each do |m|
-        captgrp = m[0].to_sym
-        captures.add(captgrp, m[1])
-      end
-    end
-    return captures
-  end
-end
-
 
 # calculate SHA-2 hash for a given file
 def hashsum(filename)
