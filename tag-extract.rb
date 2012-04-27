@@ -2,7 +2,7 @@
 $:.push(File.dirname($0))
 require 'utility-functions'
 
-unless ARGV.size == 3
+unless ARGV.size >= 2
   puts "Usage: ruby taskpaper-extract.rb <scrivener|taskpaper> <infile> [outfile]\n
   For example: ruby taskpaper-extract.rb scrivener litreview.taskpaper litreview
   (Scrivener outputs to a directory, with each tag in a separate textfile, taskpaper to a single hierarchical textfile)
@@ -97,12 +97,11 @@ lines.each_with_index do |l, i|
 end
 
 outdir = ARGV[2]
-outdir ||= ARGV[0].remove(".taskpaper)") + ".out"
+outdir ||= ARGV[1].remove(".taskpaper") + ".out"
 
 if ARGV[0] == 'scrivener'
-  outdir = 'litreview'
-  `mkdir #{outdir}`
-  `rm -rf #{outdir}/*.txt`
+  `mkdir '#{outdir}'`
+  `rm -rf '#{outdir}/*.txt'`
   tags.each do |tag, content|
 
     out = ''
@@ -122,9 +121,11 @@ if ARGV[0] == 'scrivener'
 
 else #Taskpaper
   outdir = outdir + ".taskpaper" unless outdir.index(".taskpaper")
+  out = ''
 
   tags.each do |tag, content|
     nockey = ''
+
     out << "#{tag}:\n"
     content.each do |fragments|
 
