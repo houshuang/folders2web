@@ -18,7 +18,21 @@ a.gsubs!(
 # convert bullet lists with - and tabs to * and spaces
 a.gsub!(/^(\t*)- /) { |f| "  " + f.gsubs([/\t/, '  '], ["- ", "* "]) }
 
+a.gsub!(/^([ \t]+)(?=[a-zA-Z])(?!\*)/, '  * ') # remove random spacing that leads to poor formatting
+
+
 # no double-spacing between bullet items
 a.gsub!(/\*(.+?)\n\n[^ ]/m) {|f| f.gsub("\n\n", "\n")[0..-2] + "\n" + f[-1] }
+
+# get all citations
+bib = json_bib
+out = ''
+f = a.scan2(/\[\@(?<ckey>.+?)\]/)
+f[:ckey].sort.uniq.each do |item|
+  cit = try { bib[item][2] }
+  out << "  * #{cit}\n" if cit
+end
+
+a << "\n\nh1. References\n\n#{out}"
 
 File.write(ARGV[0]+".txt", a)
