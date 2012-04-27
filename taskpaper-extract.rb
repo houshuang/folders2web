@@ -1,9 +1,24 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
 require 'utility-functions'
-require 'ap'
 
-a = File.read('/Users/Stian/Dropbox/PhD/Litreview April 2012.taskpaper')
+unless ARGV.size == 3
+  puts "Usage: ruby taskpaper-extract.rb <scrivener|taskpaper> <infile> [outfile]\n
+  For example: ruby taskpaper-extract.rb scrivener litreview.taskpaper litreview
+  (Scrivener outputs to a directory, with each tag in a separate textfile, taskpaper to a single hierarchical textfile)
+  Without an output name specified, it's automatic infile + .out"
+  exit
+end
+
+# these defaults are for Taskpaper formatted files, modify for org-mode or any other format
+Indent_pattern = /^(\t*)/           # each indent level is determined by one tab
+Citekey_pattern = /^\[@(.+?)\]/     # lines that begin with [@...] "contaminate" all indented lines below
+
+a = try { File.read(ARGV[1]) }
+unless a
+  puts "Could not read input file"
+  exit
+end
 
 lines = Array.new
 linecontext = Array.new
@@ -11,7 +26,7 @@ linecontext = Array.new
 # insert lines into an array with first argument being indent level, second being line content
 a.lines.each_with_index do |l, i|
   # count tabs at front of line to get indent level
-  tabs = $1 if /^(\t*)/ =~ l
+  tabs = $1 if Indent_pattern =~ l
   level = (defined? tabs) ? tabs.size : 0
 
   lines[i] = [level, l]
@@ -28,7 +43,7 @@ lines.each_with_index do |l, i|
 
   # if first level, grab ckey or empty out
   if level == 0
-    ckey = (ckey_pattern =~ l[1]) ? $1 : ''
+    ckey = (Citekey_pattern =~ l[1]) ? $1 : ''
   end
 
   if i == lines.size-1 || lines[i+1][0] <= level   # if it's the last entry, or the next entry is lower level
@@ -81,6 +96,9 @@ lines.each_with_index do |l, i|
   end
 end
 
+outdir = ARGV[2]
+outdir ||= ARGV[0].remove(".taskpaper)") + ".out"
+
 if ARGV[0] == 'scrivener'
   outdir = 'litreview'
   `mkdir #{outdir}`
@@ -103,7 +121,7 @@ if ARGV[0] == 'scrivener'
   end
 
 else #Taskpaper
-  out = ''
+  outdir = outdir + ".taskpaper" unless outdir.index(".taskpaper")
 
   tags.each do |tag, content|
     nockey = ''
@@ -125,7 +143,7 @@ else #Taskpaper
     end
 
   end
-  File.write('out.taskpaper', out)
+  File.write(outdir, out)
 end
 
 puts "#{tags.size} tags written to #{outdir}."
