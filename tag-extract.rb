@@ -63,10 +63,10 @@ lines.each_with_index do |l, i|
 end
 
 tag_regexp = /
-  \B                  # non-word marker
-  (?<!\[)             # not preceded by [ (to avoid catching publication references like [@publication])
-  \@(?<tagcapt>.+?)   # word starting with @
-  \b                  # word boundary
+\B                  # non-word marker
+(?<!\[)             # not preceded by [ (to avoid catching publication references like [@publication])
+\@(?<tagcapt>.+?)   # word starting with @
+\b                  # word boundary
 /x
 
 tags = Hash.new
@@ -99,7 +99,8 @@ end
 outdir = ARGV[2]
 outdir ||= ARGV[1].remove(".taskpaper") + ".out"
 
-if ARGV[0] == 'scrivener'
+case ARGV[0]
+when 'scrivener'
   `mkdir '#{outdir}'`
   `rm -rf '#{outdir}/*.txt'`
   tags.each do |tag, content|
@@ -119,8 +120,7 @@ if ARGV[0] == 'scrivener'
     File.write("#{outdir}/#{tag}.txt", out)
   end
 
-else #Taskpaper
-  outdir = outdir + ".taskpaper" unless outdir.index(".taskpaper")
+when /(taskpaper|dokuwiki)/ #Taskpaper
   out = ''
 
   tags.each do |tag, content|
@@ -138,13 +138,26 @@ else #Taskpaper
 
       out << "\t[@#{fragments[1]}]:\n#{fragments[0].join("\n")}\n"
     end
-
-    if nockey.size > 0
-      out << "\tNo citekey:\n#{nockey}"
-    end
-
+    out << "\tNo citekey:\n#{nockey}" if nockey.size > 0
   end
+
+  if ARGV[0] == 'dokuwiki'
+    out.gsubs!(
+      ["\t", '  '],
+      [/(?! )(.+?)$/, '  * \1'],
+      [/^  \* /, 'h2. ']
+    )
+    outdir = outdir + ".txt" unless outdir.index(".txt")
+  else
+    outdir = outdir + ".taskpaper" unless outdir.index(".taskpaper")
+  end
+
+
   File.write(outdir, out)
+
+else
+  puts "Did not recognize output format"
+  exit
 end
 
 puts "#{tags.size} tags written to #{outdir}."
