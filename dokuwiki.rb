@@ -15,7 +15,9 @@ def has_selection
 end
 
 def cururl
-  @chrome.windows[1].active_tab.get.URL.get.strip
+  url = @chrome.windows[1].active_tab.get.URL.get.strip
+  url.remove!(/\?s\[\](.+?)$/) if ( url.index(Internet_path) || url.index(Server_path) )
+  return url
 end
 
 def curtitle
