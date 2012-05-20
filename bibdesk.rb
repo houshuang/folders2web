@@ -159,10 +159,14 @@ def get_bibtexnet
   growl "Successfully imported metadata for #{c} publications from bibtexnet"
 end
 
-# uses quicklook to preview the PDF of the currently selected publication
-# launched by cmd+space
-def qlook
-  file =  Selection[0].linked_files.get[0].to_s
+# uses quicklook to preview the PDF of the currently selected publication (or upcoming publication to be added)
+# launched by cmd+space or ctrl+alt+cmd+space
+def qlook(argv="current")
+  if argv == "upcoming"
+    file = File.last_added("#{Downloads_path}/*.pdf")
+  else
+    file =  Selection[0].linked_files.get[0].to_s
+  end
   if File.exists?(file)
     `qlmanage -p '#{file}'`
   else
