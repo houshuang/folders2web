@@ -26,7 +26,9 @@ end
 
 # cleans bibtex string on clipboard
 def clean_bibtex
-  pbcopy(cleanup_bibtex_string(pbpaste))
+  res = try { cleanup_bibtex_string(pbpaste) }
+  fail "Could not parse BibTeX string, maybe the page next to Google Scholar was not the BibTeX page?" unless res
+  pbcopy(res)
 end
 
 # gets the bibtex from the current page, whether it's researchr or scrobblr, and cleans it up
