@@ -43,13 +43,15 @@ end
 # use anystyle parser to convert text to bibtex. Paste to clipboard.
 def anystyle_parse
   search = pbpaste
-  if search.downcase[0..2] == "doi" || (search =~ /^10\./ && !search.strip.index(" "))
+  if search.downcase[0..2] == "doi" || search.index("dx.doi.org") || (search =~ /^10\./ && !search.strip.index(" "))
+    growl "Looking up DOI"
     bibtex = doi_to_bibtex(search)
-    growl "Failure", "DOI lookup not successful" unless bibtex
+    fail "DOI lookup not successful" unless bibtex
   else
     require 'anystyle/parser'
     search = search.gsub("-\n", "").gsub("\n", " ")
     bibtex = Anystyle.parse(search, :bibtex).to_s
+    fail "Could not parse string" if bibtex == search
   end
 
   pbcopy(cleanup_bibtex_string(bibtex))
