@@ -430,12 +430,14 @@ def send_to_server(path, payload)
 end
 
 def submit_citation(bibtex)
+  require 'json'
   payload = { "bibtex" => bibtex,
     "token"  => Scrobble_token }.to_json
   send_to_server("/citations", payload)
 end
 
 def submit_wikipage(citation)
+  require 'json'
   payload = { "ref_link" => { "url" => Server_path + "/ref:" + citation },
     "citekey"  => citation,
     "token"    => Scrobble_token }.to_json
