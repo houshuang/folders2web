@@ -39,14 +39,16 @@ def get_bibtex_from_page
     query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
     js = "document.#{query}.innerHTML;"
     bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
-    bibtex = bibtex.gsubs(
+
+    bibtex.gsubs!(
+      [/\<(.+?)\>/,             ''],                      # plugins might insert random HTML tags
       [/keywords.+?\}\,\n/i,    ''],                      # no keywords, we want to assign our own
       ["<b>Bibtex:</b>",        ''],                      # not part of bibtex string
       ["&amp;",                 '&'],
       [/bdsk\-file.+?\}/mi,     '}'],                     # the local bibdesk file reference is useless
-      ["read = {1}",            "read = {0}"]             # other's might have read it, we haven't yet
+      ["read = {1},\n",         ''],                      # other's might have read it, we haven't yet
+      [/\}\n/m,                 "},\n"],                  # fix comma after any lines cleaned of tags
       ).strip
-
     bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
 
   # elsif cururl.index("wikipapers.referata.com")
