@@ -228,7 +228,7 @@ def do_clip(pagename, titletxt, onlytext = false)
   # format properly if citation
   unless onlytext
     if curpage.index("ref:")
-      curpage = "[@#{curpage.split(':').last}]"
+      curpage = "[@#{curpage.split(':').last.downcase}]"
     elsif cururl.index("localhost/wiki")
       curpage = "[[:#{capitalize_word(curpage.gsub("_", " "))}]]"
     else
