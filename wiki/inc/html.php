@@ -313,13 +313,29 @@ function html_search(){
     global $ID;
     global $lang;
 
+print '<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#pages" class="toc">Pagenames</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="#authors" class="toc">Authors</a></span></div>
+<li class="level1"><div class="li"><span class="li"><a href="#tools" class="toc">Tools</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="#articles" class="toc">Articles</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="#conferences" class="toc">Conferences</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="#other" class="toc">Other pages</a></span></div>
+</ul>
+</div>
+</div>';
     $intro = p_locale_xhtml('searchpage');
     // allow use of placeholder in search intro
     $intro = str_replace(
                 array('@QUERY@','@SEARCH@'),
                 array(hsc(rawurlencode($QUERY)),hsc($QUERY)),
                 $intro);
-    echo $intro;
+    //echo $intro;
+    print '<h1>Search: '.$QUERY.'</h1>';
+
     flush();
 
     //show progressbar
@@ -330,16 +346,22 @@ function html_search(){
     print '<br /></div>'.NL;
     flush();
 
+    $articles = '/^(clip|kindle|notes)\:/';
+    $avoid =    '/((^(ref|kbib|abib|jbib|bib|t|clip|kindle|notes|skimg|conf)\:)|^start$)/';
+    // add more conference namespaces at the end of $avoid and in $conferences, if you use first level namespaces
+    // for this, for example I have aera11: cscl11: etc.
+    $conferences = '/^(conf)\:/';
+    $tool = '/^t\:/';
+    $author = '/^a\:/';
+
     //do quick pagesearch
     $data = array();
 
     $data = ft_pageLookup($QUERY,true,useHeading('navigation'));
-    if(count($data)){
-        print '<div class="search_quickresult">';
-        print '<h3>'.$lang['quickhits'].':</h3>';
-        print '<ul class="search_quickhits">';
-        foreach($data as $id => $title){
-            print '<li> ';
+    $out = '';
+    foreach($data as $id => $title){
+        if((!preg_match($avoid, $id)) || preg_match('/^abib:/', $id)){
+            $out = $out. '<li> ';
             if (useHeading('navigation')) {
                 $name = $title;
             }else{
@@ -350,35 +372,172 @@ function html_search(){
                     $name = $id;
                 }
             }
-            print html_wikilink(':'.$id,$name);
-            print '</li> ';
+            $out = $out. html_wikilink(':'.$id,$name);
+            $out = $out. '</li> ';
         }
-        print '</ul> ';
-        //clear float (see http://www.complexspiral.com/publications/containing-floats/)
-        print '<div class="clearer"></div>';
-        print '</div>';
     }
-    flush();
 
-    //do fulltext search
-    $data = ft_pageSearch($QUERY,$regex);
-    if(count($data)){
-        $num = 1;
-        foreach($data as $id => $cnt){
-            print '<div class="search_result">';
-            print html_wikilink(':'.$id,useHeading('navigation')?null:$id,$regex);
-            if($cnt !== 0){
-                print ': <span class="search_cnt">'.$cnt.' '.$lang['hits'].'</span><br />';
-                if($num < FT_SNIPPET_NUMBER){ // create snippets for the first number of matches only
-                    print '<div class="search_snippet">'.ft_snippet($id,$regex).'</div>';
-                }
-                $num++;
-            }
-            print '</div>';
-            flush();
+    if($out != '') {
+        print '<h2 name=pages id=pages>Page titles</h2>';
+        print '<ul class="search_quickhits">';
+        print $out;
+        print "</ul>";
+        print '<div class="clearer"></div>';
+        flush();
+    }
+
+    $data = ft_pageSearch($QUERY,$regexp);
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // authors
+    $out = '';
+    foreach($data as $id => $cnt){
+        if(preg_match($author, $id))  {
+
+            $out = $out . '<li>' . html_wikilink(':'.$id,useHeading('navigation')?null:$id,$regexp) . '</li>';
         }
-    }else{
-        print '<div class="nothing">'.$lang['nothingfound'].'</div>';
+    }
+    if($out != '') {
+        print '<br><h2 name=authors id=authors>Authors</h2>';
+        print '<ul class="search_quickhits">';
+        print $out;
+        print "</ul>";
+        print '<div class="clearer"></div>';
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // tools
+    $out = '';
+    foreach($data as $id => $cnt){
+        if(preg_match($tool, $id)) {
+            $out = $out . '<li>' . html_wikilink(':'.$id,useHeading('navigation')?null:$id,$regexp) . '</li>';
+        }
+
+    }
+
+    if($out != '') {
+        print '<br><h2 name=tools id=tools>Tool results</h2>';
+        print '<ul class="search_quickhits">';
+        print $out;
+        print "</ul>";
+        print '<div class="clearer"></div>';
+        flush();
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    // articles
+    $out = '';
+    $out2 = '';
+    $pattern = '/^(clip:|skimg:|kindle:|notes:|ref:)(.*)$/';
+    $already = array();
+
+    // $json =file_get_contents(dirname ( __FILE__ )."/../lib/plugins/dokuresearchr/json.tmp");
+    // $jbib = json_decode($json,true);
+
+    foreach($data as $id => $cnt){
+        if((preg_match('/^notes\:/', $id))) {
+            if (preg_match($pattern, $id, $matches)) {
+                $idshow = $matches[2];
+            } else {$idshow = $id;}
+            if (!in_array($idshow, $already)) {
+                $cnttxt = '';
+                if($cnt !== 0){$cnttxt = ': <span class="search_cnt">'.$cnt.' '.$lang['hits'].'</span><br />';}
+                $already[] = $idshow;
+                $pub = '<div class="search_result">';
+                // $entry = $jbib[$idshow];
+                //print var_dump($entry);
+                //$pub = $pub . html_wikilink('ref:'.$idshow,$entry[2],$regexp);
+                $pub = $pub . html_wikilink('ref:'.$idshow,useHeading('navigation')?null:$id,$regexp);
+
+        // $citekey = substr($match,2,-1);
+        // $json =file_get_contents(dirname ( __FILE__ )."/json.tmp");
+        // $t = json_decode($json,true);
+        // $entry = $t[$citekey];
+        // $cit =  $entry[0];
+        // $year = $entry[1];
+        // return array($citekey,$cit,$year,$entry[2]);
+        // break;
+
+
+
+                $pub = $pub  . $cnttxt;
+                $out = $out . $pub. '</div>';
+            }
+
+        }
+
+    }
+    foreach($data as $id => $cnt){
+        if((preg_match($articles, $id))) {
+            if (preg_match($pattern, $id, $matches)) {
+                $idshow = 'ref:' . $matches[2];
+            } else {$idshow = $id;}
+            if (!in_array($idshow, $already)) {
+
+                $cnttxt = '';
+                if($cnt !== 0){$cnttxt = ': <span class="search_cnt">'.$cnt.' '.$lang['hits'].'</span><br />';}
+                $already[] = $idshow;
+                $pub = '<div class="search_result">';
+                $pub = $pub . html_wikilink(':'.$idshow,useHeading('navigation')?null:$id,$regexp);
+                $pub = $pub  . $cnttxt . '</div>';
+                $out2 = $out2 . $pub;
+            }
+
+        }
+
+    }
+
+
+    if($out != '') {
+        print '<br><h2 name=articles id=articles>Article results (notes)</h2>';
+        print $out;
+        flush();
+    }
+
+    if($out != '') {
+        print '<br><h2 name=articles id=articles>Article results (clippings)</h2>';
+        print $out2;
+        flush();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    //conferences
+    $out = '';
+    foreach($data as $id => $cnt){
+        if(preg_match($conferences, $id)) {
+            if($cnt !== 0){$cnttxt = ': <span class="search_cnt">'.$cnt.' '.$lang['hits'].'</span><br />';}
+            $out = $out . '<div class="search_result">' . html_wikilink(':'.$id,useHeading('navigation')?null:$id,$regexp);
+            $out = $out . $cnttxt . '</span></div>';
+        }
+
+    }
+
+    if($out != '') {
+        print '<br><h2 name=conferences id=conferences>Conference results</h2>';
+        print $out;
+        flush();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    //other
+    $out = '';
+    foreach($data as $id => $cnt){
+        if(!preg_match($avoid, $id)) {
+            if($cnt !== 0){$cnttxt = ': <span class="search_cnt">'.$cnt.' '.$lang['hits'].'</span><br />';}
+            $out = $out . '<div class="search_result">' . html_wikilink(':'.$id,useHeading('navigation')?null:$id,$regexp);
+            $out = $out . $cnttxt . '</span></div>';
+        }
+
+    }
+
+
+    if($out != '') {
+        print '<br><h2 name=other id=other>All other pages results</h2>';
+        print $out;
+        flush();
     }
 
     //hide progressbar
