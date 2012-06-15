@@ -103,7 +103,7 @@ class File
     # find the last file added in directory
     def last_added(path)
       path += "*" unless path.index("*")
-      Dir[path].select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop
+      Dir.glob(path, File::FNM_CASEFOLD).select {|f| test ?f, f}.sort_by {|f|  File.mtime f}.pop
     end
 
     def replace(path, before, after, newpath = "")
