@@ -39,7 +39,7 @@ end
 # lookup DOI, return BibTeX using content negotiation
 def doi_to_bibtex(doi)
   require 'open-uri'
-  doi = doi.downcase.remove(/doi[:>\/]/,'http://','dx.doi.org/').strip
+  doi = doi.downcase.strip.remove(/doi[:>\/]/,'http://','dx.doi.org/', /\.$/).strip
   url = "http://dx.doi.org/#{doi}"
   return try { open(url, "Accept" => "text/bibliography; style=bibtex").read }
 end
@@ -193,7 +193,8 @@ end
 # writes text to clipboard, using a pipe to avoid shell mangling
 # rewritten using osascript for better UTF8 support (from http://www.coderaptors.com/?action=browse&diff=1&id=Random_tips_for_Mac_OS_X)
 def pbcopy(text)
-  IO.popen("osascript -e 'set the clipboard to do shell script \"cat\"'","w+") {|pipe| pipe << text}
+  `osascript -e 'set the clipboard to "#{text}"'`
+  #IO.popen("osascript -e 'set the clipboard to do shell script \"cat\"'","w+") {|pipe| pipe << text}
 end
 
 # gets text from clipboard
