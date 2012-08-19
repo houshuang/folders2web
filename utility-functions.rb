@@ -184,7 +184,6 @@ end
 # uses online server to check if a file is OA or not
 def check_oa(fname)
   require 'open-uri'
-  puts "http://reganmian.net/check-oa/#{fname}"
   result = try { open("http://reganmian.net/check-oa/#{fname}").read }
   return (try {result.strip} == "true") ? true : false
 end
