@@ -679,16 +679,10 @@ function form_wikitext($attrs) {
     // mandatory attributes
     unset($attrs['name']);
     unset($attrs['id']);
-					    return '<textarea name="wikitext" id="wiki__text" onKeyDown="if(event.keyCode==83 && event.ctrlKey) { event.returnValue = false; event.cancelBubble=true; this.form.elements[\'edbtn__save\'].click();return false; }" '
-					                 .buildAttributes($attrs,true).'>'.DOKU_LF
-					                 .formText($attrs['_text'])
-					                 .'</textarea>';
-										    // return '<textarea name="wikitext" id="wiki__text" '
-										    //              .buildAttributes($attrs,true).'>'.DOKU_LF
-										    //              .formText($attrs['_text'])
-										    //              .'</textarea>';
-
-
+    return '<textarea name="wikitext" id="wiki__text" '
+                 .buildAttributes($attrs,true).'>'.DOKU_LF
+                 .formText($attrs['_text'])
+                 .'</textarea>';
 }
 
 /**

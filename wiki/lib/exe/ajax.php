@@ -6,18 +6,12 @@
  * @author     Andreas Gohr <andi@splitbrain.org>
  */
 
-//fix for Opera XMLHttpRequests
-if(!count($_POST) && !empty($HTTP_RAW_POST_DATA)){
-    parse_str($HTTP_RAW_POST_DATA, $_POST);
-}
-
 if(!defined('DOKU_INC')) define('DOKU_INC',dirname(__FILE__).'/../../');
 require_once(DOKU_INC.'inc/init.php');
 //close session
 session_write_close();
 
 header('Content-Type: text/html; charset=utf-8');
-
 
 //call the requested function
 if(isset($_POST['call'])){
@@ -53,6 +47,8 @@ function ajax_qsearch(){
     $query = $_POST['q'];
     if(empty($query)) $query = $_GET['q'];
     if(empty($query)) return;
+
+    $query = urldecode($query);
 
     $data = ft_pageLookup($query, true, useHeading('navigation'));
 
@@ -207,7 +203,7 @@ function ajax_medialist(){
     global $conf;
     global $NS;
 
-    $NS = $_POST['ns'];
+    $NS = cleanID($_POST['ns']);
     if ($_POST['do'] == 'media') {
         tpl_mediaFileList();
     } else {
@@ -257,7 +253,7 @@ function ajax_mediaupload(){
         $id = $_GET['qqfile'];
     }
 
-    $id = cleanID($id, false, true);
+    $id = cleanID($id);
 
     $NS = $_REQUEST['ns'];
     $ns = $NS.':'.getNS($id);
