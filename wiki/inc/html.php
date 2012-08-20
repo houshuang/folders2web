@@ -347,8 +347,10 @@ print '<div class="toc">
     flush();
 
     $articles = '/^(clip|kindle|notes)\:/';
-    $avoid =    '/((^(ref|kbib|abib|jbib|bib|t|clip|kindle|notes|skimg|aera11|gccce11|cscl11|aera12)\:)|^start$)/';
-    $conferences = '/^(aera11|gccce11|cscl11|aera12)\:/';
+    $avoid =    '/((^(ref|kbib|abib|jbib|bib|t|clip|kindle|notes|skimg|conf)\:)|^start$)/';
+    // add more conference namespaces at the end of $avoid and in $conferences, if you use first level namespaces
+    // for this, for example I have aera11: cscl11: etc.
+    $conferences = '/^(conf)\:/';
     $tool = '/^t\:/';
     $author = '/^a\:/';
 
