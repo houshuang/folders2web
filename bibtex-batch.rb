@@ -98,6 +98,7 @@ b.each do |item|
   ax = []
   if item.respond_to? :author
     item.author.each do |a|
+      next if item.author == nil #thanks Bodong
       authors[nice_name(a)] = Array.new unless authors[nice_name(a)]
       ax << a.last.gsub(/[\{\}]/,"")
       authors[nice_name(a)] << item.key
