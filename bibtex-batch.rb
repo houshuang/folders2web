@@ -96,7 +96,7 @@ puts "Starting secondary parse"
 b.each do |item|
   next unless try { item.title } # fragment, doesn't need its own listing
   ax = []
-  if item.respond_to? :author
+  if (item.respond_to? :author) && (item.author != nil)
     item.author.each do |a|
       next if item.author == nil #thanks Bodong
       authors[nice_name(a)] = Array.new unless authors[nice_name(a)]
