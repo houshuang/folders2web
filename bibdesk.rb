@@ -119,6 +119,7 @@ def linkfile
   # check if OA, and add URL field if yes
   if dlurl.index('http') && check_oa(dlurl)
     Selection[0].fields["Url"].value.set(dlurl)
+    Selection[0].fields["OA-URL"].value.set(dlurl)
     growl "Publication is OA, URL successfully added"
   end
 

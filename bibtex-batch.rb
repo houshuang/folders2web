@@ -91,6 +91,9 @@ counter[:noref] = 0
 counter[:notes] = 0
 counter[:clippings] = 0
 counter[:images] = 0
+counter[:pdf] = 0
+
+
 
 puts "Starting secondary parse"
 b.each do |item|
@@ -124,7 +127,7 @@ b.each do |item|
   if year == "n.d." and cit.match(/\((....)\)/)
     year = $1
   end
-  json[item.key.to_s] = [namify(ax), year, cit, item.title]
+  json[item.key.to_s] = [namify(ax), year, cit, item.title, item[:"oa-url"]]
 
   hasfiles = Array.new
   hasfiles[2] = '' # ensure that array is filled even if some fields are empty, for alignment
@@ -139,12 +142,18 @@ b.each do |item|
       counter[:images] += 1
       hasfiles[2] = "I"
     end
+    if item.respond_to? :"oa-url"
+      pdfurl = "[[#{item[:"oa-url"]}|{{wiki:filetype_pdf.png}}]]"
+      counter[:pdf] += 1
+    else
+      pdfurl = ''
+    end
     if File.exists?("#{Wiki_path}/data/pages/notes/#{item.key}.txt")
       counter[:notes] += 1
       hasfiles[0] = "N"
     end
 
-    txt = "| [#:ref:#{item.key}|#{item.key}] | #{hasfiles.join(" | ")} |#{cit}|\n"
+    txt = "| [#:ref:#{item.key}|#{item.key}] #{pdfurl}| #{hasfiles.join(" | ")} |#{cit}|\n"
 
     if hasfiles[0] == "N"
       out1 << txt
@@ -169,7 +178,7 @@ own pages are listed on top, and hyperlinked. Most of these also have clippings 
 Statistics: Totally **#{counter[:hasref] + counter[:noref]}** publications, and **#{counter[:hasref]}**
 publications have their own wikipages. Of these, **#{counter[:images]}** with notes (key ideas) **(N)**,
 **#{counter[:clippings]}** with highlights (imported from Kindle or Skim) **(C)**, and **#{counter[:images]}**
-with images (imported from Skim) **(I)**\n\n"
+with images (imported from Skim) **(I)**. **#{counter[:pdf]}** publications are OA, and available for immediate download.\n\n"
 
 #dt.document.save
 

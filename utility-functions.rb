@@ -25,11 +25,15 @@ require 'settings' if File.exists?("#{Script_path}/settings.rb")
 # shows notification on screen. one or two arguments, if one, just shows a message, if two, the first is the title
 # notice the path to growl
 def growl(title,text='')
+  require 'Appscript'
   if text == ''
     text = title
     title = ''
   end
-  `#{Script_path}/growlnotify -t "#{title}" -m "#{text}"`
+  #{}`#{Script_path}/growlnotify -t "#{title}" -m "#{text}"`
+  growlapp=Appscript.app('Growl')
+  growlapp.register({:as_application=>'Researchr', :all_notifications=>['Note'], :default_notifications=>['Note']})
+  growlapp.notify({:with_name=>'Note',:title=>title,:description=>text,:application_name=>'Researchr'})
 end
 
 def log(text)

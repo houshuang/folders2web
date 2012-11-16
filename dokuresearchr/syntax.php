@@ -3,7 +3,7 @@
 * Plugin Skeleton: Displays "Hello World!"
 *
 * Syntax: <TEST> - will be replaced with "Hello World!"
-* 
+*
 * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
 * @author     Christopher Smith <chris@jalakai.co.uk>
 */
@@ -122,7 +122,7 @@ function connectTo($mode) {
 	*/
 function handle($match, $state, $pos, &$handler){
 	switch ($state) {
-		case DOKU_LEXER_ENTER : 
+		case DOKU_LEXER_ENTER :
 		break;
 		case DOKU_LEXER_MATCHED :
 		break;
@@ -137,7 +137,13 @@ function handle($match, $state, $pos, &$handler){
 		$entry = $t[$citekey];
 		$cit =  $entry[0];
 		$year = $entry[1];
-		return array($citekey,$cit,$year,$entry[2]);
+		$oa = $entry[4];
+
+		if($entry[4]) {
+			$oa = "<a href='" . $entry[4] . "'><img src=/wiki/_media/wiki:pdficon_small.png></a> ";
+		} else { $oa = '';}
+
+		return array($citekey,$cit,$year,$entry[2],$oa);
 		break;
 	}
 	return array();
@@ -162,7 +168,7 @@ function handle($match, $state, $pos, &$handler){
 * @public
 * @see handle()
 */
-function render($mode, &$renderer, $data) 
+function render($mode, &$renderer, $data)
 {
 	if($mode == 'xhtml')
 	{
@@ -171,15 +177,15 @@ function render($mode, &$renderer, $data)
 		{
 			if (page_exists(":ref:".$data[0])) {
 				$linktext = "<a href='/wiki/ref:" . $data[0] . "' class='wikilink1'>";
-			} 
-			else 
+			}
+			else
 			{
 				$linktext = '<u>';
 			}
-			$renderer->doc .= "<span class='tooltip_winlike'>".$linktext.$data[1].", ".$data[2] . "</u></a><span class=\"tip\">".$data[3]."</span></span></span>";
+			$renderer->doc .= "<span class='tooltip_winlike'>".$linktext.$data[1].", ".$data[2] . "</u></a><span class=\"tip\">".$data[3]."</span></span></span>".$data[4];
 		}
-		else 
-		{ 
+		else
+		{
 			$renderer->doc .= $renderer->internallink(":ref:".$data[0]);
 		}
 		return true;

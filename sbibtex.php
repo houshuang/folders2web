@@ -18,11 +18,17 @@ function filter_bibtex($text) {
 
 		foreach($hits[1] as $hit) {
 			$entry = $t[$hit];
+			$oa = $entry[4];
+
+			if($entry[4]) {
+			$oa = "<a href='" . $entry[4] . "'><img src=/wiki/_media/wiki:pdficon_small.png></a> ";
+			} else { $oa = '';}
+
 			if($entry[1] == ""){
 				$text = str_replace('[@' . $hit . ']',"<a href=http://wiki/ref:".$hit.">".$hit."</a>",$text);
-			} else {     
-				$text = str_replace('[@' . $hit . ']',"<span class='tooltip_winlike'><a href='/wiki/ref:" . $hit . "'>".$entry[0].", ".$entry[1]."</u></a><span class=\"tip\">".$entry[2]."</span></span></span>",$text);
-				}      
+			} else {
+				$text = str_replace('[@' . $hit . ']',"<span class='tooltip_winlike'><a href='/wiki/ref:" . $hit . "'>".$entry[0].", ".$entry[1]."</u></a><span class=\"tip\">".$entry[2]."</span></span></span>".$oa,$text);
+				}
 
 
 		}
