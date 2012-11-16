@@ -384,26 +384,51 @@ def go
 end
 
 # Moves last screenshot to DokuWiki media folder, and inserts a link to that image properly formatted
-def image
+def image(local=1)
+  unless cururl.index(Internet_path)
+    fail "You can only do this on a Researchr wikipage"
+  end
   wiki = cururl[22..-1]
   w,dummy = wiki.split("?")
   wikipage = w.gsubs({:all_with => "_"}, ":", "%3A", "%20").downcase
-  curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png") # this might be different between different OSX versions
 
+  if local==1
+    curfile =  File.last_added("#{Home_path}/Desktop/Screen*.png") # this might be different between different OSX versions
+  else
+    dir =  File.last_added_dir(Photostream_path) # this might be different between different OSX versions
+    curfile = File.last_added(dir+"*.JPG")
+  end
   if curfile == nil
     growl("No screenshots available")
     exit
   end
 
   newfilename, pagenum = filename_in_series("#{Wiki_path}/data/media/pages/#{wikipage}",".png")
+  p newfilename
   if File.exists?(newfilename)
-    growl("Error!", "File already exists, aborting!")
-    exit
+    pbcopy("")
+    fail("File already exists, aborting!")
   end
+  puts %Q(mv "#{curfile.strip}" "#{newfilename}")
   `mv "#{curfile.strip}" "#{newfilename}"`
+  if defined?(dir)   # if from iCloud
+    `rm -rf "#{dir}"`
+    `sips --resampleWidth 487 #{newfilename}`
+  end
   `touch "#{newfilename}"`  # to make sure it comes up as newest next time we run filename_in_series
 
-  puts "{{pages:#{wikipage}#{pagenum}.png}}"
+  pbcopy("{{pages:#{wikipage}#{pagenum}.png}}")
+end
+
+# previews last added image to PhotoStream folder
+def preview_iphone_image
+  dir =  File.last_added_dir(Photostream_path) # this might be different between different OSX versions
+  curfile = File.last_added(dir)
+  if curfile == nil
+    fail("No screenshots available")
+  else
+    `qlmanage -p '#{curfile}'`
+  end
 end
 
 # asks for the name of a page, and presents it side-by-side with the existing page, in editing mode if it's a wiki page
