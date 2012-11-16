@@ -14,6 +14,22 @@ def has_selection
   return (sel.size > 0) ? sel : nil
 end
 
+def check_bibdesk
+  search = has_selection
+  fail "No text selected" unless search
+
+  found = try { Appscript.app("BibDesk").document.search({:for=>search.strip}) }
+  if found.size > 0
+    msg = "Matching citation exists in BibDesk: #{found[0].cite_key.get}"
+    msg << ", and #{found.size - 1} more" unless found.size == 1
+    found[0].select
+  else
+    msg = "No matching citation in BibDesk"
+  end
+  growl msg
+  puts msg
+end
+
 def cururl
   url = @chrome.windows[1].active_tab.get.URL.get.strip
   url.remove!(/\?s\[\](.+?)$/) if ( url.index(Internet_path) || url.index(Server_path) )
