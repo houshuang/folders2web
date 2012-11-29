@@ -23,6 +23,7 @@ $conf['iexssprotect'] = 0;
 $conf['htmlok'] = 1;
 $conf['locktime'] = 99999*60;
 $conf['cachetime'] = 0;
+$conf['updatecheck'] = 0;
 $conf['userewrite'] = '1';
 $conf['gzip_output'] = 1;
 $conf['send404'] = 1;
