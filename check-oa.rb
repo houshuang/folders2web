@@ -5,10 +5,11 @@ require 'open-uri'
 
 # this runs on my server, and is used to check if a certain url links to a publicly available PDF
 
-def checkOA(url)
-  url = url.gsub(/https?\:\/\/?/,'')
+def checkOA(origurl)
+  url = origurl.gsub(/https?\:\/\/?/,'')
   uri, *path = url.split("/")
   path = "/" + path.join("/")
+  origurl.sub!(':/', '://') unless origurl.index("//")
 
   # first check against whitelist
   whitelist = [ # list of URLs that don't need to be downloaded to check, first is URI, second is path
@@ -16,13 +17,11 @@ def checkOA(url)
   ]
   whitelist.each { |comp| return true if uri.match(comp[0]) && path.match(comp[1]) }
 
-  # if no luck, try downloading header
-  response = nil
-
   # faking agent, to avoid no-robots
   chrome_agent = 'Mozilla/5.0 (X11; CrOS i686 1660.57.0) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.46 Safari/535.19'
 
-  Net::HTTP.start(uri, 80) { |http| response = http.head(path, "User-Agent" => chrome_agent) }
+  # grab header using curl
+  response = `curl -A '#{chrome_agent}' -I '#{origurl}'`
 
   possible_ctypes = [
     "application/pdf",
@@ -31,19 +30,12 @@ def checkOA(url)
     "application/text.pdf"]
 
   # if ctype matches PDF, true, otherwise explore further
-  if possible_ctypes.index( response['content-type'] )
-    return true
-  end
+  possible_ctypes.each {|ctype| return true if response.index("Content-Type: #{ctype}")}
 
-  # final check - does the file downloaded have the PDF magic bytes
-  readurl = "http://" + url.gsub(" ", "%20")
-  a = open(readurl).read
-  return true if (a[0..3] == "%PDF")
+  # try curl
+  `curl -r 0-99 -s -A '#{chrome_agent}' '#{origurl}' > output.tmp`
 
-  # let's try https as well, just for fun
-  readurl = "https://" + url.gsub(" ", "%20")
-  a = open(readurl).read
-  return true if (a[0..3] == "%PDF")
+  return (`file output.tmp;rm output.tmp`.index("PDF document") ? true : false)
 
   # we tried, but we failed.
   return false
