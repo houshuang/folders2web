@@ -11,17 +11,19 @@ def checkOA(origurl)
   path = "/" + path.join("/")
   origurl.sub!(':/', '://') unless origurl.index("//")
 
+  chrome_agent = 'Mozilla/5.0 (X11; CrOS i686 1660.57.0) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.46 Safari/535.19'
+  curl_opts = "--connect-timeout 5 -A '#{chrome_agent}'"
+
   # first check against whitelist
   whitelist = [ # list of URLs that don't need to be downloaded to check, first is URI, second is path
     [/arxiv\.org/, /\.pdf$/]
   ]
-  whitelist.each { |comp| return true if uri.match(comp[0]) && path.match(comp[1]) }
+  whitelist.each { |comp| return true if uri.index(comp[0]) && path.index(comp[1]) }
 
   # faking agent, to avoid no-robots
-  chrome_agent = 'Mozilla/5.0 (X11; CrOS i686 1660.57.0) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.46 Safari/535.19'
 
   # grab header using curl
-  response = `curl -A '#{chrome_agent}' -I '#{origurl}'`
+  response = `curl #{curl_opts} -I '#{origurl}'`
 
   possible_ctypes = [
     "application/pdf",
@@ -33,7 +35,7 @@ def checkOA(origurl)
   possible_ctypes.each {|ctype| return true if response.index("Content-Type: #{ctype}")}
 
   # try curl
-  `curl -r 0-99 -s -A '#{chrome_agent}' '#{origurl}' > output.tmp`
+  `curl #{curl_opts} -r 0-99 -s '#{origurl}' > output.tmp`
 
   return (`file output.tmp;rm output.tmp`.index("PDF document") ? true : false)
 
