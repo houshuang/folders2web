@@ -103,7 +103,7 @@ else
 
   outfinal = "h2. Highlights#{percentage_text}\n\n" + @out.join('')
   File.write("/tmp/skimtmp", outfinal)
-  `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{Citekey}'`
+  `#{Wiki_path}/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'clip:#{Citekey}'`
 
   if File.exists?("/tmp/skim-#{Citekey}-tmp")
     a = File.readlines("/tmp/skim-#{Citekey}-tmp")
@@ -111,20 +111,20 @@ else
     c = 0
     a.each do |line|
       f,pg = line.split(",")
-      `mv "#{f.strip}" "/wiki/data/media/skim/#{Citekey}#{c.to_s}.png"`
+      `mv "#{f.strip}" "#{Wiki_path}/data/media/skim/#{Citekey}#{c.to_s}.png"`
       @out << "{{skim:#{Citekey}#{c.to_s}.png}}\n\n[[skimx://#{Citekey}##{pg.strip}|p. #{pg.strip}]]\n----\n\n"
       c += 1
     end
   #  `rm "/tmp/skim-#{Citekey}-tmp"`
     File.open("/tmp/skimtmp", "w") {|f| f << @out}
-    `/wiki/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{Citekey}'`
+    `#{Wiki_path}/bin/dwpage.php -m 'Automatically extracted from Skim' commit /tmp/skimtmp 'skimg:#{Citekey}'`
   end
 
   #make_newimports_page([Citekey])
 end
 
 # open ref page in browser
-`open http://localhost/wiki/ref:#{Citekey}`
+`open #{Internet_path}/ref:#{Citekey}`
 
 # update bibdesk fields
 bibdesk_publication.fields["Read"].value.set("1")
