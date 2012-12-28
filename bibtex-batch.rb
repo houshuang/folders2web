@@ -65,11 +65,11 @@ end
 timetot = Time.now
 timetmp = Time.now
 
-puts "Making RSS feed"
+# Uncomment lines below to enable RSS feed
+# puts "Making RSS feed"
+# make_rss_feed
+# puts "RSS feed complete (will be updated next time you sync with server) (#{Time.now - timetmp} s.)"
 
-make_rss_feed
-
-puts "RSS feed complete (will be updated next time you sync with server) (#{Time.now - timetmp} s.)"
 timetmp = Time.now
 puts "Parsing BibTeX"
 b = BibTeX.parse(File.read(Bibliography))
