@@ -17,13 +17,8 @@ journalopt = true
 keywordopt = true
 #######################################################################
 
-# dt = app('BibDesk')
-# dt.document.save
-def pdfpath(citekey)
-  if File.exists?("#{PDF_path}/#{citekey.to_s}.pdf")
-    return "[[skimx://#{citekey}|PDF]]"
-  end
-end
+try { dt = app('BibDesk') }
+try { dt.document.save }
 
 def sort_pubs(pubs)
   return pubs.sort {|x,y| x.to_s.scan(/[0-9]+/)[0].to_i <=> y.to_s.scan(/[0-9]+/)[0].to_i}
@@ -207,9 +202,9 @@ authors.each do |axx, pubs|
   sort_pubs(pubs).each do |i|
     item = b[i]
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [#:ref:#{item.key}|#{item.key}] | #{item[:cit]}|#{pdfpath(item.key)}|\n"
+      out1 << "| [@#{item.key}] | #{item[:cit]}|\n"
     else
-      out2 << "| #{item.key} | #{item[:cit]}|#{pdfpath(item.key)}|\n"
+      out2 << "| [@#{item.key}] | #{item[:cit]}|\n"
     end
   end
 
@@ -246,9 +241,9 @@ if keywordopt
     sort_pubs(pubs).each do |i|
       item = b[i]
       if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-        out1 << "| [#:ref:#{item.key}|#{item.key}] | #{item[:cit]}| #{pdfpath(item.key)} |\n"
+        out1 << "| [@#{item.key}] | #{item[:cit]}|\n"
       else
-        out2 << "| #{item.key} | #{item[:cit]} | #{pdfpath(item.key)}|\n"
+        out2 << "| [@#{item.key}] | #{item[:cit]}|\n"
       end
     end
 
@@ -287,9 +282,9 @@ journals.each do |axx, pubs|
   sort_pubs(pubs).each do |i|
     item = b[i]
     if File.exists?("#{Wiki_path}/data/pages/ref/#{item.key}.txt")
-      out1 << "| [#:ref:#{item.key}|#{item.key}] | #{item[:cit]}|#{pdfpath(item.key)}|\n"
+      out1 << "| [@#{item.key}] | #{item[:cit]}|\n"
     else
-      out2 << "| #{item.key} | #{item[:cit]}|#{pdfpath(item.key)}|\n"
+      out2 << "| [@#{item.key}] | #{item[:cit]}|\n"
     end
   end
 
