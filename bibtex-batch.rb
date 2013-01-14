@@ -65,10 +65,11 @@ end
 timetot = Time.now
 timetmp = Time.now
 
-# Uncomment lines below to enable RSS feed
-# puts "Making RSS feed"
-# make_rss_feed
-# puts "RSS feed complete (will be updated next time you sync with server) (#{Time.now - timetmp} s.)"
+if defined?(Make_RSS) && Make_RSS
+  puts "Making RSS feed"
+  make_rss_feed
+  puts "RSS feed complete (will be updated next time you sync with server) (#{Time.now - timetmp} s.)"
+end
 
 timetmp = Time.now
 puts "Parsing BibTeX"

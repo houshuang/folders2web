@@ -35,3 +35,6 @@ JSON_path = "/wiki/lib/plugins/dokuresearchr/json.tmp"
 Scrobble_token = ""
 Scrobble_server_host = "stormy-leaf-9036.herokuapp.com"
 Scrobble_server_port = "80"
+
+# make sure RSS generation works before turning on
+Make_RSS = false
