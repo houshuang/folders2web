@@ -181,8 +181,9 @@ def url(argv)
   arg = argv[11..-1]
   find = BibDesk.search({:for => arg})
   unless find == []
-    find[0].show
     BibDesk.activate
+    find[0].select  # does not work if pub is not listed (because of a search/keyword filter etc) not sure how to "reset"
+    find[0].show
   else
     growl("File not found", "Cannot find citation #{ARGV[0]}")
   end
