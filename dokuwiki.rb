@@ -20,15 +20,24 @@ def check_bibdesk
 
   found = try { Appscript.app("BibDesk").document.search({:for=>search.strip}) }
   if found.size > 0
-    msg = "Matching citation exists in BibDesk: #{found[0].cite_key.get}"
+    citekey = found[0].cite_key.get
+    msg = "Matching citation exists in BibDesk: #{citekey}"
     msg << ", and #{found.size - 1} more" unless found.size == 1
-    url = "bibdeskx://#{found[0].cite_key.get}"
+
+    # open in Chrome if page exists, otherwise BibDesk
+    if File.exists?("#{Wiki_path}/data/pages/ref/#{citekey}.txt")
+      url = "http://localhost/wiki/ref:#{citekey}"
+      msg << " (WEB)"
+    else
+      url = "bibdeskx://#{citekey}"
+    end
+
     found[0].select
   else
     msg = "No matching citation in BibDesk"
     url = ''
   end
-  growl('Looking up citation in BibDesK', msg, url)
+  growl('Looking up citation in BibDesk', msg, url)
 end
 
 def cururl
@@ -41,21 +50,26 @@ def curtitle
  title = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.title.get.strip
 end
 
-# cleans bibtex string on clipboard
-def clean_bibtex
-  res = try { cleanup_bibtex_string(pbpaste) }
-  fail "Could not parse BibTeX string, maybe the page next to Google Scholar was not the BibTeX page?" unless res
-  pbcopy(res)
-end
-
-# gets the bibtex from the current page, whether it's researchr or scrobblr, and cleans it up
+# gets the bibtex from the current page, whether it's google scholar, researchr or scrobblr, and cleans it up
 def get_bibtex_from_page
-  # returns the content of the BibTeX hidden div
-  bibtex = ''
-  if cururl.index("/ref:") || cururl.index("herokuapp")
-    query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
+  tabidx = @chrome.windows[1].get.active_tab_index.get
+
+  # herokuapp is scrobblr - currently offline
+  if cururl.any_index(["/ref:", "herokuapp", "scholar.google"])
+
+    if cururl.index(["/ref:", "herokuapp"])
+      query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
+    else # GScholar
+      unless @chrome.windows[1].get.tabs[tabidx].URL.get.index("/&output=citation")
+        fail "The next tab must be the BibTex tab, otherwise Google Scholar import won't work"
+      end
+
+      query = "querySelectorAll('pre')[0]"
+      tabidx += 1 # the next tab, with the BibTeX
+    end
+
     js = "document.#{query}.innerHTML;"
-    bibtex = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.execute(:javascript => js)
+    bibtex = @chrome.windows[1].get.tabs[tabidx].get.execute(:javascript => js)
 
     bibtex.gsubs!(
       [/\<(.+?)\>/,             ''],                      # plugins might insert random HTML tags
@@ -66,18 +80,9 @@ def get_bibtex_from_page
       ["read = {1},\n",         ''],                      # other's might have read it, we haven't yet
       [/\}\n/m,                 "},\n"],                  # fix comma after any lines cleaned of tags
       ).strip
+
     bibtex << "}" unless bibtex.scan("{").size == bibtex.scan("}").size  # ensure right number of closing brackets
 
-  # elsif cururl.index("wikipapers.referata.com")
-  #   title = try { cururl.match(/wikipapers.referata.com\/wiki\/(.+?)$/)[0] }
-  #   if title
-  #     require 'open-uri'
-  #     newurl = "http://wikipapers.referata.com/wiki/Special:Ask/-5B-5Btitle::#{title}/format%3Dbibtex"
-  #     puts newurl
-  #     bibtex = try { open(newurl).read }
-  #   end
-  #   fail "Could not acquire citation from Wikipapers" unless defined?(bibtex) && bibtex
-  #   puts bibtex
   else
     require 'open-uri'
     url = "http://scraper.bibsonomy.org/service?url=#{cururl}&format=bibtex"
@@ -88,6 +93,9 @@ def get_bibtex_from_page
   # final sanity check
   bibtex = cleanup_bibtex_string(bibtex)
   raise unless bibtex.index("author")
+
+  # Close if Google Scholar
+  @chrome.windows[1].get.tabs[tabidx].close if @chrome.windows[1].active_tab.title.get.index("Google Scholar")
 
   return bibtex
 end
@@ -137,7 +145,6 @@ end
 # if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
 # import citation to BibDesk
 def import_bibtex
-  #fail "This page is not a Researchr wiki, cannot import citation" unless cururl.downcase.index("/ref:") || cururl.downcase.index("herokuapp")
 
   bibtex_final = try {get_bibtex_from_page}
   fail "Could not extract BibTeX citation from this page" unless bibtex_final
@@ -168,6 +175,8 @@ def import_bibtex
     d[0].auto_file
 
     growl("PDF added", "File added successfully to #{citekey}")
+
+    add_to_jsonbib(citekey)
   end
 end
 
