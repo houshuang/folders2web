@@ -53,6 +53,7 @@ end
 # gets the bibtex from the current page, whether it's google scholar, researchr or scrobblr, and cleans it up
 def get_bibtex_from_page
   tabidx = @chrome.windows[1].get.active_tab_index.get
+  curtab = @chrome.windows[1].get.tabs[tabidx]
 
   # herokuapp is scrobblr - currently offline
   if cururl.any_index(["/ref:", "herokuapp", "scholar.google"])
@@ -60,12 +61,13 @@ def get_bibtex_from_page
     if cururl.any_index(["/ref:", "herokuapp"])
       query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
     else # GScholar
+      tabidx += 1 # the next tab, with the BibTeX
+
       unless @chrome.windows[1].get.tabs[tabidx].URL.get.index("/&output=citation")
         fail "The next tab must be the BibTex tab, otherwise Google Scholar import won't work"
       end
 
       query = "querySelectorAll('pre')[0]"
-      tabidx += 1 # the next tab, with the BibTeX
     end
 
     js = "document.#{query}.innerHTML;"
@@ -95,7 +97,7 @@ def get_bibtex_from_page
   raise unless bibtex.index("author")
 
   # Close if Google Scholar
-  @chrome.windows[1].get.tabs[tabidx].close if @chrome.windows[1].active_tab.title.get.index("Google Scholar")
+  @chrome.windows[1].get.tabs[tabidx].close if curtab.title.get.index("Google Scholar")
 
   return bibtex
 end
