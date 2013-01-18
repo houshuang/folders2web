@@ -15,21 +15,16 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>Window</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/kindleapp-screenshot.rb</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/skim-tools.rb sidebyside</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -43,14 +38,14 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Add picture to cache</string>
+				<string>Side-by-side</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>8</integer>
+						<integer>41</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -60,11 +55,11 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>DFD63E6B-BE33-4DBC-A6C0-7F1AFE012543</string>
+				<string>8C832EC9-FD4D-42BD-AEFE-F377F3773520</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Kindle App</string>
+		<string>Skim</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -72,36 +67,33 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE+AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUKS2lu
-					ZGxlLmFwcAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAfeMNseXKgwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMeXcFwA
-					AAABAAQACj7VAAIAIFNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBLaW5kbGUuYXBwAA4AFgAKAEsA
-					aQBuAGQAbABlAC4AYQBwAHAADwAQAAcAUwBT
-					AEQASABvAG0AZQASABdBcHBsaWNhdGlvbnMv
-					S2luZGxlLmFwcAAAEwABLwD//wAA
-					</data>
 					<key>BundleIdentifier</key>
-					<string>com.amazon.Kindle</string>
+					<string>net.sourceforge.skim-app.skim</string>
 					<key>Creator</key>
-					<integer>1798597987</integer>
+					<integer>1397451117</integer>
 					<key>FileType</key>
 					<integer>1095782476</integer>
 					<key>Name</key>
-					<string>Kindle.app</string>
+					<string>Skim.app</string>
 					<key>NewFile</key>
-					<string>/Applications/Kindle.app</string>
+					<string>/Applications/Skim.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.TextEdit</string>
+					<key>Creator</key>
+					<integer>1953790068</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>TextEdit.app</string>
+					<key>NewFile</key>
+					<string>/Applications/TextEdit.app</string>
 				</dict>
 			</array>
 		</dict>
 		<key>UID</key>
-		<string>8882F178-A915-4975-A717-8CA2E6607F19</string>
+		<string>014C4FFF-9C39-4FC0-8E59-B0E3B2414457</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -116,21 +108,16 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>/usr/bin/ruby /Users/Stian/src/folders2web/dokuwiki.rb add_to_rss</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb sbs</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -144,14 +131,14 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Add to RSS feed</string>
+				<string>Side-by-side</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>3</integer>
+						<integer>41</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -161,7 +148,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>9570A34C-0371-49E5-81AC-CF5D281A7CB5</string>
+				<string>D5752183-4061-47A9-92ED-C9791B929E25</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -173,22 +160,674 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/global.rb bib_selector</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Insert reference</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>47</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E06F1AE4-5572-4DCB-BE43-8160A3CC7C14</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>UID</key>
+		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb go</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Go to wikipage</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>39</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>7EA2C231-0EFE-4153-B06F-274170B054F1</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Convert references</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>44</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>35231D2C-837B-474D-B176-7957FAC3AFC5</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>UID</key>
+		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb onlylist</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Convert references</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>42</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>C56E8D37-F4FD-4BC0-9A60-5C13553C1F16</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>UID</key>
+		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.google.Chrome</string>
+							<key>Creator</key>
+							<integer>1919511898</integer>
+							<key>FileType</key>
+							<integer>1095782476</integer>
+							<key>Name</key>
+							<string>Google Chrome.app</string>
+							<key>NewFile</key>
+							<string>/Applications/Google Chrome.app</string>
+						</dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Click</string>
+						<key>Button</key>
+						<integer>0</integer>
+						<key>ClickCount</key>
+						<integer>1</integer>
+						<key>DragHorizontalPosition</key>
+						<string>0</string>
+						<key>DragVerticalPosition</key>
+						<string>0</string>
+						<key>Fuzz</key>
+						<integer>0</integer>
+						<key>HorizontalPosition</key>
+						<integer>-20</integer>
+						<key>HorizontalPositionExpression</key>
+						<string>-20</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>MouseMoveAndClick</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>MouseDrag</key>
+						<string>None</string>
+						<key>Relative</key>
+						<string>Window</string>
+						<key>RelativeCorner</key>
+						<string>TopRight</string>
+						<key>RestoreMouseLocation</key>
+						<true/>
+						<key>VerticalPosition</key>
+						<integer>50</integer>
+						<key>VerticalPositionExpression</key>
+						<string>50</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>17</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>36</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>17</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>36</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Task Manager</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>53</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>B7518E28-4496-4F56-B4D1-6D4D94CA39B3</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>ByPasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>InsertText</string>
+						<key>Paste</key>
+						<true/>
+						<key>Text</key>
+						<string>  * </string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Start bullet-list in DokuWiki</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>28</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>768</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>1D4566EE-8EC0-4017-8130-F94D5E6987DA</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 8</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Seconds</key>
+						<real>1.5</real>
+						<key>Time</key>
+						<string>1.5</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>I'm Feeling Lucky 8</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>28</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E5A0A02E-2E97-4847-8371-6F488BF6B4A4</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -232,17 +871,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -275,31 +909,6 @@
 						<string>Normal</string>
 						<key>Application</key>
 						<dict>
-							<key>Alias</key>
-							<data>
-							AAAAAAFCAAIAAQdTU0RI
-							b21lAAAAAAAAAAAAAAAA
-							AAAAAAAAAADJeU/YSCsA
-							AAAKPtULQmliRGVzay5h
-							cHAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAABVVqY8uv
-							duwAAAAAAAAAAP////8A
-							AAkgAAAAAAAAAAAAAAAA
-							AAAADEFwcGxpY2F0aW9u
-							cwAQAAgAAMl5ligAAAAR
-							AAgAAMuvrywAAAABAAQA
-							Cj7VAAIAIVNTREhvbWU6
-							QXBwbGljYXRpb25zOgBC
-							aWJEZXNrLmFwcAAADgAY
-							AAsAQgBpAGIARABlAHMA
-							awAuAGEAcABwAA8AEAAH
-							AFMAUwBEAEgAbwBtAGUA
-							EgAYQXBwbGljYXRpb25z
-							L0JpYkRlc2suYXBwABMA
-							AS8A//8AAA==
-							</data>
 							<key>BundleIdentifier</key>
 							<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 							<key>Creator</key>
@@ -378,21 +987,16 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb linkfile</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb get_bibtexnet</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -406,14 +1010,14 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Autolink most recent file in Downloads</string>
+				<string>Retrieve metadata from Bibtexnet</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>37</integer>
+						<integer>11</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -423,7 +1027,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>C3BD7596-CC2D-4704-929E-019F7309F701</string>
+				<string>A6FDA421-4A7F-41C7-8599-604107B465D4</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -435,21 +1039,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 					<key>Creator</key>
@@ -477,183 +1066,18 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Pasting</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Convert references</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>44</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>35231D2C-837B-474D-B176-7957FAC3AFC5</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Pasting</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/bin/ruby -Ku /Users/Stian/src/folders2web/convert-text.rb onlylist</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Convert references</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>42</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>C56E8D37-F4FD-4BC0-9A60-5C13553C1F16</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/qlmanage-doc2pdf.rb</string>
+						<string>ruby -KU /users/Stian/src/folders2web/dokuwiki.rb import_bibtex</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -667,14 +1091,14 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Convert to PDF</string>
+				<string>Send to Bibdesk</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>35</integer>
+						<integer>11</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -684,11 +1108,11 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>8D34C41F-0BC6-4A8B-AE36-477437AFC600</string>
+				<string>DAD2FFDD-5792-4C78-B1B1-AE8A47EB1D5C</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Finder</string>
+		<string>Chrome</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -696,38 +1120,102 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFmAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAASFngKRmlu
-					ZGVyLmFwcAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAABJVvsoodHcAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADENvcmVTZXJ2
-					aWNlcwAQAAgAAMl5ligAAAARAAgAAMoorLcA
-					AAABAAwAEhZ4AA+15gAPteQAAgAxU1NESG9t
-					ZTpTeXN0ZW06AExpYnJhcnk6AENvcmVTZXJ2
-					aWNlczoARmluZGVyLmFwcAAADgAWAAoARgBp
-					AG4AZABlAHIALgBhAHAAcAAPABAABwBTAFMA
-					RABIAG8AbQBlABIAJlN5c3RlbS9MaWJyYXJ5
-					L0NvcmVTZXJ2aWNlcy9GaW5kZXIuYXBwABMA
-					AS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
-					<string>com.apple.finder</string>
+					<string>com.google.Chrome</string>
 					<key>Creator</key>
-					<integer>1296122707</integer>
+					<integer>1919511898</integer>
 					<key>FileType</key>
-					<integer>1179534418</integer>
+					<integer>1095782476</integer>
 					<key>Name</key>
-					<string>Finder</string>
+					<string>Google Chrome</string>
 					<key>NewFile</key>
-					<string>/System/Library/CoreServices/Finder.app</string>
+					<string>/Applications/Google Chrome.app</string>
 				</dict>
 			</array>
 		</dict>
 		<key>UID</key>
-		<string>AEACA303-FB2F-433E-980E-43C8FAA85EC5</string>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/kindleapp-screenshot.rb</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Add picture to cache</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>DFD63E6B-BE33-4DBC-A6C0-7F1AFE012543</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Kindle App</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.amazon.Kindle</string>
+					<key>Creator</key>
+					<integer>1798597987</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Kindle.app</string>
+					<key>NewFile</key>
+					<string>/Applications/Kindle.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>8882F178-A915-4975-A717-8CA2E6607F19</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -742,17 +1230,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -799,21 +1282,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
-					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABFEAkcuDSkEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuDgoEA
-					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
-					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
-					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
-					cHAAABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>net.sourceforge.skim-app.skim</string>
 					<key>Creator</key>
@@ -826,22 +1294,6 @@
 					<string>/Applications/Skim.app</string>
 				</dict>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFGAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUMVGV4
-					dEVkaXQuYXBwAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAvY7cogNoAAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMogbsAA
-					AAABAAQACj7VAAIAIlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBUZXh0RWRpdC5hcHAADgAaAAwA
-					VABlAHgAdABFAGQAaQB0AC4AYQBwAHAADwAQ
-					AAcAUwBTAEQASABvAG0AZQASABlBcHBsaWNh
-					dGlvbnMvVGV4dEVkaXQuYXBwAAATAAEvAP//
-					AAA=
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.apple.TextEdit</string>
 					<key>Creator</key>
@@ -871,17 +1323,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>Window</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -928,21 +1375,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 					<key>Creator</key>
@@ -971,18 +1403,94 @@
 				<array>
 					<dict>
 						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
+						<string>Pasting</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
+						<key>Path</key>
 						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb image</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Insert image in DokuWiki</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>14E6A735-AC9D-44A3-9FE0-855859EAA689</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Creator</key>
+					<integer>1919511898</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -1029,22 +1537,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -1074,17 +1566,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -1131,21 +1618,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE+AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUKS2lu
-					ZGxlLmFwcAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAfeMNseXKgwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMeXcFwA
-					AAABAAQACj7VAAIAIFNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBLaW5kbGUuYXBwAA4AFgAKAEsA
-					aQBuAGQAbABlAC4AYQBwAHAADwAQAAcAUwBT
-					AEQASABvAG0AZQASABdBcHBsaWNhdGlvbnMv
-					S2luZGxlLmFwcAAAEwABLwD//wAA
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.amazon.Kindle</string>
 					<key>Creator</key>
@@ -1173,37 +1645,18 @@
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
 						<key>DisplayKind</key>
-						<string>Pasting</string>
-						<key>File</key>
-						<data>
-						</data>
+						<string>None</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -Ku /Users/Stian/src/folders2web/bibdesk.rb authorlist</string>
+						<string>/usr/local/bin/ruby -KU /Users/Stian/src/folders2web/skim.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1213,42 +1666,121 @@
 						<key>Variable</key>
 						<string>Variable</string>
 					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Format author list</string>
+				<string>Make wiki clipping</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>35</integer>
+						<integer>14</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>6400</integer>
+						<integer>256</integer>
 						<key>TriggerRepeat</key>
 						<false/>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>F98C0DC7-20B8-4847-A808-235ACF4C595B</string>
+				<string>4973E99C-315F-4EC0-AF6B-F37DEA4108F7</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Skim</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>net.sourceforge.skim-app.skim</string>
+					<key>Creator</key>
+					<integer>1397451117</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>Skim.app</string>
+					<key>NewFile</key>
+					<string>/Applications/Skim.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.TextEdit</string>
+					<key>Creator</key>
+					<integer>1953790068</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>TextEdit.app</string>
+					<key>NewFile</key>
+					<string>/Applications/TextEdit.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>014C4FFF-9C39-4FC0-8E59-B0E3B2414457</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb open_page</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Open in wiki</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>14</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>0C2B72D0-494D-4837-9835-4296968CEE46</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -1260,21 +1792,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 					<key>Creator</key>
@@ -1304,21 +1821,16 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb go</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/devonthink.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1332,14 +1844,95 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Go to wikipage</string>
+				<string>Open in wiki</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>39</integer>
+						<integer>14</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>23DD10DE-2C05-412E-9F56-F6B05F4ED5C7</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>DevonThink</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.devon-technologies.thinkpro2</string>
+					<key>Creator</key>
+					<integer>1145992304</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>DEVONthink Pro</string>
+					<key>NewFile</key>
+					<string>/Applications/DEVONthink Pro.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>E0F7BE25-07E3-4205-A84E-8387B564B168</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/usr/bin/ruby /Users/Stian/src/folders2web/dokuwiki.rb add_to_rss</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Add to RSS feed</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>3</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -1349,7 +1942,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>7EA2C231-0EFE-4153-B06F-274170B054F1</string>
+				<string>9570A34C-0371-49E5-81AC-CF5D281A7CB5</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -1361,22 +1954,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -1548,22 +2125,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -1607,1173 +2168,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>37</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>2CE023B6-513D-4EB0-9C22-F9BEBA765F8B</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 1</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 1</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>18</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>DE873ABF-C22E-4E7B-A88F-203AA269C672</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 2</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 2</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>19</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>B9818ED7-40E7-40C3-B114-6ED35BFFFBB7</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 3</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 3</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>20</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>1EED2BB7-BC31-410A-815F-D8F0572E2FD2</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 4</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 4</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>21</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>06A78E58-5161-4885-8421-777C45C66430</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 5</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>23</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>88007045-3234-4380-8BEF-5FD07B1F9CB5</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 6</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 6</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>22</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>A2684BB8-E809-40B6-824D-17C5EE135507</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 7</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 7</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>26</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>6FB9B068-7B01-4693-89B5-D87C5D268A81</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/macruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky-y.rb 8</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Pause</string>
-						<key>Seconds</key>
-						<real>1.5</real>
-						<key>Time</key>
-						<string>1.5</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>I'm Feeling Lucky 8</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>28</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>E5A0A02E-2E97-4847-8371-6F488BF6B4A4</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>8</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -2820,22 +2220,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -2879,17 +2263,12 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -2936,22 +2315,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -2980,22 +2343,17 @@
 				<array>
 					<dict>
 						<key>DisplayKind</key>
-						<string>Pasting</string>
-						<key>File</key>
-						<data>
-						</data>
+						<string>Briefly</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb image</string>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb send_to_kindle</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3009,14 +2367,14 @@
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Insert image in DokuWiki</string>
+				<string>Send to Kindle</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>8</integer>
+						<integer>40</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -3026,7 +2384,183 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>14E6A735-AC9D-44A3-9FE0-855859EAA689</string>
+				<string>8135F987-0B67-4A59-8A3A-7657C5860DCD</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Bibdesk</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
+					<key>Creator</key>
+					<integer>1111774027</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>BibDesk</string>
+					<key>NewFile</key>
+					<string>/Applications/BibDesk.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb linkfile</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Autolink most recent file in Downloads</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>37</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>C3BD7596-CC2D-4704-929E-019F7309F701</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Bibdesk</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
+					<key>Creator</key>
+					<integer>1111774027</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>BibDesk</string>
+					<key>NewFile</key>
+					<string>/Applications/BibDesk.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby -KU /Users/Stian/src/imfeelinglucky/imfeelinglucky.rb</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>I'm Feeling Lucky</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>37</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>2CE023B6-513D-4EB0-9C22-F9BEBA765F8B</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -3038,22 +2572,6 @@
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -3083,21 +2601,16 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/global.rb bib_selector</string>
+						<string>ruby -KU /Users/Stian/src/folders2web/qlmanage-doc2pdf.rb</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -3107,48 +2620,54 @@
 						<key>Variable</key>
 						<string>Variable</string>
 					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>9</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Insert reference</string>
+				<string>Convert to PDF</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>47</integer>
+						<integer>35</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>256</integer>
+						<integer>6400</integer>
 						<key>TriggerRepeat</key>
 						<false/>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>E06F1AE4-5572-4DCB-BE43-8160A3CC7C14</string>
+				<string>8D34C41F-0BC6-4A8B-AE36-477437AFC600</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Global Macro Group</string>
+		<string>Finder</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.finder</string>
+					<key>Creator</key>
+					<integer>1296122707</integer>
+					<key>FileType</key>
+					<integer>1179534418</integer>
+					<key>Name</key>
+					<string>Finder</string>
+					<key>NewFile</key>
+					<string>/System/Library/CoreServices/Finder.app</string>
+				</dict>
+			</array>
+		</dict>
 		<key>UID</key>
-		<string>EA461070-F870-418B-85B3-8B464DBDA9F4</string>
+		<string>AEACA303-FB2F-433E-980E-43C8FAA85EC5</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -3177,17 +2696,121 @@
 					<dict>
 						<key>DisplayKind</key>
 						<string>Pasting</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
+						<key>Path</key>
 						<string></string>
+						<key>Text</key>
+						<string>ruby -Ku /Users/Stian/src/folders2web/bibdesk.rb authorlist</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Format author list</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>35</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F98C0DC7-20B8-4847-A808-235ACF4C595B</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Bibdesk</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
+					<key>Creator</key>
+					<integer>1111774027</integer>
+					<key>FileType</key>
+					<integer>1095782476</integer>
+					<key>Name</key>
+					<string>BibDesk</string>
+					<key>NewFile</key>
+					<string>/Applications/BibDesk.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -3235,22 +2858,6 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.google.Chrome</string>
 					<key>Creator</key>
@@ -3280,1434 +2887,12 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>/usr/local/bin/ruby -KU /Users/Stian/src/folders2web/skim.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Make wiki clipping</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>14</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>4973E99C-315F-4EC0-AF6B-F37DEA4108F7</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Skim</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
-					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABFEAkcuDSkEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuDgoEA
-					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
-					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
-					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
-					cHAAABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>net.sourceforge.skim-app.skim</string>
-					<key>Creator</key>
-					<integer>1397451117</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Skim.app</string>
-					<key>NewFile</key>
-					<string>/Applications/Skim.app</string>
-				</dict>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFGAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUMVGV4
-					dEVkaXQuYXBwAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAvY7cogNoAAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMogbsAA
-					AAABAAQACj7VAAIAIlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBUZXh0RWRpdC5hcHAADgAaAAwA
-					VABlAHgAdABFAGQAaQB0AC4AYQBwAHAADwAQ
-					AAcAUwBTAEQASABvAG0AZQASABlBcHBsaWNh
-					dGlvbnMvVGV4dEVkaXQuYXBwAAATAAEvAP//
-					AAA=
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.apple.TextEdit</string>
-					<key>Creator</key>
-					<integer>1953790068</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>TextEdit.app</string>
-					<key>NewFile</key>
-					<string>/Applications/TextEdit.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>014C4FFF-9C39-4FC0-8E59-B0E3B2414457</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>17</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>New task</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>45</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>DDFA7B51-7BCB-465C-83DA-5365948896FA</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Pomodoro</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFuAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUWTXkg
-					TGl0dGxlIFBvbW9kb3JvLmFwcAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAL3hZcnb0ZoAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMncCdoA
-					AAABAAQACj7VAAIALFNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBNeSBMaXR0bGUgUG9tb2Rvcm8u
-					YXBwAA4ALgAWAE0AeQAgAEwAaQB0AHQAbABl
-					ACAAUABvAG0AbwBkAG8AcgBvAC4AYQBwAHAA
-					DwAQAAcAUwBTAEQASABvAG0AZQASACNBcHBs
-					aWNhdGlvbnMvTXkgTGl0dGxlIFBvbW9kb3Jv
-					LmFwcAAAEwABLwD//wAA
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.voltagesoftware.MyLittlePomodoro</string>
-					<key>Creator</key>
-					<integer>1061109567</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>My Little Pomodoro.app</string>
-					<key>NewFile</key>
-					<string>/Applications/My Little Pomodoro.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>3F8BC7EC-2FFB-4A42-A918-6BC55D744F5F</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb open_page</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Open in wiki</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>14</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>0C2B72D0-494D-4837-9835-4296968CEE46</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/devonthink.rb</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Open in wiki</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>14</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>256</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>23DD10DE-2C05-412E-9F56-F6B05F4ED5C7</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>DevonThink</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFeAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUSREVW
-					T050aGluayBQcm8uYXBwAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABW3A5MtzWAcAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMtznlcA
-					AAABAAQACj7VAAIAKFNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBERVZPTnRoaW5rIFByby5hcHAA
-					DgAmABIARABFAFYATwBOAHQAaABpAG4AawAg
-					AFAAcgBvAC4AYQBwAHAADwAQAAcAUwBTAEQA
-					SABvAG0AZQASAB9BcHBsaWNhdGlvbnMvREVW
-					T050aGluayBQcm8uYXBwAAATAAEvAP//AAA=
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.devon-technologies.thinkpro2</string>
-					<key>Creator</key>
-					<integer>1145992304</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>DEVONthink Pro</string>
-					<key>NewFile</key>
-					<string>/Applications/DEVONthink Pro.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>E0F7BE25-07E3-4205-A84E-8387B564B168</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb qlook</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>QuickLook</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>49</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>2048</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>8EDE4AE7-2C9D-442E-8FA5-674E185B3CEA</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb qlook upcoming</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>QuickLook upcoming</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>49</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>C200F446-2D78-43EA-BC2D-508942F538B6</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb get_bibtexnet</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Retrieve metadata from Bibtexnet</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>11</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>A6FDA421-4A7F-41C7-8599-604107B465D4</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Conditions</key>
-						<dict>
-							<key>ConditionList</key>
-							<array>
-								<dict>
-									<key>ConditionType</key>
-									<string>FrontWindow</string>
-									<key>FrontWindowConditionType</key>
-									<string>TitleContains</string>
-									<key>FrontWindowTitle</key>
-									<string>Google Scholar</string>
-								</dict>
-							</array>
-							<key>ConditionListMatch</key>
-							<string>All</string>
-						</dict>
-						<key>ElseActions</key>
-						<array>
-							<dict>
-								<key>DisplayKind</key>
-								<string>Variable</string>
-								<key>File</key>
-								<data>
-								</data>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>ExecuteShellScript</string>
-								<key>NewFile</key>
-								<string></string>
-								<key>Path</key>
-								<string></string>
-								<key>Text</key>
-								<string>ruby -KU /users/Stian/src/folders2web/dokuwiki.rb import_bibtex</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-								<key>TrimResults</key>
-								<true/>
-								<key>UseText</key>
-								<true/>
-								<key>Variable</key>
-								<string>Variable</string>
-							</dict>
-						</array>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>IfThenElse</string>
-						<key>ThenActions</key>
-						<array>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>KeyCode</key>
-								<integer>124</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>2304</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>KeyCode</key>
-								<integer>0</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>256</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>KeyCode</key>
-								<integer>8</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>256</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>DisplayKind</key>
-								<string>Window</string>
-								<key>File</key>
-								<data>
-								</data>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>ExecuteShellScript</string>
-								<key>NewFile</key>
-								<string></string>
-								<key>Path</key>
-								<string></string>
-								<key>Text</key>
-								<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb clean_bibtex</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-								<key>TrimResults</key>
-								<true/>
-								<key>UseText</key>
-								<true/>
-								<key>Variable</key>
-								<string>Variable</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>SaveClipboardToNamedClipboard</string>
-								<key>Name</key>
-								<string>8EFD8082-4792-4BD0-B057-4C4916D7D4B5</string>
-								<key>RedundandDisplayName</key>
-								<string>Clipboard #2</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>SetClipboardToNamedClipboard</string>
-								<key>Name</key>
-								<string>BBC8C46D-FD3E-4D3A-955F-EA156639BD67</string>
-								<key>RedundandDisplayName</key>
-								<string>Default Clipboard</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>KeyCode</key>
-								<integer>13</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>256</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>AlreadyActivatedActionType</key>
-								<string>Normal</string>
-								<key>Application</key>
-								<dict>
-									<key>Alias</key>
-									<data>
-								AAAAAAFCAAIA
-								AQdTU0RIb21l
-								AAAAAAAAAAAA
-								AAAAAAAAAAAA
-								AADJeU/YSCsA
-								AAAKPtULQmli
-								RGVzay5hcHAA
-								AAAAAAAAAAAA
-								AAAAAAAAAAAA
-								AAAAAAAAAAAA
-								AAAAAAAAAAAA
-								AAAAAAAAAAAA
-								AAAAAAAABVVq
-								Y8uvduwAAAAA
-								AAAAAP////8A
-								AAkgAAAAAAAA
-								AAAAAAAAAAAA
-								DEFwcGxpY2F0
-								aW9ucwAQAAgA
-								AMl5ligAAAAR
-								AAgAAMuvrywA
-								AAABAAQACj7V
-								AAIAIVNTREhv
-								bWU6QXBwbGlj
-								YXRpb25zOgBC
-								aWJEZXNrLmFw
-								cAAADgAYAAsA
-								QgBpAGIARABl
-								AHMAawAuAGEA
-								cABwAA8AEAAH
-								AFMAUwBEAEgA
-								bwBtAGUAEgAY
-								QXBwbGljYXRp
-								b25zL0JpYkRl
-								c2suYXBwABMA
-								AS8A//8AAA==
-									</data>
-									<key>BundleIdentifier</key>
-									<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-									<key>Creator</key>
-									<integer>1111774027</integer>
-									<key>FileType</key>
-									<integer>1095782476</integer>
-									<key>Name</key>
-									<string>BibDesk</string>
-									<key>NewFile</key>
-									<string>/Applications/BibDesk.app</string>
-								</dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>ActivateApplication</string>
-								<key>ReopenWindows</key>
-								<false/>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>SetClipboardToNamedClipboard</string>
-								<key>Name</key>
-								<string>8EFD8082-4792-4BD0-B057-4C4916D7D4B5</string>
-								<key>RedundandDisplayName</key>
-								<string>Clipboard #2</string>
-							</dict>
-							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>KeyCode</key>
-								<integer>37</integer>
-								<key>MacroActionType</key>
-								<string>SimulateKeystroke</string>
-								<key>Modifiers</key>
-								<integer>2304</integer>
-								<key>ReleaseAll</key>
-								<false/>
-							</dict>
-							<dict>
-								<key>DisplayKind</key>
-								<string>Window</string>
-								<key>File</key>
-								<data>
-								</data>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
-								<key>MacroActionType</key>
-								<string>ExecuteShellScript</string>
-								<key>NewFile</key>
-								<string></string>
-								<key>Path</key>
-								<string></string>
-								<key>Text</key>
-								<string>ruby -KU /Users/Stian/src/folders2web/bibdesk.rb post_import</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-								<key>TrimResults</key>
-								<true/>
-								<key>UseText</key>
-								<true/>
-								<key>Variable</key>
-								<string>Variable</string>
-							</dict>
-						</array>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Send to Bibdesk</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>11</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>DAD2FFDD-5792-4C78-B1B1-AE8A47EB1D5C</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Briefly</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb send_to_kindle</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Send to Kindle</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>40</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>8135F987-0B67-4A59-8A3A-7657C5860DCD</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Bibdesk</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFCAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtULQmli
-					RGVzay5hcHAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABVVqY8uvduwAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuvrywA
-					AAABAAQACj7VAAIAIVNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBCaWJEZXNrLmFwcAAADgAYAAsA
-					QgBpAGIARABlAHMAawAuAGEAcABwAA8AEAAH
-					AFMAUwBEAEgAbwBtAGUAEgAYQXBwbGljYXRp
-					b25zL0JpYkRlc2suYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
-					<key>Creator</key>
-					<integer>1111774027</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>BibDesk</string>
-					<key>NewFile</key>
-					<string>/Applications/BibDesk.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Window</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/skim-tools.rb sidebyside</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Side-by-side</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>41</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>8C832EC9-FD4D-42BD-AEFE-F377F3773520</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Skim</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
-					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABFEAkcuDSkEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuDgoEA
-					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
-					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
-					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
-					cHAAABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>net.sourceforge.skim-app.skim</string>
-					<key>Creator</key>
-					<integer>1397451117</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Skim.app</string>
-					<key>NewFile</key>
-					<string>/Applications/Skim.app</string>
-				</dict>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFGAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUMVGV4
-					dEVkaXQuYXBwAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAvY7cogNoAAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMogbsAA
-					AAABAAQACj7VAAIAIlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBUZXh0RWRpdC5hcHAADgAaAAwA
-					VABlAHgAdABFAGQAaQB0AC4AYQBwAHAADwAQ
-					AAcAUwBTAEQASABvAG0AZQASABlBcHBsaWNh
-					dGlvbnMvVGV4dEVkaXQuYXBwAAATAAEvAP//
-					AAA=
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.apple.TextEdit</string>
-					<key>Creator</key>
-					<integer>1953790068</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>TextEdit.app</string>
-					<key>NewFile</key>
-					<string>/Applications/TextEdit.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>014C4FFF-9C39-4FC0-8E59-B0E3B2414457</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>ruby -KU /Users/Stian/src/folders2web/dokuwiki.rb sbs</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>Variable</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Side-by-side</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>41</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-						<key>TriggerRepeat</key>
-						<false/>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>D5752183-4061-47A9-92ED-C9791B929E25</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Chrome</string>
-		<key>Targeting</key>
-		<dict>
-			<key>Targeting</key>
-			<string>Included</string>
-			<key>TargetingApps</key>
-			<array>
-				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
-					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
-					<key>Creator</key>
-					<integer>1919511898</integer>
-					<key>FileType</key>
-					<integer>1095782476</integer>
-					<key>Name</key>
-					<string>Google Chrome</string>
-					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
-				</dict>
-			</array>
-		</dict>
-		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>File</key>
-						<data>
-						</data>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>NewFile</key>
-						<string></string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
@@ -4754,21 +2939,6 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAE2AAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUIU2tp
-					bS5hcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABFEAkcuDSkEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMuDgoEA
-					AAABAAQACj7VAAIAHlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBTa2ltLmFwcAAOABIACABTAGsA
-					aQBtAC4AYQBwAHAADwAQAAcAUwBTAEQASABv
-					AG0AZQASABVBcHBsaWNhdGlvbnMvU2tpbS5h
-					cHAAABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
 					<string>net.sourceforge.skim-app.skim</string>
 					<key>Creator</key>
@@ -4781,22 +2951,6 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 					<string>/Applications/Skim.app</string>
 				</dict>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFGAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtUMVGV4
-					dEVkaXQuYXBwAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAvY7cogNoAAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMogbsAA
-					AAABAAQACj7VAAIAIlNTREhvbWU6QXBwbGlj
-					YXRpb25zOgBUZXh0RWRpdC5hcHAADgAaAAwA
-					VABlAHgAdABFAGQAaQB0AC4AYQBwAHAADwAQ
-					AAcAUwBTAEQASABvAG0AZQASABlBcHBsaWNh
-					dGlvbnMvVGV4dEVkaXQuYXBwAAATAAEvAP//
-					AAA=
-					</data>
 					<key>BundleIdentifier</key>
 					<string>com.apple.TextEdit</string>
 					<key>Creator</key>
@@ -4824,45 +2978,53 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>Action</key>
-						<string>ByPasting</string>
+						<key>DisplayKind</key>
+						<string>None</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<true/>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
 						<key>Text</key>
-						<string>  * </string>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb qlook</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Start bullet-list in DokuWiki</string>
+				<string>QuickLook</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>28</integer>
+						<integer>49</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>768</integer>
+						<integer>2048</integer>
 						<key>TriggerRepeat</key>
 						<false/>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>1D4566EE-8EC0-4017-8130-F94D5E6987DA</string>
+				<string>8EDE4AE7-2C9D-442E-8FA5-674E185B3CEA</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Chrome</string>
+		<string>Bibdesk</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -4870,37 +3032,21 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
+					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 					<key>Creator</key>
-					<integer>1919511898</integer>
+					<integer>1111774027</integer>
 					<key>FileType</key>
 					<integer>1095782476</integer>
 					<key>Name</key>
-					<string>Google Chrome</string>
+					<string>BibDesk</string>
 					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
+					<string>/Applications/BibDesk.app</string>
 				</dict>
 			</array>
 		</dict>
 		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
@@ -4913,165 +3059,53 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>AlreadyActivatedActionType</key>
-						<string>Normal</string>
-						<key>Application</key>
-						<dict>
-							<key>Alias</key>
-							<data>
-							AAAAAAFaAAIAAQdTU0RI
-							b21lAAAAAAAAAAAAAAAA
-							AAAAAAAAAADJeU/YSCsA
-							AAAKPtURR29vZ2xlIENo
-							cm9tZS5hcHAAAAAAAAAA
-							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAAAAAAAAAA
-							AAAAAAAAAAAABhi58svA
-							pUEAAAAAAAAAAP////8A
-							AAkgAAAAAAAAAAAAAAAA
-							AAAADEFwcGxpY2F0aW9u
-							cwAQAAgAAMl5ligAAAAR
-							AAgAAMvA3YEAAAABAAQA
-							Cj7VAAIAJ1NTREhvbWU6
-							QXBwbGljYXRpb25zOgBH
-							b29nbGUgQ2hyb21lLmFw
-							cAAADgAkABEARwBvAG8A
-							ZwBsAGUAIABDAGgAcgBv
-							AG0AZQAuAGEAcABwAA8A
-							EAAHAFMAUwBEAEgAbwBt
-							AGUAEgAeQXBwbGljYXRp
-							b25zL0dvb2dsZSBDaHJv
-							bWUuYXBwABMAAS8A//8A
-							AA==
-							</data>
-							<key>BundleIdentifier</key>
-							<string>com.google.Chrome</string>
-							<key>Creator</key>
-							<integer>1919511898</integer>
-							<key>FileType</key>
-							<integer>1095782476</integer>
-							<key>Name</key>
-							<string>Google Chrome.app</string>
-							<key>NewFile</key>
-							<string>/Applications/Google Chrome.app</string>
-						</dict>
+						<key>DisplayKind</key>
+						<string>None</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
-						<false/>
+						<true/>
 						<key>MacroActionType</key>
-						<string>ActivateApplication</string>
-						<key>ReopenWindows</key>
-						<false/>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>ruby /Users/Stian/src/folders2web/bibdesk.rb qlook upcoming</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>Click</string>
-						<key>HorizontalPosition</key>
-						<integer>-20</integer>
-						<key>HorizontalPositionExpression</key>
-						<string>-20</string>
-						<key>IsActive</key>
+						<key>TrimResults</key>
 						<true/>
-						<key>IsDisclosed</key>
+						<key>UseText</key>
 						<true/>
-						<key>MacroActionType</key>
-						<string>MouseMoveAndClick</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>Relative</key>
-						<string>Window</string>
-						<key>RelativeCorner</key>
-						<string>TopRight</string>
-						<key>VerticalPosition</key>
-						<integer>50</integer>
-						<key>VerticalPositionExpression</key>
-						<string>50</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>17</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>36</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>17</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>KeyCode</key>
-						<integer>36</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-						<key>ReleaseAll</key>
-						<false/>
+						<key>Variable</key>
+						<string>Variable</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Task Manager</string>
+				<string>QuickLook upcoming</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>53</integer>
+						<integer>49</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>256</integer>
+						<integer>6400</integer>
 						<key>TriggerRepeat</key>
 						<false/>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>B7518E28-4496-4F56-B4D1-6D4D94CA39B3</string>
+				<string>C200F446-2D78-43EA-BC2D-508942F538B6</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Chrome</string>
+		<string>Bibdesk</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -5079,37 +3113,21 @@ ruby -Ku /Users/Stian/src/folders2web/dokuwiki.rb bulletlist</string>
 			<key>TargetingApps</key>
 			<array>
 				<dict>
-					<key>Alias</key>
-					<data>
-					AAAAAAFaAAIAAQdTU0RIb21lAAAAAAAAAAAA
-					AAAAAAAAAAAAAADJeU/YSCsAAAAKPtURR29v
-					Z2xlIENocm9tZS5hcHAAAAAAAAAAAAAAAAAA
-					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-					AAAAAAAABhi58svApUEAAAAAAAAAAP////8A
-					AAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0
-					aW9ucwAQAAgAAMl5ligAAAARAAgAAMvA3YEA
-					AAABAAQACj7VAAIAJ1NTREhvbWU6QXBwbGlj
-					YXRpb25zOgBHb29nbGUgQ2hyb21lLmFwcAAA
-					DgAkABEARwBvAG8AZwBsAGUAIABDAGgAcgBv
-					AG0AZQAuAGEAcABwAA8AEAAHAFMAUwBEAEgA
-					bwBtAGUAEgAeQXBwbGljYXRpb25zL0dvb2ds
-					ZSBDaHJvbWUuYXBwABMAAS8A//8AAA==
-					</data>
 					<key>BundleIdentifier</key>
-					<string>com.google.Chrome</string>
+					<string>edu.ucsd.cs.mmccrack.bibdesk</string>
 					<key>Creator</key>
-					<integer>1919511898</integer>
+					<integer>1111774027</integer>
 					<key>FileType</key>
 					<integer>1095782476</integer>
 					<key>Name</key>
-					<string>Google Chrome</string>
+					<string>BibDesk</string>
 					<key>NewFile</key>
-					<string>/Applications/Google Chrome.app</string>
+					<string>/Applications/BibDesk.app</string>
 				</dict>
 			</array>
 		</dict>
 		<key>UID</key>
-		<string>7037A841-5EF5-4B07-B498-4A486906254D</string>
+		<string>0F426B8E-72FE-4F1F-929F-9314495EF097</string>
 	</dict>
 </array>
 </plist>
