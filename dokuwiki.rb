@@ -57,7 +57,7 @@ def get_bibtex_from_page
   # herokuapp is scrobblr - currently offline
   if cururl.any_index(["/ref:", "herokuapp", "scholar.google"])
 
-    if cururl.index(["/ref:", "herokuapp"])
+    if cururl.any_index(["/ref:", "herokuapp"])
       query = cururl.index("herokuapp") ? "getElementById('bibtex')" : "querySelectorAll('.code')[0]"
     else # GScholar
       unless @chrome.windows[1].get.tabs[tabidx].URL.get.index("/&output=citation")
