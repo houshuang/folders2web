@@ -22,12 +22,13 @@ def check_bibdesk
   if found.size > 0
     msg = "Matching citation exists in BibDesk: #{found[0].cite_key.get}"
     msg << ", and #{found.size - 1} more" unless found.size == 1
+    url = "bibdeskx://#{found[0].cite_key.get}"
     found[0].select
   else
     msg = "No matching citation in BibDesk"
+    url = ''
   end
-  growl msg
-  puts msg
+  growl('Looking up citation in BibDesK', msg, url)
 end
 
 def cururl
