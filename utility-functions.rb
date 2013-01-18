@@ -143,6 +143,11 @@ class String
     self.replace(gsubs(*searches))
   end
 
+  def any_index(searches)
+    searches.each {|search| return true if self.match(search)}
+    return false
+  end
+
   def gsubs(*searches)
     if searches[0].kind_of?(Hash)
       args = searches.shift
