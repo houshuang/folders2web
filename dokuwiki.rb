@@ -144,8 +144,8 @@ end
 
 #### keyboard commands ####
 
-# if Ctrl+Cmd+Alt+G is invoked, and current tab is not Google Scholar, assume that it is a foreign wiki, and try to
-# import citation to BibDesk
+# attempt to import citation to bibdesk, whether it's a Google Scholar page, another Researchr page, or
+# an unknown page (using API)
 def import_bibtex
 
   bibtex_final = try {get_bibtex_from_page}
@@ -155,6 +155,8 @@ def import_bibtex
   bibdesk.activate
   document = bibdesk.document.get[0].import({:from => bibtex_final})
   citekey = document[0].cite_key.get
+
+  add_to_jsonbib(citekey)
 
   if bibtex_final.scan(/url \= \{(.+?)\}/)
     fname = $~[1]
@@ -171,14 +173,11 @@ def import_bibtex
       fail "Not able to download file from #{fname}"
     end
 
-    d = bibdesk.search({:for=>citekey})
     f = MacTypes::FileURL.path('/tmp/pdftmp.pdf')
-    d[0].linked_files.add(f,{:to =>d[0]})
-    d[0].auto_file
+    document[0].linked_files.add(f,{:to =>d[0]})
+    document[0].auto_file
 
     growl("PDF added", "File added successfully to #{citekey}")
-
-    add_to_jsonbib(citekey)
   end
 end
 

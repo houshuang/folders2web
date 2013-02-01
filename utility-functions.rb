@@ -414,8 +414,11 @@ def add_to_jsonbib(citekey)
   require 'json'
   require 'citeproc'
   require 'bibtex'
+  require 'appscript'
 
-  find = try {BibDesk.search({:for => citekey}) }
+  bibdesk = Appscript.app('BibDesk')
+
+  find = try {bibdesk.search({:for => citekey}) }
   exit unless find && find != []
 
   bib = find[0].BibTeX_string.get.to_s
