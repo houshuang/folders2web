@@ -1,4 +1,10 @@
 #!/usr/bin/ruby
+# encoding: utf-8
+
+require 'rubygems'
+require 'sinatra'
+require 'haml'
+
 require 'net/http'
 require "cgi"
 require 'open-uri'
@@ -43,6 +49,18 @@ def checkOA(origurl)
   return false
 end
 
-arg = CGI.new['redir'].to_s
-puts "Content-Type: text/html; charset=utf-8\n\n"
-puts checkOA(arg) ? 'true' : 'false'
+class CheckOA < Sinatra::Base
+  not_found do
+    haml '404'
+  end
+
+  error do
+    haml "Error (#{request.env['sinatra.error']})"
+  end
+
+  get '/check-oa/*' do
+    url = params[:splat][0]
+    checkOA(url).to_s
+  end
+
+end
