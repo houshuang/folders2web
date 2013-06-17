@@ -1,4 +1,5 @@
-# encoding: UTF-8
+# encoding: utf-8
+Encoding.default_external = "UTF-8"
 # utility functions for researchr
 $:.push(File.dirname($0))
 Bibliography_header = "h1. Bibliography\n\n
@@ -46,8 +47,8 @@ end
 def doi_to_bibtex(doi)
   require 'open-uri'
   doi = doi.downcase.strip.remove(/doi[:>\/]/,'http://','dx.doi.org/', /\.$/).strip
-  url = "http://dx.doi.org/#{doi}"
-  return try { open(url, "Accept" => "text/bibliography; style=bibtex").read }
+  url = "http://data.crossref.org/#{doi}"
+  return try { open(url, "Accept" => "application/x-bibtex").read }
 end
 
 # a new bibtex filter to recapitalize names with proper unicode
@@ -239,7 +240,6 @@ end
 
 # show GUI selector listing all wiki pages, and letting user choose one, or manually enter a new one
 def wikipage_selector(title, retfull = false, additional_code = "")
-  require 'find'
   require 'pashua'
   include Pashua
 
@@ -257,11 +257,13 @@ def wikipage_selector(title, retfull = false, additional_code = "")
 
   # insert list of all wiki pages from filesystem into Pashua config
   wpath = "#{Wiki_path}/data/pages/"
-  Find.find(wpath) do |path|
+  Dir.glob(wpath+"**/*.txt") do |path|
     next unless File.file?(path)
+    path.encode!('UTF-8','UTF8-MAC')
     fname = path[wpath.size..-5].gsubs(["/",":"],["_", " "])
-    idx = fname.index(":")
-    config << "cb.option = #{capitalize_word(fname)}\n" if (path[-4..-1] == ".txt" && path[0] != '_')
+    if (path =~ /.txt$/ && path[0] != '_')
+      config =  "#{config}\ncb.option = #{capitalize_word(fname)}\n"
+    end
   end
   pagetmp = pashua_run config
 
