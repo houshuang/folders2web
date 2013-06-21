@@ -294,7 +294,7 @@ end
 
 def clip
   require 'pashua'
-  title = curtitle.strip
+  title = curtitle.strip.force_encoding("UTF-8")
 
   # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
   gui = "
