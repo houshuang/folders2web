@@ -47,7 +47,7 @@ def cururl
 end
 
 def curtitle
- title = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.title.get.strip
+ title = @chrome.windows[1].get.tabs[@chrome.windows[1].get.active_tab_index.get].get.title.get.strip.force_encoding("UTF-8")
 end
 
 # gets the bibtex from the current page, whether it's google scholar, researchr or scrobblr, and cleans it up
@@ -294,7 +294,7 @@ end
 
 def clip
   require 'pashua'
-  title = curtitle.strip.force_encoding("UTF-8")
+  title = curtitle
 
   # asks for a page name, and appends selected text on current page to that wiki page, with proper citation
   gui = "
