@@ -1,12 +1,13 @@
 # encoding: UTF-8
 $:.push(File.dirname($0))
 require 'utility-functions'
+require 'json'
 
-unless ARGV.size >= 2
-  puts "Usage: ruby taskpaper-extract.rb <scrivener|taskpaper> <infile> [outfile]\n
+unless ARGV.size >= 2 or ARGV.size == 0
+  puts "Usage: ruby taskpaper-extract.rb <scrivener|taskpaper|machine> <infile> [outfile]\n
   For example: ruby taskpaper-extract.rb scrivener litreview.taskpaper litreview
   (Scrivener outputs to a directory, with each tag in a separate textfile, taskpaper to a single hierarchical textfile)
-  Without an output name specified, it's automatic infile + .out"
+  Without an output name specified, print to stdout."
   exit
 end
 
@@ -14,10 +15,14 @@ end
 Indent_pattern = /^(\t*)/           # each indent level is determined by one tab
 Citekey_pattern = /^\[@(.+?)\]/     # lines that begin with [@...] "contaminate" all indented lines below
 
-a = try { File.read(ARGV[1]) }
-unless a
-  puts "Could not read input file"
-  exit
+if ARGV.size == 0
+  a = ARGF.read
+else
+  a = try { File.read(ARGV[1]) }
+  unless a
+    puts "Could not read input file"
+    exit
+  end
 end
 
 lines = Array.new
@@ -65,7 +70,7 @@ end
 tag_regexp = /
 \B                  # non-word marker
 (?<!\[)             # not preceded by [ (to avoid catching publication references like [@publication])
-\@(?<tagcapt>.+?)   # word starting with @
+\#(?<tagcapt>.+?)   # word starting with @
 \b                  # word boundary
 /x
 
@@ -94,6 +99,11 @@ lines.each_with_index do |l, i|
   unless all_tagged.index(cont) # unless it has been tagged
     tags.add('not_tagged', [cont, linecontext[i][1]])
   end
+end
+
+if ARGV.size == 0
+  puts JSON.generate(tags)
+  exit()
 end
 
 outdir = ARGV[2]
@@ -160,7 +170,7 @@ else
   exit
 end
 
-puts "#{tags.size} tags written to #{outdir}."
+#puts "#{tags.size} tags written to #{outdir}."
 
 # ideas:
 # - hierarchy of tags
